@@ -1,0 +1,36 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dsl="http://schemas.datacontract.org/2004/07/DSLService1">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:GetSupplierProductList>
+      <tem:input>
+        <dsl:requestId>${request.getRequestId()}</dsl:requestId>
+        <dsl:SiteDetails>
+          <#list request.getSupplierSites() as site>
+            <dsl:Site>
+              <dsl:siteId>${site.getSiteId()}</dsl:siteId>
+              <dsl:siteName>${site.getSiteName()?html}</dsl:siteName>
+              <dsl:AddressDetails>
+                <dsl:houseNumber/>
+                <dsl:streetName/>
+                <dsl:postCode/>
+                <dsl:city/>
+                <dsl:countryISOCode>${site.getCountryISOCode()}</dsl:countryISOCode>
+                <dsl:countryName/>
+                <dsl:accuracyLevel/>
+                <dsl:latitude/>
+                <dsl:longitude/>
+              </dsl:AddressDetails>
+              <dsl:TechnologyList>
+                <dsl:Technology>
+                  <dsl:parentAccessType/>
+                  <dsl:deliveryMode/>
+                </dsl:Technology>
+              </dsl:TechnologyList>
+            </dsl:Site>
+          </#list>
+        </dsl:SiteDetails>
+        <dsl:syncUri>${request.getSyncUri()}</dsl:syncUri>
+      </tem:input>
+    </tem:GetSupplierProductList>
+  </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,52 @@
+<div class="innerWrapUserMgmt" ng-controller="userManagementController" ng-init="onLoadSubGroup()">
+
+    <div ng-form="userConfigurationForm" ng-model="userConfigFormData">
+
+
+        <div style="margin-top: 25px;margin-bottom: 30px">
+            <label for="loginIDTextFld" class="cqmFieldInOneRow">User ID</label>
+            <input type="text" id="loginIDTextFld" name="loginId"
+                   class="cqmFieldInOneRow"
+                   data-placeholder="Enter User Id.."
+                   ng-model="userConfigFormData.loginId" style="margin-left:15px;width:190px" required/>
+            <button class="btn cqmFieldInOneRow" id="searchBut"
+                    style="margin-left: 20px; padding: 1px;height: 30px;border-radius: 4px;margin-top: -3px;margin-left:60px"
+                    ng-disabled="!userConfigFormData.loginId.length>0" ng-click="loginSearchForSubGroup()">
+                Search
+            </button>
+        </div>
+
+        <div class="containerDiv" style="float:left;width:100%;margin-bottom: 30px" ng-show="displayuserDetails">
+            <label class="cqmFieldInOneRow">Sub Groups </label>
+            <select style="width:200px;" class="cqmField" type="text" id="subGroup" name="subGroup"
+                    ng-model="userConfigFormData.subGroup"
+                    ng-options="subGroup for subGroup in subGroups" required/>
+            <button class="btn cqmFieldInOneRow" id="addBut"
+                    style="margin-left: 20px; padding: 1px;height: 30px;border-radius: 4px;margin-top: -3px;margin-left:60px"
+                    ng-click="addUserSubGroup()">
+                Add
+            </button>
+        </div>
+
+
+        <div class="containerDiv" style="float:left;width:80%" ng-show="displayuserDetails">
+            <div class="hrMargin" style="float:left;width:30%" ng-show="displayuserDetails">
+                <span class="headerLabel">User Sub Groups</span>
+                <hr class="hrStyle"/>
+            </div>
+            <div class="searchResultGridStyle" style="width:30%;height:220px;margin-top: 60px" ng-grid="userSubGroupGrid"/>
+        </div>
+
+        <div class="containerDiv" style="float:left;margin-top: 240px" ng-show="displayuserDetails">
+            <button class="btn" ng-click="deleteUserSubGroup()" style="margin-left:350px;float:left;margin-top: -120px;"
+                    ng-disabled="disableDeleteButton">
+                Delete
+            </button>
+        </div>
+
+        </fieldset>
+    </div>
+</div>
+
+</div>
+

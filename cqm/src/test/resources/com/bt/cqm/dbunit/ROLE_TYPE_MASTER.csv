@@ -1,0 +1,3 @@
+ROLE_TYPE_ID,ROLE_TYPE_NAME,CREATED_USER,MODIFIED_USER
+1,Direct,Initial Load,Initial Load
+2,Indirect,Initial Load,Initial Load

@@ -1,0 +1,10026 @@
+[
+  {
+    "cusId": "43777",
+    "cusName": "08TH JAN CUSTOMER ACCOUNT"
+  },
+  {
+    "cusId": "208038",
+    "cusName": "131"
+  },
+  {
+    "cusId": "599451",
+    "cusName": "13IPSDKOCC"
+  },
+  {
+    "cusId": "70010",
+    "cusName": "14604 - TEST"
+  },
+  {
+    "cusId": "35915",
+    "cusName": "22156_RETEST"
+  },
+  {
+    "cusId": "218095",
+    "cusName": "2ND80584"
+  },
+  {
+    "cusId": "187632",
+    "cusName": "3 SEPT- NEW ACCOUNT"
+  },
+  {
+    "cusId": "215795",
+    "cusName": "3RD56168"
+  },
+  {
+    "cusId": "743619",
+    "cusName": "4G TESTING"
+  },
+  {
+    "cusId": "685476",
+    "cusName": "4GR38GSCE142074SC01"
+  },
+  {
+    "cusId": "703124",
+    "cusName": "4G_SC01_CUS"
+  },
+  {
+    "cusId": "205460",
+    "cusName": "55267TC1PR"
+  },
+  {
+    "cusId": "560024",
+    "cusName": "5R34ASSET"
+  },
+  {
+    "cusId": "210033",
+    "cusName": "67121SCENARIO2"
+  },
+  {
+    "cusId": "203251",
+    "cusName": "82MXUNLIM"
+  },
+  {
+    "cusId": "203262",
+    "cusName": "82UNLIM"
+  },
+  {
+    "cusId": "321102",
+    "cusName": "85717DRYRUN"
+  },
+  {
+    "cusId": "200059",
+    "cusName": "88204RETESTCLASSICTEST"
+  },
+  {
+    "cusId": "205724",
+    "cusName": "88RETEST"
+  },
+  {
+    "cusId": "205723",
+    "cusName": "88TEST"
+  },
+  {
+    "cusId": "43840",
+    "cusName": "893_BULK_CONFIG-11"
+  },
+  {
+    "cusId": "44691",
+    "cusName": "893_BULK_CONFIG-12"
+  },
+  {
+    "cusId": "44733",
+    "cusName": "893_BULK_CONFIG-SC11-RUN2"
+  },
+  {
+    "cusId": "69920",
+    "cusName": "894_LEASEDLINE"
+  },
+  {
+    "cusId": "197101",
+    "cusName": "90349RETEST"
+  },
+  {
+    "cusId": "474502",
+    "cusName": "AAA10"
+  },
+  {
+    "cusId": "522762",
+    "cusName": "AARYA_CRE_CUST"
+  },
+  {
+    "cusId": "210406",
+    "cusName": "ABC LEARNING"
+  },
+  {
+    "cusId": "208294",
+    "cusName": "ABC2"
+  },
+  {
+    "cusId": "200044",
+    "cusName": "ABCDEF"
+  },
+  {
+    "cusId": "597793",
+    "cusName": "ABCZXY"
+  },
+  {
+    "cusId": "207191",
+    "cusName": "ABHIGNA_CPROOT"
+  },
+  {
+    "cusId": "207192",
+    "cusName": "ABHIGNA_SUBCUST"
+  },
+  {
+    "cusId": "36099",
+    "cusName": "ABHINAV IVPN"
+  },
+  {
+    "cusId": "211261",
+    "cusName": "AC TRAINING"
+  },
+  {
+    "cusId": "208458",
+    "cusName": "ACC_MX_2"
+  },
+  {
+    "cusId": "208461",
+    "cusName": "ACC_MX_3"
+  },
+  {
+    "cusId": "207087",
+    "cusName": "ADCPVPNUM"
+  },
+  {
+    "cusId": "207336",
+    "cusName": "ADDCPVPN"
+  },
+  {
+    "cusId": "200527",
+    "cusName": "ADSCUSTA"
+  },
+  {
+    "cusId": "207073",
+    "cusName": "ADVPNCP"
+  },
+  {
+    "cusId": "202168",
+    "cusName": "AGASTIN"
+  },
+  {
+    "cusId": "212814",
+    "cusName": "AJITHABC"
+  },
+  {
+    "cusId": "216217",
+    "cusName": "ALEXKAREV"
+  },
+  {
+    "cusId": "203847",
+    "cusName": "ALLMXFINPR"
+  },
+  {
+    "cusId": "203773",
+    "cusName": "ALLMXPR"
+  },
+  {
+    "cusId": "43805",
+    "cusName": "AMAN GUPTA TEST"
+  },
+  {
+    "cusId": "23631",
+    "cusName": "AMERICAN AIRLINES"
+  },
+  {
+    "cusId": "200179",
+    "cusName": "AMITI"
+  },
+  {
+    "cusId": "208971",
+    "cusName": "ANDERSON HOLDINGS"
+  },
+  {
+    "cusId": "208429",
+    "cusName": "ANDERSON INTL"
+  },
+  {
+    "cusId": "362502",
+    "cusName": "ANDREW LLOYD TEST CUSTOMER"
+  },
+  {
+    "cusId": "370082",
+    "cusName": "ANDREW LLOYD TEST CUSTOMER2"
+  },
+  {
+    "cusId": "198790",
+    "cusName": "ANDY TEST"
+  },
+  {
+    "cusId": "199384",
+    "cusName": "ANDY TEST 3"
+  },
+  {
+    "cusId": "198791",
+    "cusName": "ANDY TEST2"
+  },
+  {
+    "cusId": "201138",
+    "cusName": "ANDY TEST3"
+  },
+  {
+    "cusId": "35349",
+    "cusName": "ANIMAL LABORATORIES"
+  },
+  {
+    "cusId": "206644",
+    "cusName": "ANJANI"
+  },
+  {
+    "cusId": "206642",
+    "cusName": "ANJU"
+  },
+  {
+    "cusId": "248523",
+    "cusName": "ANSHUL ASMITA CORP"
+  },
+  {
+    "cusId": "36026",
+    "cusName": "AP TECHNOLOGIES LTD"
+  },
+  {
+    "cusId": "199818",
+    "cusName": "AP15"
+  },
+  {
+    "cusId": "207142",
+    "cusName": "APEUPLOAD"
+  },
+  {
+    "cusId": "222195",
+    "cusName": "APPIN"
+  },
+  {
+    "cusId": "198605",
+    "cusName": "APP_TEST_CUST_ST"
+  },
+  {
+    "cusId": "40716",
+    "cusName": "ARYABHAT"
+  },
+  {
+    "cusId": "493782",
+    "cusName": "ASDF123"
+  },
+  {
+    "cusId": "522042",
+    "cusName": "ASDFGH"
+  },
+  {
+    "cusId": "43604",
+    "cusName": "ASIAN TOURIST-RUN1-R893A"
+  },
+  {
+    "cusId": "225144",
+    "cusName": "ASSETHVPNLL"
+  },
+  {
+    "cusId": "43387",
+    "cusName": "AT-PETER HOUSE - R893-RUN1"
+  },
+  {
+    "cusId": "206679",
+    "cusName": "ATHENS CUSTOMER"
+  },
+  {
+    "cusId": "685558",
+    "cusName": "AUSTRIA"
+  },
+  {
+    "cusId": "44678",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-11-RUN-1"
+  },
+  {
+    "cusId": "48258",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-11-RUN-3"
+  },
+  {
+    "cusId": "44695",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-16-RUN-1"
+  },
+  {
+    "cusId": "48252",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-16-RUN-3"
+  },
+  {
+    "cusId": "44752",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-17-RUN-1"
+  },
+  {
+    "cusId": "48259",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-17-RUN-3"
+  },
+  {
+    "cusId": "44665",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-2-RUN-1"
+  },
+  {
+    "cusId": "44689",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-3-RUN-1"
+  },
+  {
+    "cusId": "44709",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-8-RUN-1"
+  },
+  {
+    "cusId": "48273",
+    "cusName": "AUTO-CUSTOMER-R894-SCE-8-RUN-3"
+  },
+  {
+    "cusId": "52055",
+    "cusName": "AUTO-CUSTOMER-R894_SCE02-13-APRIL-09-DEMO-A1"
+  },
+  {
+    "cusId": "52192",
+    "cusName": "AUTO-CUSTOMER-R894_SCE02-15-APRIL-09-DEMO-A1"
+  },
+  {
+    "cusId": "69917",
+    "cusName": "AUTO-CUSTOMER-R894_SCE11-16-MAY-09-DEMO-A4"
+  },
+  {
+    "cusId": "70028",
+    "cusName": "AUTO-CUSTOMER-R894_SCE11-19-MAY-09-DEMO-A1"
+  },
+  {
+    "cusId": "52179",
+    "cusName": "AUTO-CUSTOMER-R894_SCE16_DEMO-Z5"
+  },
+  {
+    "cusId": "52160",
+    "cusName": "AUTO-CUSTOMER-R894_SCE25-16-APRIL-09-DEMO-AB3"
+  },
+  {
+    "cusId": "48262",
+    "cusName": "AUTO-CUSTOMER-R894_SCE2_RUN-3"
+  },
+  {
+    "cusId": "48267",
+    "cusName": "AUTO-CUSTOMER-R894_SCE3_RUN-3"
+  },
+  {
+    "cusId": "187473",
+    "cusName": "AUTO-CUSTOMER-R901-R2 PP19-2SEPT-09-SANKE"
+  },
+  {
+    "cusId": "187568",
+    "cusName": "AUTO-CUSTOMER-R901-RP03-22-SEPT-09"
+  },
+  {
+    "cusId": "187275",
+    "cusName": "AUTO-CUSTOMER-R901-RP15-3AUG-EZHIL"
+  },
+  {
+    "cusId": "187222",
+    "cusName": "AUTO-CUSTOMER-R901-RPP10-27-AUG-09-SANK"
+  },
+  {
+    "cusId": "106627",
+    "cusName": "AUTO-CUSTOMER-R901-SCE10-20-JULY-09-SANKE2"
+  },
+  {
+    "cusId": "187810",
+    "cusName": "AUTO-CUSTOMER-R901-SCE11-4-AUG-09-BENNY1"
+  },
+  {
+    "cusId": "187361",
+    "cusName": "AUTO-CUSTOMER-R901-SCE11-5-AUG-09-SARAH"
+  },
+  {
+    "cusId": "187428",
+    "cusName": "AUTO-CUSTOMER-R901-SCE21-22-JULY-09-SANKE1"
+  },
+  {
+    "cusId": "187431",
+    "cusName": "AUTO-CUSTOMER-R901_RP14-31-JULY-09-SARAH"
+  },
+  {
+    "cusId": "187426",
+    "cusName": "AUTO-CUSTOMER-R901_RP1_SCE05-10-AUG-09-DEMO-A1"
+  },
+  {
+    "cusId": "187294",
+    "cusName": "AUTO-CUSTOMER-R901_RP1_SCE05-22-SEP-09-DEMO-A1"
+  },
+  {
+    "cusId": "187317",
+    "cusName": "AUTO-CUSTOMER-R901_SCE03-04-SEP-09-DEMO-A1"
+  },
+  {
+    "cusId": "187636",
+    "cusName": "AUTO-CUSTOMER-R901_SCE03-12-AUG-09-DEMO-A1"
+  },
+  {
+    "cusId": "187318",
+    "cusName": "AUTO-CUSTOMER-R901_SCE03-25-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187524",
+    "cusName": "AUTO-CUSTOMER-R901_SCE03-31-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187268",
+    "cusName": "AUTO-CUSTOMER-R901_SCE09-03-SEP-09-DEMO-A1"
+  },
+  {
+    "cusId": "106634",
+    "cusName": "AUTO-CUSTOMER-R901_SCE09-15-JULY-09-DEMO-A6"
+  },
+  {
+    "cusId": "106658",
+    "cusName": "AUTO-CUSTOMER-R901_SCE09-16-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187254",
+    "cusName": "AUTO-CUSTOMER-R901_SCE15-01-SEP-09-DEMO-A3"
+  },
+  {
+    "cusId": "106652",
+    "cusName": "AUTO-CUSTOMER-R901_SCE15-20-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187373",
+    "cusName": "AUTO-CUSTOMER-R901_SCE16-01-SEP-09-DEMO-A2"
+  },
+  {
+    "cusId": "106624",
+    "cusName": "AUTO-CUSTOMER-R901_SCE16-22-JULY-09-DEMO-A2"
+  },
+  {
+    "cusId": "187505",
+    "cusName": "AUTO-CUSTOMER-R901_SCE16-25-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187299",
+    "cusName": "AUTO-CUSTOMER-R901_SCE16-29-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187262",
+    "cusName": "AUTO-CUSTOMER-R901_SCE16-30-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "187809",
+    "cusName": "AUTO-CUSTOMER-R901_SCE18-03-SEP-09-DEMO-A1"
+  },
+  {
+    "cusId": "106649",
+    "cusName": "AUTO-CUSTOMER-R901_SCE18-22-JULY-09-DEMO-A1"
+  },
+  {
+    "cusId": "69971",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE11-03-JUNE-09-SANKE1"
+  },
+  {
+    "cusId": "70005",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE16-05-JUNE-09-SANKE1"
+  },
+  {
+    "cusId": "69935",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE17-4-JUNE-09-EZHIL1"
+  },
+  {
+    "cusId": "70016",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE19-5-JUNE-09-EZHIL1"
+  },
+  {
+    "cusId": "70023",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE2-26-MAY-09-BENNY3"
+  },
+  {
+    "cusId": "69989",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE23-11-JUNE-09-SANKE1"
+  },
+  {
+    "cusId": "70022",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE23-11-JUNE-09-SANKE2"
+  },
+  {
+    "cusId": "70037",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE24-10-JUNE-09-EZHIL1"
+  },
+  {
+    "cusId": "69891",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE25-10-JUNE-09-SANKE1"
+  },
+  {
+    "cusId": "69886",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE3-28-MAY-09-SANKE2"
+  },
+  {
+    "cusId": "69877",
+    "cusName": "AUTO-CUSTOMER-RMR96_SCE8-11-JUNE-09-EZHIL1"
+  },
+  {
+    "cusId": "187593",
+    "cusName": "AUTO-CUSTOMER-RUN2-RPP18-31AUG-SARAH"
+  },
+  {
+    "cusId": "187581",
+    "cusName": "AUTO-CUSTOMER-RUN2_SCE07-25-AUG-09-SARAH"
+  },
+  {
+    "cusId": "187188",
+    "cusName": "AUTO-CUSTOMER-RUN2_SCE08-27-AUG-09-SARAH"
+  },
+  {
+    "cusId": "69913",
+    "cusName": "AUTO-CUSTOMER-RWD2_SCE16-20-MAY-09-BENNY"
+  },
+  {
+    "cusId": "70058",
+    "cusName": "AUTO-CUSTOMER-RWD2_SCE2-20-MAY-09-SANE1"
+  },
+  {
+    "cusId": "70008",
+    "cusName": "AUTO-CUSTOMER-RWD2_SCE2-20-MAY-09-SANKE2"
+  },
+  {
+    "cusId": "70006",
+    "cusName": "AUTO-CUSTOMER-RWD2_SCE25-20-MAY-09-BENNY"
+  },
+  {
+    "cusId": "69931",
+    "cusName": "AUTO-CUSTOMER-RWD2_SCE25-20-MAY-09-EZHIL"
+  },
+  {
+    "cusId": "445163",
+    "cusName": "AUTOHVPN_ASG"
+  },
+  {
+    "cusId": "445182",
+    "cusName": "AUTOHVPN_ASG1"
+  },
+  {
+    "cusId": "445203",
+    "cusName": "AUTOHVPN_ASG2"
+  },
+  {
+    "cusId": "445222",
+    "cusName": "AUTOHVPN_ASG3"
+  },
+  {
+    "cusId": "225067",
+    "cusName": "AUTOMATION2012"
+  },
+  {
+    "cusId": "230606",
+    "cusName": "AUTOMATION20121123105839"
+  },
+  {
+    "cusId": "533262",
+    "cusName": "AUTOMATIONCUST"
+  },
+  {
+    "cusId": "498082",
+    "cusName": "AUTOMXCUST"
+  },
+  {
+    "cusId": "505502",
+    "cusName": "AUTOMXCUST1"
+  },
+  {
+    "cusId": "509882",
+    "cusName": "AUTOMXCUST10"
+  },
+  {
+    "cusId": "512622",
+    "cusName": "AUTOMXCUST13"
+  },
+  {
+    "cusId": "507242",
+    "cusName": "AUTOMXCUST2"
+  },
+  {
+    "cusId": "608274",
+    "cusName": "AUTOTEST060215"
+  },
+  {
+    "cusId": "546043",
+    "cusName": "AUTOTEST10"
+  },
+  {
+    "cusId": "612776",
+    "cusName": "AUTOTEST200215"
+  },
+  {
+    "cusId": "612798",
+    "cusName": "AUTOTEST2002151"
+  },
+  {
+    "cusId": "623068",
+    "cusName": "AUTOTEST310315"
+  },
+  {
+    "cusId": "623288",
+    "cusName": "AUTOTEST3103151"
+  },
+  {
+    "cusId": "201005",
+    "cusName": "AUTO_NEW_CUSTOMER1"
+  },
+  {
+    "cusId": "201009",
+    "cusName": "AUTO_NEW_CUSTOMER2"
+  },
+  {
+    "cusId": "200811",
+    "cusName": "AUTO_NEW_RK1"
+  },
+  {
+    "cusId": "201015",
+    "cusName": "AUTO_NEW_RK100"
+  },
+  {
+    "cusId": "200997",
+    "cusName": "AUTO_NEW_RK12121"
+  },
+  {
+    "cusId": "200876",
+    "cusName": "AUTO_NEW_RK2"
+  },
+  {
+    "cusId": "203690",
+    "cusName": "AXZ"
+  },
+  {
+    "cusId": "206760",
+    "cusName": "BABAIHOTEL"
+  },
+  {
+    "cusId": "206704",
+    "cusName": "BACKUPPR"
+  },
+  {
+    "cusId": "206641",
+    "cusName": "BALABTGS"
+  },
+  {
+    "cusId": "23537",
+    "cusName": "BARCLAYS BANK PLC"
+  },
+  {
+    "cusId": "187540",
+    "cusName": "BENNETT"
+  },
+  {
+    "cusId": "187604",
+    "cusName": "BENNETT1"
+  },
+  {
+    "cusId": "35862",
+    "cusName": "BESSA DEVELOPMENT GROUP-R783"
+  },
+  {
+    "cusId": "35843",
+    "cusName": "BESSA DEVELOPMENT GROUP-R783-3"
+  },
+  {
+    "cusId": "35880",
+    "cusName": "BESSA DEVELOPMENT GROUP-R783-RUN2"
+  },
+  {
+    "cusId": "43141",
+    "cusName": "BESSA DEVELOPMENT GROUP-R891-AUTO-14"
+  },
+  {
+    "cusId": "42556",
+    "cusName": "BESSA DEVELOPMENT GROUP-R891.2"
+  },
+  {
+    "cusId": "43035",
+    "cusName": "BESSA DEVELOPMENT GROUP-R892"
+  },
+  {
+    "cusId": "43366",
+    "cusName": "BESSA DEVELOPMENT GROUP-RUN1-R893-DEMO"
+  },
+  {
+    "cusId": "43059",
+    "cusName": "BESSA DEVELOPMENT GROUP-TRIAL"
+  },
+  {
+    "cusId": "43265",
+    "cusName": "BESSA DEVELOPMENT R892 3A"
+  },
+  {
+    "cusId": "42554",
+    "cusName": "BESSA DEVELOPMENT-R891"
+  },
+  {
+    "cusId": "43130",
+    "cusName": "BESSA DEVELOPMENT-R892"
+  },
+  {
+    "cusId": "43073",
+    "cusName": "BESSA DEVELOPMENT_02"
+  },
+  {
+    "cusId": "198785",
+    "cusName": "BETTY"
+  },
+  {
+    "cusId": "198786",
+    "cusName": "BETTYSUBCP"
+  },
+  {
+    "cusId": "596651",
+    "cusName": "BHARAT ARORA"
+  },
+  {
+    "cusId": "187702",
+    "cusName": "BHUSHAN-EFM-UK"
+  },
+  {
+    "cusId": "444042",
+    "cusName": "BHUVI"
+  },
+  {
+    "cusId": "205795",
+    "cusName": "BILLINGSCENARIO3"
+  },
+  {
+    "cusId": "205750",
+    "cusName": "BILLTEST3"
+  },
+  {
+    "cusId": "222315",
+    "cusName": "BN398598CUST"
+  },
+  {
+    "cusId": "208037",
+    "cusName": "BOOKMARK"
+  },
+  {
+    "cusId": "206493",
+    "cusName": "BROADBAND"
+  },
+  {
+    "cusId": "262802",
+    "cusName": "BRUK"
+  },
+  {
+    "cusId": "224620",
+    "cusName": "BS"
+  },
+  {
+    "cusId": "212355",
+    "cusName": "BSECURECUS"
+  },
+  {
+    "cusId": "212373",
+    "cusName": "BSECURECUSPLUS"
+  },
+  {
+    "cusId": "212379",
+    "cusName": "BSECUREPLUSCUS"
+  },
+  {
+    "cusId": "200637",
+    "cusName": "BT BUILDING"
+  },
+  {
+    "cusId": "227017",
+    "cusName": "BT GLOBAL SERVICES AAI"
+  },
+  {
+    "cusId": "523602",
+    "cusName": "BT UA_TEST01"
+  },
+  {
+    "cusId": "202652",
+    "cusName": "BT-CUST2"
+  },
+  {
+    "cusId": "224936",
+    "cusName": "BT1234NILA"
+  },
+  {
+    "cusId": "363222",
+    "cusName": "BTCUKCUS"
+  },
+  {
+    "cusId": "211287",
+    "cusName": "BTGLO"
+  },
+  {
+    "cusId": "21877",
+    "cusName": "BTGS"
+  },
+  {
+    "cusId": "33322",
+    "cusName": "BTGS (ORACLE)"
+  },
+  {
+    "cusId": "207117",
+    "cusName": "BTGSUK1"
+  },
+  {
+    "cusId": "527511",
+    "cusName": "BTHCS"
+  },
+  {
+    "cusId": "224898",
+    "cusName": "BTNILAKHI"
+  },
+  {
+    "cusId": "224900",
+    "cusName": "BTNILAUB"
+  },
+  {
+    "cusId": "209397",
+    "cusName": "BTWBCAJAY"
+  },
+  {
+    "cusId": "209638",
+    "cusName": "BT_WBC_SCENARIO2"
+  },
+  {
+    "cusId": "209395",
+    "cusName": "BT_WBC_UK"
+  },
+  {
+    "cusId": "203789",
+    "cusName": "BULKNEWAUG"
+  },
+  {
+    "cusId": "212380",
+    "cusName": "BULKSECURECUS"
+  },
+  {
+    "cusId": "301843",
+    "cusName": "CA"
+  },
+  {
+    "cusId": "301862",
+    "cusName": "CABCD123"
+  },
+  {
+    "cusId": "301962",
+    "cusName": "CABCD1237657"
+  },
+  {
+    "cusId": "301883",
+    "cusName": "CABCD67"
+  },
+  {
+    "cusId": "208069",
+    "cusName": "CACBILLFORMAT"
+  },
+  {
+    "cusId": "206675",
+    "cusName": "CAMTECH"
+  },
+  {
+    "cusId": "206689",
+    "cusName": "CAMTEH1"
+  },
+  {
+    "cusId": "32397",
+    "cusName": "CARLSON MARKETING GROUP BV"
+  },
+  {
+    "cusId": "301342",
+    "cusName": "CAU01040121"
+  },
+  {
+    "cusId": "301483",
+    "cusName": "CAU01040321"
+  },
+  {
+    "cusId": "301602",
+    "cusName": "CAU01040347"
+  },
+  {
+    "cusId": "301662",
+    "cusName": "CAU01040408"
+  },
+  {
+    "cusId": "302002",
+    "cusName": "CAU01040626"
+  },
+  {
+    "cusId": "300985",
+    "cusName": "CAU01040912"
+  },
+  {
+    "cusId": "301002",
+    "cusName": "CAU01040937"
+  },
+  {
+    "cusId": "301064",
+    "cusName": "CAU01041058"
+  },
+  {
+    "cusId": "302342",
+    "cusName": "CAU01041115"
+  },
+  {
+    "cusId": "301122",
+    "cusName": "CAU01041133"
+  },
+  {
+    "cusId": "301142",
+    "cusName": "CAU01041150"
+  },
+  {
+    "cusId": "301282",
+    "cusName": "CAU01041247"
+  },
+  {
+    "cusId": "303985",
+    "cusName": "CAU03040239"
+  },
+  {
+    "cusId": "306125",
+    "cusName": "CAU05041107"
+  },
+  {
+    "cusId": "311182",
+    "cusName": "CAU11040611"
+  },
+  {
+    "cusId": "312042",
+    "cusName": "CAU12040329"
+  },
+  {
+    "cusId": "311562",
+    "cusName": "CAU12041041"
+  },
+  {
+    "cusId": "311583",
+    "cusName": "CAU12041055"
+  },
+  {
+    "cusId": "335402",
+    "cusName": "CAU1238"
+  },
+  {
+    "cusId": "335342",
+    "cusName": "CAU13051209"
+  },
+  {
+    "cusId": "335362",
+    "cusName": "CAU13051223"
+  },
+  {
+    "cusId": "299982",
+    "cusName": "CAU29030415"
+  },
+  {
+    "cusId": "300064",
+    "cusName": "CAU29030530"
+  },
+  {
+    "cusId": "300082",
+    "cusName": "CAU29030601"
+  },
+  {
+    "cusId": "414043",
+    "cusName": "CAUTOMATIONUK1"
+  },
+  {
+    "cusId": "335622",
+    "cusName": "CAUUKKLL9999"
+  },
+  {
+    "cusId": "414062",
+    "cusName": "CCAUTOMATIONUK2"
+  },
+  {
+    "cusId": "414103",
+    "cusName": "CCAUTOMATIONUK3"
+  },
+  {
+    "cusId": "393062",
+    "cusName": "CE108734TC1"
+  },
+  {
+    "cusId": "393122",
+    "cusName": "CE108734TC2"
+  },
+  {
+    "cusId": "403402",
+    "cusName": "CE108734TC2NEW"
+  },
+  {
+    "cusId": "615425",
+    "cusName": "CE142064SC01NEW"
+  },
+  {
+    "cusId": "614262",
+    "cusName": "CE142064SC02NEW"
+  },
+  {
+    "cusId": "726357",
+    "cusName": "CE167408SC03"
+  },
+  {
+    "cusId": "726477",
+    "cusName": "CE167408SC9"
+  },
+  {
+    "cusId": "216196",
+    "cusName": "CENTRAL SITE TEST"
+  },
+  {
+    "cusId": "209619",
+    "cusName": "CE_CAP_ONE"
+  },
+  {
+    "cusId": "36166",
+    "cusName": "CHALLENGER"
+  },
+  {
+    "cusId": "199529",
+    "cusName": "CHAWLA"
+  },
+  {
+    "cusId": "303722",
+    "cusName": "CHECK_R25"
+  },
+  {
+    "cusId": "199378",
+    "cusName": "CHENNAI 1"
+  },
+  {
+    "cusId": "199374",
+    "cusName": "CHENNAI ONE"
+  },
+  {
+    "cusId": "201746",
+    "cusName": "CHERAN"
+  },
+  {
+    "cusId": "35659",
+    "cusName": "CHEW IMPORTANTS \u0026 SALES-R782"
+  },
+  {
+    "cusId": "35827",
+    "cusName": "CHEW IMPORTANTS \u0026 SALES-R783"
+  },
+  {
+    "cusId": "40713",
+    "cusName": "CHEW IMPORTANTS \u0026 SALES-R891"
+  },
+  {
+    "cusId": "43214",
+    "cusName": "CHEW IMPORTANTS R892 3A"
+  },
+  {
+    "cusId": "40767",
+    "cusName": "CHEW IMPORTANTS-R891"
+  },
+  {
+    "cusId": "43078",
+    "cusName": "CHEW IMPORTANTS-R892"
+  },
+  {
+    "cusId": "208919",
+    "cusName": "CHILLO ENTERPRISES PLC"
+  },
+  {
+    "cusId": "509862",
+    "cusName": "CHKAUTOCUST"
+  },
+  {
+    "cusId": "517022",
+    "cusName": "CHKAUTOCUST1"
+  },
+  {
+    "cusId": "517344",
+    "cusName": "CHKAUTOCUSTNEW"
+  },
+  {
+    "cusId": "456022",
+    "cusName": "CHKUNBUNDLED"
+  },
+  {
+    "cusId": "208945",
+    "cusName": "CHRIS HILL INC"
+  },
+  {
+    "cusId": "200579",
+    "cusName": "CHRISTO"
+  },
+  {
+    "cusId": "311642",
+    "cusName": "CIPSDK789"
+  },
+  {
+    "cusId": "438494",
+    "cusName": "CITAUTOLLHVPNSINCPE3"
+  },
+  {
+    "cusId": "438513",
+    "cusName": "CITAUTOLLHVPNSINCPE5"
+  },
+  {
+    "cusId": "444564",
+    "cusName": "CITAUTOPCUST14NOVHUA01"
+  },
+  {
+    "cusId": "444566",
+    "cusName": "CITAUTOPCUST14NOVHUA02"
+  },
+  {
+    "cusId": "438491",
+    "cusName": "CITAUTOPCUST28OCT002"
+  },
+  {
+    "cusId": "205175",
+    "cusName": "CITMX16"
+  },
+  {
+    "cusId": "201383",
+    "cusName": "CIT_ACCOUNT"
+  },
+  {
+    "cusId": "510722",
+    "cusName": "CIT_AUTO_MXCUST01"
+  },
+  {
+    "cusId": "510942",
+    "cusName": "CIT_AUTO_MXCUST02"
+  },
+  {
+    "cusId": "210236",
+    "cusName": "CIT_UK_WD"
+  },
+  {
+    "cusId": "208224",
+    "cusName": "CLEAN"
+  },
+  {
+    "cusId": "206647",
+    "cusName": "CMCTECH"
+  },
+  {
+    "cusId": "203433",
+    "cusName": "CMP18JULYQREFREUSE"
+  },
+  {
+    "cusId": "223856",
+    "cusName": "CMP23AUG2012092751"
+  },
+  {
+    "cusId": "223857",
+    "cusName": "CMP23AUG2012093541"
+  },
+  {
+    "cusId": "214897",
+    "cusName": "CMPSANITYMX2106"
+  },
+  {
+    "cusId": "214895",
+    "cusName": "CMPSANITYT32106"
+  },
+  {
+    "cusId": "207102",
+    "cusName": "CN EFM CUSTOMER"
+  },
+  {
+    "cusId": "207116",
+    "cusName": "CN EFM UK"
+  },
+  {
+    "cusId": "206701",
+    "cusName": "COGNO"
+  },
+  {
+    "cusId": "524382",
+    "cusName": "CONTRACT_TEST"
+  },
+  {
+    "cusId": "207710",
+    "cusName": "CPVPNPP"
+  },
+  {
+    "cusId": "610877",
+    "cusName": "CQM13022015A"
+  },
+  {
+    "cusId": "619769",
+    "cusName": "CQM23032015"
+  },
+  {
+    "cusId": "33280",
+    "cusName": "CRANE TELECOMMUNICATIONS GROUP LTD"
+  },
+  {
+    "cusId": "224316",
+    "cusName": "CRISTIANO"
+  },
+  {
+    "cusId": "461026",
+    "cusName": "CUNLON123"
+  },
+  {
+    "cusId": "206773",
+    "cusName": "CUS21CN"
+  },
+  {
+    "cusId": "205145",
+    "cusName": "CUSIPSEC"
+  },
+  {
+    "cusId": "43354",
+    "cusName": "CUST BESSA DEV R893 A"
+  },
+  {
+    "cusId": "43417",
+    "cusName": "CUST BIRMINGHAM R893 A"
+  },
+  {
+    "cusId": "43411",
+    "cusName": "CUST CHEW IMPORTANTS R893 A"
+  },
+  {
+    "cusId": "43358",
+    "cusName": "CUST DEERING COMM R893 A"
+  },
+  {
+    "cusId": "43399",
+    "cusName": "CUST DEERING CORP R893 A"
+  },
+  {
+    "cusId": "43592",
+    "cusName": "CUST DEERING CORP R893-R4"
+  },
+  {
+    "cusId": "43381",
+    "cusName": "CUST EDIFICIO PLAZA R893 A"
+  },
+  {
+    "cusId": "43589",
+    "cusName": "CUST EDIFICIO PLAZA R893-R4"
+  },
+  {
+    "cusId": "43379",
+    "cusName": "CUST FINANCIAL CORP R893 A"
+  },
+  {
+    "cusId": "43530",
+    "cusName": "CUST FINANCIAL CORP R893-R4"
+  },
+  {
+    "cusId": "44673",
+    "cusName": "CUST MOD POC"
+  },
+  {
+    "cusId": "43395",
+    "cusName": "CUST PETER HOUSE R893 A"
+  },
+  {
+    "cusId": "43400",
+    "cusName": "CUST R783 FRANKFURT"
+  },
+  {
+    "cusId": "43594",
+    "cusName": "CUST R783 SCN 3"
+  },
+  {
+    "cusId": "43528",
+    "cusName": "CUST R783 SCN 4"
+  },
+  {
+    "cusId": "43836",
+    "cusName": "CUST R894 SCN 02"
+  },
+  {
+    "cusId": "43786",
+    "cusName": "CUST R894 SCN 11"
+  },
+  {
+    "cusId": "43820",
+    "cusName": "CUST R894 SCN 20"
+  },
+  {
+    "cusId": "43845",
+    "cusName": "CUST R894 SCN3"
+  },
+  {
+    "cusId": "52027",
+    "cusName": "CUST SBR 6 R894"
+  },
+  {
+    "cusId": "43838",
+    "cusName": "CUST SCRIPTING MODS"
+  },
+  {
+    "cusId": "43401",
+    "cusName": "CUST UK CITI FINANCE R893 A"
+  },
+  {
+    "cusId": "346182",
+    "cusName": "CUST249"
+  },
+  {
+    "cusId": "69945",
+    "cusName": "CUSTACC_ALBANIA"
+  },
+  {
+    "cusId": "616728",
+    "cusName": "CUSTDEEPIKA"
+  },
+  {
+    "cusId": "212382",
+    "cusName": "CUSTDIRBULK"
+  },
+  {
+    "cusId": "266642",
+    "cusName": "CUSTFTTC"
+  },
+  {
+    "cusId": "201055",
+    "cusName": "CUSTMREOC"
+  },
+  {
+    "cusId": "194104",
+    "cusName": "CUSTNEW"
+  },
+  {
+    "cusId": "561162",
+    "cusName": "CUSTNEW35"
+  },
+  {
+    "cusId": "202724",
+    "cusName": "CUSTOMER EFM"
+  },
+  {
+    "cusId": "44669",
+    "cusName": "CUSTOMER SBR 1 R894"
+  },
+  {
+    "cusId": "44708",
+    "cusName": "CUSTOMER SBR 6 R894"
+  },
+  {
+    "cusId": "48247",
+    "cusName": "CUSTOMER SBR 7 R894"
+  },
+  {
+    "cusId": "694223",
+    "cusName": "CUSTOMER SC01"
+  },
+  {
+    "cusId": "744217",
+    "cusName": "CUSTOMER TESTING 123"
+  },
+  {
+    "cusId": "696677",
+    "cusName": "CUSTOMER-001"
+  },
+  {
+    "cusId": "187256",
+    "cusName": "CUSTOMER-R902_PP3_22-OCT-09-A2"
+  },
+  {
+    "cusId": "183603",
+    "cusName": "CUSTOMER1"
+  },
+  {
+    "cusId": "581931",
+    "cusName": "CUSTOMER1212"
+  },
+  {
+    "cusId": "585851",
+    "cusName": "CUSTOMER2014"
+  },
+  {
+    "cusId": "561160",
+    "cusName": "CUSTOMER800"
+  },
+  {
+    "cusId": "616348",
+    "cusName": "CUSTOMERPALLAVEE"
+  },
+  {
+    "cusId": "69994",
+    "cusName": "CUSTOMERTEST"
+  },
+  {
+    "cusId": "527485",
+    "cusName": "CUSTOMER_LIVE"
+  },
+  {
+    "cusId": "731077",
+    "cusName": "CUSTOMR1A"
+  },
+  {
+    "cusId": "214595",
+    "cusName": "CUSTUK"
+  },
+  {
+    "cusId": "202716",
+    "cusName": "CUST_2"
+  },
+  {
+    "cusId": "540430",
+    "cusName": "CUST_AUG_07"
+  },
+  {
+    "cusId": "273043",
+    "cusName": "CUST_BULKR"
+  },
+  {
+    "cusId": "599432",
+    "cusName": "CVVQ"
+  },
+  {
+    "cusId": "35672",
+    "cusName": "DAIRY MILK"
+  },
+  {
+    "cusId": "198761",
+    "cusName": "DAVID"
+  },
+  {
+    "cusId": "471682",
+    "cusName": "DAVIDFROZE"
+  },
+  {
+    "cusId": "198763",
+    "cusName": "DAVIDSUB"
+  },
+  {
+    "cusId": "198766",
+    "cusName": "DAVIDSUBCP"
+  },
+  {
+    "cusId": "199768",
+    "cusName": "DAVISON"
+  },
+  {
+    "cusId": "224549",
+    "cusName": "DCCCUST"
+  },
+  {
+    "cusId": "43089",
+    "cusName": "DEERING COMM"
+  },
+  {
+    "cusId": "43164",
+    "cusName": "DEERING COMM R892 3A"
+  },
+  {
+    "cusId": "36052",
+    "cusName": "DEERING COMM-R783-RUN4-V1"
+  },
+  {
+    "cusId": "43611",
+    "cusName": "DEERING COMMU-RUN1-R893"
+  },
+  {
+    "cusId": "43833",
+    "cusName": "DEERING COMMUNICATIONS-17"
+  },
+  {
+    "cusId": "40721",
+    "cusName": "DEERING COMMUNICATIONS-MOD-R891"
+  },
+  {
+    "cusId": "35868",
+    "cusName": "DEERING COMMUNICATIONS-R783"
+  },
+  {
+    "cusId": "36069",
+    "cusName": "DEERING COMMUNICATIONS-R783-RUN4"
+  },
+  {
+    "cusId": "40729",
+    "cusName": "DEERING COMMUNICATIONS-R891"
+  },
+  {
+    "cusId": "43352",
+    "cusName": "DEERING COMMUNICATIONS-RUN1-R893-DEMO"
+  },
+  {
+    "cusId": "40735",
+    "cusName": "DEERING COMMUNICATIONS.-R891"
+  },
+  {
+    "cusId": "43534",
+    "cusName": "DEERING COMMUNICATIONS.-R891-4A"
+  },
+  {
+    "cusId": "43132",
+    "cusName": "DEERING COMMUNICATIONS.-R891-TEST1"
+  },
+  {
+    "cusId": "43053",
+    "cusName": "DEERING COMMUNICATIONS.-R892"
+  },
+  {
+    "cusId": "206510",
+    "cusName": "DEF6939"
+  },
+  {
+    "cusId": "203780",
+    "cusName": "DEJAVU"
+  },
+  {
+    "cusId": "198965",
+    "cusName": "DEMO CUST DOC"
+  },
+  {
+    "cusId": "198539",
+    "cusName": "DEMO CUSTOMER 1"
+  },
+  {
+    "cusId": "455144",
+    "cusName": "DEMO0000"
+  },
+  {
+    "cusId": "276422",
+    "cusName": "DEMO85328"
+  },
+  {
+    "cusId": "81389",
+    "cusName": "DEMO_CUSTOMER"
+  },
+  {
+    "cusId": "30110",
+    "cusName": "DERKS STAR BUSMANN HANOTIAU"
+  },
+  {
+    "cusId": "200178",
+    "cusName": "DEV"
+  },
+  {
+    "cusId": "204903",
+    "cusName": "DFG"
+  },
+  {
+    "cusId": "454443",
+    "cusName": "DHIYA"
+  },
+  {
+    "cusId": "219955",
+    "cusName": "DHONI"
+  },
+  {
+    "cusId": "196554",
+    "cusName": "DINGDONG"
+  },
+  {
+    "cusId": "199015",
+    "cusName": "DIRCUSTMITA"
+  },
+  {
+    "cusId": "199397",
+    "cusName": "DIRECTMX"
+  },
+  {
+    "cusId": "199898",
+    "cusName": "DIRECTMX02201124"
+  },
+  {
+    "cusId": "199383",
+    "cusName": "DIRECTMXTRAIL0902"
+  },
+  {
+    "cusId": "198923",
+    "cusName": "DIRECTUK"
+  },
+  {
+    "cusId": "209568",
+    "cusName": "DIRECT_RT_1000"
+  },
+  {
+    "cusId": "521804",
+    "cusName": "DISCOUNTCUST"
+  },
+  {
+    "cusId": "204081",
+    "cusName": "DISLICMXPR"
+  },
+  {
+    "cusId": "35821",
+    "cusName": "DISNEYSEA"
+  },
+  {
+    "cusId": "36826",
+    "cusName": "DNS DEUTSCHLAND/DT"
+  },
+  {
+    "cusId": "202780",
+    "cusName": "DON"
+  },
+  {
+    "cusId": "35347",
+    "cusName": "DOWNSTREAM ASSOCIATES"
+  },
+  {
+    "cusId": "35492",
+    "cusName": "DOWNSTREAM ASSOCIATES_1"
+  },
+  {
+    "cusId": "35494",
+    "cusName": "DOWNSTREAM ASSOCIATES_2"
+  },
+  {
+    "cusId": "525477",
+    "cusName": "DPNSSCUST"
+  },
+  {
+    "cusId": "525622",
+    "cusName": "DPNSSOCC"
+  },
+  {
+    "cusId": "525521",
+    "cusName": "DPNSSTRK"
+  },
+  {
+    "cusId": "525515",
+    "cusName": "DPNSSTRUNK"
+  },
+  {
+    "cusId": "203412",
+    "cusName": "DROOTNNO"
+  },
+  {
+    "cusId": "35398",
+    "cusName": "DROP ZONE LABS"
+  },
+  {
+    "cusId": "35553",
+    "cusName": "DROP ZONE LABS NEW"
+  },
+  {
+    "cusId": "201006",
+    "cusName": "DSGFSDFSGDFSG"
+  },
+  {
+    "cusId": "210659",
+    "cusName": "DSL"
+  },
+  {
+    "cusId": "211139",
+    "cusName": "DSLAJAY"
+  },
+  {
+    "cusId": "211145",
+    "cusName": "DSLBAU"
+  },
+  {
+    "cusId": "200987",
+    "cusName": "DSLVLP"
+  },
+  {
+    "cusId": "200989",
+    "cusName": "DSLVLP1"
+  },
+  {
+    "cusId": "200992",
+    "cusName": "DSLVLP2"
+  },
+  {
+    "cusId": "187585",
+    "cusName": "DSL_UK_ACC"
+  },
+  {
+    "cusId": "199881",
+    "cusName": "DUGGI"
+  },
+  {
+    "cusId": "208198",
+    "cusName": "DUMMYCUSTOMER"
+  },
+  {
+    "cusId": "208207",
+    "cusName": "DUMMYSOLA"
+  },
+  {
+    "cusId": "200047",
+    "cusName": "DUMMYTESTPR"
+  },
+  {
+    "cusId": "761177",
+    "cusName": "DUMMYUK"
+  },
+  {
+    "cusId": "208861",
+    "cusName": "DUNHAMO"
+  },
+  {
+    "cusId": "205197",
+    "cusName": "DURGAMA"
+  },
+  {
+    "cusId": "194542",
+    "cusName": "E2E IAM MA SC TEST"
+  },
+  {
+    "cusId": "425762",
+    "cusName": "E2ECUSA"
+  },
+  {
+    "cusId": "581791",
+    "cusName": "E2ECUSTOMER"
+  },
+  {
+    "cusId": "507382",
+    "cusName": "E2E_TEST_SAMPLE"
+  },
+  {
+    "cusId": "35656",
+    "cusName": "EAST WEST ELECTRONICS- R782"
+  },
+  {
+    "cusId": "43191",
+    "cusName": "EDINBURGH-CFIN-9"
+  },
+  {
+    "cusId": "207083",
+    "cusName": "EDUCOM"
+  },
+  {
+    "cusId": "206060",
+    "cusName": "EFMUK"
+  },
+  {
+    "cusId": "451962",
+    "cusName": "EIJAAS"
+  },
+  {
+    "cusId": "470922",
+    "cusName": "ELIZABETH"
+  },
+  {
+    "cusId": "201981",
+    "cusName": "ERIC"
+  },
+  {
+    "cusId": "199838",
+    "cusName": "ERT"
+  },
+  {
+    "cusId": "226898",
+    "cusName": "ESF LIMITED"
+  },
+  {
+    "cusId": "203770",
+    "cusName": "EXP1"
+  },
+  {
+    "cusId": "203768",
+    "cusName": "EXPEDIOCUST"
+  },
+  {
+    "cusId": "203538",
+    "cusName": "EXPEDIO_TEST_SACHIN"
+  },
+  {
+    "cusId": "550218",
+    "cusName": "EXPFOLDERCREATE"
+  },
+  {
+    "cusId": "550238",
+    "cusName": "EXPFOLDERCREATE1"
+  },
+  {
+    "cusId": "187681",
+    "cusName": "EZHILRP12"
+  },
+  {
+    "cusId": "105390",
+    "cusName": "FARADAY"
+  },
+  {
+    "cusId": "197424",
+    "cusName": "FASD"
+  },
+  {
+    "cusId": "631188",
+    "cusName": "FAST CONV SC01"
+  },
+  {
+    "cusId": "631208",
+    "cusName": "FAST CONV SC02"
+  },
+  {
+    "cusId": "199715",
+    "cusName": "FINALTEST"
+  },
+  {
+    "cusId": "199717",
+    "cusName": "FINALTEST1"
+  },
+  {
+    "cusId": "199720",
+    "cusName": "FINALTEST2"
+  },
+  {
+    "cusId": "43143",
+    "cusName": "FIRE"
+  },
+  {
+    "cusId": "32229",
+    "cusName": "FIREPOND (UK) LIMITED"
+  },
+  {
+    "cusId": "208946",
+    "cusName": "FIRST FOR TRAINING"
+  },
+  {
+    "cusId": "43531",
+    "cusName": "FOX SYSTEMS"
+  },
+  {
+    "cusId": "224552",
+    "cusName": "FREE81725"
+  },
+  {
+    "cusId": "203778",
+    "cusName": "FREEZE"
+  },
+  {
+    "cusId": "200501",
+    "cusName": "FRFRAJ"
+  },
+  {
+    "cusId": "35386",
+    "cusName": "FULL PROOF SYSTEMS"
+  },
+  {
+    "cusId": "35658",
+    "cusName": "GALIOTO CONSULTING-R782"
+  },
+  {
+    "cusId": "232746",
+    "cusName": "GAYA3CUST"
+  },
+  {
+    "cusId": "206762",
+    "cusName": "GENEVAGEORGE"
+  },
+  {
+    "cusId": "206781",
+    "cusName": "GEORGEGENIVA"
+  },
+  {
+    "cusId": "314262",
+    "cusName": "GES_BTUK"
+  },
+  {
+    "cusId": "200177",
+    "cusName": "GET"
+  },
+  {
+    "cusId": "203537",
+    "cusName": "GGG"
+  },
+  {
+    "cusId": "198733",
+    "cusName": "GHUCS_CMP_TEST3"
+  },
+  {
+    "cusId": "200091",
+    "cusName": "GIGA"
+  },
+  {
+    "cusId": "197652",
+    "cusName": "GIRISHBTGS"
+  },
+  {
+    "cusId": "203261",
+    "cusName": "GIRISHIVPN2"
+  },
+  {
+    "cusId": "651868",
+    "cusName": "GLASGOW 2014 LTD"
+  },
+  {
+    "cusId": "206940",
+    "cusName": "GLOBAL"
+  },
+  {
+    "cusId": "40736",
+    "cusName": "GOLDER ASSOCIATES"
+  },
+  {
+    "cusId": "207025",
+    "cusName": "GOLDNEBULA"
+  },
+  {
+    "cusId": "200836",
+    "cusName": "GONY"
+  },
+  {
+    "cusId": "208918",
+    "cusName": "GRAY ENTERPRISES"
+  },
+  {
+    "cusId": "206692",
+    "cusName": "GREECE CUSTOMER"
+  },
+  {
+    "cusId": "619728",
+    "cusName": "GSCE-142074.SC01"
+  },
+  {
+    "cusId": "461582",
+    "cusName": "GSCE108734IFC"
+  },
+  {
+    "cusId": "484582",
+    "cusName": "GSCE108734IFC0201"
+  },
+  {
+    "cusId": "467043",
+    "cusName": "GSCE108734IFC1"
+  },
+  {
+    "cusId": "475062",
+    "cusName": "GSCE108734IFC3"
+  },
+  {
+    "cusId": "475362",
+    "cusName": "GSCE108734NEWCEASE"
+  },
+  {
+    "cusId": "476802",
+    "cusName": "GSCE108734NEWMODIFY"
+  },
+  {
+    "cusId": "690816",
+    "cusName": "GSCE142074BLSC01"
+  },
+  {
+    "cusId": "656828",
+    "cusName": "GSCE142074BULK"
+  },
+  {
+    "cusId": "660468",
+    "cusName": "GSCE142074R37SC002"
+  },
+  {
+    "cusId": "660008",
+    "cusName": "GSCE142074R37SC02"
+  },
+  {
+    "cusId": "619732",
+    "cusName": "GSCE142074SC001"
+  },
+  {
+    "cusId": "619748",
+    "cusName": "GSCE142074SC002"
+  },
+  {
+    "cusId": "624948",
+    "cusName": "GSCE142074SC01"
+  },
+  {
+    "cusId": "619772",
+    "cusName": "GSCE142074SC02"
+  },
+  {
+    "cusId": "625028",
+    "cusName": "GSCE142074SC02L1"
+  },
+  {
+    "cusId": "631089",
+    "cusName": "GSCE142074SC04"
+  },
+  {
+    "cusId": "655948",
+    "cusName": "GSCE142074SC04L1"
+  },
+  {
+    "cusId": "641588",
+    "cusName": "GSCE142074SC3"
+  },
+  {
+    "cusId": "758057",
+    "cusName": "GSCE166987PROVIDE01"
+  },
+  {
+    "cusId": "232300",
+    "cusName": "GSCE55721TC7"
+  },
+  {
+    "cusId": "208181",
+    "cusName": "GSCE57782"
+  },
+  {
+    "cusId": "224126",
+    "cusName": "GSCE82890TC1"
+  },
+  {
+    "cusId": "225732",
+    "cusName": "GSCE82890TC1NEW"
+  },
+  {
+    "cusId": "225891",
+    "cusName": "GSCE82890TC1NEWCUST1210"
+  },
+  {
+    "cusId": "224146",
+    "cusName": "GSCE82890TC2"
+  },
+  {
+    "cusId": "224439",
+    "cusName": "GSCE85294TC1"
+  },
+  {
+    "cusId": "224560",
+    "cusName": "GSCE85294TC2"
+  },
+  {
+    "cusId": "225707",
+    "cusName": "GSCE85294TC3"
+  },
+  {
+    "cusId": "225917",
+    "cusName": "GSCE85294TC3B"
+  },
+  {
+    "cusId": "226027",
+    "cusName": "GSCE85294TC3NEW1810"
+  },
+  {
+    "cusId": "232447",
+    "cusName": "GSCE85315TC5"
+  },
+  {
+    "cusId": "232751",
+    "cusName": "GSCE85315TC5NEW"
+  },
+  {
+    "cusId": "242844",
+    "cusName": "GSCE85697TC1"
+  },
+  {
+    "cusId": "243742",
+    "cusName": "GSCE85697TC1NEW"
+  },
+  {
+    "cusId": "247105",
+    "cusName": "GSCE85697TC2"
+  },
+  {
+    "cusId": "240162",
+    "cusName": "GSCE85717TC1"
+  },
+  {
+    "cusId": "243683",
+    "cusName": "GSCE85717TC1NEW"
+  },
+  {
+    "cusId": "266282",
+    "cusName": "GSCE85717TC1NEW1802"
+  },
+  {
+    "cusId": "232484",
+    "cusName": "GSCE89400TC7"
+  },
+  {
+    "cusId": "232493",
+    "cusName": "GSCE89400TC9"
+  },
+  {
+    "cusId": "232842",
+    "cusName": "GSCE89400TC9NEW"
+  },
+  {
+    "cusId": "257462",
+    "cusName": "GSCE90526A"
+  },
+  {
+    "cusId": "274722",
+    "cusName": "GSUKCUST"
+  },
+  {
+    "cusId": "200839",
+    "cusName": "GTDR"
+  },
+  {
+    "cusId": "734737",
+    "cusName": "GUNJAN"
+  },
+  {
+    "cusId": "206946",
+    "cusName": "GUTS"
+  },
+  {
+    "cusId": "205494",
+    "cusName": "GWGWE"
+  },
+  {
+    "cusId": "202772",
+    "cusName": "GYMSBOND"
+  },
+  {
+    "cusId": "36218",
+    "cusName": "HBOS PLC"
+  },
+  {
+    "cusId": "521682",
+    "cusName": "HCS CUSTOMER R31"
+  },
+  {
+    "cusId": "731837",
+    "cusName": "HCS TEST GANESH"
+  },
+  {
+    "cusId": "526942",
+    "cusName": "HCS-UK_DAVIDSHARPE_CUSTT3"
+  },
+  {
+    "cusId": "525438",
+    "cusName": "HCS32CUST"
+  },
+  {
+    "cusId": "527462",
+    "cusName": "HCSBILLINGINT"
+  },
+  {
+    "cusId": "527463",
+    "cusName": "HCSBILLINGINTER"
+  },
+  {
+    "cusId": "527562",
+    "cusName": "HCSBILLINGINTER1"
+  },
+  {
+    "cusId": "540123",
+    "cusName": "HCSCISCOTEST"
+  },
+  {
+    "cusId": "525742",
+    "cusName": "HCSCON1"
+  },
+  {
+    "cusId": "541823",
+    "cusName": "HCSCUSTENVT3"
+  },
+  {
+    "cusId": "504522",
+    "cusName": "HCSCUSTOMER"
+  },
+  {
+    "cusId": "525531",
+    "cusName": "HCSCUSTOMEROCC"
+  },
+  {
+    "cusId": "525524",
+    "cusName": "HCSDPNSS"
+  },
+  {
+    "cusId": "526566",
+    "cusName": "HCSM2"
+  },
+  {
+    "cusId": "526564",
+    "cusName": "HCSMT1"
+  },
+  {
+    "cusId": "521371",
+    "cusName": "HCSNEGATIVE"
+  },
+  {
+    "cusId": "525842",
+    "cusName": "HCSNEW1"
+  },
+  {
+    "cusId": "526242",
+    "cusName": "HCSNEW2"
+  },
+  {
+    "cusId": "526656",
+    "cusName": "HCSNEWTEST"
+  },
+  {
+    "cusId": "526682",
+    "cusName": "HCSOC1"
+  },
+  {
+    "cusId": "526683",
+    "cusName": "HCSOC2"
+  },
+  {
+    "cusId": "611925",
+    "cusName": "HCSOCCDEMO"
+  },
+  {
+    "cusId": "612716",
+    "cusName": "HCSOCCPAL"
+  },
+  {
+    "cusId": "526671",
+    "cusName": "HCSOCCT3"
+  },
+  {
+    "cusId": "527362",
+    "cusName": "HCSOCCV1"
+  },
+  {
+    "cusId": "525722",
+    "cusName": "HCSR32TST"
+  },
+  {
+    "cusId": "521464",
+    "cusName": "HCSSIPCUST"
+  },
+  {
+    "cusId": "525413",
+    "cusName": "HCST3"
+  },
+  {
+    "cusId": "526142",
+    "cusName": "HCST3CUST"
+  },
+  {
+    "cusId": "526262",
+    "cusName": "HCSTEST"
+  },
+  {
+    "cusId": "526302",
+    "cusName": "HCSTEST1"
+  },
+  {
+    "cusId": "526504",
+    "cusName": "HCSTEST2"
+  },
+  {
+    "cusId": "526532",
+    "cusName": "HCSTEST3"
+  },
+  {
+    "cusId": "526553",
+    "cusName": "HCSTEST4"
+  },
+  {
+    "cusId": "527102",
+    "cusName": "HCSTEST5"
+  },
+  {
+    "cusId": "576473",
+    "cusName": "HCSTESTBCM"
+  },
+  {
+    "cusId": "525451",
+    "cusName": "HCSTRUNK"
+  },
+  {
+    "cusId": "525475",
+    "cusName": "HCSVOIP1"
+  },
+  {
+    "cusId": "525479",
+    "cusName": "HCSVOIP2"
+  },
+  {
+    "cusId": "525518",
+    "cusName": "HCSVOIP3"
+  },
+  {
+    "cusId": "526631",
+    "cusName": "HCSVOIP4"
+  },
+  {
+    "cusId": "525463",
+    "cusName": "HCSVT3"
+  },
+  {
+    "cusId": "525407",
+    "cusName": "HCTESTT3"
+  },
+  {
+    "cusId": "455884",
+    "cusName": "HEPZ12"
+  },
+  {
+    "cusId": "205747",
+    "cusName": "HERTS"
+  },
+  {
+    "cusId": "208885",
+    "cusName": "HH"
+  },
+  {
+    "cusId": "745337",
+    "cusName": "HH2"
+  },
+  {
+    "cusId": "201463",
+    "cusName": "HOSANNA"
+  },
+  {
+    "cusId": "203742",
+    "cusName": "HRITHIK"
+  },
+  {
+    "cusId": "70035",
+    "cusName": "HVPN - IRELAND TEST ACC SC08"
+  },
+  {
+    "cusId": "69904",
+    "cusName": "HVPN RUN3 6. 9 PREPROVIDE"
+  },
+  {
+    "cusId": "69896",
+    "cusName": "HVPN_6. 13PRE"
+  },
+  {
+    "cusId": "69901",
+    "cusName": "HVPN_SC6. 4"
+  },
+  {
+    "cusId": "199956",
+    "cusName": "IFRFCU"
+  },
+  {
+    "cusId": "35620",
+    "cusName": "INDIAN TELECOM"
+  },
+  {
+    "cusId": "206705",
+    "cusName": "INFOTECH"
+  },
+  {
+    "cusId": "227149",
+    "cusName": "INTERNATIONAL PAPER (NETHERLANDS) BV"
+  },
+  {
+    "cusId": "32137",
+    "cusName": "INVESCO UK LIMITED"
+  },
+  {
+    "cusId": "226144",
+    "cusName": "IPSDKCN"
+  },
+  {
+    "cusId": "200347",
+    "cusName": "IPSDKCUST"
+  },
+  {
+    "cusId": "599394",
+    "cusName": "IPSDK_T3_OCC"
+  },
+  {
+    "cusId": "206603",
+    "cusName": "IPSECMID"
+  },
+  {
+    "cusId": "203728",
+    "cusName": "IPSECPRMX"
+  },
+  {
+    "cusId": "200137",
+    "cusName": "IPSECPRTEST"
+  },
+  {
+    "cusId": "200139",
+    "cusName": "IPSECPRTESTV"
+  },
+  {
+    "cusId": "443703",
+    "cusName": "ISDNSUPPORT"
+  },
+  {
+    "cusId": "401523",
+    "cusName": "ITWCUST"
+  },
+  {
+    "cusId": "306222",
+    "cusName": "ITWINTERNAL"
+  },
+  {
+    "cusId": "204588",
+    "cusName": "ITWLAKS"
+  },
+  {
+    "cusId": "200493",
+    "cusName": "ITWTEST"
+  },
+  {
+    "cusId": "52096",
+    "cusName": "IVPN E2E CUSTOMER"
+  },
+  {
+    "cusId": "36221",
+    "cusName": "IVPN E2E CUSTOMER 3"
+  },
+  {
+    "cusId": "35807",
+    "cusName": "IVPN E2E ORT1 UK (PROCESS)"
+  },
+  {
+    "cusId": "199861",
+    "cusName": "IVPN2"
+  },
+  {
+    "cusId": "213540",
+    "cusName": "IVPN2CUST"
+  },
+  {
+    "cusId": "200941",
+    "cusName": "IVPNNET"
+  },
+  {
+    "cusId": "204437",
+    "cusName": "IVPNPR"
+  },
+  {
+    "cusId": "203589",
+    "cusName": "IVPT"
+  },
+  {
+    "cusId": "200576",
+    "cusName": "JASPER"
+  },
+  {
+    "cusId": "43163",
+    "cusName": "JEEVES TRAINERS LIMITED-R892-RUN2"
+  },
+  {
+    "cusId": "43232",
+    "cusName": "JEEVES TRAINERS LIMITED-R892-RUN3"
+  },
+  {
+    "cusId": "330127",
+    "cusName": "JEGA BULK TEST"
+  },
+  {
+    "cusId": "201262",
+    "cusName": "JEGA CLEAN CUSTOMER"
+  },
+  {
+    "cusId": "206725",
+    "cusName": "JEGA MX ORDER"
+  },
+  {
+    "cusId": "197430",
+    "cusName": "JEGA NEW E2E"
+  },
+  {
+    "cusId": "402943",
+    "cusName": "JEGA R27"
+  },
+  {
+    "cusId": "324122",
+    "cusName": "JEGA TEST CUSTOMER"
+  },
+  {
+    "cusId": "225883",
+    "cusName": "JEGA TEST R22"
+  },
+  {
+    "cusId": "483022",
+    "cusName": "JEGAAA"
+  },
+  {
+    "cusId": "200539",
+    "cusName": "JESS"
+  },
+  {
+    "cusId": "200895",
+    "cusName": "JESSICA"
+  },
+  {
+    "cusId": "196140",
+    "cusName": "JOANNA"
+  },
+  {
+    "cusId": "42005",
+    "cusName": "JOHNSONS ENTERPRISE-R891"
+  },
+  {
+    "cusId": "473042",
+    "cusName": "JOSEPH"
+  },
+  {
+    "cusId": "678168",
+    "cusName": "JOSHI"
+  },
+  {
+    "cusId": "200014",
+    "cusName": "JUSTIN"
+  },
+  {
+    "cusId": "200052",
+    "cusName": "JUSTINEC"
+  },
+  {
+    "cusId": "200022",
+    "cusName": "JUSTINEND"
+  },
+  {
+    "cusId": "200021",
+    "cusName": "JUSTINSUB"
+  },
+  {
+    "cusId": "200762",
+    "cusName": "KEERAN"
+  },
+  {
+    "cusId": "200822",
+    "cusName": "KEERAND"
+  },
+  {
+    "cusId": "200765",
+    "cusName": "KEERANEND"
+  },
+  {
+    "cusId": "200764",
+    "cusName": "KEERANSUB"
+  },
+  {
+    "cusId": "197928",
+    "cusName": "KELLY"
+  },
+  {
+    "cusId": "197929",
+    "cusName": "KELLYSUBCP"
+  },
+  {
+    "cusId": "339863",
+    "cusName": "KHUSHBOO_R26_REG"
+  },
+  {
+    "cusId": "205719",
+    "cusName": "KINGZERO"
+  },
+  {
+    "cusId": "454442",
+    "cusName": "KIRUTHIKA123"
+  },
+  {
+    "cusId": "201134",
+    "cusName": "KIZIBIZ"
+  },
+  {
+    "cusId": "208213",
+    "cusName": "KKRAM"
+  },
+  {
+    "cusId": "641688",
+    "cusName": "KNR MBP AD HOC APRIL14 2015"
+  },
+  {
+    "cusId": "199944",
+    "cusName": "LAKPRIYA"
+  },
+  {
+    "cusId": "200116",
+    "cusName": "LAKPRIYATEST"
+  },
+  {
+    "cusId": "199866",
+    "cusName": "LAKPV"
+  },
+  {
+    "cusId": "35160",
+    "cusName": "LAURA ASHLEY BV"
+  },
+  {
+    "cusId": "598631",
+    "cusName": "LAVANYA"
+  },
+  {
+    "cusId": "206133",
+    "cusName": "LEAH"
+  },
+  {
+    "cusId": "207369",
+    "cusName": "LEALORDER"
+  },
+  {
+    "cusId": "208083",
+    "cusName": "LEASED"
+  },
+  {
+    "cusId": "206752",
+    "cusName": "LEASEDCUSTOMER"
+  },
+  {
+    "cusId": "70046",
+    "cusName": "LEASEDLINE CUSTOMERGERMANY"
+  },
+  {
+    "cusId": "69939",
+    "cusName": "LEASEDLINE CUSTOMERGERMANYPP"
+  },
+  {
+    "cusId": "198629",
+    "cusName": "LEEMA"
+  },
+  {
+    "cusId": "210568",
+    "cusName": "LEOPARD"
+  },
+  {
+    "cusId": "199668",
+    "cusName": "LINDCY NEW"
+  },
+  {
+    "cusId": "201898",
+    "cusName": "LINDSY"
+  },
+  {
+    "cusId": "211307",
+    "cusName": "LKSAAI"
+  },
+  {
+    "cusId": "208869",
+    "cusName": "LKSCUTOVER"
+  },
+  {
+    "cusId": "200996",
+    "cusName": "LLDSLVLP"
+  },
+  {
+    "cusId": "200766",
+    "cusName": "LOUIS"
+  },
+  {
+    "cusId": "200571",
+    "cusName": "LPRIYA"
+  },
+  {
+    "cusId": "199910",
+    "cusName": "LPRIYATEST"
+  },
+  {
+    "cusId": "199948",
+    "cusName": "LPV"
+  },
+  {
+    "cusId": "199949",
+    "cusName": "LPVE"
+  },
+  {
+    "cusId": "199879",
+    "cusName": "LPVIPSECTEST"
+  },
+  {
+    "cusId": "745977",
+    "cusName": "LR_TEST"
+  },
+  {
+    "cusId": "200760",
+    "cusName": "LUNAS"
+  },
+  {
+    "cusId": "200763",
+    "cusName": "LUNASEND"
+  },
+  {
+    "cusId": "200761",
+    "cusName": "LUNASSUB"
+  },
+  {
+    "cusId": "200786",
+    "cusName": "LUXPRTEST"
+  },
+  {
+    "cusId": "597771",
+    "cusName": "MADHUKAR"
+  },
+  {
+    "cusId": "35290",
+    "cusName": "MAGENTA NETWORKS"
+  },
+  {
+    "cusId": "35657",
+    "cusName": "MAGENTA NETWORKS-R782-IVPN"
+  },
+  {
+    "cusId": "35743",
+    "cusName": "MAGENTA NETWORKS02"
+  },
+  {
+    "cusId": "199282",
+    "cusName": "MAGHADHEERA"
+  },
+  {
+    "cusId": "466463",
+    "cusName": "MAHABAHU"
+  },
+  {
+    "cusId": "207024",
+    "cusName": "MAHESHPR"
+  },
+  {
+    "cusId": "200918",
+    "cusName": "MAHESHWARI"
+  },
+  {
+    "cusId": "207028",
+    "cusName": "MAHLIF"
+  },
+  {
+    "cusId": "261102",
+    "cusName": "MAMNEWCUST"
+  },
+  {
+    "cusId": "271262",
+    "cusName": "MAMNEWCUST1"
+  },
+  {
+    "cusId": "272062",
+    "cusName": "MAMNEWCUST3"
+  },
+  {
+    "cusId": "187335",
+    "cusName": "MANDRO"
+  },
+  {
+    "cusId": "52040",
+    "cusName": "MANISH_SC10_TEST2"
+  },
+  {
+    "cusId": "52173",
+    "cusName": "MANISH_SC11_TEST1_CUSTOMER"
+  },
+  {
+    "cusId": "52154",
+    "cusName": "MANISH_SC5_TEST1_CUSTOMER"
+  },
+  {
+    "cusId": "207078",
+    "cusName": "MANOJETH"
+  },
+  {
+    "cusId": "197670",
+    "cusName": "MANUG"
+  },
+  {
+    "cusId": "106587",
+    "cusName": "MARKSON"
+  },
+  {
+    "cusId": "472864",
+    "cusName": "MARRY"
+  },
+  {
+    "cusId": "471644",
+    "cusName": "MARUTHI"
+  },
+  {
+    "cusId": "687178",
+    "cusName": "MBP ADDRESS REVALIDATION"
+  },
+  {
+    "cusId": "650628",
+    "cusName": "MBP TEST EVONIK AOD"
+  },
+  {
+    "cusId": "660768",
+    "cusName": "MBP TEST HARNESS"
+  },
+  {
+    "cusId": "663269",
+    "cusName": "MBP TEST HARNESS2"
+  },
+  {
+    "cusId": "655288",
+    "cusName": "MBP TEST THOMSON REUTERS FRANCE SINGLE QUOTE"
+  },
+  {
+    "cusId": "641748",
+    "cusName": "MBP TEST YARA AOD"
+  },
+  {
+    "cusId": "641609",
+    "cusName": "MBP TEST YARA DATA AOD"
+  },
+  {
+    "cusId": "692697",
+    "cusName": "MBPWPP"
+  },
+  {
+    "cusId": "665488",
+    "cusName": "MBP_TEST_CUST"
+  },
+  {
+    "cusId": "204830",
+    "cusName": "MC19PR"
+  },
+  {
+    "cusId": "205196",
+    "cusName": "MC9"
+  },
+  {
+    "cusId": "227484",
+    "cusName": "MELLON BANK INTERNATIONAL"
+  },
+  {
+    "cusId": "32159",
+    "cusName": "MEMEC EUROPE LIMITED(MEMEC)"
+  },
+  {
+    "cusId": "201181",
+    "cusName": "MICAH"
+  },
+  {
+    "cusId": "201287",
+    "cusName": "MILAN"
+  },
+  {
+    "cusId": "205727",
+    "cusName": "MILE"
+  },
+  {
+    "cusId": "203777",
+    "cusName": "MINISTER"
+  },
+  {
+    "cusId": "207872",
+    "cusName": "MISHRA"
+  },
+  {
+    "cusId": "540580",
+    "cusName": "MISSINGCUST"
+  },
+  {
+    "cusId": "201283",
+    "cusName": "MIST"
+  },
+  {
+    "cusId": "199007",
+    "cusName": "MITAMXDIRECT"
+  },
+  {
+    "cusId": "199086",
+    "cusName": "MITAMXPRODIR"
+  },
+  {
+    "cusId": "204516",
+    "cusName": "MITA_45"
+  },
+  {
+    "cusId": "470023",
+    "cusName": "MITTTAL"
+  },
+  {
+    "cusId": "642449",
+    "cusName": "MMM_MICHAELS_TESTCUSTOMER"
+  },
+  {
+    "cusId": "525642",
+    "cusName": "MNCTESTDEV"
+  },
+  {
+    "cusId": "43424",
+    "cusName": "MOD-REGRESSION-21-RUN-1"
+  },
+  {
+    "cusId": "205038",
+    "cusName": "MODSSLVPN"
+  },
+  {
+    "cusId": "36071",
+    "cusName": "MODS_RAHUL"
+  },
+  {
+    "cusId": "207894",
+    "cusName": "MOD_CUS"
+  },
+  {
+    "cusId": "525202",
+    "cusName": "MOLIKU ESR"
+  },
+  {
+    "cusId": "198709",
+    "cusName": "MOTOR"
+  },
+  {
+    "cusId": "32400",
+    "cusName": "MOTOROLA BV"
+  },
+  {
+    "cusId": "69865",
+    "cusName": "MR0906 HVPN APA_CUSTOMER"
+  },
+  {
+    "cusId": "70032",
+    "cusName": "MR0906 REGRESSION MIXED RESIELIENCE-CUSTOMER"
+  },
+  {
+    "cusId": "69937",
+    "cusName": "MR0906 REGRESSION RETEST-CUSTOMER"
+  },
+  {
+    "cusId": "69870",
+    "cusName": "MR0906 REGRESSION TEST-CUSTOMER"
+  },
+  {
+    "cusId": "69882",
+    "cusName": "MR0906 STDETHERNET REG_CUSTOMER"
+  },
+  {
+    "cusId": "196842",
+    "cusName": "MSS1"
+  },
+  {
+    "cusId": "205009",
+    "cusName": "MULTIMX"
+  },
+  {
+    "cusId": "204606",
+    "cusName": "MULTISSLVPN"
+  },
+  {
+    "cusId": "204168",
+    "cusName": "MX1213PR"
+  },
+  {
+    "cusId": "619745",
+    "cusName": "MX160160TC4"
+  },
+  {
+    "cusId": "209692",
+    "cusName": "MX19TEST"
+  },
+  {
+    "cusId": "390284",
+    "cusName": "MX58324TC1B"
+  },
+  {
+    "cusId": "402122",
+    "cusName": "MX81266TC1B"
+  },
+  {
+    "cusId": "234362",
+    "cusName": "MX85315TC5NEWTEST"
+  },
+  {
+    "cusId": "287062",
+    "cusName": "MX853281403"
+  },
+  {
+    "cusId": "278082",
+    "cusName": "MX857170403"
+  },
+  {
+    "cusId": "271182",
+    "cusName": "MX857172202"
+  },
+  {
+    "cusId": "248122",
+    "cusName": "MX85717TC12901"
+  },
+  {
+    "cusId": "260782",
+    "cusName": "MX85717TC1NEW1302"
+  },
+  {
+    "cusId": "249025",
+    "cusName": "MX85717TC23001"
+  },
+  {
+    "cusId": "205452",
+    "cusName": "MX88"
+  },
+  {
+    "cusId": "232511",
+    "cusName": "MX89400TC10"
+  },
+  {
+    "cusId": "273982",
+    "cusName": "MX89400TC5"
+  },
+  {
+    "cusId": "207122",
+    "cusName": "MXADSYNC"
+  },
+  {
+    "cusId": "515164",
+    "cusName": "MXALLFEATURES"
+  },
+  {
+    "cusId": "208023",
+    "cusName": "MXAONE"
+  },
+  {
+    "cusId": "205763",
+    "cusName": "MXBILLING_0811"
+  },
+  {
+    "cusId": "204405",
+    "cusName": "MXCIT1209"
+  },
+  {
+    "cusId": "204515",
+    "cusName": "MXCIT1509"
+  },
+  {
+    "cusId": "205533",
+    "cusName": "MXCITT3T18"
+  },
+  {
+    "cusId": "204362",
+    "cusName": "MXCITTEST"
+  },
+  {
+    "cusId": "204294",
+    "cusName": "MXCIT_0809"
+  },
+  {
+    "cusId": "204517",
+    "cusName": "MXCIT_1509"
+  },
+  {
+    "cusId": "204341",
+    "cusName": "MXCIT_C42.3"
+  },
+  {
+    "cusId": "204310",
+    "cusName": "MXCIT_C42.4"
+  },
+  {
+    "cusId": "204312",
+    "cusName": "MXCIT_C42.5"
+  },
+  {
+    "cusId": "204318",
+    "cusName": "MXCIT_C51.1"
+  },
+  {
+    "cusId": "204329",
+    "cusName": "MXCIT_C51.8"
+  },
+  {
+    "cusId": "286543",
+    "cusName": "MXDEMO1403"
+  },
+  {
+    "cusId": "203056",
+    "cusName": "MXDEMPPR1"
+  },
+  {
+    "cusId": "199373",
+    "cusName": "MXDIR0902"
+  },
+  {
+    "cusId": "199606",
+    "cusName": "MXDIR1602"
+  },
+  {
+    "cusId": "204114",
+    "cusName": "MXDIRCUST2507"
+  },
+  {
+    "cusId": "199388",
+    "cusName": "MXDIRECT"
+  },
+  {
+    "cusId": "199863",
+    "cusName": "MXDIRECT02232011"
+  },
+  {
+    "cusId": "199897",
+    "cusName": "MXDIRECT022411"
+  },
+  {
+    "cusId": "199903",
+    "cusName": "MXDIRECT02242011"
+  },
+  {
+    "cusId": "199904",
+    "cusName": "MXDIRECT124022011"
+  },
+  {
+    "cusId": "199790",
+    "cusName": "MXDIRECT20110221"
+  },
+  {
+    "cusId": "199857",
+    "cusName": "MXDIRECT23022011"
+  },
+  {
+    "cusId": "199878",
+    "cusName": "MXDIRECT24022011"
+  },
+  {
+    "cusId": "199050",
+    "cusName": "MXDIRECTCUST"
+  },
+  {
+    "cusId": "199511",
+    "cusName": "MXDIRECTCUST1_1402"
+  },
+  {
+    "cusId": "200089",
+    "cusName": "MXDIRECT_0303"
+  },
+  {
+    "cusId": "200126",
+    "cusName": "MXDIRECT_0403"
+  },
+  {
+    "cusId": "200138",
+    "cusName": "MXDIRECT_04032011"
+  },
+  {
+    "cusId": "199807",
+    "cusName": "MXDIRECT_11_2202"
+  },
+  {
+    "cusId": "199813",
+    "cusName": "MXDIRECT_12_2202"
+  },
+  {
+    "cusId": "199509",
+    "cusName": "MXDIRECT_1402"
+  },
+  {
+    "cusId": "199578",
+    "cusName": "MXDIRECT_1502"
+  },
+  {
+    "cusId": "199656",
+    "cusName": "MXDIRECT_1702"
+  },
+  {
+    "cusId": "199679",
+    "cusName": "MXDIRECT_1802"
+  },
+  {
+    "cusId": "199806",
+    "cusName": "MXDIRECT_1_2202"
+  },
+  {
+    "cusId": "199759",
+    "cusName": "MXDIRECT_2102"
+  },
+  {
+    "cusId": "199802",
+    "cusName": "MXDIRECT_2202"
+  },
+  {
+    "cusId": "199810",
+    "cusName": "MXDIRECT_22_2202"
+  },
+  {
+    "cusId": "199844",
+    "cusName": "MXDIRECT_2302"
+  },
+  {
+    "cusId": "199011",
+    "cusName": "MXDIRMITA"
+  },
+  {
+    "cusId": "199376",
+    "cusName": "MXDIRTRAIL2"
+  },
+  {
+    "cusId": "204103",
+    "cusName": "MXDIR_2407"
+  },
+  {
+    "cusId": "204116",
+    "cusName": "MXDIR_2508"
+  },
+  {
+    "cusId": "204151",
+    "cusName": "MXDIR_2908"
+  },
+  {
+    "cusId": "202633",
+    "cusName": "MXEXEX1"
+  },
+  {
+    "cusId": "207041",
+    "cusName": "MXFUNCTC13"
+  },
+  {
+    "cusId": "207066",
+    "cusName": "MXFUNCTC2"
+  },
+  {
+    "cusId": "205786",
+    "cusName": "MXGGPSI_0911"
+  },
+  {
+    "cusId": "264402",
+    "cusName": "MXGSCE85328TC31502"
+  },
+  {
+    "cusId": "266763",
+    "cusName": "MXGSCE85328TC3NEW1802"
+  },
+  {
+    "cusId": "247345",
+    "cusName": "MXGSCE85717TC1"
+  },
+  {
+    "cusId": "203298",
+    "cusName": "MXLSSVPN"
+  },
+  {
+    "cusId": "208021",
+    "cusName": "MXORDER1"
+  },
+  {
+    "cusId": "309802",
+    "cusName": "MXOTIC10APR2013123718"
+  },
+  {
+    "cusId": "309862",
+    "cusName": "MXOTIC10APR2013131422"
+  },
+  {
+    "cusId": "309943",
+    "cusName": "MXOTIC10APR2013140611"
+  },
+  {
+    "cusId": "310222",
+    "cusName": "MXOTIC10APR2013162438"
+  },
+  {
+    "cusId": "257602",
+    "cusName": "MXOTIC10FEB2013030244"
+  },
+  {
+    "cusId": "257604",
+    "cusName": "MXOTIC10FEB2013032424"
+  },
+  {
+    "cusId": "257605",
+    "cusName": "MXOTIC10FEB2013033440"
+  },
+  {
+    "cusId": "257625",
+    "cusName": "MXOTIC10FEB2013040549"
+  },
+  {
+    "cusId": "236165",
+    "cusName": "MXOTIC10JAN2013040553"
+  },
+  {
+    "cusId": "236182",
+    "cusName": "MXOTIC10JAN2013041714"
+  },
+  {
+    "cusId": "236202",
+    "cusName": "MXOTIC10JAN2013043043"
+  },
+  {
+    "cusId": "236205",
+    "cusName": "MXOTIC10JAN201305135"
+  },
+  {
+    "cusId": "236526",
+    "cusName": "MXOTIC10JAN201315159"
+  },
+  {
+    "cusId": "236528",
+    "cusName": "MXOTIC10JAN2013154536"
+  },
+  {
+    "cusId": "236603",
+    "cusName": "MXOTIC10JAN2013163748"
+  },
+  {
+    "cusId": "283063",
+    "cusName": "MXOTIC10MAR201303063"
+  },
+  {
+    "cusId": "283065",
+    "cusName": "MXOTIC10MAR2013031330"
+  },
+  {
+    "cusId": "283066",
+    "cusName": "MXOTIC10MAR2013032442"
+  },
+  {
+    "cusId": "436633",
+    "cusName": "MXOTIC10OCT2013184431"
+  },
+  {
+    "cusId": "417502",
+    "cusName": "MXOTIC10SEP2013112837"
+  },
+  {
+    "cusId": "417562",
+    "cusName": "MXOTIC10SEP2013121429"
+  },
+  {
+    "cusId": "417602",
+    "cusName": "MXOTIC10SEP201313008"
+  },
+  {
+    "cusId": "257902",
+    "cusName": "MXOTIC11FEB2013030327"
+  },
+  {
+    "cusId": "257904",
+    "cusName": "MXOTIC11FEB2013032453"
+  },
+  {
+    "cusId": "257905",
+    "cusName": "MXOTIC11FEB201303358"
+  },
+  {
+    "cusId": "257925",
+    "cusName": "MXOTIC11FEB2013040610"
+  },
+  {
+    "cusId": "236844",
+    "cusName": "MXOTIC11JAN201303228"
+  },
+  {
+    "cusId": "236846",
+    "cusName": "MXOTIC11JAN2013034128"
+  },
+  {
+    "cusId": "237042",
+    "cusName": "MXOTIC11JAN2013124841"
+  },
+  {
+    "cusId": "283682",
+    "cusName": "MXOTIC11MAR2013121148"
+  },
+  {
+    "cusId": "283722",
+    "cusName": "MXOTIC11MAR2013123814"
+  },
+  {
+    "cusId": "442693",
+    "cusName": "MXOTIC11NOV201304102"
+  },
+  {
+    "cusId": "442695",
+    "cusName": "MXOTIC11NOV2013045423"
+  },
+  {
+    "cusId": "442696",
+    "cusName": "MXOTIC11NOV201305380"
+  },
+  {
+    "cusId": "436694",
+    "cusName": "MXOTIC11OCT2013105221"
+  },
+  {
+    "cusId": "436701",
+    "cusName": "MXOTIC11OCT2013113944"
+  },
+  {
+    "cusId": "436715",
+    "cusName": "MXOTIC11OCT2013120737"
+  },
+  {
+    "cusId": "436725",
+    "cusName": "MXOTIC11OCT2013124019"
+  },
+  {
+    "cusId": "436741",
+    "cusName": "MXOTIC11OCT2013154658"
+  },
+  {
+    "cusId": "436745",
+    "cusName": "MXOTIC11OCT201317027"
+  },
+  {
+    "cusId": "418622",
+    "cusName": "MXOTIC11SEP201304315"
+  },
+  {
+    "cusId": "418644",
+    "cusName": "MXOTIC11SEP201305162"
+  },
+  {
+    "cusId": "418662",
+    "cusName": "MXOTIC11SEP2013060046"
+  },
+  {
+    "cusId": "311546",
+    "cusName": "MXOTIC12APR2013101034"
+  },
+  {
+    "cusId": "311842",
+    "cusName": "MXOTIC12APR2013132853"
+  },
+  {
+    "cusId": "311942",
+    "cusName": "MXOTIC12APR201314443"
+  },
+  {
+    "cusId": "259142",
+    "cusName": "MXOTIC12FEB2013030241"
+  },
+  {
+    "cusId": "259144",
+    "cusName": "MXOTIC12FEB2013032354"
+  },
+  {
+    "cusId": "259202",
+    "cusName": "MXOTIC12FEB2013035612"
+  },
+  {
+    "cusId": "259603",
+    "cusName": "MXOTIC12FEB2013124323"
+  },
+  {
+    "cusId": "259802",
+    "cusName": "MXOTIC12FEB2013144951"
+  },
+  {
+    "cusId": "259862",
+    "cusName": "MXOTIC12FEB2013151340"
+  },
+  {
+    "cusId": "259902",
+    "cusName": "MXOTIC12FEB2013152257"
+  },
+  {
+    "cusId": "259922",
+    "cusName": "MXOTIC12FEB2013152719"
+  },
+  {
+    "cusId": "259942",
+    "cusName": "MXOTIC12FEB2013153237"
+  },
+  {
+    "cusId": "260002",
+    "cusName": "MXOTIC12FEB2013154744"
+  },
+  {
+    "cusId": "260023",
+    "cusName": "MXOTIC12FEB201315554"
+  },
+  {
+    "cusId": "260084",
+    "cusName": "MXOTIC12FEB2013161427"
+  },
+  {
+    "cusId": "260103",
+    "cusName": "MXOTIC12FEB2013162125"
+  },
+  {
+    "cusId": "260322",
+    "cusName": "MXOTIC12FEB2013175025"
+  },
+  {
+    "cusId": "260342",
+    "cusName": "MXOTIC12FEB2013175916"
+  },
+  {
+    "cusId": "237323",
+    "cusName": "MXOTIC12JAN2013052040"
+  },
+  {
+    "cusId": "237326",
+    "cusName": "MXOTIC12JAN201306170"
+  },
+  {
+    "cusId": "284482",
+    "cusName": "MXOTIC12MAR2013044335"
+  },
+  {
+    "cusId": "284502",
+    "cusName": "MXOTIC12MAR2013051935"
+  },
+  {
+    "cusId": "443003",
+    "cusName": "MXOTIC12NOV201304038"
+  },
+  {
+    "cusId": "443042",
+    "cusName": "MXOTIC12NOV2013044812"
+  },
+  {
+    "cusId": "443062",
+    "cusName": "MXOTIC12NOV2013053159"
+  },
+  {
+    "cusId": "420723",
+    "cusName": "MXOTIC12SEP2013153241"
+  },
+  {
+    "cusId": "260564",
+    "cusName": "MXOTIC13FEB2013030252"
+  },
+  {
+    "cusId": "260602",
+    "cusName": "MXOTIC13FEB2013035020"
+  },
+  {
+    "cusId": "260606",
+    "cusName": "MXOTIC13FEB2013044926"
+  },
+  {
+    "cusId": "237683",
+    "cusName": "MXOTIC13JAN2013051517"
+  },
+  {
+    "cusId": "237702",
+    "cusName": "MXOTIC13JAN2013062748"
+  },
+  {
+    "cusId": "237722",
+    "cusName": "MXOTIC13JAN2013070113"
+  },
+  {
+    "cusId": "237762",
+    "cusName": "MXOTIC13JAN2013084158"
+  },
+  {
+    "cusId": "284962",
+    "cusName": "MXOTIC13MAR2013043821"
+  },
+  {
+    "cusId": "284984",
+    "cusName": "MXOTIC13MAR2013054425"
+  },
+  {
+    "cusId": "285202",
+    "cusName": "MXOTIC13MAR2013114248"
+  },
+  {
+    "cusId": "285262",
+    "cusName": "MXOTIC13MAR2013121745"
+  },
+  {
+    "cusId": "285462",
+    "cusName": "MXOTIC13MAR201315018"
+  },
+  {
+    "cusId": "285542",
+    "cusName": "MXOTIC13MAR201315431"
+  },
+  {
+    "cusId": "443565",
+    "cusName": "MXOTIC13NOV2013041021"
+  },
+  {
+    "cusId": "443582",
+    "cusName": "MXOTIC13NOV201304548"
+  },
+  {
+    "cusId": "443603",
+    "cusName": "MXOTIC13NOV201305379"
+  },
+  {
+    "cusId": "421162",
+    "cusName": "MXOTIC13SEP2013032728"
+  },
+  {
+    "cusId": "421182",
+    "cusName": "MXOTIC13SEP2013034945"
+  },
+  {
+    "cusId": "421202",
+    "cusName": "MXOTIC13SEP201304115"
+  },
+  {
+    "cusId": "261865",
+    "cusName": "MXOTIC14FEB2013030229"
+  },
+  {
+    "cusId": "261866",
+    "cusName": "MXOTIC14FEB2013031342"
+  },
+  {
+    "cusId": "261867",
+    "cusName": "MXOTIC14FEB2013032226"
+  },
+  {
+    "cusId": "261882",
+    "cusName": "MXOTIC14FEB201303402"
+  },
+  {
+    "cusId": "262202",
+    "cusName": "MXOTIC14FEB2013111922"
+  },
+  {
+    "cusId": "262242",
+    "cusName": "MXOTIC14FEB2013114031"
+  },
+  {
+    "cusId": "262325",
+    "cusName": "MXOTIC14FEB2013120046"
+  },
+  {
+    "cusId": "263002",
+    "cusName": "MXOTIC14FEB2013163616"
+  },
+  {
+    "cusId": "238042",
+    "cusName": "MXOTIC14JAN2013051411"
+  },
+  {
+    "cusId": "238082",
+    "cusName": "MXOTIC14JAN2013062636"
+  },
+  {
+    "cusId": "238102",
+    "cusName": "MXOTIC14JAN2013065953"
+  },
+  {
+    "cusId": "238162",
+    "cusName": "MXOTIC14JAN2013083238"
+  },
+  {
+    "cusId": "286142",
+    "cusName": "MXOTIC14MAR2013035057"
+  },
+  {
+    "cusId": "286143",
+    "cusName": "MXOTIC14MAR2013035947"
+  },
+  {
+    "cusId": "286182",
+    "cusName": "MXOTIC14MAR2013044156"
+  },
+  {
+    "cusId": "286522",
+    "cusName": "MXOTIC14MAR2013105945"
+  },
+  {
+    "cusId": "286703",
+    "cusName": "MXOTIC14MAR2013122041"
+  },
+  {
+    "cusId": "286882",
+    "cusName": "MXOTIC14MAR2013144722"
+  },
+  {
+    "cusId": "286942",
+    "cusName": "MXOTIC14MAR2013150929"
+  },
+  {
+    "cusId": "287082",
+    "cusName": "MXOTIC14MAR2013162142"
+  },
+  {
+    "cusId": "444305",
+    "cusName": "MXOTIC14NOV2013033739"
+  },
+  {
+    "cusId": "444325",
+    "cusName": "MXOTIC14NOV2013042421"
+  },
+  {
+    "cusId": "444342",
+    "cusName": "MXOTIC14NOV2013050915"
+  },
+  {
+    "cusId": "313482",
+    "cusName": "MXOTIC15APR2013111146"
+  },
+  {
+    "cusId": "313582",
+    "cusName": "MXOTIC15APR2013120136"
+  },
+  {
+    "cusId": "313782",
+    "cusName": "MXOTIC15APR2013134013"
+  },
+  {
+    "cusId": "263662",
+    "cusName": "MXOTIC15FEB2013044529"
+  },
+  {
+    "cusId": "263682",
+    "cusName": "MXOTIC15FEB2013050826"
+  },
+  {
+    "cusId": "263683",
+    "cusName": "MXOTIC15FEB2013052925"
+  },
+  {
+    "cusId": "238582",
+    "cusName": "MXOTIC15JAN2013051856"
+  },
+  {
+    "cusId": "238622",
+    "cusName": "MXOTIC15JAN201306347"
+  },
+  {
+    "cusId": "238623",
+    "cusName": "MXOTIC15JAN2013070752"
+  },
+  {
+    "cusId": "238642",
+    "cusName": "MXOTIC15JAN2013085032"
+  },
+  {
+    "cusId": "287542",
+    "cusName": "MXOTIC15MAR2013034311"
+  },
+  {
+    "cusId": "287582",
+    "cusName": "MXOTIC15MAR2013042429"
+  },
+  {
+    "cusId": "287762",
+    "cusName": "MXOTIC15MAR2013105024"
+  },
+  {
+    "cusId": "287782",
+    "cusName": "MXOTIC15MAR2013110242"
+  },
+  {
+    "cusId": "287882",
+    "cusName": "MXOTIC15MAR2013121132"
+  },
+  {
+    "cusId": "445485",
+    "cusName": "MXOTIC15NOV2013032911"
+  },
+  {
+    "cusId": "445505",
+    "cusName": "MXOTIC15NOV201304178"
+  },
+  {
+    "cusId": "445522",
+    "cusName": "MXOTIC15NOV201305019"
+  },
+  {
+    "cusId": "437019",
+    "cusName": "MXOTIC15OCT2013095031"
+  },
+  {
+    "cusId": "437038",
+    "cusName": "MXOTIC15OCT201315242"
+  },
+  {
+    "cusId": "437041",
+    "cusName": "MXOTIC15OCT2013155649"
+  },
+  {
+    "cusId": "437042",
+    "cusName": "MXOTIC15OCT2013161539"
+  },
+  {
+    "cusId": "314482",
+    "cusName": "MXOTIC16APR2013033129"
+  },
+  {
+    "cusId": "314502",
+    "cusName": "MXOTIC16APR2013040818"
+  },
+  {
+    "cusId": "314503",
+    "cusName": "MXOTIC16APR2013042140"
+  },
+  {
+    "cusId": "314544",
+    "cusName": "MXOTIC16APR2013064114"
+  },
+  {
+    "cusId": "314703",
+    "cusName": "MXOTIC16APR2013120153"
+  },
+  {
+    "cusId": "314725",
+    "cusName": "MXOTIC16APR201312152"
+  },
+  {
+    "cusId": "314882",
+    "cusName": "MXOTIC16APR201313276"
+  },
+  {
+    "cusId": "315143",
+    "cusName": "MXOTIC16APR2013152540"
+  },
+  {
+    "cusId": "265542",
+    "cusName": "MXOTIC16FEB2013053245"
+  },
+  {
+    "cusId": "265562",
+    "cusName": "MXOTIC16FEB2013055318"
+  },
+  {
+    "cusId": "288822",
+    "cusName": "MXOTIC16MAR2013042847"
+  },
+  {
+    "cusId": "288842",
+    "cusName": "MXOTIC16MAR2013050441"
+  },
+  {
+    "cusId": "288942",
+    "cusName": "MXOTIC16MAR2013061449"
+  },
+  {
+    "cusId": "437063",
+    "cusName": "MXOTIC16OCT2013031657"
+  },
+  {
+    "cusId": "437064",
+    "cusName": "MXOTIC16OCT2013033015"
+  },
+  {
+    "cusId": "437065",
+    "cusName": "MXOTIC16OCT2013034932"
+  },
+  {
+    "cusId": "437077",
+    "cusName": "MXOTIC16OCT2013102553"
+  },
+  {
+    "cusId": "437078",
+    "cusName": "MXOTIC16OCT2013103938"
+  },
+  {
+    "cusId": "437124",
+    "cusName": "MXOTIC16OCT2013150925"
+  },
+  {
+    "cusId": "315682",
+    "cusName": "MXOTIC17APR2013033124"
+  },
+  {
+    "cusId": "315702",
+    "cusName": "MXOTIC17APR2013034211"
+  },
+  {
+    "cusId": "315704",
+    "cusName": "MXOTIC17APR2013040316"
+  },
+  {
+    "cusId": "315707",
+    "cusName": "MXOTIC17APR2013043548"
+  },
+  {
+    "cusId": "437203",
+    "cusName": "MXOTIC17OCT201303179"
+  },
+  {
+    "cusId": "437204",
+    "cusName": "MXOTIC17OCT2013035548"
+  },
+  {
+    "cusId": "437208",
+    "cusName": "MXOTIC17OCT2013043128"
+  },
+  {
+    "cusId": "437234",
+    "cusName": "MXOTIC17OCT2013124416"
+  },
+  {
+    "cusId": "316742",
+    "cusName": "MXOTIC18APR2013104214"
+  },
+  {
+    "cusId": "316764",
+    "cusName": "MXOTIC18APR2013105252"
+  },
+  {
+    "cusId": "316782",
+    "cusName": "MXOTIC18APR2013110353"
+  },
+  {
+    "cusId": "316883",
+    "cusName": "MXOTIC18APR2013120933"
+  },
+  {
+    "cusId": "240202",
+    "cusName": "MXOTIC18JAN2013124512"
+  },
+  {
+    "cusId": "289582",
+    "cusName": "MXOTIC18MAR201304160"
+  },
+  {
+    "cusId": "289622",
+    "cusName": "MXOTIC18MAR2013114858"
+  },
+  {
+    "cusId": "289662",
+    "cusName": "MXOTIC18MAR2013120245"
+  },
+  {
+    "cusId": "289963",
+    "cusName": "MXOTIC18MAR2013153858"
+  },
+  {
+    "cusId": "289982",
+    "cusName": "MXOTIC18MAR2013155224"
+  },
+  {
+    "cusId": "447022",
+    "cusName": "MXOTIC18NOV2013035424"
+  },
+  {
+    "cusId": "447028",
+    "cusName": "MXOTIC18NOV2013043318"
+  },
+  {
+    "cusId": "437384",
+    "cusName": "MXOTIC18OCT2013143841"
+  },
+  {
+    "cusId": "437390",
+    "cusName": "MXOTIC18OCT201315307"
+  },
+  {
+    "cusId": "437397",
+    "cusName": "MXOTIC18OCT201316238"
+  },
+  {
+    "cusId": "317682",
+    "cusName": "MXOTIC19APR2013100152"
+  },
+  {
+    "cusId": "267222",
+    "cusName": "MXOTIC19FEB2013050321"
+  },
+  {
+    "cusId": "267242",
+    "cusName": "MXOTIC19FEB2013052330"
+  },
+  {
+    "cusId": "267262",
+    "cusName": "MXOTIC19FEB2013054330"
+  },
+  {
+    "cusId": "240662",
+    "cusName": "MXOTIC19JAN2013051210"
+  },
+  {
+    "cusId": "240702",
+    "cusName": "MXOTIC19JAN2013062933"
+  },
+  {
+    "cusId": "240722",
+    "cusName": "MXOTIC19JAN2013070720"
+  },
+  {
+    "cusId": "240782",
+    "cusName": "MXOTIC19JAN2013085834"
+  },
+  {
+    "cusId": "290202",
+    "cusName": "MXOTIC19MAR2013044138"
+  },
+  {
+    "cusId": "290222",
+    "cusName": "MXOTIC19MAR2013051637"
+  },
+  {
+    "cusId": "290262",
+    "cusName": "MXOTIC19MAR2013063554"
+  },
+  {
+    "cusId": "447542",
+    "cusName": "MXOTIC19NOV2013033351"
+  },
+  {
+    "cusId": "447565",
+    "cusName": "MXOTIC19NOV2013041938"
+  },
+  {
+    "cusId": "447566",
+    "cusName": "MXOTIC19NOV201304269"
+  },
+  {
+    "cusId": "300782",
+    "cusName": "MXOTIC1APR2013034345"
+  },
+  {
+    "cusId": "300802",
+    "cusName": "MXOTIC1APR2013045918"
+  },
+  {
+    "cusId": "300942",
+    "cusName": "MXOTIC1APR2013075549"
+  },
+  {
+    "cusId": "250482",
+    "cusName": "MXOTIC1FEB2013030250"
+  },
+  {
+    "cusId": "250522",
+    "cusName": "MXOTIC1FEB2013042345"
+  },
+  {
+    "cusId": "250542",
+    "cusName": "MXOTIC1FEB2013050225"
+  },
+  {
+    "cusId": "250563",
+    "cusName": "MXOTIC1FEB2013054850"
+  },
+  {
+    "cusId": "275964",
+    "cusName": "MXOTIC1MAR201304146"
+  },
+  {
+    "cusId": "275982",
+    "cusName": "MXOTIC1MAR2013043740"
+  },
+  {
+    "cusId": "276002",
+    "cusName": "MXOTIC1MAR2013053553"
+  },
+  {
+    "cusId": "276082",
+    "cusName": "MXOTIC1MAR2013083040"
+  },
+  {
+    "cusId": "438949",
+    "cusName": "MXOTIC1NOV2013031641"
+  },
+  {
+    "cusId": "438954",
+    "cusName": "MXOTIC1NOV2013041121"
+  },
+  {
+    "cusId": "438957",
+    "cusName": "MXOTIC1NOV2013050237"
+  },
+  {
+    "cusId": "268503",
+    "cusName": "MXOTIC20FEB2013052129"
+  },
+  {
+    "cusId": "268504",
+    "cusName": "MXOTIC20FEB2013054233"
+  },
+  {
+    "cusId": "241024",
+    "cusName": "MXOTIC20JAN2013053017"
+  },
+  {
+    "cusId": "241044",
+    "cusName": "MXOTIC20JAN2013061813"
+  },
+  {
+    "cusId": "241103",
+    "cusName": "MXOTIC20JAN2013080820"
+  },
+  {
+    "cusId": "290842",
+    "cusName": "MXOTIC20MAR201311319"
+  },
+  {
+    "cusId": "290862",
+    "cusName": "MXOTIC20MAR201311423"
+  },
+  {
+    "cusId": "290963",
+    "cusName": "MXOTIC20MAR2013122543"
+  },
+  {
+    "cusId": "448205",
+    "cusName": "MXOTIC20NOV201303305"
+  },
+  {
+    "cusId": "269702",
+    "cusName": "MXOTIC21FEB2013053741"
+  },
+  {
+    "cusId": "269722",
+    "cusName": "MXOTIC21FEB2013055831"
+  },
+  {
+    "cusId": "241422",
+    "cusName": "MXOTIC21JAN2013053043"
+  },
+  {
+    "cusId": "241462",
+    "cusName": "MXOTIC21JAN2013064712"
+  },
+  {
+    "cusId": "241503",
+    "cusName": "MXOTIC21JAN201308137"
+  },
+  {
+    "cusId": "292024",
+    "cusName": "MXOTIC21MAR2013112816"
+  },
+  {
+    "cusId": "292043",
+    "cusName": "MXOTIC21MAR2013113931"
+  },
+  {
+    "cusId": "292142",
+    "cusName": "MXOTIC21MAR201312230"
+  },
+  {
+    "cusId": "292163",
+    "cusName": "MXOTIC21MAR2013123344"
+  },
+  {
+    "cusId": "448906",
+    "cusName": "MXOTIC21NOV2013032831"
+  },
+  {
+    "cusId": "448925",
+    "cusName": "MXOTIC21NOV2013041625"
+  },
+  {
+    "cusId": "448943",
+    "cusName": "MXOTIC21NOV2013050134"
+  },
+  {
+    "cusId": "437575",
+    "cusName": "MXOTIC21OCT2013031739"
+  },
+  {
+    "cusId": "437578",
+    "cusName": "MXOTIC21OCT2013033743"
+  },
+  {
+    "cusId": "437579",
+    "cusName": "MXOTIC21OCT201304000"
+  },
+  {
+    "cusId": "437629",
+    "cusName": "MXOTIC21OCT201314302"
+  },
+  {
+    "cusId": "437637",
+    "cusName": "MXOTIC21OCT2013152142"
+  },
+  {
+    "cusId": "437645",
+    "cusName": "MXOTIC21OCT201316126"
+  },
+  {
+    "cusId": "270942",
+    "cusName": "MXOTIC22FEB201305084"
+  },
+  {
+    "cusId": "270962",
+    "cusName": "MXOTIC22FEB2013053117"
+  },
+  {
+    "cusId": "270982",
+    "cusName": "MXOTIC22FEB2013055213"
+  },
+  {
+    "cusId": "242544",
+    "cusName": "MXOTIC22JAN2013053510"
+  },
+  {
+    "cusId": "242562",
+    "cusName": "MXOTIC22JAN201306348"
+  },
+  {
+    "cusId": "242703",
+    "cusName": "MXOTIC22JAN2013103325"
+  },
+  {
+    "cusId": "293482",
+    "cusName": "MXOTIC22MAR2013153112"
+  },
+  {
+    "cusId": "293662",
+    "cusName": "MXOTIC22MAR2013162738"
+  },
+  {
+    "cusId": "293743",
+    "cusName": "MXOTIC22MAR2013164918"
+  },
+  {
+    "cusId": "293763",
+    "cusName": "MXOTIC22MAR2013170016"
+  },
+  {
+    "cusId": "449685",
+    "cusName": "MXOTIC22NOV201304100"
+  },
+  {
+    "cusId": "449702",
+    "cusName": "MXOTIC22NOV2013045412"
+  },
+  {
+    "cusId": "449722",
+    "cusName": "MXOTIC22NOV2013053834"
+  },
+  {
+    "cusId": "271862",
+    "cusName": "MXOTIC23FEB2013051132"
+  },
+  {
+    "cusId": "271863",
+    "cusName": "MXOTIC23FEB2013052244"
+  },
+  {
+    "cusId": "271882",
+    "cusName": "MXOTIC23FEB201305445"
+  },
+  {
+    "cusId": "243582",
+    "cusName": "MXOTIC23JAN2013050316"
+  },
+  {
+    "cusId": "243604",
+    "cusName": "MXOTIC23JAN2013060538"
+  },
+  {
+    "cusId": "243623",
+    "cusName": "MXOTIC23JAN2013071652"
+  },
+  {
+    "cusId": "437863",
+    "cusName": "MXOTIC23OCT201303176"
+  },
+  {
+    "cusId": "437864",
+    "cusName": "MXOTIC23OCT2013033721"
+  },
+  {
+    "cusId": "437867",
+    "cusName": "MXOTIC23OCT2013042956"
+  },
+  {
+    "cusId": "272262",
+    "cusName": "MXOTIC24FEB2013044635"
+  },
+  {
+    "cusId": "272282",
+    "cusName": "MXOTIC24FEB2013051028"
+  },
+  {
+    "cusId": "272302",
+    "cusName": "MXOTIC24FEB201305316"
+  },
+  {
+    "cusId": "272322",
+    "cusName": "MXOTIC24FEB2013055211"
+  },
+  {
+    "cusId": "244662",
+    "cusName": "MXOTIC24JAN2013052331"
+  },
+  {
+    "cusId": "244702",
+    "cusName": "MXOTIC24JAN2013063711"
+  },
+  {
+    "cusId": "244722",
+    "cusName": "MXOTIC24JAN2013071036"
+  },
+  {
+    "cusId": "244803",
+    "cusName": "MXOTIC24JAN2013085230"
+  },
+  {
+    "cusId": "437997",
+    "cusName": "MXOTIC24OCT2013031647"
+  },
+  {
+    "cusId": "438000",
+    "cusName": "MXOTIC24OCT2013041139"
+  },
+  {
+    "cusId": "272662",
+    "cusName": "MXOTIC25FEB2013044636"
+  },
+  {
+    "cusId": "272682",
+    "cusName": "MXOTIC25FEB2013051038"
+  },
+  {
+    "cusId": "272702",
+    "cusName": "MXOTIC25FEB2013053153"
+  },
+  {
+    "cusId": "272722",
+    "cusName": "MXOTIC25FEB2013055315"
+  },
+  {
+    "cusId": "245642",
+    "cusName": "MXOTIC25JAN201304277"
+  },
+  {
+    "cusId": "245682",
+    "cusName": "MXOTIC25JAN2013054214"
+  },
+  {
+    "cusId": "245684",
+    "cusName": "MXOTIC25JAN2013061613"
+  },
+  {
+    "cusId": "245704",
+    "cusName": "MXOTIC25JAN2013075830"
+  },
+  {
+    "cusId": "294763",
+    "cusName": "MXOTIC25MAR201304543"
+  },
+  {
+    "cusId": "294768",
+    "cusName": "MXOTIC25MAR2013051047"
+  },
+  {
+    "cusId": "294823",
+    "cusName": "MXOTIC25MAR2013091124"
+  },
+  {
+    "cusId": "294824",
+    "cusName": "MXOTIC25MAR2013092136"
+  },
+  {
+    "cusId": "294862",
+    "cusName": "MXOTIC25MAR2013100913"
+  },
+  {
+    "cusId": "295182",
+    "cusName": "MXOTIC25MAR2013124517"
+  },
+  {
+    "cusId": "295284",
+    "cusName": "MXOTIC25MAR2013132132"
+  },
+  {
+    "cusId": "295462",
+    "cusName": "MXOTIC25MAR2013144253"
+  },
+  {
+    "cusId": "295862",
+    "cusName": "MXOTIC25MAR2013170343"
+  },
+  {
+    "cusId": "438151",
+    "cusName": "MXOTIC25OCT201303177"
+  },
+  {
+    "cusId": "438154",
+    "cusName": "MXOTIC25OCT201304139"
+  },
+  {
+    "cusId": "438156",
+    "cusName": "MXOTIC25OCT201305076"
+  },
+  {
+    "cusId": "323682",
+    "cusName": "MXOTIC26APR2013115132"
+  },
+  {
+    "cusId": "273623",
+    "cusName": "MXOTIC26FEB2013055611"
+  },
+  {
+    "cusId": "273625",
+    "cusName": "MXOTIC26FEB2013062513"
+  },
+  {
+    "cusId": "273626",
+    "cusName": "MXOTIC26FEB2013065421"
+  },
+  {
+    "cusId": "273943",
+    "cusName": "MXOTIC26FEB201315009"
+  },
+  {
+    "cusId": "246282",
+    "cusName": "MXOTIC26JAN201305216"
+  },
+  {
+    "cusId": "246322",
+    "cusName": "MXOTIC26JAN201306361"
+  },
+  {
+    "cusId": "246323",
+    "cusName": "MXOTIC26JAN2013070938"
+  },
+  {
+    "cusId": "246382",
+    "cusName": "MXOTIC26JAN2013085138"
+  },
+  {
+    "cusId": "296142",
+    "cusName": "MXOTIC26MAR2013033249"
+  },
+  {
+    "cusId": "296182",
+    "cusName": "MXOTIC26MAR2013041139"
+  },
+  {
+    "cusId": "296222",
+    "cusName": "MXOTIC26MAR2013052553"
+  },
+  {
+    "cusId": "296322",
+    "cusName": "MXOTIC26MAR201308274"
+  },
+  {
+    "cusId": "274224",
+    "cusName": "MXOTIC27FEB2013041555"
+  },
+  {
+    "cusId": "274242",
+    "cusName": "MXOTIC27FEB2013045511"
+  },
+  {
+    "cusId": "274284",
+    "cusName": "MXOTIC27FEB201306378"
+  },
+  {
+    "cusId": "274622",
+    "cusName": "MXOTIC27FEB2013123943"
+  },
+  {
+    "cusId": "274962",
+    "cusName": "MXOTIC27FEB201316305"
+  },
+  {
+    "cusId": "246623",
+    "cusName": "MXOTIC27JAN2013051839"
+  },
+  {
+    "cusId": "246626",
+    "cusName": "MXOTIC27JAN201306321"
+  },
+  {
+    "cusId": "246642",
+    "cusName": "MXOTIC27JAN2013070531"
+  },
+  {
+    "cusId": "246682",
+    "cusName": "MXOTIC27JAN2013084827"
+  },
+  {
+    "cusId": "297502",
+    "cusName": "MXOTIC27MAR2013033139"
+  },
+  {
+    "cusId": "297542",
+    "cusName": "MXOTIC27MAR2013041122"
+  },
+  {
+    "cusId": "297582",
+    "cusName": "MXOTIC27MAR2013052248"
+  },
+  {
+    "cusId": "297703",
+    "cusName": "MXOTIC27MAR2013081649"
+  },
+  {
+    "cusId": "275282",
+    "cusName": "MXOTIC28FEB2013041529"
+  },
+  {
+    "cusId": "275283",
+    "cusName": "MXOTIC28FEB201304472"
+  },
+  {
+    "cusId": "275285",
+    "cusName": "MXOTIC28FEB2013055212"
+  },
+  {
+    "cusId": "246962",
+    "cusName": "MXOTIC28JAN2013051547"
+  },
+  {
+    "cusId": "247002",
+    "cusName": "MXOTIC28JAN2013062948"
+  },
+  {
+    "cusId": "247022",
+    "cusName": "MXOTIC28JAN2013070346"
+  },
+  {
+    "cusId": "247062",
+    "cusName": "MXOTIC28JAN2013084628"
+  },
+  {
+    "cusId": "298402",
+    "cusName": "MXOTIC28MAR2013055539"
+  },
+  {
+    "cusId": "298645",
+    "cusName": "MXOTIC28MAR2013120042"
+  },
+  {
+    "cusId": "298822",
+    "cusName": "MXOTIC28MAR2013130316"
+  },
+  {
+    "cusId": "299042",
+    "cusName": "MXOTIC28MAR2013150826"
+  },
+  {
+    "cusId": "438428",
+    "cusName": "MXOTIC28OCT2013031740"
+  },
+  {
+    "cusId": "438434",
+    "cusName": "MXOTIC28OCT2013041147"
+  },
+  {
+    "cusId": "438435",
+    "cusName": "MXOTIC28OCT2013050350"
+  },
+  {
+    "cusId": "408802",
+    "cusName": "MXOTIC29AUG2013123657"
+  },
+  {
+    "cusId": "408822",
+    "cusName": "MXOTIC29AUG2013124155"
+  },
+  {
+    "cusId": "408842",
+    "cusName": "MXOTIC29AUG2013124717"
+  },
+  {
+    "cusId": "408862",
+    "cusName": "MXOTIC29AUG2013130039"
+  },
+  {
+    "cusId": "408922",
+    "cusName": "MXOTIC29AUG2013144519"
+  },
+  {
+    "cusId": "408942",
+    "cusName": "MXOTIC29AUG2013150055"
+  },
+  {
+    "cusId": "408982",
+    "cusName": "MXOTIC29AUG2013151712"
+  },
+  {
+    "cusId": "409002",
+    "cusName": "MXOTIC29AUG2013153946"
+  },
+  {
+    "cusId": "409062",
+    "cusName": "MXOTIC29AUG2013173720"
+  },
+  {
+    "cusId": "409082",
+    "cusName": "MXOTIC29AUG2013175352"
+  },
+  {
+    "cusId": "247886",
+    "cusName": "MXOTIC29JAN2013052152"
+  },
+  {
+    "cusId": "247922",
+    "cusName": "MXOTIC29JAN2013063629"
+  },
+  {
+    "cusId": "247942",
+    "cusName": "MXOTIC29JAN2013070814"
+  },
+  {
+    "cusId": "247982",
+    "cusName": "MXOTIC29JAN2013085224"
+  },
+  {
+    "cusId": "299522",
+    "cusName": "MXOTIC29MAR2013033127"
+  },
+  {
+    "cusId": "299562",
+    "cusName": "MXOTIC29MAR2013041046"
+  },
+  {
+    "cusId": "299602",
+    "cusName": "MXOTIC29MAR2013052217"
+  },
+  {
+    "cusId": "299702",
+    "cusName": "MXOTIC29MAR2013081755"
+  },
+  {
+    "cusId": "438561",
+    "cusName": "MXOTIC29OCT2013031752"
+  },
+  {
+    "cusId": "438566",
+    "cusName": "MXOTIC29OCT2013041231"
+  },
+  {
+    "cusId": "438569",
+    "cusName": "MXOTIC29OCT2013050539"
+  },
+  {
+    "cusId": "302302",
+    "cusName": "MXOTIC2APR2013104542"
+  },
+  {
+    "cusId": "302482",
+    "cusName": "MXOTIC2APR2013120055"
+  },
+  {
+    "cusId": "251142",
+    "cusName": "MXOTIC2FEB2013030223"
+  },
+  {
+    "cusId": "251202",
+    "cusName": "MXOTIC2FEB2013042335"
+  },
+  {
+    "cusId": "251222",
+    "cusName": "MXOTIC2FEB201305007"
+  },
+  {
+    "cusId": "251262",
+    "cusName": "MXOTIC2FEB201306522"
+  },
+  {
+    "cusId": "277122",
+    "cusName": "MXOTIC2MAR2013122737"
+  },
+  {
+    "cusId": "410663",
+    "cusName": "MXOTIC2SEP2013030145"
+  },
+  {
+    "cusId": "410666",
+    "cusName": "MXOTIC2SEP201303193"
+  },
+  {
+    "cusId": "410683",
+    "cusName": "MXOTIC2SEP2013040156"
+  },
+  {
+    "cusId": "410902",
+    "cusName": "MXOTIC2SEP2013112127"
+  },
+  {
+    "cusId": "411102",
+    "cusName": "MXOTIC2SEP2013152643"
+  },
+  {
+    "cusId": "411222",
+    "cusName": "MXOTIC2SEP2013180147"
+  },
+  {
+    "cusId": "411262",
+    "cusName": "MXOTIC2SEP2013184341"
+  },
+  {
+    "cusId": "411282",
+    "cusName": "MXOTIC2SEP201318514"
+  },
+  {
+    "cusId": "411342",
+    "cusName": "MXOTIC2SEP2013193724"
+  },
+  {
+    "cusId": "411362",
+    "cusName": "MXOTIC2SEP201319453"
+  },
+  {
+    "cusId": "409283",
+    "cusName": "MXOTIC30AUG2013030130"
+  },
+  {
+    "cusId": "409286",
+    "cusName": "MXOTIC30AUG2013032631"
+  },
+  {
+    "cusId": "409422",
+    "cusName": "MXOTIC30AUG2013104452"
+  },
+  {
+    "cusId": "409444",
+    "cusName": "MXOTIC30AUG2013105641"
+  },
+  {
+    "cusId": "409502",
+    "cusName": "MXOTIC30AUG201311263"
+  },
+  {
+    "cusId": "409583",
+    "cusName": "MXOTIC30AUG2013124235"
+  },
+  {
+    "cusId": "409763",
+    "cusName": "MXOTIC30AUG2013150455"
+  },
+  {
+    "cusId": "248943",
+    "cusName": "MXOTIC30JAN2013144820"
+  },
+  {
+    "cusId": "249024",
+    "cusName": "MXOTIC30JAN2013153847"
+  },
+  {
+    "cusId": "249122",
+    "cusName": "MXOTIC30JAN2013161735"
+  },
+  {
+    "cusId": "249242",
+    "cusName": "MXOTIC30JAN201317590"
+  },
+  {
+    "cusId": "438715",
+    "cusName": "MXOTIC30OCT2013031644"
+  },
+  {
+    "cusId": "438717",
+    "cusName": "MXOTIC30OCT2013034531"
+  },
+  {
+    "cusId": "438721",
+    "cusName": "MXOTIC30OCT2013043911"
+  },
+  {
+    "cusId": "249482",
+    "cusName": "MXOTIC31JAN2013030315"
+  },
+  {
+    "cusId": "249542",
+    "cusName": "MXOTIC31JAN201304285"
+  },
+  {
+    "cusId": "249562",
+    "cusName": "MXOTIC31JAN2013050455"
+  },
+  {
+    "cusId": "249622",
+    "cusName": "MXOTIC31JAN2013065739"
+  },
+  {
+    "cusId": "250007",
+    "cusName": "MXOTIC31JAN2013145558"
+  },
+  {
+    "cusId": "438836",
+    "cusName": "MXOTIC31OCT2013031640"
+  },
+  {
+    "cusId": "438841",
+    "cusName": "MXOTIC31OCT2013041048"
+  },
+  {
+    "cusId": "438843",
+    "cusName": "MXOTIC31OCT2013050330"
+  },
+  {
+    "cusId": "303362",
+    "cusName": "MXOTIC3APR2013033215"
+  },
+  {
+    "cusId": "303382",
+    "cusName": "MXOTIC3APR2013040949"
+  },
+  {
+    "cusId": "303405",
+    "cusName": "MXOTIC3APR2013052320"
+  },
+  {
+    "cusId": "303502",
+    "cusName": "MXOTIC3APR201307521"
+  },
+  {
+    "cusId": "304045",
+    "cusName": "MXOTIC3APR2013150010"
+  },
+  {
+    "cusId": "304102",
+    "cusName": "MXOTIC3APR2013160450"
+  },
+  {
+    "cusId": "304342",
+    "cusName": "MXOTIC3APR2013191227"
+  },
+  {
+    "cusId": "251602",
+    "cusName": "MXOTIC3FEB2013035458"
+  },
+  {
+    "cusId": "251642",
+    "cusName": "MXOTIC3FEB2013043344"
+  },
+  {
+    "cusId": "251702",
+    "cusName": "MXOTIC3FEB2013062611"
+  },
+  {
+    "cusId": "411543",
+    "cusName": "MXOTIC3SEP2013030157"
+  },
+  {
+    "cusId": "411562",
+    "cusName": "MXOTIC3SEP2013034215"
+  },
+  {
+    "cusId": "411762",
+    "cusName": "MXOTIC3SEP201311179"
+  },
+  {
+    "cusId": "304482",
+    "cusName": "MXOTIC4APR2013033148"
+  },
+  {
+    "cusId": "304502",
+    "cusName": "MXOTIC4APR201304107"
+  },
+  {
+    "cusId": "304542",
+    "cusName": "MXOTIC4APR2013052233"
+  },
+  {
+    "cusId": "304662",
+    "cusName": "MXOTIC4APR2013082255"
+  },
+  {
+    "cusId": "251962",
+    "cusName": "MXOTIC4FEB2013030140"
+  },
+  {
+    "cusId": "252002",
+    "cusName": "MXOTIC4FEB2013051448"
+  },
+  {
+    "cusId": "252042",
+    "cusName": "MXOTIC4FEB2013062124"
+  },
+  {
+    "cusId": "252122",
+    "cusName": "MXOTIC4FEB2013094114"
+  },
+  {
+    "cusId": "439677",
+    "cusName": "MXOTIC4NOV2013032926"
+  },
+  {
+    "cusId": "439681",
+    "cusName": "MXOTIC4NOV2013041011"
+  },
+  {
+    "cusId": "412642",
+    "cusName": "MXOTIC4SEP2013110959"
+  },
+  {
+    "cusId": "412662",
+    "cusName": "MXOTIC4SEP201311220"
+  },
+  {
+    "cusId": "412682",
+    "cusName": "MXOTIC4SEP2013120835"
+  },
+  {
+    "cusId": "412702",
+    "cusName": "MXOTIC4SEP2013124757"
+  },
+  {
+    "cusId": "412722",
+    "cusName": "MXOTIC4SEP201313030"
+  },
+  {
+    "cusId": "412782",
+    "cusName": "MXOTIC4SEP2013135710"
+  },
+  {
+    "cusId": "305762",
+    "cusName": "MXOTIC5APR2013041346"
+  },
+  {
+    "cusId": "305782",
+    "cusName": "MXOTIC5APR2013045050"
+  },
+  {
+    "cusId": "305822",
+    "cusName": "MXOTIC5APR201306024"
+  },
+  {
+    "cusId": "305942",
+    "cusName": "MXOTIC5APR2013082828"
+  },
+  {
+    "cusId": "306282",
+    "cusName": "MXOTIC5APR2013121021"
+  },
+  {
+    "cusId": "306382",
+    "cusName": "MXOTIC5APR2013135042"
+  },
+  {
+    "cusId": "252862",
+    "cusName": "MXOTIC5FEB2013030342"
+  },
+  {
+    "cusId": "252902",
+    "cusName": "MXOTIC5FEB2013051756"
+  },
+  {
+    "cusId": "252942",
+    "cusName": "MXOTIC5FEB2013062436"
+  },
+  {
+    "cusId": "253023",
+    "cusName": "MXOTIC5FEB2013094444"
+  },
+  {
+    "cusId": "413822",
+    "cusName": "MXOTIC5SEP2013114245"
+  },
+  {
+    "cusId": "413903",
+    "cusName": "MXOTIC5SEP2013121526"
+  },
+  {
+    "cusId": "413962",
+    "cusName": "MXOTIC5SEP2013125510"
+  },
+  {
+    "cusId": "414044",
+    "cusName": "MXOTIC5SEP2013132835"
+  },
+  {
+    "cusId": "253822",
+    "cusName": "MXOTIC6FEB2013030246"
+  },
+  {
+    "cusId": "253862",
+    "cusName": "MXOTIC6FEB2013042457"
+  },
+  {
+    "cusId": "253863",
+    "cusName": "MXOTIC6FEB2013050322"
+  },
+  {
+    "cusId": "279942",
+    "cusName": "MXOTIC6MAR2013120819"
+  },
+  {
+    "cusId": "280042",
+    "cusName": "MXOTIC6MAR2013124211"
+  },
+  {
+    "cusId": "280242",
+    "cusName": "MXOTIC6MAR2013150550"
+  },
+  {
+    "cusId": "280402",
+    "cusName": "MXOTIC6MAR2013153034"
+  },
+  {
+    "cusId": "280503",
+    "cusName": "MXOTIC6MAR201316042"
+  },
+  {
+    "cusId": "414643",
+    "cusName": "MXOTIC6SEP2013030139"
+  },
+  {
+    "cusId": "414682",
+    "cusName": "MXOTIC6SEP2013034034"
+  },
+  {
+    "cusId": "414704",
+    "cusName": "MXOTIC6SEP2013041836"
+  },
+  {
+    "cusId": "394345",
+    "cusName": "MXOTIC7AUG201303112"
+  },
+  {
+    "cusId": "394482",
+    "cusName": "MXOTIC7AUG2013110949"
+  },
+  {
+    "cusId": "254842",
+    "cusName": "MXOTIC7FEB2013030341"
+  },
+  {
+    "cusId": "254882",
+    "cusName": "MXOTIC7FEB2013035835"
+  },
+  {
+    "cusId": "254902",
+    "cusName": "MXOTIC7FEB2013043715"
+  },
+  {
+    "cusId": "254962",
+    "cusName": "MXOTIC7FEB201306358"
+  },
+  {
+    "cusId": "281302",
+    "cusName": "MXOTIC7MAR201310375"
+  },
+  {
+    "cusId": "281342",
+    "cusName": "MXOTIC7MAR2013110112"
+  },
+  {
+    "cusId": "281402",
+    "cusName": "MXOTIC7MAR2013113417"
+  },
+  {
+    "cusId": "440956",
+    "cusName": "MXOTIC7NOV201303290"
+  },
+  {
+    "cusId": "440962",
+    "cusName": "MXOTIC7NOV2013035648"
+  },
+  {
+    "cusId": "307422",
+    "cusName": "MXOTIC8APR2013034125"
+  },
+  {
+    "cusId": "307462",
+    "cusName": "MXOTIC8APR2013045459"
+  },
+  {
+    "cusId": "307583",
+    "cusName": "MXOTIC8APR2013075334"
+  },
+  {
+    "cusId": "256202",
+    "cusName": "MXOTIC8FEB2013030243"
+  },
+  {
+    "cusId": "256203",
+    "cusName": "MXOTIC8FEB2013031518"
+  },
+  {
+    "cusId": "256222",
+    "cusName": "MXOTIC8FEB2013035232"
+  },
+  {
+    "cusId": "235522",
+    "cusName": "MXOTIC8JAN2013193240"
+  },
+  {
+    "cusId": "235523",
+    "cusName": "MXOTIC8JAN201319422"
+  },
+  {
+    "cusId": "282203",
+    "cusName": "MXOTIC8MAR2013040934"
+  },
+  {
+    "cusId": "282204",
+    "cusName": "MXOTIC8MAR2013044435"
+  },
+  {
+    "cusId": "282282",
+    "cusName": "MXOTIC8MAR201307049"
+  },
+  {
+    "cusId": "282302",
+    "cusName": "MXOTIC8MAR2013073843"
+  },
+  {
+    "cusId": "441685",
+    "cusName": "MXOTIC8NOV2013041015"
+  },
+  {
+    "cusId": "441723",
+    "cusName": "MXOTIC8NOV2013045456"
+  },
+  {
+    "cusId": "441742",
+    "cusName": "MXOTIC8NOV201305381"
+  },
+  {
+    "cusId": "308442",
+    "cusName": "MXOTIC9APR2013033144"
+  },
+  {
+    "cusId": "308482",
+    "cusName": "MXOTIC9APR2013044254"
+  },
+  {
+    "cusId": "308562",
+    "cusName": "MXOTIC9APR2013073812"
+  },
+  {
+    "cusId": "257222",
+    "cusName": "MXOTIC9FEB2013030219"
+  },
+  {
+    "cusId": "257242",
+    "cusName": "MXOTIC9FEB2013032537"
+  },
+  {
+    "cusId": "257243",
+    "cusName": "MXOTIC9FEB2013033637"
+  },
+  {
+    "cusId": "257282",
+    "cusName": "MXOTIC9FEB2013040955"
+  },
+  {
+    "cusId": "235602",
+    "cusName": "MXOTIC9JAN2013030233"
+  },
+  {
+    "cusId": "235605",
+    "cusName": "MXOTIC9JAN2013030927"
+  },
+  {
+    "cusId": "235609",
+    "cusName": "MXOTIC9JAN2013031820"
+  },
+  {
+    "cusId": "235610",
+    "cusName": "MXOTIC9JAN2013032030"
+  },
+  {
+    "cusId": "235762",
+    "cusName": "MXOTIC9JAN2013111240"
+  },
+  {
+    "cusId": "235802",
+    "cusName": "MXOTIC9JAN2013112557"
+  },
+  {
+    "cusId": "235962",
+    "cusName": "MXOTIC9JAN2013163616"
+  },
+  {
+    "cusId": "236002",
+    "cusName": "MXOTIC9JAN2013170519"
+  },
+  {
+    "cusId": "282783",
+    "cusName": "MXOTIC9MAR2013040352"
+  },
+  {
+    "cusId": "204138",
+    "cusName": "MXPR1213"
+  },
+  {
+    "cusId": "204139",
+    "cusName": "MXPR12131"
+  },
+  {
+    "cusId": "204691",
+    "cusName": "MXPROCIT"
+  },
+  {
+    "cusId": "205493",
+    "cusName": "MXPROCUST"
+  },
+  {
+    "cusId": "199016",
+    "cusName": "MXPRODIRCUST"
+  },
+  {
+    "cusId": "204987",
+    "cusName": "MXPROIPSEC"
+  },
+  {
+    "cusId": "204713",
+    "cusName": "MXPROMIS"
+  },
+  {
+    "cusId": "205836",
+    "cusName": "MXPROMIS_1011"
+  },
+  {
+    "cusId": "232957",
+    "cusName": "MXPROSSL2812"
+  },
+  {
+    "cusId": "232673",
+    "cusName": "MXPROSSLDIRECT"
+  },
+  {
+    "cusId": "205404",
+    "cusName": "MXPRO_2010"
+  },
+  {
+    "cusId": "205044",
+    "cusName": "MXPRO_MC16"
+  },
+  {
+    "cusId": "204812",
+    "cusName": "MXPRO_MC20"
+  },
+  {
+    "cusId": "204859",
+    "cusName": "MXPRO_MC21"
+  },
+  {
+    "cusId": "204135",
+    "cusName": "MXPRRETEST"
+  },
+  {
+    "cusId": "203112",
+    "cusName": "MXPRSC51"
+  },
+  {
+    "cusId": "204528",
+    "cusName": "MXPR_1509"
+  },
+  {
+    "cusId": "204684",
+    "cusName": "MXPR_2010"
+  },
+  {
+    "cusId": "204529",
+    "cusName": "MXPR_C59.3"
+  },
+  {
+    "cusId": "204030",
+    "cusName": "MXR15"
+  },
+  {
+    "cusId": "204856",
+    "cusName": "MXR1602"
+  },
+  {
+    "cusId": "204332",
+    "cusName": "MXR16SC16"
+  },
+  {
+    "cusId": "204219",
+    "cusName": "MXR16SC2"
+  },
+  {
+    "cusId": "382702",
+    "cusName": "MXR27REGTC5"
+  },
+  {
+    "cusId": "619893",
+    "cusName": "MXR36.2CEIFC"
+  },
+  {
+    "cusId": "616068",
+    "cusName": "MXR36ASSET"
+  },
+  {
+    "cusId": "207466",
+    "cusName": "MXREG85"
+  },
+  {
+    "cusId": "223975",
+    "cusName": "MXREGR22T12"
+  },
+  {
+    "cusId": "207039",
+    "cusName": "MXREGRESSIONRETN"
+  },
+  {
+    "cusId": "207015",
+    "cusName": "MXREGTC2"
+  },
+  {
+    "cusId": "207197",
+    "cusName": "MXREGTC2NEW_2812"
+  },
+  {
+    "cusId": "207593",
+    "cusName": "MXREGTC2_0901"
+  },
+  {
+    "cusId": "207019",
+    "cusName": "MXREGTC2_2610"
+  },
+  {
+    "cusId": "207187",
+    "cusName": "MXREGTC2_2812"
+  },
+  {
+    "cusId": "206960",
+    "cusName": "MXREGTC5"
+  },
+  {
+    "cusId": "207070",
+    "cusName": "MXREGTC5_2712"
+  },
+  {
+    "cusId": "207548",
+    "cusName": "MXREGTC6"
+  },
+  {
+    "cusId": "245964",
+    "cusName": "MXREGTEST466"
+  },
+  {
+    "cusId": "205856",
+    "cusName": "MXRESIFC_1011"
+  },
+  {
+    "cusId": "205875",
+    "cusName": "MXRESMOD_1111"
+  },
+  {
+    "cusId": "212590",
+    "cusName": "MXRETEST9038"
+  },
+  {
+    "cusId": "212599",
+    "cusName": "MXRETEST9038NEW"
+  },
+  {
+    "cusId": "207473",
+    "cusName": "MXRETEST_3649"
+  },
+  {
+    "cusId": "199983",
+    "cusName": "MXRT12"
+  },
+  {
+    "cusId": "209109",
+    "cusName": "MXSANITY1402"
+  },
+  {
+    "cusId": "211870",
+    "cusName": "MXSANITY2004"
+  },
+  {
+    "cusId": "205507",
+    "cusName": "MXSANITYT3"
+  },
+  {
+    "cusId": "206588",
+    "cusName": "MXSC10_0312"
+  },
+  {
+    "cusId": "205791",
+    "cusName": "MXSPBID_0911"
+  },
+  {
+    "cusId": "202025",
+    "cusName": "MXT3DIRGSUK"
+  },
+  {
+    "cusId": "202928",
+    "cusName": "MXT3DIRGSUKSC9"
+  },
+  {
+    "cusId": "202904",
+    "cusName": "MXT3DIRSC6"
+  },
+  {
+    "cusId": "202891",
+    "cusName": "MXT3DIRSC7"
+  },
+  {
+    "cusId": "208053",
+    "cusName": "MXTEST2301"
+  },
+  {
+    "cusId": "211534",
+    "cusName": "MXTEST4935"
+  },
+  {
+    "cusId": "420342",
+    "cusName": "MXTESTCUSTOMER"
+  },
+  {
+    "cusId": "199650",
+    "cusName": "MXTESTDIRECT"
+  },
+  {
+    "cusId": "235782",
+    "cusName": "MXTESTMANAGE"
+  },
+  {
+    "cusId": "217855",
+    "cusName": "MXTESTNEW50918"
+  },
+  {
+    "cusId": "205577",
+    "cusName": "MXTESTTC6"
+  },
+  {
+    "cusId": "203280",
+    "cusName": "MXUKONE"
+  },
+  {
+    "cusId": "203309",
+    "cusName": "MXVPNLSS"
+  },
+  {
+    "cusId": "43811",
+    "cusName": "MY CUST MOD 10 AUTO"
+  },
+  {
+    "cusId": "43827",
+    "cusName": "MY CUST MOD 14 AUTO"
+  },
+  {
+    "cusId": "43520",
+    "cusName": "MY CUST MOD 19 AUTO"
+  },
+  {
+    "cusId": "43500",
+    "cusName": "MY CUST MOD 20 AUTO"
+  },
+  {
+    "cusId": "43386",
+    "cusName": "MY CUST MOD 7 AUTO"
+  },
+  {
+    "cusId": "516862",
+    "cusName": "MYAUTOCUST"
+  },
+  {
+    "cusId": "517422",
+    "cusName": "MYAUTOCUST1"
+  },
+  {
+    "cusId": "517602",
+    "cusName": "MYAUTOCUST2"
+  },
+  {
+    "cusId": "205657",
+    "cusName": "MYFIESTA"
+  },
+  {
+    "cusId": "203779",
+    "cusName": "MYSTAR"
+  },
+  {
+    "cusId": "521603",
+    "cusName": "MYTESTCUST"
+  },
+  {
+    "cusId": "583731",
+    "cusName": "NAGARAJT301"
+  },
+  {
+    "cusId": "208145",
+    "cusName": "NANDHINI_TEST"
+  },
+  {
+    "cusId": "208392",
+    "cusName": "NANDHINI_TEST_1"
+  },
+  {
+    "cusId": "35677",
+    "cusName": "NATIONAL TRUST BANK OF COLOMBIA-R782"
+  },
+  {
+    "cusId": "35925",
+    "cusName": "NATIONAL TRUST BANK OF COLOMBIA-R783"
+  },
+  {
+    "cusId": "211138",
+    "cusName": "NAZEEBDSL"
+  },
+  {
+    "cusId": "641568",
+    "cusName": "NBP TEST YARA DATA AOD"
+  },
+  {
+    "cusId": "201802",
+    "cusName": "NEMO"
+  },
+  {
+    "cusId": "43776",
+    "cusName": "NETHERLAND CORP TEAM-RUN1-R893"
+  },
+  {
+    "cusId": "43423",
+    "cusName": "NETHERLAND CORPORATION T-RUN1-R893"
+  },
+  {
+    "cusId": "43588",
+    "cusName": "NETHERLAND CORPORATION TEAM-RUN1-R893"
+  },
+  {
+    "cusId": "199820",
+    "cusName": "NETTLE"
+  },
+  {
+    "cusId": "204143",
+    "cusName": "NEW1213PR"
+  },
+  {
+    "cusId": "199804",
+    "cusName": "NEW15"
+  },
+  {
+    "cusId": "199809",
+    "cusName": "NEW16"
+  },
+  {
+    "cusId": "199796",
+    "cusName": "NEW17"
+  },
+  {
+    "cusId": "203611",
+    "cusName": "NEW21PR"
+  },
+  {
+    "cusId": "280362",
+    "cusName": "NEW85717"
+  },
+  {
+    "cusId": "558202",
+    "cusName": "NEWAUTOMATION"
+  },
+  {
+    "cusId": "203489",
+    "cusName": "NEWBILL"
+  },
+  {
+    "cusId": "206631",
+    "cusName": "NEWBTGS"
+  },
+  {
+    "cusId": "196917",
+    "cusName": "NEWC"
+  },
+  {
+    "cusId": "202651",
+    "cusName": "NEWCUST4"
+  },
+  {
+    "cusId": "280022",
+    "cusName": "NEWCUST85717"
+  },
+  {
+    "cusId": "261182",
+    "cusName": "NEWCUSTDIR7"
+  },
+  {
+    "cusId": "525425",
+    "cusName": "NEWCUSTOMEROCC"
+  },
+  {
+    "cusId": "287862",
+    "cusName": "NEWFTTC"
+  },
+  {
+    "cusId": "206776",
+    "cusName": "NEWGSCNUK"
+  },
+  {
+    "cusId": "244945",
+    "cusName": "NEWMDMMME"
+  },
+  {
+    "cusId": "758590",
+    "cusName": "NEWMXCUST"
+  },
+  {
+    "cusId": "202718",
+    "cusName": "NEWMXPR"
+  },
+  {
+    "cusId": "205659",
+    "cusName": "NEWPPIPSEC"
+  },
+  {
+    "cusId": "207614",
+    "cusName": "NEWPR"
+  },
+  {
+    "cusId": "201666",
+    "cusName": "NEWPR13"
+  },
+  {
+    "cusId": "201762",
+    "cusName": "NEWPR2"
+  },
+  {
+    "cusId": "204295",
+    "cusName": "NEWPR59"
+  },
+  {
+    "cusId": "204487",
+    "cusName": "NEWPR5951"
+  },
+  {
+    "cusId": "205923",
+    "cusName": "NEWPRGGP"
+  },
+  {
+    "cusId": "201654",
+    "cusName": "NEWPRI5"
+  },
+  {
+    "cusId": "199943",
+    "cusName": "NEWPRIYA"
+  },
+  {
+    "cusId": "200224",
+    "cusName": "NEWPRIYA1"
+  },
+  {
+    "cusId": "208673",
+    "cusName": "NEWPRLIVE"
+  },
+  {
+    "cusId": "200043",
+    "cusName": "NEWPRTESTING"
+  },
+  {
+    "cusId": "377862",
+    "cusName": "NEWREACHINN"
+  },
+  {
+    "cusId": "203834",
+    "cusName": "NEWS"
+  },
+  {
+    "cusId": "524035",
+    "cusName": "NEWSIPCUST"
+  },
+  {
+    "cusId": "206589",
+    "cusName": "NEWTC4"
+  },
+  {
+    "cusId": "201896",
+    "cusName": "NEWTEST10"
+  },
+  {
+    "cusId": "512642",
+    "cusName": "NEWTESTMXCUST"
+  },
+  {
+    "cusId": "515322",
+    "cusName": "NEWTESTMXCUST1"
+  },
+  {
+    "cusId": "207486",
+    "cusName": "NEWTULIP"
+  },
+  {
+    "cusId": "203402",
+    "cusName": "NEWUKCUS"
+  },
+  {
+    "cusId": "197710",
+    "cusName": "NEWYEARS"
+  },
+  {
+    "cusId": "52090",
+    "cusName": "NEW_IVPN_BILLING"
+  },
+  {
+    "cusId": "704199",
+    "cusName": "NEW_NEW_WEN"
+  },
+  {
+    "cusId": "704339",
+    "cusName": "NEW_NEW_WEN1"
+  },
+  {
+    "cusId": "224180",
+    "cusName": "NFNETWORK"
+  },
+  {
+    "cusId": "207038",
+    "cusName": "NICK"
+  },
+  {
+    "cusId": "205775",
+    "cusName": "NIGHTINGALE5"
+  },
+  {
+    "cusId": "299922",
+    "cusName": "NIKHIL897"
+  },
+  {
+    "cusId": "26699",
+    "cusName": "NIRVANA"
+  },
+  {
+    "cusId": "207263",
+    "cusName": "NNEW"
+  },
+  {
+    "cusId": "44720",
+    "cusName": "NNI CUSTOMER"
+  },
+  {
+    "cusId": "231622",
+    "cusName": "NNIRIN"
+  },
+  {
+    "cusId": "206782",
+    "cusName": "NOKIANEHRU"
+  },
+  {
+    "cusId": "411402",
+    "cusName": "NON STANDARDS TEST CUSTOMER"
+  },
+  {
+    "cusId": "201024",
+    "cusName": "NONCPEPR"
+  },
+  {
+    "cusId": "214656",
+    "cusName": "NONSTANDARDSSL"
+  },
+  {
+    "cusId": "226925",
+    "cusName": "NOT IN USE ANYMORE"
+  },
+  {
+    "cusId": "29287",
+    "cusName": "NOVARTIS CROP PROTECTION AG"
+  },
+  {
+    "cusId": "227136",
+    "cusName": "NRG MANAGEMENT LIMITED"
+  },
+  {
+    "cusId": "201106",
+    "cusName": "NSCPERET"
+  },
+  {
+    "cusId": "35691",
+    "cusName": "NT TECHNOLOGIES"
+  },
+  {
+    "cusId": "200075",
+    "cusName": "OBRIEN"
+  },
+  {
+    "cusId": "534472",
+    "cusName": "OCC CUSTOMER"
+  },
+  {
+    "cusId": "534488",
+    "cusName": "OCC CUSTOMER 1"
+  },
+  {
+    "cusId": "534492",
+    "cusName": "OCC CUSTOMER 2"
+  },
+  {
+    "cusId": "521805",
+    "cusName": "OCC UK CUSTOMER"
+  },
+  {
+    "cusId": "558781",
+    "cusName": "OCCAUTOT301"
+  },
+  {
+    "cusId": "561305",
+    "cusName": "OCCAUTO_T3_01"
+  },
+  {
+    "cusId": "564411",
+    "cusName": "OCCAUTO_T3_02"
+  },
+  {
+    "cusId": "526103",
+    "cusName": "OCCBILL"
+  },
+  {
+    "cusId": "547567",
+    "cusName": "OCCDR6"
+  },
+  {
+    "cusId": "548114",
+    "cusName": "OCCDR7"
+  },
+  {
+    "cusId": "525782",
+    "cusName": "OCCHCS1"
+  },
+  {
+    "cusId": "526687",
+    "cusName": "OCCHCS10"
+  },
+  {
+    "cusId": "527262",
+    "cusName": "OCCHCS11"
+  },
+  {
+    "cusId": "527503",
+    "cusName": "OCCHCS12"
+  },
+  {
+    "cusId": "527505",
+    "cusName": "OCCHCS13"
+  },
+  {
+    "cusId": "527506",
+    "cusName": "OCCHCS14"
+  },
+  {
+    "cusId": "527563",
+    "cusName": "OCCHCS15"
+  },
+  {
+    "cusId": "527682",
+    "cusName": "OCCHCS16"
+  },
+  {
+    "cusId": "527702",
+    "cusName": "OCCHCS17"
+  },
+  {
+    "cusId": "525882",
+    "cusName": "OCCHCS2"
+  },
+  {
+    "cusId": "525902",
+    "cusName": "OCCHCS3"
+  },
+  {
+    "cusId": "525922",
+    "cusName": "OCCHCS4"
+  },
+  {
+    "cusId": "526543",
+    "cusName": "OCCHCS5"
+  },
+  {
+    "cusId": "526544",
+    "cusName": "OCCHCS6"
+  },
+  {
+    "cusId": "526573",
+    "cusName": "OCCHCS7"
+  },
+  {
+    "cusId": "526588",
+    "cusName": "OCCHCS8"
+  },
+  {
+    "cusId": "526643",
+    "cusName": "OCCHCS9"
+  },
+  {
+    "cusId": "550738",
+    "cusName": "OCCHCSA1"
+  },
+  {
+    "cusId": "550838",
+    "cusName": "OCCHCSA2"
+  },
+  {
+    "cusId": "550839",
+    "cusName": "OCCHCSA3"
+  },
+  {
+    "cusId": "550840",
+    "cusName": "OCCHCSA4"
+  },
+  {
+    "cusId": "550841",
+    "cusName": "OCCHCSA5"
+  },
+  {
+    "cusId": "557440",
+    "cusName": "OCCHCSA6"
+  },
+  {
+    "cusId": "557462",
+    "cusName": "OCCHCSA7"
+  },
+  {
+    "cusId": "556622",
+    "cusName": "OCCHCSA98"
+  },
+  {
+    "cusId": "556580",
+    "cusName": "OCCHCSA99"
+  },
+  {
+    "cusId": "559744",
+    "cusName": "OCCHCSAT3"
+  },
+  {
+    "cusId": "558739",
+    "cusName": "OCCHCSB1"
+  },
+  {
+    "cusId": "559779",
+    "cusName": "OCCHCSBK1"
+  },
+  {
+    "cusId": "559774",
+    "cusName": "OCCHCSBT3"
+  },
+  {
+    "cusId": "598351",
+    "cusName": "OCCHCSDEMO1"
+  },
+  {
+    "cusId": "614247",
+    "cusName": "OCCHCSFEB27"
+  },
+  {
+    "cusId": "548140",
+    "cusName": "OCCHCSNEXT"
+  },
+  {
+    "cusId": "544864",
+    "cusName": "OCCHCSSV14"
+  },
+  {
+    "cusId": "546162",
+    "cusName": "OCCHCSSV15"
+  },
+  {
+    "cusId": "546375",
+    "cusName": "OCCHCSSV16"
+  },
+  {
+    "cusId": "546376",
+    "cusName": "OCCHCSSV17"
+  },
+  {
+    "cusId": "547047",
+    "cusName": "OCCHCSSV18"
+  },
+  {
+    "cusId": "580351",
+    "cusName": "OCCHCSUK2"
+  },
+  {
+    "cusId": "595031",
+    "cusName": "OCCHCSUK3"
+  },
+  {
+    "cusId": "597731",
+    "cusName": "OCCHCSUKA1"
+  },
+  {
+    "cusId": "540226",
+    "cusName": "OCCHCSVS1"
+  },
+  {
+    "cusId": "540227",
+    "cusName": "OCCHCSVS2"
+  },
+  {
+    "cusId": "540228",
+    "cusName": "OCCHCSVS3"
+  },
+  {
+    "cusId": "540229",
+    "cusName": "OCCHCSVS4"
+  },
+  {
+    "cusId": "540230",
+    "cusName": "OCCHCSVS5"
+  },
+  {
+    "cusId": "544325",
+    "cusName": "OCCHCSVS6"
+  },
+  {
+    "cusId": "544342",
+    "cusName": "OCCHCSVS7"
+  },
+  {
+    "cusId": "547024",
+    "cusName": "OCCHCSVS8"
+  },
+  {
+    "cusId": "547638",
+    "cusName": "OCCHCSVS9"
+  },
+  {
+    "cusId": "556738",
+    "cusName": "OCCHCSZ1"
+  },
+  {
+    "cusId": "557133",
+    "cusName": "OCCHCSZ2"
+  },
+  {
+    "cusId": "557320",
+    "cusName": "OCCHCSZ3"
+  },
+  {
+    "cusId": "557321",
+    "cusName": "OCCHCSZ4"
+  },
+  {
+    "cusId": "557781",
+    "cusName": "OCCHCSZ6"
+  },
+  {
+    "cusId": "580811",
+    "cusName": "OCCHSATO1"
+  },
+  {
+    "cusId": "584371",
+    "cusName": "OCCHSATO3"
+  },
+  {
+    "cusId": "585332",
+    "cusName": "OCCHSATO4"
+  },
+  {
+    "cusId": "526535",
+    "cusName": "OCCMAXCUST"
+  },
+  {
+    "cusId": "599396",
+    "cusName": "OCCR35CUSTOMER"
+  },
+  {
+    "cusId": "541482",
+    "cusName": "OCCTESTAUTO"
+  },
+  {
+    "cusId": "583011",
+    "cusName": "OCCTESTBCM"
+  },
+  {
+    "cusId": "207753",
+    "cusName": "OCEAN"
+  },
+  {
+    "cusId": "207756",
+    "cusName": "OCEANIC"
+  },
+  {
+    "cusId": "526528",
+    "cusName": "OHCSCUSTOMOR"
+  },
+  {
+    "cusId": "203169",
+    "cusName": "OOTNNO"
+  },
+  {
+    "cusId": "203776",
+    "cusName": "OPTIMIZE"
+  },
+  {
+    "cusId": "35329",
+    "cusName": "ORANGE NETWORKS"
+  },
+  {
+    "cusId": "35509",
+    "cusName": "ORANGE NETWORKS."
+  },
+  {
+    "cusId": "525802",
+    "cusName": "OSSHCSCUS1"
+  },
+  {
+    "cusId": "525822",
+    "cusName": "OSSHCSCUS2"
+  },
+  {
+    "cusId": "527162",
+    "cusName": "OSSHCSTEST"
+  },
+  {
+    "cusId": "200525",
+    "cusName": "OTTERINARI"
+  },
+  {
+    "cusId": "203554",
+    "cusName": "OVCUST_4"
+  },
+  {
+    "cusId": "509462",
+    "cusName": "OVRBTSGUKT3"
+  },
+  {
+    "cusId": "513704",
+    "cusName": "OVR_10"
+  },
+  {
+    "cusId": "206808",
+    "cusName": "PANASONICPINGU"
+  },
+  {
+    "cusId": "447145",
+    "cusName": "PANDUIT CABLE"
+  },
+  {
+    "cusId": "227168",
+    "cusName": "PARKER HANNIFIN BV"
+  },
+  {
+    "cusId": "222886",
+    "cusName": "PATHAN"
+  },
+  {
+    "cusId": "202719",
+    "cusName": "PAUL 17 JUNE"
+  },
+  {
+    "cusId": "436620",
+    "cusName": "PAULS TEST COMPANY"
+  },
+  {
+    "cusId": "198585",
+    "cusName": "PAVCUS18"
+  },
+  {
+    "cusId": "197701",
+    "cusName": "PEARS"
+  },
+  {
+    "cusId": "35805",
+    "cusName": "PEER TREE"
+  },
+  {
+    "cusId": "207018",
+    "cusName": "PENSOUJI"
+  },
+  {
+    "cusId": "207080",
+    "cusName": "PENTASOFT"
+  },
+  {
+    "cusId": "43190",
+    "cusName": "PEPSODENT-RUN3A-R892"
+  },
+  {
+    "cusId": "200361",
+    "cusName": "PESTALLPR"
+  },
+  {
+    "cusId": "43090",
+    "cusName": "PETER HOUSE"
+  },
+  {
+    "cusId": "43227",
+    "cusName": "PETER HOUSE DESIGNS R892 3A"
+  },
+  {
+    "cusId": "43586",
+    "cusName": "PETER HOUSE DESIGNS R893-R4"
+  },
+  {
+    "cusId": "43047",
+    "cusName": "PETER HOUSE OF DESIGN - R1000"
+  },
+  {
+    "cusId": "40765",
+    "cusName": "PETER HOUSE OF DESIGN - R891"
+  },
+  {
+    "cusId": "43153",
+    "cusName": "PETER HOUSE OF DESIGN - R892-RUN1"
+  },
+  {
+    "cusId": "43170",
+    "cusName": "PETER HOUSE R892 3A"
+  },
+  {
+    "cusId": "43063",
+    "cusName": "PETERS HOUSE OF DESIGN - R892"
+  },
+  {
+    "cusId": "602951",
+    "cusName": "PHONES"
+  },
+  {
+    "cusId": "206935",
+    "cusName": "PIPECLEAN"
+  },
+  {
+    "cusId": "206980",
+    "cusName": "PIPECLN"
+  },
+  {
+    "cusId": "207022",
+    "cusName": "PIPECLN2"
+  },
+  {
+    "cusId": "199634",
+    "cusName": "PIYUENDC"
+  },
+  {
+    "cusId": "199601",
+    "cusName": "PIYUSH"
+  },
+  {
+    "cusId": "199632",
+    "cusName": "PIYUSHE"
+  },
+  {
+    "cusId": "199609",
+    "cusName": "PIYUSHEND"
+  },
+  {
+    "cusId": "199633",
+    "cusName": "PIYUSHENDC"
+  },
+  {
+    "cusId": "199602",
+    "cusName": "PIYUSHSUB"
+  },
+  {
+    "cusId": "201096",
+    "cusName": "PJC - TEST COMPARE"
+  },
+  {
+    "cusId": "206155",
+    "cusName": "POSTCN"
+  },
+  {
+    "cusId": "220315",
+    "cusName": "POSTPAYEE"
+  },
+  {
+    "cusId": "203332",
+    "cusName": "PPP_MXCUSTOMER111"
+  },
+  {
+    "cusId": "187484",
+    "cusName": "PP_STDLL_TO_HVPN"
+  },
+  {
+    "cusId": "204970",
+    "cusName": "PR233"
+  },
+  {
+    "cusId": "205144",
+    "cusName": "PR277RET"
+  },
+  {
+    "cusId": "203726",
+    "cusName": "PR423SSLBR"
+  },
+  {
+    "cusId": "203748",
+    "cusName": "PR425SSLMX"
+  },
+  {
+    "cusId": "205225",
+    "cusName": "PR589RETEST"
+  },
+  {
+    "cusId": "206827",
+    "cusName": "PRABHAS"
+  },
+  {
+    "cusId": "35491",
+    "cusName": "PRATAP"
+  },
+  {
+    "cusId": "202197",
+    "cusName": "PRATTTEST"
+  },
+  {
+    "cusId": "205843",
+    "cusName": "PRCEASE"
+  },
+  {
+    "cusId": "70030",
+    "cusName": "PRE-PROVIDE-6. 6_CUSTOMER"
+  },
+  {
+    "cusId": "69887",
+    "cusName": "PRE-PROVIDE_6. 13_CUSTOMER"
+  },
+  {
+    "cusId": "211482",
+    "cusName": "PREALLD"
+  },
+  {
+    "cusId": "43595",
+    "cusName": "PREM@89"
+  },
+  {
+    "cusId": "207069",
+    "cusName": "PREPROUK"
+  },
+  {
+    "cusId": "69984",
+    "cusName": "PREPROVIDE - SCO6 TEST"
+  },
+  {
+    "cusId": "70042",
+    "cusName": "PREPROVIDE6. 9_BACKUP"
+  },
+  {
+    "cusId": "52130",
+    "cusName": "PREPROVIDE_S2"
+  },
+  {
+    "cusId": "106605",
+    "cusName": "PRE_SLL_BTUK_CUSTOMER"
+  },
+  {
+    "cusId": "69871",
+    "cusName": "PRE_STDLL_CUSTOMER"
+  },
+  {
+    "cusId": "81466",
+    "cusName": "PRE_STDLL_CUSTOMERNEW"
+  },
+  {
+    "cusId": "523783",
+    "cusName": "PRICINGCUST"
+  },
+  {
+    "cusId": "205826",
+    "cusName": "PRIFC"
+  },
+  {
+    "cusId": "199969",
+    "cusName": "PRIPSEC"
+  },
+  {
+    "cusId": "206532",
+    "cusName": "PRIPSEC1"
+  },
+  {
+    "cusId": "199984",
+    "cusName": "PRIPTEST"
+  },
+  {
+    "cusId": "199965",
+    "cusName": "PRITEST"
+  },
+  {
+    "cusId": "201975",
+    "cusName": "PRIYA1"
+  },
+  {
+    "cusId": "200256",
+    "cusName": "PRIYAIVPN"
+  },
+  {
+    "cusId": "200406",
+    "cusName": "PRIYAIVPN1"
+  },
+  {
+    "cusId": "207583",
+    "cusName": "PRIYAMAH"
+  },
+  {
+    "cusId": "207633",
+    "cusName": "PRIYAMAHESH"
+  },
+  {
+    "cusId": "200323",
+    "cusName": "PRIYAPROXY1"
+  },
+  {
+    "cusId": "199868",
+    "cusName": "PRIYATEST"
+  },
+  {
+    "cusId": "201879",
+    "cusName": "PRIYATEST1"
+  },
+  {
+    "cusId": "200306",
+    "cusName": "PRIYATEST4"
+  },
+  {
+    "cusId": "200245",
+    "cusName": "PRIYATESTING"
+  },
+  {
+    "cusId": "200202",
+    "cusName": "PRIYATESTVLP"
+  },
+  {
+    "cusId": "199937",
+    "cusName": "PRIYAVENK"
+  },
+  {
+    "cusId": "199938",
+    "cusName": "PRIYAVTEST"
+  },
+  {
+    "cusId": "206560",
+    "cusName": "PRMAH"
+  },
+  {
+    "cusId": "204850",
+    "cusName": "PRMC10"
+  },
+  {
+    "cusId": "204811",
+    "cusName": "PRMC19"
+  },
+  {
+    "cusId": "204849",
+    "cusName": "PRMC4"
+  },
+  {
+    "cusId": "204764",
+    "cusName": "PRMOD"
+  },
+  {
+    "cusId": "204338",
+    "cusName": "PRMX421"
+  },
+  {
+    "cusId": "204340",
+    "cusName": "PRMX421NEW"
+  },
+  {
+    "cusId": "204335",
+    "cusName": "PRMX59"
+  },
+  {
+    "cusId": "203193",
+    "cusName": "PRMXC42"
+  },
+  {
+    "cusId": "203240",
+    "cusName": "PRMXC421"
+  },
+  {
+    "cusId": "204093",
+    "cusName": "PRMXDIS"
+  },
+  {
+    "cusId": "204080",
+    "cusName": "PRMXIFC"
+  },
+  {
+    "cusId": "204120",
+    "cusName": "PRMXREGIFC"
+  },
+  {
+    "cusId": "203398",
+    "cusName": "PRMXSSL"
+  },
+  {
+    "cusId": "204343",
+    "cusName": "PRMXTC3"
+  },
+  {
+    "cusId": "199998",
+    "cusName": "PROFEY"
+  },
+  {
+    "cusId": "203100",
+    "cusName": "PROVIDCP"
+  },
+  {
+    "cusId": "52102",
+    "cusName": "PROVIDE MOD RUN4"
+  },
+  {
+    "cusId": "52121",
+    "cusName": "PROVIDE-R894"
+  },
+  {
+    "cusId": "403622",
+    "cusName": "PROVIDESERVICEDESKMSUPP"
+  },
+  {
+    "cusId": "200340",
+    "cusName": "PROXYPTEST"
+  },
+  {
+    "cusId": "200331",
+    "cusName": "PROXYTESTPR"
+  },
+  {
+    "cusId": "203516",
+    "cusName": "PRSSL42"
+  },
+  {
+    "cusId": "204032",
+    "cusName": "PRSSLBR"
+  },
+  {
+    "cusId": "204717",
+    "cusName": "PRSSLCON"
+  },
+  {
+    "cusId": "204988",
+    "cusName": "PRTC1"
+  },
+  {
+    "cusId": "200350",
+    "cusName": "PRTEST2"
+  },
+  {
+    "cusId": "204136",
+    "cusName": "PRTEST2487"
+  },
+  {
+    "cusId": "200592",
+    "cusName": "PRTEST4CB5"
+  },
+  {
+    "cusId": "200046",
+    "cusName": "PRTESTNEW"
+  },
+  {
+    "cusId": "206947",
+    "cusName": "PSYCO"
+  },
+  {
+    "cusId": "203688",
+    "cusName": "QAZS"
+  },
+  {
+    "cusId": "207097",
+    "cusName": "QHCN"
+  },
+  {
+    "cusId": "200115",
+    "cusName": "QUEENEND"
+  },
+  {
+    "cusId": "200107",
+    "cusName": "QUEENSLAND"
+  },
+  {
+    "cusId": "200111",
+    "cusName": "QUEENSLANDEND"
+  },
+  {
+    "cusId": "200109",
+    "cusName": "QUEENSLANDSUBCP"
+  },
+  {
+    "cusId": "494022",
+    "cusName": "QWSA"
+  },
+  {
+    "cusId": "187485",
+    "cusName": "R-901_REGRESSION_BUCKINGHAM"
+  },
+  {
+    "cusId": "70004",
+    "cusName": "R0906PPLL"
+  },
+  {
+    "cusId": "203341",
+    "cusName": "R15E2E85215"
+  },
+  {
+    "cusId": "208062",
+    "cusName": "R15MX85"
+  },
+  {
+    "cusId": "205012",
+    "cusName": "R16 BULK UPLOAD TEST"
+  },
+  {
+    "cusId": "206654",
+    "cusName": "R16MXSTEST"
+  },
+  {
+    "cusId": "205868",
+    "cusName": "R17CIT16"
+  },
+  {
+    "cusId": "205649",
+    "cusName": "R17MOB31"
+  },
+  {
+    "cusId": "205774",
+    "cusName": "R17NEWMOB31"
+  },
+  {
+    "cusId": "207111",
+    "cusName": "R183TC"
+  },
+  {
+    "cusId": "207076",
+    "cusName": "R183TC14"
+  },
+  {
+    "cusId": "207071",
+    "cusName": "R18E2E154PP"
+  },
+  {
+    "cusId": "209156",
+    "cusName": "R19MXREG10"
+  },
+  {
+    "cusId": "215116",
+    "cusName": "R21MXREG12206"
+  },
+  {
+    "cusId": "215877",
+    "cusName": "R21MXREG72907"
+  },
+  {
+    "cusId": "224117",
+    "cusName": "R22MXIFCAMEND2808"
+  },
+  {
+    "cusId": "232564",
+    "cusName": "R23ADSL"
+  },
+  {
+    "cusId": "226530",
+    "cusName": "R23MXREG44"
+  },
+  {
+    "cusId": "226269",
+    "cusName": "R23SANITYDIRECT"
+  },
+  {
+    "cusId": "229282",
+    "cusName": "R23WBCADSL"
+  },
+  {
+    "cusId": "231282",
+    "cusName": "R23WBCHE"
+  },
+  {
+    "cusId": "252303",
+    "cusName": "R24ADSL"
+  },
+  {
+    "cusId": "256542",
+    "cusName": "R24FTTC"
+  },
+  {
+    "cusId": "250942",
+    "cusName": "R24HE"
+  },
+  {
+    "cusId": "240042",
+    "cusName": "R24MXREG1"
+  },
+  {
+    "cusId": "263922",
+    "cusName": "R24WBC"
+  },
+  {
+    "cusId": "309982",
+    "cusName": "R25BTUK"
+  },
+  {
+    "cusId": "290762",
+    "cusName": "R25MXSANITY"
+  },
+  {
+    "cusId": "412982",
+    "cusName": "R27REGCEASE"
+  },
+  {
+    "cusId": "376942",
+    "cusName": "R27TESTT3"
+  },
+  {
+    "cusId": "489442",
+    "cusName": "R30DEMOCUST"
+  },
+  {
+    "cusId": "494423",
+    "cusName": "R31 JEGA"
+  },
+  {
+    "cusId": "523508",
+    "cusName": "R32REGSEAM"
+  },
+  {
+    "cusId": "521983",
+    "cusName": "R32TEST1"
+  },
+  {
+    "cusId": "544585",
+    "cusName": "R33BCMLOADTEST"
+  },
+  {
+    "cusId": "540131",
+    "cusName": "R33HUCSTOHCS"
+  },
+  {
+    "cusId": "541706",
+    "cusName": "R33UKCUST"
+  },
+  {
+    "cusId": "541705",
+    "cusName": "R33UKTEST"
+  },
+  {
+    "cusId": "549725",
+    "cusName": "R34REGSITE10"
+  },
+  {
+    "cusId": "597631",
+    "cusName": "R35AUTOT301"
+  },
+  {
+    "cusId": "599372",
+    "cusName": "R35E2ECUSTOMER"
+  },
+  {
+    "cusId": "563891",
+    "cusName": "R35HCS1"
+  },
+  {
+    "cusId": "563901",
+    "cusName": "R35HCS10"
+  },
+  {
+    "cusId": "584411",
+    "cusName": "R35HCS11"
+  },
+  {
+    "cusId": "594891",
+    "cusName": "R35HCS12"
+  },
+  {
+    "cusId": "563892",
+    "cusName": "R35HCS2"
+  },
+  {
+    "cusId": "563893",
+    "cusName": "R35HCS3"
+  },
+  {
+    "cusId": "563895",
+    "cusName": "R35HCS4"
+  },
+  {
+    "cusId": "563896",
+    "cusName": "R35HCS5"
+  },
+  {
+    "cusId": "563897",
+    "cusName": "R35HCS6"
+  },
+  {
+    "cusId": "563898",
+    "cusName": "R35HCS7"
+  },
+  {
+    "cusId": "563899",
+    "cusName": "R35HCS8"
+  },
+  {
+    "cusId": "563900",
+    "cusName": "R35HCS9"
+  },
+  {
+    "cusId": "579431",
+    "cusName": "R35HCSTEST"
+  },
+  {
+    "cusId": "587431",
+    "cusName": "R35HSBCM"
+  },
+  {
+    "cusId": "588791",
+    "cusName": "R35HSBCM1"
+  },
+  {
+    "cusId": "585891",
+    "cusName": "R35OCCBCM"
+  },
+  {
+    "cusId": "598691",
+    "cusName": "R35OCCDEMO1"
+  },
+  {
+    "cusId": "596831",
+    "cusName": "R35OCCHCS5"
+  },
+  {
+    "cusId": "597951",
+    "cusName": "R35OCCHCSUK6"
+  },
+  {
+    "cusId": "607211",
+    "cusName": "R36 GSCE142064 SC01"
+  },
+  {
+    "cusId": "611922",
+    "cusName": "R36142064SC04"
+  },
+  {
+    "cusId": "603591",
+    "cusName": "R36ATMN1"
+  },
+  {
+    "cusId": "607992",
+    "cusName": "R36AUTO01"
+  },
+  {
+    "cusId": "604573",
+    "cusName": "R36AUTOCUST1"
+  },
+  {
+    "cusId": "614261",
+    "cusName": "R36DEMOEMEA1"
+  },
+  {
+    "cusId": "607631",
+    "cusName": "R36GSCE142064SC001"
+  },
+  {
+    "cusId": "609693",
+    "cusName": "R36GSCE142064SC02"
+  },
+  {
+    "cusId": "610553",
+    "cusName": "R36GSCE142064SC03"
+  },
+  {
+    "cusId": "604234",
+    "cusName": "R36HCSUK1"
+  },
+  {
+    "cusId": "604235",
+    "cusName": "R36HCSUK2"
+  },
+  {
+    "cusId": "604236",
+    "cusName": "R36HCSUK3"
+  },
+  {
+    "cusId": "611416",
+    "cusName": "R36OCCPNC"
+  },
+  {
+    "cusId": "605371",
+    "cusName": "R36OCCUK1"
+  },
+  {
+    "cusId": "608314",
+    "cusName": "R36OCCUK2"
+  },
+  {
+    "cusId": "610431",
+    "cusName": "R36OCCUK4"
+  },
+  {
+    "cusId": "613116",
+    "cusName": "R36OCCUK5"
+  },
+  {
+    "cusId": "611716",
+    "cusName": "R36T3AUTOTEST01"
+  },
+  {
+    "cusId": "615228",
+    "cusName": "R36TESTCUST"
+  },
+  {
+    "cusId": "614701",
+    "cusName": "R36_OCL_VANDY"
+  },
+  {
+    "cusId": "623368",
+    "cusName": "R37AUTOM01"
+  },
+  {
+    "cusId": "664128",
+    "cusName": "R37GSCE142074MX03"
+  },
+  {
+    "cusId": "650188",
+    "cusName": "R37GSCE142074SC00003"
+  },
+  {
+    "cusId": "619775",
+    "cusName": "R37GSCE142074SC002"
+  },
+  {
+    "cusId": "619777",
+    "cusName": "R37GSCE142074SC003"
+  },
+  {
+    "cusId": "663388",
+    "cusName": "R37GSCE142074SC03"
+  },
+  {
+    "cusId": "664028",
+    "cusName": "R37GSCE142074SC04"
+  },
+  {
+    "cusId": "666208",
+    "cusName": "R37GSCE412074MX01"
+  },
+  {
+    "cusId": "620088",
+    "cusName": "R37HCSAUTOUK1"
+  },
+  {
+    "cusId": "623048",
+    "cusName": "R37OCCHCSUK1"
+  },
+  {
+    "cusId": "662528",
+    "cusName": "R37OCCMIG"
+  },
+  {
+    "cusId": "620188",
+    "cusName": "R37OCCUK1"
+  },
+  {
+    "cusId": "666948",
+    "cusName": "R37TESTAUTO05"
+  },
+  {
+    "cusId": "675368",
+    "cusName": "R38 4G CUS"
+  },
+  {
+    "cusId": "687516",
+    "cusName": "R38 GSCE-142074 SC01"
+  },
+  {
+    "cusId": "684568",
+    "cusName": "R38 GSCE-142074 SC06"
+  },
+  {
+    "cusId": "690836",
+    "cusName": "R38AUTOUK01"
+  },
+  {
+    "cusId": "692536",
+    "cusName": "R38AUTOUK02"
+  },
+  {
+    "cusId": "694939",
+    "cusName": "R38AUTOUK04"
+  },
+  {
+    "cusId": "695219",
+    "cusName": "R38AUTOUK05"
+  },
+  {
+    "cusId": "695243",
+    "cusName": "R38AUTOUK06"
+  },
+  {
+    "cusId": "695244",
+    "cusName": "R38AUTOUK07"
+  },
+  {
+    "cusId": "695247",
+    "cusName": "R38AUTOUK08"
+  },
+  {
+    "cusId": "695249",
+    "cusName": "R38AUTOUK09"
+  },
+  {
+    "cusId": "695250",
+    "cusName": "R38AUTOUK10"
+  },
+  {
+    "cusId": "695251",
+    "cusName": "R38AUTOUK11"
+  },
+  {
+    "cusId": "685093",
+    "cusName": "R38CUSTUK01"
+  },
+  {
+    "cusId": "688916",
+    "cusName": "R38DEMOU"
+  },
+  {
+    "cusId": "681829",
+    "cusName": "R38GSCE-142074SC0006"
+  },
+  {
+    "cusId": "681728",
+    "cusName": "R38GSCE-142074SC006"
+  },
+  {
+    "cusId": "685685",
+    "cusName": "R38GSCE142074SC01BULK"
+  },
+  {
+    "cusId": "685596",
+    "cusName": "R38GSCE142074SC03UI"
+  },
+  {
+    "cusId": "674128",
+    "cusName": "R38HCSUK01"
+  },
+  {
+    "cusId": "673908",
+    "cusName": "R38HCSUK1"
+  },
+  {
+    "cusId": "687756",
+    "cusName": "R38HCSUKCUST"
+  },
+  {
+    "cusId": "673728",
+    "cusName": "R38IFCPROVID"
+  },
+  {
+    "cusId": "669888",
+    "cusName": "R38OCCUK1"
+  },
+  {
+    "cusId": "685937",
+    "cusName": "R38OCCUK2"
+  },
+  {
+    "cusId": "695577",
+    "cusName": "R38SC014GBI"
+  },
+  {
+    "cusId": "694693",
+    "cusName": "R38SC014GCUS"
+  },
+  {
+    "cusId": "695857",
+    "cusName": "R38SC06ERRORWAY"
+  },
+  {
+    "cusId": "685365",
+    "cusName": "R38TESTAUTO1"
+  },
+  {
+    "cusId": "690936",
+    "cusName": "R38UKCUST05"
+  },
+  {
+    "cusId": "695205",
+    "cusName": "R38UKHCS3751"
+  },
+  {
+    "cusId": "689096",
+    "cusName": "R38UKUATCUST"
+  },
+  {
+    "cusId": "703399",
+    "cusName": "R39 OCC TEST"
+  },
+  {
+    "cusId": "700660",
+    "cusName": "R39 UKFALLOUT1"
+  },
+  {
+    "cusId": "712237",
+    "cusName": "R39AUTOTEST"
+  },
+  {
+    "cusId": "702697",
+    "cusName": "R39AUTOUK01"
+  },
+  {
+    "cusId": "702737",
+    "cusName": "R39AUTOUK02"
+  },
+  {
+    "cusId": "708497",
+    "cusName": "R39AUTOUK03"
+  },
+  {
+    "cusId": "708500",
+    "cusName": "R39AUTOUK05"
+  },
+  {
+    "cusId": "709008",
+    "cusName": "R39AUTOUK06"
+  },
+  {
+    "cusId": "714957",
+    "cusName": "R39AUTOUK07"
+  },
+  {
+    "cusId": "714997",
+    "cusName": "R39AUTOUK08"
+  },
+  {
+    "cusId": "717637",
+    "cusName": "R39AUTOUK09"
+  },
+  {
+    "cusId": "718257",
+    "cusName": "R39AUTOUK10"
+  },
+  {
+    "cusId": "718258",
+    "cusName": "R39AUTOUK11"
+  },
+  {
+    "cusId": "718260",
+    "cusName": "R39AUTOUK12"
+  },
+  {
+    "cusId": "718262",
+    "cusName": "R39AUTOUK13"
+  },
+  {
+    "cusId": "699481",
+    "cusName": "R39BULKCUS"
+  },
+  {
+    "cusId": "700317",
+    "cusName": "R39CUSTREG"
+  },
+  {
+    "cusId": "709158",
+    "cusName": "R39HCSUK2"
+  },
+  {
+    "cusId": "701317",
+    "cusName": "R39MOBILECUST"
+  },
+  {
+    "cusId": "724017",
+    "cusName": "R40 TEST1"
+  },
+  {
+    "cusId": "723977",
+    "cusName": "R40 UK CUSTOMER1"
+  },
+  {
+    "cusId": "727297",
+    "cusName": "R40 UK CUSTOMER2"
+  },
+  {
+    "cusId": "741997",
+    "cusName": "R40 UK CUSTOMER3"
+  },
+  {
+    "cusId": "721879",
+    "cusName": "R40AUTOUK01"
+  },
+  {
+    "cusId": "721897",
+    "cusName": "R40AUTOUK02"
+  },
+  {
+    "cusId": "721957",
+    "cusName": "R40AUTOUK03"
+  },
+  {
+    "cusId": "725397",
+    "cusName": "R40AUTOUK04"
+  },
+  {
+    "cusId": "725477",
+    "cusName": "R40AUTOUK05"
+  },
+  {
+    "cusId": "733977",
+    "cusName": "R40AUTOUK06"
+  },
+  {
+    "cusId": "737299",
+    "cusName": "R40AUTOUK07"
+  },
+  {
+    "cusId": "743777",
+    "cusName": "R40AUTOUK08"
+  },
+  {
+    "cusId": "734137",
+    "cusName": "R40HCSUK"
+  },
+  {
+    "cusId": "735857",
+    "cusName": "R40HCSUK01"
+  },
+  {
+    "cusId": "742238",
+    "cusName": "R40HCSUK02"
+  },
+  {
+    "cusId": "742937",
+    "cusName": "R40HCSUK03"
+  },
+  {
+    "cusId": "732537",
+    "cusName": "R40REG4G"
+  },
+  {
+    "cusId": "725357",
+    "cusName": "R40REGCUST"
+  },
+  {
+    "cusId": "753859",
+    "cusName": "R40UK1"
+  },
+  {
+    "cusId": "759549",
+    "cusName": "R41 WALKTHORUGH"
+  },
+  {
+    "cusId": "758932",
+    "cusName": "R41AUTOUK01"
+  },
+  {
+    "cusId": "759580",
+    "cusName": "R41AUTOUK02"
+  },
+  {
+    "cusId": "753898",
+    "cusName": "R41CQMUK"
+  },
+  {
+    "cusId": "758600",
+    "cusName": "R41CQMUKMODIFY"
+  },
+  {
+    "cusId": "771437",
+    "cusName": "R41HCSAUTOUK01"
+  },
+  {
+    "cusId": "753897",
+    "cusName": "R41HCSUK01"
+  },
+  {
+    "cusId": "759219",
+    "cusName": "R41HCSUK02"
+  },
+  {
+    "cusId": "764490",
+    "cusName": "R41HCSUK03"
+  },
+  {
+    "cusId": "754617",
+    "cusName": "R41HCSUKLG"
+  },
+  {
+    "cusId": "751758",
+    "cusName": "R41OCCCUST"
+  },
+  {
+    "cusId": "764085",
+    "cusName": "R41TESTAUTO01"
+  },
+  {
+    "cusId": "763053",
+    "cusName": "R41TESTE2E"
+  },
+  {
+    "cusId": "753937",
+    "cusName": "R41UKPOD"
+  },
+  {
+    "cusId": "754258",
+    "cusName": "R41UKPODCQM"
+  },
+  {
+    "cusId": "752998",
+    "cusName": "R41UKPROVIDE"
+  },
+  {
+    "cusId": "750120",
+    "cusName": "R41_CUSTOMERTEST"
+  },
+  {
+    "cusId": "776577",
+    "cusName": "R42AUTOUK01"
+  },
+  {
+    "cusId": "776637",
+    "cusName": "R42AUTOUK02"
+  },
+  {
+    "cusId": "200883",
+    "cusName": "R5 E2E 11 FRF"
+  },
+  {
+    "cusId": "199755",
+    "cusName": "R5E2E11STD"
+  },
+  {
+    "cusId": "206979",
+    "cusName": "R5E2E8BTGSUK"
+  },
+  {
+    "cusId": "207007",
+    "cusName": "R5E2E8_CUS"
+  },
+  {
+    "cusId": "194212",
+    "cusName": "R5_UK_TEST_ACC"
+  },
+  {
+    "cusId": "194211",
+    "cusName": "R5_UK_TEST_ACC1"
+  },
+  {
+    "cusId": "206550",
+    "cusName": "R7NEW16"
+  },
+  {
+    "cusId": "48261",
+    "cusName": "R894 1VST SC11_R3_CA"
+  },
+  {
+    "cusId": "44840",
+    "cusName": "R894 1VST SC12_R2_CA"
+  },
+  {
+    "cusId": "44812",
+    "cusName": "R894 1VST SC3_R2_CA"
+  },
+  {
+    "cusId": "44679",
+    "cusName": "R894 1VST SC4_R2_CA"
+  },
+  {
+    "cusId": "44699",
+    "cusName": "R894 1VST SC5_R1_CA1"
+  },
+  {
+    "cusId": "44683",
+    "cusName": "R894 1VST SC5_R2_CA2"
+  },
+  {
+    "cusId": "52106",
+    "cusName": "R894 1VST SC5_R3_CA"
+  },
+  {
+    "cusId": "45297",
+    "cusName": "R894 1VST SC5_R3_CA2"
+  },
+  {
+    "cusId": "44754",
+    "cusName": "R894 1VST SC6_R1_CA"
+  },
+  {
+    "cusId": "44688",
+    "cusName": "R894 1VST SC6_R2_CA"
+  },
+  {
+    "cusId": "44811",
+    "cusName": "R894 1VST SC7_R2_CA"
+  },
+  {
+    "cusId": "48257",
+    "cusName": "R894 1VST TEST_CA1"
+  },
+  {
+    "cusId": "44810",
+    "cusName": "R894 1VST TEST_R2"
+  },
+  {
+    "cusId": "81504",
+    "cusName": "R894 ARMENIA RETEST-CUSTOMER"
+  },
+  {
+    "cusId": "70017",
+    "cusName": "R894 DSL ACCESS TEST_CUSTOMER"
+  },
+  {
+    "cusId": "69923",
+    "cusName": "R894 DSL TEST-CUSTOMER"
+  },
+  {
+    "cusId": "70012",
+    "cusName": "R894 ETHERNET_HVPN_CUSTOMER"
+  },
+  {
+    "cusId": "202351",
+    "cusName": "R894 FRANCE TEST ACCRUN2"
+  },
+  {
+    "cusId": "44730",
+    "cusName": "R894 FRANCE TEST ACC_RUN2"
+  },
+  {
+    "cusId": "193788",
+    "cusName": "R894 GERMANY TEST ACC"
+  },
+  {
+    "cusId": "70063",
+    "cusName": "R894 GERMANY TEST ACC RUN3"
+  },
+  {
+    "cusId": "44740",
+    "cusName": "R894 GERMANY TEST ACC SCE3"
+  },
+  {
+    "cusId": "70019",
+    "cusName": "R894 GERMANY TEST ACCOUNT RUN3"
+  },
+  {
+    "cusId": "69946",
+    "cusName": "R894 GERMANYTEST ACC PRO09"
+  },
+  {
+    "cusId": "56661",
+    "cusName": "R894 GERMANYTEST ACC-PRO09"
+  },
+  {
+    "cusId": "44666",
+    "cusName": "R894 HVPN MO CUST ACC08-RUN1"
+  },
+  {
+    "cusId": "44735",
+    "cusName": "R894 HVPN MO CUST ACC10-RUN1"
+  },
+  {
+    "cusId": "44661",
+    "cusName": "R894 HVPN MO CUST ACC13-RUN1"
+  },
+  {
+    "cusId": "52120",
+    "cusName": "R894 HVPN MO CUST ACC14-RUN1_RETEST"
+  },
+  {
+    "cusId": "44719",
+    "cusName": "R894 HVPN TEST CEASE CUST ACC02- RUN 1"
+  },
+  {
+    "cusId": "44814",
+    "cusName": "R894 HVPN TEST CEASE CUST ACC02-RUN1REP"
+  },
+  {
+    "cusId": "48255",
+    "cusName": "R894 HVPN TEST CUST ACC 05-RUN1"
+  },
+  {
+    "cusId": "69902",
+    "cusName": "R894 HVPN TEST CUST ACC 13_RUN1"
+  },
+  {
+    "cusId": "44684",
+    "cusName": "R894 HVPN TEST CUST ACC06-RUN1"
+  },
+  {
+    "cusId": "52053",
+    "cusName": "R894 HVPN TEST CUST ACC07 - RUN1"
+  },
+  {
+    "cusId": "45298",
+    "cusName": "R894 HVPN TEST CUST ACC08 - RUN1"
+  },
+  {
+    "cusId": "70039",
+    "cusName": "R894 HVPN TEST CUST ACC09 - RUN1"
+  },
+  {
+    "cusId": "44731",
+    "cusName": "R894 HVPN TEST CUST ACC09-RUN1"
+  },
+  {
+    "cusId": "45299",
+    "cusName": "R894 HVPN TEST CUST ACC10-RUN1"
+  },
+  {
+    "cusId": "52037",
+    "cusName": "R894 HVPN TEST CUST ACC11-RUN1"
+  },
+  {
+    "cusId": "44849",
+    "cusName": "R894 HVPN TEST CUST ACC16 - RUN1"
+  },
+  {
+    "cusId": "52195",
+    "cusName": "R894 HVPN TEST CUST ACC17 - RUN1"
+  },
+  {
+    "cusId": "44716",
+    "cusName": "R894 IRELAND TEST ACC"
+  },
+  {
+    "cusId": "69888",
+    "cusName": "R894 IRELAND TEST ACC RUN3F"
+  },
+  {
+    "cusId": "69912",
+    "cusName": "R894 IRELAND TEST ACC06"
+  },
+  {
+    "cusId": "69915",
+    "cusName": "R894 IRELAND TEST ACC6"
+  },
+  {
+    "cusId": "69932",
+    "cusName": "R894 IRELAND TEST ACC6. 6"
+  },
+  {
+    "cusId": "69977",
+    "cusName": "R894 MR0906 REGRESSION-CUSTOMER"
+  },
+  {
+    "cusId": "48269",
+    "cusName": "R894 OV IST SC12 CUS RUN2"
+  },
+  {
+    "cusId": "187520",
+    "cusName": "R894 P LLTO HVPN"
+  },
+  {
+    "cusId": "187311",
+    "cusName": "R894 PP STDLL TO HVPN"
+  },
+  {
+    "cusId": "52167",
+    "cusName": "R894 PREPROVIDE-CUSTOMER"
+  },
+  {
+    "cusId": "70024",
+    "cusName": "R894 RUN2 PROVIDE"
+  },
+  {
+    "cusId": "69964",
+    "cusName": "R894 RUN3 US TEST-CUSTOMER"
+  },
+  {
+    "cusId": "70040",
+    "cusName": "R894 SPAIN TESTACC"
+  },
+  {
+    "cusId": "69995",
+    "cusName": "R894 STDAPA_TESTACC"
+  },
+  {
+    "cusId": "69872",
+    "cusName": "R894 STDETHERNET TEST_CUSTOMER"
+  },
+  {
+    "cusId": "70054",
+    "cusName": "R894 UK CUST ACC"
+  },
+  {
+    "cusId": "44663",
+    "cusName": "R894 UK TEST ACC-RUN1"
+  },
+  {
+    "cusId": "52157",
+    "cusName": "R894 UK TEST ACC_RUN003"
+  },
+  {
+    "cusId": "52137",
+    "cusName": "R894 UK TEST ACC_RUN04"
+  },
+  {
+    "cusId": "44717",
+    "cusName": "R894 UK TEST ACC_RUN2"
+  },
+  {
+    "cusId": "48250",
+    "cusName": "R894 UK TEST ACC_RUN3"
+  },
+  {
+    "cusId": "52134",
+    "cusName": "R894 UK TEST ACC_RUN4"
+  },
+  {
+    "cusId": "70018",
+    "cusName": "R894 UK_RUN4_CUSTOMER"
+  },
+  {
+    "cusId": "70055",
+    "cusName": "R894 UK_RUN4_TEST_CUSTOMER"
+  },
+  {
+    "cusId": "70021",
+    "cusName": "R894 UK_TEST_CUSTOMER"
+  },
+  {
+    "cusId": "69980",
+    "cusName": "R894 US TEST ACC CUSTOMER"
+  },
+  {
+    "cusId": "69911",
+    "cusName": "R894 US TEST ACC MOD"
+  },
+  {
+    "cusId": "70029",
+    "cusName": "R894 US TEST ACC1"
+  },
+  {
+    "cusId": "69925",
+    "cusName": "R894-ARMENIA12"
+  },
+  {
+    "cusId": "69930",
+    "cusName": "R894-CUSTOMER-RUN2"
+  },
+  {
+    "cusId": "69884",
+    "cusName": "R894-HVPN-RUN2PROVIDE"
+  },
+  {
+    "cusId": "69997",
+    "cusName": "R894-PROVIDE-HVPN"
+  },
+  {
+    "cusId": "69889",
+    "cusName": "R894-SBR-25"
+  },
+  {
+    "cusId": "69897",
+    "cusName": "R894-SCENARIO17"
+  },
+  {
+    "cusId": "44667",
+    "cusName": "R894-SPAIN-TEST-ACC"
+  },
+  {
+    "cusId": "69954",
+    "cusName": "R894-TESTPROVIDE"
+  },
+  {
+    "cusId": "69934",
+    "cusName": "R894-US-ACC"
+  },
+  {
+    "cusId": "70061",
+    "cusName": "R894-US-HVPN"
+  },
+  {
+    "cusId": "69940",
+    "cusName": "R894US-RETESTACC"
+  },
+  {
+    "cusId": "56658",
+    "cusName": "R894USTEST ACC"
+  },
+  {
+    "cusId": "69999",
+    "cusName": "R894_76_CUST_TEST"
+  },
+  {
+    "cusId": "70059",
+    "cusName": "R894_CUST1"
+  },
+  {
+    "cusId": "69895",
+    "cusName": "R894_CUSTACC_65"
+  },
+  {
+    "cusId": "69933",
+    "cusName": "R894_CUSTACC_RUN2"
+  },
+  {
+    "cusId": "70000",
+    "cusName": "R894_CUSTACC_UK"
+  },
+  {
+    "cusId": "69890",
+    "cusName": "R894_MOD7. 6_PROVIDE"
+  },
+  {
+    "cusId": "70026",
+    "cusName": "R894_PROVIDE11_CUSTOMER"
+  },
+  {
+    "cusId": "69966",
+    "cusName": "R894_PROVIDE_610"
+  },
+  {
+    "cusId": "69955",
+    "cusName": "R894_PROVIDE_CUST13_TEST"
+  },
+  {
+    "cusId": "69881",
+    "cusName": "R894_SCE9PROVIDE"
+  },
+  {
+    "cusId": "69905",
+    "cusName": "R894_SCENARIO11_CUSTOMER"
+  },
+  {
+    "cusId": "69900",
+    "cusName": "R894_SCENARIO7. 13"
+  },
+  {
+    "cusId": "70013",
+    "cusName": "R894_SCENARIO_CUSTOMER"
+  },
+  {
+    "cusId": "44712",
+    "cusName": "R894_TEST_SC7"
+  },
+  {
+    "cusId": "69906",
+    "cusName": "R894_UK_ACC06_B1"
+  },
+  {
+    "cusId": "56664",
+    "cusName": "R894_UK_TEST"
+  },
+  {
+    "cusId": "69986",
+    "cusName": "R894_UK_TEST-CUSTOMER"
+  },
+  {
+    "cusId": "69979",
+    "cusName": "R894_UK_TEST1"
+  },
+  {
+    "cusId": "187771",
+    "cusName": "R901 RUN3 NNI_CUSTOMER"
+  },
+  {
+    "cusId": "106596",
+    "cusName": "R901 STD DSL IN UK"
+  },
+  {
+    "cusId": "187406",
+    "cusName": "R901-MVPN-NNI-RUN4"
+  },
+  {
+    "cusId": "187679",
+    "cusName": "R901-MVPN-RUN4"
+  },
+  {
+    "cusId": "187849",
+    "cusName": "R901-SCE10-CUSTOMER"
+  },
+  {
+    "cusId": "89490",
+    "cusName": "R901-US"
+  },
+  {
+    "cusId": "187656",
+    "cusName": "R901CSTLLBGM"
+  },
+  {
+    "cusId": "187330",
+    "cusName": "R901DSLRUN4"
+  },
+  {
+    "cusId": "187825",
+    "cusName": "R901_UAT_21CN"
+  },
+  {
+    "cusId": "187195",
+    "cusName": "R901_UAT_GERMANY"
+  },
+  {
+    "cusId": "187279",
+    "cusName": "R902DSL"
+  },
+  {
+    "cusId": "187244",
+    "cusName": "R902ETHERNET01"
+  },
+  {
+    "cusId": "187531",
+    "cusName": "R902ETHERNET011"
+  },
+  {
+    "cusId": "187190",
+    "cusName": "R902FRANCED2R2"
+  },
+  {
+    "cusId": "187764",
+    "cusName": "R902NWCUSTOMER"
+  },
+  {
+    "cusId": "187642",
+    "cusName": "R902SPAINACC"
+  },
+  {
+    "cusId": "187602",
+    "cusName": "R902SPAINACC1"
+  },
+  {
+    "cusId": "195247",
+    "cusName": "R902TESTACCIRELAND"
+  },
+  {
+    "cusId": "187700",
+    "cusName": "R902_D1_RUN3"
+  },
+  {
+    "cusId": "187777",
+    "cusName": "R902_D2_IRELAND"
+  },
+  {
+    "cusId": "187590",
+    "cusName": "R902_FINLAND_TEST ACC"
+  },
+  {
+    "cusId": "187776",
+    "cusName": "R902_IRELAND_TESTACC"
+  },
+  {
+    "cusId": "187749",
+    "cusName": "R902_REG_PROVIDE_DSL_UK_CUSTOMER"
+  },
+  {
+    "cusId": "187435",
+    "cusName": "R902_TEST_ACC_IRELAND"
+  },
+  {
+    "cusId": "187775",
+    "cusName": "R903_TEST_21CN_CUSTOMER"
+  },
+  {
+    "cusId": "69956",
+    "cusName": "R906 HVPN TEST CUST ACC04-RUN1"
+  },
+  {
+    "cusId": "227449",
+    "cusName": "RACAL ELECTRONICS EUROPE BV"
+  },
+  {
+    "cusId": "43347",
+    "cusName": "RAFEL"
+  },
+  {
+    "cusId": "187077",
+    "cusName": "RAHUL"
+  },
+  {
+    "cusId": "36165",
+    "cusName": "RAHUL_TEST"
+  },
+  {
+    "cusId": "433102",
+    "cusName": "RAJANI"
+  },
+  {
+    "cusId": "661729",
+    "cusName": "RAJMC1"
+  },
+  {
+    "cusId": "203848",
+    "cusName": "RAJU GARIMELLA 11"
+  },
+  {
+    "cusId": "557219",
+    "cusName": "RAJ_NEW_TEST"
+  },
+  {
+    "cusId": "206676",
+    "cusName": "RAMCUST"
+  },
+  {
+    "cusId": "206742",
+    "cusName": "RAMKUMARCUST"
+  },
+  {
+    "cusId": "207115",
+    "cusName": "RAMORDER"
+  },
+  {
+    "cusId": "206955",
+    "cusName": "RAMPIPECLEAN"
+  },
+  {
+    "cusId": "470783",
+    "cusName": "RANDOM"
+  },
+  {
+    "cusId": "213036",
+    "cusName": "RAVI3105"
+  },
+  {
+    "cusId": "213016",
+    "cusName": "RAVICHHIKARA30052012"
+  },
+  {
+    "cusId": "232492",
+    "cusName": "RAVINET"
+  },
+  {
+    "cusId": "32379",
+    "cusName": "RAYOVAC EUROPE BV"
+  },
+  {
+    "cusId": "544322",
+    "cusName": "RDTEST33"
+  },
+  {
+    "cusId": "208086",
+    "cusName": "RECORDQC"
+  },
+  {
+    "cusId": "43355",
+    "cusName": "RED STAR"
+  },
+  {
+    "cusId": "207312",
+    "cusName": "REDOVENKPR"
+  },
+  {
+    "cusId": "187762",
+    "cusName": "REEXECUTION_PP3_PROVIDE_DSL_UK_CUSTOMER"
+  },
+  {
+    "cusId": "212339",
+    "cusName": "REG5T3TEST"
+  },
+  {
+    "cusId": "207578",
+    "cusName": "REG85MX"
+  },
+  {
+    "cusId": "207584",
+    "cusName": "REG85MXS"
+  },
+  {
+    "cusId": "70034",
+    "cusName": "REGG_PROVIDE_CUSTOMER001"
+  },
+  {
+    "cusId": "207042",
+    "cusName": "REGITWMX"
+  },
+  {
+    "cusId": "210969",
+    "cusName": "REGR20RESIGN"
+  },
+  {
+    "cusId": "671948",
+    "cusName": "REGR38DSL"
+  },
+  {
+    "cusId": "203249",
+    "cusName": "REGRE11"
+  },
+  {
+    "cusId": "207145",
+    "cusName": "REGRESMX"
+  },
+  {
+    "cusId": "203209",
+    "cusName": "REGRESSION 11"
+  },
+  {
+    "cusId": "43114",
+    "cusName": "REGRESSION CUST 2"
+  },
+  {
+    "cusId": "70041",
+    "cusName": "REGRESSION LL GERMANY"
+  },
+  {
+    "cusId": "42540",
+    "cusName": "REGRESSION PACK-R891-4"
+  },
+  {
+    "cusId": "523550",
+    "cusName": "REGRESSIONCUST"
+  },
+  {
+    "cusId": "69975",
+    "cusName": "REGRESSION_LL"
+  },
+  {
+    "cusId": "673608",
+    "cusName": "REGTEST384"
+  },
+  {
+    "cusId": "187456",
+    "cusName": "REG_RM10"
+  },
+  {
+    "cusId": "204137",
+    "cusName": "REMXPR1213"
+  },
+  {
+    "cusId": "203454",
+    "cusName": "REPRMX"
+  },
+  {
+    "cusId": "212418",
+    "cusName": "RESECURECUS"
+  },
+  {
+    "cusId": "203247",
+    "cusName": "RESTESTMXP"
+  },
+  {
+    "cusId": "81521",
+    "cusName": "RETEST-R894-ORDER"
+  },
+  {
+    "cusId": "206841",
+    "cusName": "RETEST12417"
+  },
+  {
+    "cusId": "207616",
+    "cusName": "RETEST131"
+  },
+  {
+    "cusId": "217736",
+    "cusName": "RETEST1935"
+  },
+  {
+    "cusId": "556180",
+    "cusName": "RETEST25099"
+  },
+  {
+    "cusId": "201162",
+    "cusName": "RETEST5"
+  },
+  {
+    "cusId": "204134",
+    "cusName": "RETESTMXPR"
+  },
+  {
+    "cusId": "200528",
+    "cusName": "RETESTPR1"
+  },
+  {
+    "cusId": "521562",
+    "cusName": "RETESTSIP"
+  },
+  {
+    "cusId": "203528",
+    "cusName": "RETEST_691"
+  },
+  {
+    "cusId": "203506",
+    "cusName": "RETSSLPR"
+  },
+  {
+    "cusId": "608011",
+    "cusName": "RFQ_AUTOMTEST_0502-"
+  },
+  {
+    "cusId": "607991",
+    "cusName": "RFQ_AUTOMTEST_2534"
+  },
+  {
+    "cusId": "608032",
+    "cusName": "RFQ_AUTOTEST_050215"
+  },
+  {
+    "cusId": "608231",
+    "cusName": "RFQ_AUTOTEST_060215"
+  },
+  {
+    "cusId": "608012",
+    "cusName": "RFQ_AUTO_0502"
+  },
+  {
+    "cusId": "607551",
+    "cusName": "RFQ_AUTO_234"
+  },
+  {
+    "cusId": "533705",
+    "cusName": "RGSNCUST"
+  },
+  {
+    "cusId": "524303",
+    "cusName": "RHCS CUSTOMER"
+  },
+  {
+    "cusId": "767097",
+    "cusName": "RITA ELLEN TEST CUSTOMER"
+  },
+  {
+    "cusId": "187579",
+    "cusName": "ROCK"
+  },
+  {
+    "cusId": "198633",
+    "cusName": "ROOTLEEMA"
+  },
+  {
+    "cusId": "198706",
+    "cusName": "ROOTMODEL"
+  },
+  {
+    "cusId": "198707",
+    "cusName": "ROOTMOTOR"
+  },
+  {
+    "cusId": "203171",
+    "cusName": "ROOTNNO"
+  },
+  {
+    "cusId": "187690",
+    "cusName": "RPP21SEP10SA"
+  },
+  {
+    "cusId": "745257",
+    "cusName": "RR_TEST"
+  },
+  {
+    "cusId": "205033",
+    "cusName": "RSQETEST"
+  },
+  {
+    "cusId": "52152",
+    "cusName": "RUN3_TEST_REQ"
+  },
+  {
+    "cusId": "474022",
+    "cusName": "RUSBEY"
+  },
+  {
+    "cusId": "196673",
+    "cusName": "RUSSIANCUST"
+  },
+  {
+    "cusId": "197882",
+    "cusName": "S-TEST-CP"
+  },
+  {
+    "cusId": "200068",
+    "cusName": "SACHINNAYAK"
+  },
+  {
+    "cusId": "203567",
+    "cusName": "SACHIN_103244"
+  },
+  {
+    "cusId": "187788",
+    "cusName": "SACHIN_UK"
+  },
+  {
+    "cusId": "473022",
+    "cusName": "SAMIYO"
+  },
+  {
+    "cusId": "206541",
+    "cusName": "SAMP"
+  },
+  {
+    "cusId": "206522",
+    "cusName": "SAMPLE ORDER"
+  },
+  {
+    "cusId": "206454",
+    "cusName": "SANITYORDER"
+  },
+  {
+    "cusId": "207260",
+    "cusName": "SAN_CUS"
+  },
+  {
+    "cusId": "200982",
+    "cusName": "SARITHA"
+  },
+  {
+    "cusId": "187850",
+    "cusName": "SBRRP14"
+  },
+  {
+    "cusId": "685071",
+    "cusName": "SC003 CUSTOMER"
+  },
+  {
+    "cusId": "696488",
+    "cusName": "SC01CUS4G"
+  },
+  {
+    "cusId": "685070",
+    "cusName": "SC03 CUSTOMER"
+  },
+  {
+    "cusId": "757437",
+    "cusName": "SC05CSP"
+  },
+  {
+    "cusId": "69919",
+    "cusName": "SC16 HVPN TEST CUST ACC"
+  },
+  {
+    "cusId": "69965",
+    "cusName": "SC16 HVPN TEST CUST ACC-RUN2-SERBIA"
+  },
+  {
+    "cusId": "521124",
+    "cusName": "SC3_GOOGLE"
+  },
+  {
+    "cusId": "199800",
+    "cusName": "SCE01_RK_SAMPLE1"
+  },
+  {
+    "cusId": "199746",
+    "cusName": "SCENARIO15"
+  },
+  {
+    "cusId": "199736",
+    "cusName": "SCENARIO2"
+  },
+  {
+    "cusId": "205704",
+    "cusName": "SCENARIO3"
+  },
+  {
+    "cusId": "199740",
+    "cusName": "SCENARIO7"
+  },
+  {
+    "cusId": "70002",
+    "cusName": "SCENARIO7. 13"
+  },
+  {
+    "cusId": "199741",
+    "cusName": "SCENARIOO7"
+  },
+  {
+    "cusId": "199192",
+    "cusName": "SCN3_MXDIRECTCUST"
+  },
+  {
+    "cusId": "212944",
+    "cusName": "SCOLOCATE"
+  },
+  {
+    "cusId": "523611",
+    "cusName": "SCOTT CUSTOMER"
+  },
+  {
+    "cusId": "2054",
+    "cusName": "SCOTTISH ENTERPRISE"
+  },
+  {
+    "cusId": "205655",
+    "cusName": "SD 008"
+  },
+  {
+    "cusId": "763920",
+    "cusName": "SD TEST"
+  },
+  {
+    "cusId": "769997",
+    "cusName": "SD TEST ACC 209"
+  },
+  {
+    "cusId": "764557",
+    "cusName": "SD TEST NN"
+  },
+  {
+    "cusId": "764376",
+    "cusName": "SD TEST2"
+  },
+  {
+    "cusId": "525405",
+    "cusName": "SEAMLESSTEST"
+  },
+  {
+    "cusId": "500822",
+    "cusName": "SEAMLESSTHIRTY"
+  },
+  {
+    "cusId": "199738",
+    "cusName": "SECNARIO3"
+  },
+  {
+    "cusId": "224274",
+    "cusName": "SECNNILLLL"
+  },
+  {
+    "cusId": "212326",
+    "cusName": "SECUREBULKCUS"
+  },
+  {
+    "cusId": "212331",
+    "cusName": "SECUREBULKCUSPLUS"
+  },
+  {
+    "cusId": "212290",
+    "cusName": "SECURECUS"
+  },
+  {
+    "cusId": "212319",
+    "cusName": "SECURECUSPLUS"
+  },
+  {
+    "cusId": "224314",
+    "cusName": "SEMLL"
+  },
+  {
+    "cusId": "69958",
+    "cusName": "SERBIA_CUST_TEST"
+  },
+  {
+    "cusId": "195565",
+    "cusName": "SERENE"
+  },
+  {
+    "cusId": "226913",
+    "cusName": "SERVICE DELIVERY SYSTEMS"
+  },
+  {
+    "cusId": "397785",
+    "cusName": "SERVICEDESKCUST1"
+  },
+  {
+    "cusId": "401862",
+    "cusName": "SERVICEDESKCUST1NEW"
+  },
+  {
+    "cusId": "405964",
+    "cusName": "SERVICEDESKCUST2"
+  },
+  {
+    "cusId": "407762",
+    "cusName": "SERVICEDESKCUST2NEW"
+  },
+  {
+    "cusId": "413002",
+    "cusName": "SERVICEDESKCUSTC3"
+  },
+  {
+    "cusId": "399843",
+    "cusName": "SERVICEDSKCUST6"
+  },
+  {
+    "cusId": "254423",
+    "cusName": "SG00114491"
+  },
+  {
+    "cusId": "204813",
+    "cusName": "SHADOW BID CBULK TEST 2"
+  },
+  {
+    "cusId": "432322",
+    "cusName": "SHAHEEDABANU"
+  },
+  {
+    "cusId": "596195",
+    "cusName": "SHALINITEST"
+  },
+  {
+    "cusId": "203106",
+    "cusName": "SHAYNE"
+  },
+  {
+    "cusId": "525426",
+    "cusName": "SHCS CUSTOMER"
+  },
+  {
+    "cusId": "36200",
+    "cusName": "SHELL INFORMATION TECHNOLOGIES"
+  },
+  {
+    "cusId": "208177",
+    "cusName": "SIGNATURE"
+  },
+  {
+    "cusId": "206585",
+    "cusName": "SIMON WATSON"
+  },
+  {
+    "cusId": "199336",
+    "cusName": "SIMONS"
+  },
+  {
+    "cusId": "200333",
+    "cusName": "SIMPLEPRTEST"
+  },
+  {
+    "cusId": "525410",
+    "cusName": "SIPNEWCUST"
+  },
+  {
+    "cusId": "205146",
+    "cusName": "SIPSEC"
+  },
+  {
+    "cusId": "721617",
+    "cusName": "SK-TEST0"
+  },
+  {
+    "cusId": "40737",
+    "cusName": "SKIPPER"
+  },
+  {
+    "cusId": "35443",
+    "cusName": "SKY COMMUNICATIONS"
+  },
+  {
+    "cusId": "199279",
+    "cusName": "SKY WALK"
+  },
+  {
+    "cusId": "598231",
+    "cusName": "SLKF"
+  },
+  {
+    "cusId": "200587",
+    "cusName": "SLPTEST1"
+  },
+  {
+    "cusId": "203064",
+    "cusName": "SMARTS"
+  },
+  {
+    "cusId": "43124",
+    "cusName": "SOTC"
+  },
+  {
+    "cusId": "540024",
+    "cusName": "SOUK"
+  },
+  {
+    "cusId": "43823",
+    "cusName": "SPAIN CORPORATION R893-DEMO"
+  },
+  {
+    "cusId": "43798",
+    "cusName": "SPAIN CORPORATION R893-NN"
+  },
+  {
+    "cusId": "43847",
+    "cusName": "SPAIN CORPORATION R893-REG1"
+  },
+  {
+    "cusId": "43361",
+    "cusName": "SPAIN CORPORATION R893-RUN1"
+  },
+  {
+    "cusId": "43413",
+    "cusName": "SPAIN CORPORATION R893-RUN2"
+  },
+  {
+    "cusId": "43519",
+    "cusName": "SPAIN CORPORATION R893-RUN3"
+  },
+  {
+    "cusId": "43785",
+    "cusName": "SPAIN CORPORATION R893-RUN4"
+  },
+  {
+    "cusId": "44732",
+    "cusName": "SPAIN CORPORATION R893-SBC"
+  },
+  {
+    "cusId": "205648",
+    "cusName": "SPECIALBIDMX"
+  },
+  {
+    "cusId": "43168",
+    "cusName": "SPRITE-RUN3-R892"
+  },
+  {
+    "cusId": "195756",
+    "cusName": "SQE TEST"
+  },
+  {
+    "cusId": "212248",
+    "cusName": "SRILEKHA"
+  },
+  {
+    "cusId": "204002",
+    "cusName": "SSLCENTRAL"
+  },
+  {
+    "cusId": "204777",
+    "cusName": "SSLCONCU"
+  },
+  {
+    "cusId": "200124",
+    "cusName": "SSLFINAL"
+  },
+  {
+    "cusId": "203639",
+    "cusName": "SSLMXPR423"
+  },
+  {
+    "cusId": "203642",
+    "cusName": "SSLMXPR425"
+  },
+  {
+    "cusId": "203846",
+    "cusName": "SSLPR16"
+  },
+  {
+    "cusId": "203653",
+    "cusName": "SSLPRBRANCH"
+  },
+  {
+    "cusId": "204025",
+    "cusName": "SSLPRMXICE"
+  },
+  {
+    "cusId": "205028",
+    "cusName": "SSLTEST"
+  },
+  {
+    "cusId": "202631",
+    "cusName": "STANDARDFRF"
+  },
+  {
+    "cusId": "199669",
+    "cusName": "STEPHEN"
+  },
+  {
+    "cusId": "196495",
+    "cusName": "STEVE"
+  },
+  {
+    "cusId": "509902",
+    "cusName": "STEVE GRANT"
+  },
+  {
+    "cusId": "681808",
+    "cusName": "STEVE WARREN TEST 1"
+  },
+  {
+    "cusId": "43584",
+    "cusName": "STREEL THREAD CUST"
+  },
+  {
+    "cusId": "200595",
+    "cusName": "SUAT23"
+  },
+  {
+    "cusId": "199635",
+    "cusName": "SUBATH"
+  },
+  {
+    "cusId": "198630",
+    "cusName": "SUBLEEMA"
+  },
+  {
+    "cusId": "198708",
+    "cusName": "SUBMOTOR"
+  },
+  {
+    "cusId": "198104",
+    "cusName": "SUDH"
+  },
+  {
+    "cusId": "199216",
+    "cusName": "SUDHIR TEST CUSTOMER"
+  },
+  {
+    "cusId": "208407",
+    "cusName": "SUDHIR1"
+  },
+  {
+    "cusId": "473582",
+    "cusName": "SUJITH"
+  },
+  {
+    "cusId": "585652",
+    "cusName": "SUMIT MATHUR"
+  },
+  {
+    "cusId": "201133",
+    "cusName": "SUNNY"
+  },
+  {
+    "cusId": "602313",
+    "cusName": "SUPERRMASTER"
+  },
+  {
+    "cusId": "205178",
+    "cusName": "SUSPENRESUME"
+  },
+  {
+    "cusId": "199338",
+    "cusName": "SYMONDS"
+  },
+  {
+    "cusId": "559748",
+    "cusName": "T1_OCCAUTO_01"
+  },
+  {
+    "cusId": "523062",
+    "cusName": "T1_TEST"
+  },
+  {
+    "cusId": "210409",
+    "cusName": "T2_BULK_REWRITE_CUSTOMER_1"
+  },
+  {
+    "cusId": "558763",
+    "cusName": "T3AUTODEMO"
+  },
+  {
+    "cusId": "198792",
+    "cusName": "T3DIRECTMX"
+  },
+  {
+    "cusId": "209321",
+    "cusName": "T3EXPEDIO"
+  },
+  {
+    "cusId": "205508",
+    "cusName": "T3PR"
+  },
+  {
+    "cusId": "220555",
+    "cusName": "T3REG3007"
+  },
+  {
+    "cusId": "549180",
+    "cusName": "T3UKCUSTOMER"
+  },
+  {
+    "cusId": "210410",
+    "cusName": "T3_BULK_REWRITE_CUSTOMER_1"
+  },
+  {
+    "cusId": "558979",
+    "cusName": "T3_OCCAUTO_01"
+  },
+  {
+    "cusId": "52044",
+    "cusName": "TANMAY_SC01_TEST1_CUSTOMER"
+  },
+  {
+    "cusId": "52059",
+    "cusName": "TANMAY_SC04_TEST2_CUSTOMER"
+  },
+  {
+    "cusId": "52062",
+    "cusName": "TANMAY_SC06_TEST1_CUSTOMER"
+  },
+  {
+    "cusId": "52176",
+    "cusName": "TANMAY_SC06_TEST2_CUSTOMER"
+  },
+  {
+    "cusId": "52105",
+    "cusName": "TANMAY_SC06_TEST3_CUSTOMER"
+  },
+  {
+    "cusId": "52150",
+    "cusName": "TANMAY_SC12_TEST1_CUSTOMER"
+  },
+  {
+    "cusId": "36059",
+    "cusName": "TATTON PARK"
+  },
+  {
+    "cusId": "618288",
+    "cusName": "TCUSTDEEP"
+  },
+  {
+    "cusId": "525419",
+    "cusName": "TCUSTOMEROCC"
+  },
+  {
+    "cusId": "525423",
+    "cusName": "TCUSTOMEROCCC"
+  },
+  {
+    "cusId": "206649",
+    "cusName": "TECHCOM"
+  },
+  {
+    "cusId": "488562",
+    "cusName": "TECHM2"
+  },
+  {
+    "cusId": "207084",
+    "cusName": "TECHNIP"
+  },
+  {
+    "cusId": "494002",
+    "cusName": "TEDF"
+  },
+  {
+    "cusId": "203604",
+    "cusName": "TEENGRAHAK"
+  },
+  {
+    "cusId": "43356",
+    "cusName": "TELCO1"
+  },
+  {
+    "cusId": "205729",
+    "cusName": "TELE"
+  },
+  {
+    "cusId": "198193",
+    "cusName": "TES1"
+  },
+  {
+    "cusId": "194571",
+    "cusName": "TEST"
+  },
+  {
+    "cusId": "207969",
+    "cusName": "TEST 19 JAN 2012"
+  },
+  {
+    "cusId": "198194",
+    "cusName": "TEST 2"
+  },
+  {
+    "cusId": "213535",
+    "cusName": "TEST CENTRAL SITE"
+  },
+  {
+    "cusId": "205644",
+    "cusName": "TEST CUST 008"
+  },
+  {
+    "cusId": "198690",
+    "cusName": "TEST CUST NAV"
+  },
+  {
+    "cusId": "612908",
+    "cusName": "TEST CUST T3 UK"
+  },
+  {
+    "cusId": "35560",
+    "cusName": "TEST CUSTOMER"
+  },
+  {
+    "cusId": "200154",
+    "cusName": "TEST CUSTOMER JEGA"
+  },
+  {
+    "cusId": "204965",
+    "cusName": "TEST CUSTOMER JEGA123"
+  },
+  {
+    "cusId": "210239",
+    "cusName": "TEST CUSTOMER11"
+  },
+  {
+    "cusId": "44711",
+    "cusName": "TEST DEMO 07"
+  },
+  {
+    "cusId": "43279",
+    "cusName": "TEST FOR REGRESSION 19TH NOVEMBER"
+  },
+  {
+    "cusId": "195253",
+    "cusName": "TEST IVPN2CLA"
+  },
+  {
+    "cusId": "215659",
+    "cusName": "TEST JEGA CENTRAL SITE"
+  },
+  {
+    "cusId": "663528",
+    "cusName": "TEST+MBP+CUSTOMER"
+  },
+  {
+    "cusId": "469842",
+    "cusName": "TEST-"
+  },
+  {
+    "cusId": "43286",
+    "cusName": "TEST-DUMMY-CUSTOMER-05"
+  },
+  {
+    "cusId": "43280",
+    "cusName": "TEST-DUMMY-CUSTOMER-13"
+  },
+  {
+    "cusId": "52133",
+    "cusName": "TEST-PREPROVIDES-SC03"
+  },
+  {
+    "cusId": "52155",
+    "cusName": "TEST-PROVIDE 1"
+  },
+  {
+    "cusId": "525594",
+    "cusName": "TEST00R31"
+  },
+  {
+    "cusId": "106625",
+    "cusName": "TEST123"
+  },
+  {
+    "cusId": "200611",
+    "cusName": "TEST123456"
+  },
+  {
+    "cusId": "205417",
+    "cusName": "TEST123456789"
+  },
+  {
+    "cusId": "605011",
+    "cusName": "TEST13"
+  },
+  {
+    "cusId": "200720",
+    "cusName": "TEST19384"
+  },
+  {
+    "cusId": "210405",
+    "cusName": "TEST4935"
+  },
+  {
+    "cusId": "584271",
+    "cusName": "TEST524"
+  },
+  {
+    "cusId": "205726",
+    "cusName": "TEST88"
+  },
+  {
+    "cusId": "398042",
+    "cusName": "TEST888"
+  },
+  {
+    "cusId": "392903",
+    "cusName": "TESTAA"
+  },
+  {
+    "cusId": "398663",
+    "cusName": "TESTAGAINTC2"
+  },
+  {
+    "cusId": "225956",
+    "cusName": "TESTANKIT45674"
+  },
+  {
+    "cusId": "35776",
+    "cusName": "TESTAUTO-10"
+  },
+  {
+    "cusId": "40717",
+    "cusName": "TESTAUTO-2284"
+  },
+  {
+    "cusId": "543243",
+    "cusName": "TESTCLOUD33"
+  },
+  {
+    "cusId": "584331",
+    "cusName": "TESTCLOUDE13"
+  },
+  {
+    "cusId": "212667",
+    "cusName": "TESTCUS198"
+  },
+  {
+    "cusId": "526667",
+    "cusName": "TESTCUSTHCS"
+  },
+  {
+    "cusId": "69976",
+    "cusName": "TESTCUSTOMERACC"
+  },
+  {
+    "cusId": "526685",
+    "cusName": "TESTCUSTOMERT3"
+  },
+  {
+    "cusId": "760797",
+    "cusName": "TESTCUSTUK"
+  },
+  {
+    "cusId": "200141",
+    "cusName": "TESTDATAPRI"
+  },
+  {
+    "cusId": "762577",
+    "cusName": "TESTDEMO1"
+  },
+  {
+    "cusId": "442756",
+    "cusName": "TESTDEMOUAT"
+  },
+  {
+    "cusId": "199233",
+    "cusName": "TESTDIRECTMITA"
+  },
+  {
+    "cusId": "303943",
+    "cusName": "TESTER_PEDDI"
+  },
+  {
+    "cusId": "525510",
+    "cusName": "TESTHCS"
+  },
+  {
+    "cusId": "526655",
+    "cusName": "TESTHCS02"
+  },
+  {
+    "cusId": "526565",
+    "cusName": "TESTHCSMULTI"
+  },
+  {
+    "cusId": "381362",
+    "cusName": "TESTHKB"
+  },
+  {
+    "cusId": "549478",
+    "cusName": "TESTICG1"
+  },
+  {
+    "cusId": "525623",
+    "cusName": "TESTIN00R32"
+  },
+  {
+    "cusId": "600811",
+    "cusName": "TESTINASSET1"
+  },
+  {
+    "cusId": "199703",
+    "cusName": "TESTING111"
+  },
+  {
+    "cusId": "199701",
+    "cusName": "TESTING123"
+  },
+  {
+    "cusId": "588511",
+    "cusName": "TESTINGBRAZIL"
+  },
+  {
+    "cusId": "200093",
+    "cusName": "TESTINGPR"
+  },
+  {
+    "cusId": "206161",
+    "cusName": "TESTINVOICE"
+  },
+  {
+    "cusId": "200010",
+    "cusName": "TESTIP"
+  },
+  {
+    "cusId": "200009",
+    "cusName": "TESTLAKPR"
+  },
+  {
+    "cusId": "487582",
+    "cusName": "TESTMX001"
+  },
+  {
+    "cusId": "217655",
+    "cusName": "TESTMX50918"
+  },
+  {
+    "cusId": "489464",
+    "cusName": "TESTMXCUST001"
+  },
+  {
+    "cusId": "483422",
+    "cusName": "TESTMXKT"
+  },
+  {
+    "cusId": "486902",
+    "cusName": "TESTMXKTAS"
+  },
+  {
+    "cusId": "487982",
+    "cusName": "TESTMXRCUST"
+  },
+  {
+    "cusId": "492602",
+    "cusName": "TESTMXSD"
+  },
+  {
+    "cusId": "563356",
+    "cusName": "TESTND102"
+  },
+  {
+    "cusId": "473623",
+    "cusName": "TESTNEW3"
+  },
+  {
+    "cusId": "200045",
+    "cusName": "TESTNEWPR"
+  },
+  {
+    "cusId": "473602",
+    "cusName": "TESTNEWVIRTUSA"
+  },
+  {
+    "cusId": "355062",
+    "cusName": "TESTNMX"
+  },
+  {
+    "cusId": "525404",
+    "cusName": "TESTOCCCUSTOMR"
+  },
+  {
+    "cusId": "525414",
+    "cusName": "TESTOCCCUSTOMRR"
+  },
+  {
+    "cusId": "616048",
+    "cusName": "TESTOCCPAL"
+  },
+  {
+    "cusId": "232795",
+    "cusName": "TESTORD"
+  },
+  {
+    "cusId": "385362",
+    "cusName": "TESTPQR"
+  },
+  {
+    "cusId": "203893",
+    "cusName": "TESTPR123"
+  },
+  {
+    "cusId": "205106",
+    "cusName": "TESTPR528"
+  },
+  {
+    "cusId": "40723",
+    "cusName": "TESTPREMIUM-2001"
+  },
+  {
+    "cusId": "200008",
+    "cusName": "TESTPRI"
+  },
+  {
+    "cusId": "200031",
+    "cusName": "TESTPRIPSEC"
+  },
+  {
+    "cusId": "199934",
+    "cusName": "TESTPRIYA"
+  },
+  {
+    "cusId": "200007",
+    "cusName": "TESTPRIYAV"
+  },
+  {
+    "cusId": "200343",
+    "cusName": "TESTPROXY"
+  },
+  {
+    "cusId": "296983",
+    "cusName": "TESTR25"
+  },
+  {
+    "cusId": "380822",
+    "cusName": "TESTR27"
+  },
+  {
+    "cusId": "529063",
+    "cusName": "TESTRAJ1"
+  },
+  {
+    "cusId": "548569",
+    "cusName": "TESTRAJ2D"
+  },
+  {
+    "cusId": "547237",
+    "cusName": "TESTRD33"
+  },
+  {
+    "cusId": "382662",
+    "cusName": "TESTRMX"
+  },
+  {
+    "cusId": "205722",
+    "cusName": "TESTSC6_0711"
+  },
+  {
+    "cusId": "522102",
+    "cusName": "TESTSQE_V"
+  },
+  {
+    "cusId": "384862",
+    "cusName": "TESTTEN"
+  },
+  {
+    "cusId": "660668",
+    "cusName": "TESTUKR3811"
+  },
+  {
+    "cusId": "784097",
+    "cusName": "TESTUKR42"
+  },
+  {
+    "cusId": "199940",
+    "cusName": "TESTVEPRIYA"
+  },
+  {
+    "cusId": "205363",
+    "cusName": "TESTVL"
+  },
+  {
+    "cusId": "199939",
+    "cusName": "TESTVLP"
+  },
+  {
+    "cusId": "200081",
+    "cusName": "TESTVLPRIYA"
+  },
+  {
+    "cusId": "200217",
+    "cusName": "TESTVLPRIYA1"
+  },
+  {
+    "cusId": "224142",
+    "cusName": "TEST_110"
+  },
+  {
+    "cusId": "488022",
+    "cusName": "TEST_1TEST"
+  },
+  {
+    "cusId": "206251",
+    "cusName": "TEST_2211"
+  },
+  {
+    "cusId": "203539",
+    "cusName": "TEST_691"
+  },
+  {
+    "cusId": "313662",
+    "cusName": "TEST_APE_TODAY"
+  },
+  {
+    "cusId": "206289",
+    "cusName": "TEST_AS_QUOTE1CUST"
+  },
+  {
+    "cusId": "274822",
+    "cusName": "TEST_BULK_CUSTZ"
+  },
+  {
+    "cusId": "547809",
+    "cusName": "TEST_CDM1"
+  },
+  {
+    "cusId": "525478",
+    "cusName": "TEST_CREATE_CUS"
+  },
+  {
+    "cusId": "210930",
+    "cusName": "TEST_CUS12"
+  },
+  {
+    "cusId": "313682",
+    "cusName": "TEST_CUST_15"
+  },
+  {
+    "cusId": "269062",
+    "cusName": "TEST_CUST_20_1"
+  },
+  {
+    "cusId": "208862",
+    "cusName": "TEST_FEB-08"
+  },
+  {
+    "cusId": "512583",
+    "cusName": "TEST_IND2"
+  },
+  {
+    "cusId": "521845",
+    "cusName": "TEST_NEW_CUST123"
+  },
+  {
+    "cusId": "527513",
+    "cusName": "TEST_OCC_T3"
+  },
+  {
+    "cusId": "513482",
+    "cusName": "TEST_OVR_2IND"
+  },
+  {
+    "cusId": "513842",
+    "cusName": "TEST_OVR_2UK"
+  },
+  {
+    "cusId": "509442",
+    "cusName": "TEST_OVR_IN"
+  },
+  {
+    "cusId": "303682",
+    "cusName": "TEST_R25"
+  },
+  {
+    "cusId": "302802",
+    "cusName": "TEST_REG_FIN"
+  },
+  {
+    "cusId": "525480",
+    "cusName": "TEST_RRR"
+  },
+  {
+    "cusId": "296942",
+    "cusName": "TEST_SAM_R25"
+  },
+  {
+    "cusId": "438614",
+    "cusName": "TEST_TEST_1"
+  },
+  {
+    "cusId": "449386",
+    "cusName": "TEST_TEST_12QWE"
+  },
+  {
+    "cusId": "521351",
+    "cusName": "TEST_VIJAY"
+  },
+  {
+    "cusId": "521644",
+    "cusName": "TEST_VIJAY1"
+  },
+  {
+    "cusId": "510083",
+    "cusName": "TES_OVR2"
+  },
+  {
+    "cusId": "510084",
+    "cusName": "TES_OVR3"
+  },
+  {
+    "cusId": "509963",
+    "cusName": "TES_OVR_IND"
+  },
+  {
+    "cusId": "525102",
+    "cusName": "THIN CLIENT NEW CUSTOME"
+  },
+  {
+    "cusId": "513263",
+    "cusName": "THIYAGARAJAN"
+  },
+  {
+    "cusId": "212296",
+    "cusName": "THOSANITY"
+  },
+  {
+    "cusId": "597271",
+    "cusName": "TILOTTAMA"
+  },
+  {
+    "cusId": "599711",
+    "cusName": "TILOTTAMA N"
+  },
+  {
+    "cusId": "201302",
+    "cusName": "TIME_12"
+  },
+  {
+    "cusId": "204171",
+    "cusName": "TINTIN123"
+  },
+  {
+    "cusId": "525362",
+    "cusName": "TOCCCUST"
+  },
+  {
+    "cusId": "208402",
+    "cusName": "TOD"
+  },
+  {
+    "cusId": "207544",
+    "cusName": "TODCHK"
+  },
+  {
+    "cusId": "207259",
+    "cusName": "TOMDEXTER"
+  },
+  {
+    "cusId": "212486",
+    "cusName": "TONY BULK TEST CUSTOMER"
+  },
+  {
+    "cusId": "203793",
+    "cusName": "TONY BULK TEST CUSTOMER R15"
+  },
+  {
+    "cusId": "204721",
+    "cusName": "TONY BULK UPLOAD CUSTOMER R16"
+  },
+  {
+    "cusId": "204931",
+    "cusName": "TONY BULK UPLOAD DEMO 4"
+  },
+  {
+    "cusId": "202857",
+    "cusName": "TONY MANAGED PLACE TEST CUSTOMER"
+  },
+  {
+    "cusId": "201528",
+    "cusName": "TONY R13 BULK UPLOAD"
+  },
+  {
+    "cusId": "200594",
+    "cusName": "TONY R13 CUSTOMER"
+  },
+  {
+    "cusId": "213006",
+    "cusName": "TONY R20 TEST CUSTOMER"
+  },
+  {
+    "cusId": "408002",
+    "cusName": "TONY R27 TEST CUSTOMER"
+  },
+  {
+    "cusId": "521542",
+    "cusName": "TONY R31 TEST CUSTOMER"
+  },
+  {
+    "cusId": "204623",
+    "cusName": "TONY SHADOW BID CUSTOMER"
+  },
+  {
+    "cusId": "204624",
+    "cusName": "TONY SHADOW BID CUSTOMER 2"
+  },
+  {
+    "cusId": "197208",
+    "cusName": "TONY TEST CUSTOMER"
+  },
+  {
+    "cusId": "199788",
+    "cusName": "TONY TEST CUSTOMER DRT T3"
+  },
+  {
+    "cusId": "200069",
+    "cusName": "TONY TEST CUSTOMER R13"
+  },
+  {
+    "cusId": "200334",
+    "cusName": "TONY TEST CUSTOMER R13B"
+  },
+  {
+    "cusId": "522448",
+    "cusName": "TONY TEST CUSTOMER R31"
+  },
+  {
+    "cusId": "559038",
+    "cusName": "TONY TEST CUSTOMER R34"
+  },
+  {
+    "cusId": "195754",
+    "cusName": "TONY TEST CUSTOMER R7"
+  },
+  {
+    "cusId": "195835",
+    "cusName": "TONY TEST CUSTOMER R9"
+  },
+  {
+    "cusId": "219095",
+    "cusName": "TONY TEST OF CENTRAL SITE CREATION"
+  },
+  {
+    "cusId": "204049",
+    "cusName": "TONYS BULK UPLOAD CUSTOMER R15"
+  },
+  {
+    "cusId": "199315",
+    "cusName": "TRAININE2080111"
+  },
+  {
+    "cusId": "199971",
+    "cusName": "TRAINING DEMO"
+  },
+  {
+    "cusId": "210415",
+    "cusName": "TRAINING DEVELOPMENT"
+  },
+  {
+    "cusId": "199314",
+    "cusName": "TRAINING080211"
+  },
+  {
+    "cusId": "198636",
+    "cusName": "TRAININGTEST 200111"
+  },
+  {
+    "cusId": "198683",
+    "cusName": "TRAININGTEST210111"
+  },
+  {
+    "cusId": "549418",
+    "cusName": "TRIAAL3"
+  },
+  {
+    "cusId": "525342",
+    "cusName": "TRUNKCUST"
+  },
+  {
+    "cusId": "525532",
+    "cusName": "TRUNKDPNSS"
+  },
+  {
+    "cusId": "489522",
+    "cusName": "TSETMXNEW001"
+  },
+  {
+    "cusId": "207442",
+    "cusName": "TULIP"
+  },
+  {
+    "cusId": "522160",
+    "cusName": "UATDEMO"
+  },
+  {
+    "cusId": "187305",
+    "cusName": "UAT_ R902_SPAIN1_TEST ACC"
+  },
+  {
+    "cusId": "187501",
+    "cusName": "UAT_ R902_SPAIN_TEST ACC"
+  },
+  {
+    "cusId": "187689",
+    "cusName": "UAT_R902_IRELAND_TEST ACC"
+  },
+  {
+    "cusId": "208848",
+    "cusName": "UIMATRIX"
+  },
+  {
+    "cusId": "227008",
+    "cusName": "UK CCM ORT2"
+  },
+  {
+    "cusId": "43115",
+    "cusName": "UK CITI FINANCE - R892"
+  },
+  {
+    "cusId": "43219",
+    "cusName": "UK CITI FINANCE - R892-RUN3"
+  },
+  {
+    "cusId": "43773",
+    "cusName": "UK CITI FINANCE - R893"
+  },
+  {
+    "cusId": "43807",
+    "cusName": "UK CITI FINANCE - R893- RUN4"
+  },
+  {
+    "cusId": "43794",
+    "cusName": "UK CITI FINANCE - R893-REG1"
+  },
+  {
+    "cusId": "43409",
+    "cusName": "UK CITI FINANCE - R893-RUN2"
+  },
+  {
+    "cusId": "43599",
+    "cusName": "UK CITI FINANCE - R893-RUN3"
+  },
+  {
+    "cusId": "43781",
+    "cusName": "UK CITI FINANCE - R893-WDRUN"
+  },
+  {
+    "cusId": "43443",
+    "cusName": "UK CITI FINANCE - R893_003"
+  },
+  {
+    "cusId": "43799",
+    "cusName": "UK CITI FINANCE - R893_RUN4"
+  },
+  {
+    "cusId": "42541",
+    "cusName": "UK DRT783"
+  },
+  {
+    "cusId": "43091",
+    "cusName": "UK FINANCIAL - R892"
+  },
+  {
+    "cusId": "43217",
+    "cusName": "UK FINANCIAL - R892-RUN3"
+  },
+  {
+    "cusId": "43233",
+    "cusName": "UK FINANCIAL - R893"
+  },
+  {
+    "cusId": "40802",
+    "cusName": "UK HARDWARE R783"
+  },
+  {
+    "cusId": "42530",
+    "cusName": "UK HARDWARE R783_02"
+  },
+  {
+    "cusId": "41033",
+    "cusName": "UK HARDWARE R891"
+  },
+  {
+    "cusId": "43051",
+    "cusName": "UK HARDWARE R892"
+  },
+  {
+    "cusId": "43224",
+    "cusName": "UK HARDWARE R892 3A"
+  },
+  {
+    "cusId": "43274",
+    "cusName": "UK HARDWARE R892 TEST"
+  },
+  {
+    "cusId": "43367",
+    "cusName": "UK HARDWARE R893 A"
+  },
+  {
+    "cusId": "52064",
+    "cusName": "UK HARDWARE R894"
+  },
+  {
+    "cusId": "522034",
+    "cusName": "UK R31 CUSTOMER"
+  },
+  {
+    "cusId": "227007",
+    "cusName": "UK RCE EDCA ORT"
+  },
+  {
+    "cusId": "44668",
+    "cusName": "UK TECH CORP - R893-001"
+  },
+  {
+    "cusId": "43598",
+    "cusName": "UK TECH CORP - R893-RETEST"
+  },
+  {
+    "cusId": "43783",
+    "cusName": "UK TECH CORP - R893-RETESTING1"
+  },
+  {
+    "cusId": "43513",
+    "cusName": "UK TECH CORP - R893-RUN3"
+  },
+  {
+    "cusId": "43812",
+    "cusName": "UK TECH CORPARATION DUMMY"
+  },
+  {
+    "cusId": "206951",
+    "cusName": "UK TEST CUSTOMER"
+  },
+  {
+    "cusId": "52036",
+    "cusName": "UK-ACCOUNT"
+  },
+  {
+    "cusId": "258342",
+    "cusName": "UK1"
+  },
+  {
+    "cusId": "261462",
+    "cusName": "UK249"
+  },
+  {
+    "cusId": "588611",
+    "cusName": "UKCOUNTRY"
+  },
+  {
+    "cusId": "203312",
+    "cusName": "UKCUST"
+  },
+  {
+    "cusId": "609995",
+    "cusName": "UKCUSTA"
+  },
+  {
+    "cusId": "205867",
+    "cusName": "UKCUSTNEW"
+  },
+  {
+    "cusId": "214616",
+    "cusName": "UKCUSTNIK"
+  },
+  {
+    "cusId": "187487",
+    "cusName": "UKCUSTOMER"
+  },
+  {
+    "cusId": "540122",
+    "cusName": "UKHCS"
+  },
+  {
+    "cusId": "200710",
+    "cusName": "UKLOP"
+  },
+  {
+    "cusId": "200603",
+    "cusName": "UKMO"
+  },
+  {
+    "cusId": "725077",
+    "cusName": "UKMOBILEPLUSTEST"
+  },
+  {
+    "cusId": "200157",
+    "cusName": "UKMX"
+  },
+  {
+    "cusId": "590271",
+    "cusName": "UKNEW"
+  },
+  {
+    "cusId": "594931",
+    "cusName": "UKNEWCUS"
+  },
+  {
+    "cusId": "349982",
+    "cusName": "UKREACHIN"
+  },
+  {
+    "cusId": "368202",
+    "cusName": "UKSHAN"
+  },
+  {
+    "cusId": "744597",
+    "cusName": "UKTESTTRUNK"
+  },
+  {
+    "cusId": "255602",
+    "cusName": "UK_123"
+  },
+  {
+    "cusId": "70015",
+    "cusName": "UK_CUST"
+  },
+  {
+    "cusId": "52151",
+    "cusName": "UK_NEW_ACCOUNT"
+  },
+  {
+    "cusId": "35442",
+    "cusName": "UNICO"
+  },
+  {
+    "cusId": "35546",
+    "cusName": "UNICO_NEW1"
+  },
+  {
+    "cusId": "30952",
+    "cusName": "UNILEVER"
+  },
+  {
+    "cusId": "680988",
+    "cusName": "UNILEVER_PLC_TEST"
+  },
+  {
+    "cusId": "680939",
+    "cusName": "UNILEVER_TEST"
+  },
+  {
+    "cusId": "235402",
+    "cusName": "USER3"
+  },
+  {
+    "cusId": "235927",
+    "cusName": "USER4"
+  },
+  {
+    "cusId": "198876",
+    "cusName": "VALAR"
+  },
+  {
+    "cusId": "226897",
+    "cusName": "VAN DEN BERGH FOODS LIMITED"
+  },
+  {
+    "cusId": "600351",
+    "cusName": "VASANTH12345"
+  },
+  {
+    "cusId": "35556",
+    "cusName": "VAUXHALL"
+  },
+  {
+    "cusId": "207061",
+    "cusName": "VENKAT"
+  },
+  {
+    "cusId": "207401",
+    "cusName": "VENKATPR"
+  },
+  {
+    "cusId": "777557",
+    "cusName": "VENKAT_TEST4"
+  },
+  {
+    "cusId": "207064",
+    "cusName": "VENKPR"
+  },
+  {
+    "cusId": "207082",
+    "cusName": "VENKPR1"
+  },
+  {
+    "cusId": "198783",
+    "cusName": "VERONIKA"
+  },
+  {
+    "cusId": "471084",
+    "cusName": "VIGNESH+"
+  },
+  {
+    "cusId": "106586",
+    "cusName": "VIJI"
+  },
+  {
+    "cusId": "226681",
+    "cusName": "VIMALANANDPERIYASAMY"
+  },
+  {
+    "cusId": "198401",
+    "cusName": "VINCE NEW SCREEN TEST"
+  },
+  {
+    "cusId": "195755",
+    "cusName": "VINCE TEST"
+  },
+  {
+    "cusId": "196109",
+    "cusName": "VINCE TEST1511"
+  },
+  {
+    "cusId": "201328",
+    "cusName": "VIRAT"
+  },
+  {
+    "cusId": "587211",
+    "cusName": "VLI CUSTOMER"
+  },
+  {
+    "cusId": "205584",
+    "cusName": "VLP17"
+  },
+  {
+    "cusId": "206735",
+    "cusName": "VLPDEM"
+  },
+  {
+    "cusId": "200530",
+    "cusName": "VLPRETEST"
+  },
+  {
+    "cusId": "200544",
+    "cusName": "VLPRETEST2"
+  },
+  {
+    "cusId": "200712",
+    "cusName": "VLPRETEST7"
+  },
+  {
+    "cusId": "202903",
+    "cusName": "VLPRIY"
+  },
+  {
+    "cusId": "202066",
+    "cusName": "VLPRIYA1"
+  },
+  {
+    "cusId": "200593",
+    "cusName": "VLPTEST4"
+  },
+  {
+    "cusId": "198604",
+    "cusName": "VMD TEST STG TEST"
+  },
+  {
+    "cusId": "206587",
+    "cusName": "VPRIYA1"
+  },
+  {
+    "cusId": "199941",
+    "cusName": "VPRIYATEST"
+  },
+  {
+    "cusId": "206625",
+    "cusName": "VPRTC4"
+  },
+  {
+    "cusId": "43172",
+    "cusName": "WALLED GARDEN UK 2"
+  },
+  {
+    "cusId": "226891",
+    "cusName": "WALTERS HEXAGON LTD"
+  },
+  {
+    "cusId": "43780",
+    "cusName": "WARANTY-DROP-TEST-SCENARIO-18"
+  },
+  {
+    "cusId": "458282",
+    "cusName": "WBCCUST"
+  },
+  {
+    "cusId": "462202",
+    "cusName": "WBCCUSTNEW"
+  },
+  {
+    "cusId": "343922",
+    "cusName": "WBCEASEPP"
+  },
+  {
+    "cusId": "227638",
+    "cusName": "WBCNEWSCE"
+  },
+  {
+    "cusId": "225969",
+    "cusName": "WBCREGORD"
+  },
+  {
+    "cusId": "210558",
+    "cusName": "WBCSCENARIO1"
+  },
+  {
+    "cusId": "199776",
+    "cusName": "WC2011"
+  },
+  {
+    "cusId": "547240",
+    "cusName": "WHITBREAD"
+  },
+  {
+    "cusId": "547477",
+    "cusName": "WHITBREAD2"
+  },
+  {
+    "cusId": "201899",
+    "cusName": "WISDOM"
+  },
+  {
+    "cusId": "43453",
+    "cusName": "WORLD TOURS CORP-MODS04"
+  },
+  {
+    "cusId": "35814",
+    "cusName": "WORLD TOURS CORP-R783"
+  },
+  {
+    "cusId": "43082",
+    "cusName": "WORLD TOURS CORP-RUN2"
+  },
+  {
+    "cusId": "35923",
+    "cusName": "WORLD TOURS CORP-RUN2-R783"
+  },
+  {
+    "cusId": "40758",
+    "cusName": "WORLD TOURS CORP.-MOD-R891"
+  },
+  {
+    "cusId": "36049",
+    "cusName": "WORLD TOURS CORP.-R782-FN"
+  },
+  {
+    "cusId": "35828",
+    "cusName": "WORLD TOURS CORP.-R783"
+  },
+  {
+    "cusId": "35871",
+    "cusName": "WORLD TOURS CORP.-R783RUN2"
+  },
+  {
+    "cusId": "40715",
+    "cusName": "WORLD TOURS CORP.-R891"
+  },
+  {
+    "cusId": "40720",
+    "cusName": "WORLD TOURS CORP.-R891-1"
+  },
+  {
+    "cusId": "43052",
+    "cusName": "WORLD TOURS RUN2"
+  },
+  {
+    "cusId": "687596",
+    "cusName": "WWWW"
+  },
+  {
+    "cusId": "21748",
+    "cusName": "WYETH PHARMACEUTICALS"
+  },
+  {
+    "cusId": "212276",
+    "cusName": "XLOBFIRST"
+  },
+  {
+    "cusId": "212278",
+    "cusName": "XLOBTHIRD"
+  },
+  {
+    "cusId": "212288",
+    "cusName": "XLOBULK"
+  },
+  {
+    "cusId": "30078",
+    "cusName": "XTENSO"
+  },
+  {
+    "cusId": "208129",
+    "cusName": "XYX"
+  },
+  {
+    "cusId": "647908",
+    "cusName": "XYZ_TESTCUSTOMER"
+  },
+  {
+    "cusId": "525506",
+    "cusName": "YIOYUI"
+  },
+  {
+    "cusId": "211402",
+    "cusName": "YYSQE ANDY2"
+  },
+  {
+    "cusId": "786037",
+    "cusName": "YYYADDVALID"
+  },
+  {
+    "cusId": "533765",
+    "cusName": "YYYLISA TEST"
+  },
+  {
+    "cusId": "631308",
+    "cusName": "YYYOCCTEST"
+  },
+  {
+    "cusId": "549238",
+    "cusName": "YYYOZS001"
+  },
+  {
+    "cusId": "620148",
+    "cusName": "YYYPPTEST1"
+  },
+  {
+    "cusId": "527333",
+    "cusName": "YYYSQE DEMO R32 CUSTOMER"
+  },
+  {
+    "cusId": "655248",
+    "cusName": "YYYSQE ENABLEMENT TRAINING"
+  },
+  {
+    "cusId": "660908",
+    "cusName": "YYYSQE PHIL MBP TEST CUSTOMER"
+  },
+  {
+    "cusId": "548240",
+    "cusName": "YYYSQE PM ICG"
+  },
+  {
+    "cusId": "519599",
+    "cusName": "YYYSQE RELEASE 30 TRAINING CUSTOMER"
+  },
+  {
+    "cusId": "497522",
+    "cusName": "YYYSQE STONELAKE"
+  },
+  {
+    "cusId": "201095",
+    "cusName": "YYYSQE SUAT5 PHIL TEST"
+  },
+  {
+    "cusId": "527564",
+    "cusName": "YYYSQE TEST DIRECT INDIRECT"
+  },
+  {
+    "cusId": "738237",
+    "cusName": "YYYSQE TEST KRISZTA"
+  },
+  {
+    "cusId": "225721",
+    "cusName": "YYYSQE TONY T3 TEST"
+  },
+  {
+    "cusId": "304043",
+    "cusName": "YYYSQE TONY T3 TEST CUSTOMER 2"
+  },
+  {
+    "cusId": "203783",
+    "cusName": "YYYSQE TRAINING 050811"
+  },
+  {
+    "cusId": "519006",
+    "cusName": "YYYSQE TRAINING CUSTOMER"
+  },
+  {
+    "cusId": "547642",
+    "cusName": "YYYSQE TRAINING R33 CUSTOMER"
+  },
+  {
+    "cusId": "556619",
+    "cusName": "YYYSQE TRAINING R34 CUSTOMER"
+  },
+  {
+    "cusId": "519122",
+    "cusName": "YYYSQER30 PM EST"
+  },
+  {
+    "cusId": "519123",
+    "cusName": "YYYSQER30 PM TEST"
+  },
+  {
+    "cusId": "516162",
+    "cusName": "YYYSQER30 TEST CUSTOMER"
+  },
+  {
+    "cusId": "519009",
+    "cusName": "YYYSQER30 TONY TEST"
+  },
+  {
+    "cusId": "655828",
+    "cusName": "YYYSQESHAN01"
+  },
+  {
+    "cusId": "658832",
+    "cusName": "YYYSQESHAN03"
+  },
+  {
+    "cusId": "607853",
+    "cusName": "YYYSQESHANARIVALAKAN"
+  },
+  {
+    "cusId": "211396",
+    "cusName": "YYYSQE_TEST_ANDY1"
+  },
+  {
+    "cusId": "548858",
+    "cusName": "YYYSZL020"
+  },
+  {
+    "cusId": "708492",
+    "cusName": "YYYTESTLINGA"
+  },
+  {
+    "cusId": "437039",
+    "cusName": "YYYYMXYYYY"
+  },
+  {
+    "cusId": "211399",
+    "cusName": "YYY_SQE_ANDY1"
+  },
+  {
+    "cusId": "742557",
+    "cusName": "YYY_TEST_881V"
+  },
+  {
+    "cusId": "469843",
+    "cusName": "ZCALARBT"
+  },
+  {
+    "cusId": "225747",
+    "cusName": "ZIDANE"
+  },
+  {
+    "cusId": "474982",
+    "cusName": "ZSCALST"
+  },
+  {
+    "cusId": "36862",
+    "cusName": "ZZZ WIZARD ALL PRICE SCHEDULES"
+  },
+  {
+    "cusId": "232501",
+    "cusName": "ÇÛßTÖMÈŽRAVI"
+  }
+]

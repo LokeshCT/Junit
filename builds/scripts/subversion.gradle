@@ -1,0 +1,132 @@
+import org.tmatesoft.svn.core.SVNException
+import org.tmatesoft.svn.core.SVNLogEntry
+import org.tmatesoft.svn.core.SVNLogEntryPath
+import org.tmatesoft.svn.core.io.SVNRepository
+import org.tmatesoft.svn.core.internal.wc.DefaultSVNOptions
+import org.tmatesoft.svn.core.wc.SVNClientManager
+import org.tmatesoft.svn.core.wc.SVNWCUtil
+import org.tmatesoft.svn.core.SVNURL
+
+task svnChangelog << {
+    description = "Log Subversion revisions in a range from the last release until the latest change on the current working copy"
+
+    def (svnWcUrl, svnWcRev) = getSvnInfo()
+
+    def projectSvnUrl = "https://collaborate.bt.com/svn/rsqe/rsqe"
+    def tagsBaseUrl = "${projectSvnUrl}/tags"
+    def workingSvnUrl = svnWcUrl ?: projectSvnUrl
+
+    def fromRelNum = project.hasProperty('fromRelease') ? project.fromRelease : previousReleaseVersion()
+    if (fromRelNum.split(/\./)[2].toInteger() < 0) {
+	println """===ERROR================================
+Cannot generate the change log automatically.
+Override the default start and end release using
+gradle -PfromRelease=<e.g. ${lastValidVersionOfPreviousRelease()}> -PtoRelease=${thisReleaseVersion()} svnChangelog
+========================================"""
+    } else {
+        def toRelNum = project.hasProperty('toRelease') ? project.toRelease : 'HEAD'
+        def fromReleaseRevision = lastChangedRevisionOf("$tagsBaseUrl/$fromRelNum")
+        def toReleaseRevision = toRelNum == 'HEAD' ? -1 : lastChangedRevisionOf("$tagsBaseUrl/$toRelNum")
+
+        println "\n\nChangelog from $fromRelNum to $toRelNum on $workingSvnUrl"
+        println """Override the default start and end release using
+       gradle -PfromRelease=<e.g. 1.0.1> -PtoRelease=<e.g. 1.0.2> svnChangelog
+    N.B this only gives the right changeset if your working copy is on the same branch that the releases were made from
+    """
+        printSvnLog(workingSvnUrl, fromReleaseRevision, toReleaseRevision)
+        println "\n\n"
+    }
+}
+
+/*This works only if the pattern for versions follows the A.B.C scheme
+ * and only 'C' changes between releases
+ */
+def previousReleaseVersion() {
+    def version = thisReleaseVersion().split(/\./)
+    "${version[0]}.${version[1]}.${version[2].toInteger()-1}"
+}
+
+def thisReleaseVersion() {
+    project.version.replaceAll("-SNAPSHOT", "")
+}
+
+def lastValidVersionOfPreviousRelease() {
+    def version = thisReleaseVersion().split(/\./)
+    "${version[0]}.${version[1].toInteger()-1}.x"
+}
+
+/* Adapted from the gradle-svnkit plugin
+ * http://gradle-wdc-plugins.googlecode.com/svn/gradle-svnkit/trunk/src/main/java/org/gradle/plugins/svnkit/svnclient/WorkingCopy.java
+ */
+def printSvnLog(url, long startRevision = 0, long endRevision = -1) {
+        SVNRepository repository = svnRepositoryAt(url)
+
+        Collection logEntries = null
+        try {
+            /*
+             * Collects SVNLogEntry objects for all revisions in the range
+             * defined by its start and end points [startRevision, endRevision].
+             * For each revision commit information is represented by
+             * SVNLogEntry.
+             *
+             * the 1st parameter (targetPaths - an array of path strings) is set
+             * when restricting the [startRevision, endRevision] range to only
+             * those revisions when the paths in targetPaths were changed.
+             *
+             * the 2nd parameter if non-null - is a user's Collection that will
+             * be filled up with found SVNLogEntry objects it's just another
+             * way to reach the scope.
+             *
+             * startRevision, endRevision - to define a range of revisions you are
+             * interested in by default in this program - startRevision=0, endRevision=
+             * the latest (HEAD) revision of the repository.
+             *
+             * the 5th parameter - a boolean flag changedPath - if true then for
+             * each revision a corresponding SVNLogEntry will contain a map of
+             * all paths which were changed in that revision.
+             *
+             * the 6th parameter - a boolean flag strictNode - if false and a
+             * changed path is a copy (branch) of an existing one in the repository
+             * then the history for its origin will be traversed it means the
+             * history of changes of the target URL (and all that there's in that
+             * URL) will include the history of the origin path(s).
+             * Otherwise if strictNode is true then the origin path history won't be
+             * included.
+             *
+             * The return value is a Collection filled up with SVNLogEntry Objects.
+             */
+            logEntries = repository.log([""] as String[], null,
+                    startRevision, endRevision, true, true)
+
+            logEntries.each { logEntry ->
+                println "${logEntry.revision} (${logEntry.date}): [${logEntry.author}] ${logEntry.message}"
+            }
+
+        } catch (SVNException svne) {
+            throw new SVNException("error while collecting log information for '"
+                    + url + "': " + svne.getMessage())
+        }
+}
+
+def lastChangedRevisionOf(String url) {
+    println "Checking revision for $url"
+    SVNRepository repository = svnRepositoryAt(url)
+    repository.info('.', -1).revision
+}
+
+def SVNRepository svnRepositoryAt(String url) {
+    def ourClientManager = SVNClientManager.newInstance(SVNWCUtil.createDefaultOptions(true), null, null)
+
+    try {
+        /*
+        * Creates an instance of SVNRepository to work with the repository.
+        * All user's requests to the repository are relative to the
+        * repository location used to create this SVNRepository.
+        * SVNURL is a wrapper for URL strings that refer to repository locations.
+        */
+        return ourClientManager.createRepository(SVNURL.parseURIEncoded(url), false)
+    } catch (SVNException svne) {
+        throw new SVNException("error while creating an SVNRepository for the location '"
+                                   + url + "': " + svne.getMessage())
+    }
+}

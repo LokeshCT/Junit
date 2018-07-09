@@ -1,0 +1,216 @@
+<div class="col-lg-12 col-sm-12 col-xs-12" ng-controller="RequestDetailsController as requestDetails">
+    <div class="widget">
+        <div class="widget-header bordered-bottom bg-themeprimary">
+            <span class="widget-caption"><b>Request Details</b></span>
+            <div class="widget-buttons">
+                <a href="" widget-maximize></a>
+                <a href="" widget-collapse></a>
+                <a href="" widget-dispose></a>
+            </div>
+        </div>
+        <div class="widget-body no-padding">
+            <form class="form-horizontal form-bordered" role="form">
+                <accordion close-others="false">
+                    <accordion-group heading="Request Summary" is-open="true">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Request Id </th>
+                                <th> State </th>
+                                <th> Product </th>
+                                <th> Feature </th>
+                                <th> URL </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td> {{request.requestId}} </td>
+                                <td> {{request.state}} </td>
+                                <td> {{request.productCategoryName}} </td>
+                                <td> {{request.templateName}} </td>
+                                <td> {{request.publicURL}} </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="Feature Definition" is-open="true">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <td class="bordered-purple-right"> Non-Standard Item </td>
+                                <td> {{request.templateName}} </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Centrally Attached Feature Files </td>
+                                <td> {{request.attachments}} </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="General Attributes" is-open="true">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <td class="bordered-purple-right"> Customer Name </td>
+                                <td> {{request.quote.customerName}} </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Request Title </td>
+                                <td> {{request.requestName}} </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Created By </td>
+                                <td> {{request.createdUser}} </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Volume For Feature </td>
+                                <td> Get this from request details </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Expected Response Time </td>
+                                <td> {{request.expectedResponseTime}} </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> SLA </td>
+                                <td> Get this from request details </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Quote Option Id </td>
+                                <td> {{request.quote.quoteOptionId}} </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="Other Requests For This Quote Option" is-open="true">
+
+                    </accordion-group>
+                    <accordion-group heading="Request Specific Attributes" is-open="true">
+
+                    </accordion-group>
+                    <accordion-group heading="Evaluators" is-open="true">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Group </th>
+                                <th> Evaluator </th>
+                                <th> State </th>
+                                <th> Accepted Date </th>
+                                <th> Closed Date </th>
+                                <th> Response </th>
+                                <th> Decision </th>
+                                <th> Comments </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="requestGroup in request.requestEvaluators">
+                                <td> {{requestGroup.evaluatorGroupName}} </td>
+                                <td> {{requestGroup.acceptedBy}} </td>
+                                <td> {{requestGroup.state}} </td>
+                                <td> {{requestGroup.acceptedDate}} </td>
+                                <td> {{requestGroup.closedDate}} </td>
+                                <td>
+                                    <span ng-if="requestGroup.response == requestEvaluatorResponseConstantsService.requestEvaluatorResponse_go" class="badge badge-success "> {{requestEvaluatorResponseConstantsService.requestEvaluatorResponse_go}} </span>
+                                    <span ng-if="requestGroup.response == requestEvaluatorResponseConstantsService.requestEvaluatorResponse_noGo" class="badge badge-danger "> {{requestEvaluatorResponseConstantsService.requestEvaluatorResponse_noGo}} </span>
+                                    <span ng-if="requestGroup.response == requestEvaluatorResponseConstantsService.requestEvaluatorResponse_none" class="badge badge-default "> {{requestEvaluatorResponseConstantsService.requestEvaluatorResponse_none}} </span>
+                                </td>
+                                <td> {{requestGroup.decision}} </td>
+                                <td> <button class="btn btn-purple" ng-click="openCommentsModal('','/nrm/static/views/modal/controllerEvaluatorComments.html','lg', requestGroup, nrmUser)">Click To View/Add Comments</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="Response" is-open="true">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <td class="bordered-purple-right"> Mode Setting </td>
+                                <td> This will be a drop down from allowed values of mode setting in the template </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Response Type </td>
+                                <td> This will be a text or editable drop down depending on the state of request </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Detailed Response </td>
+                                <td> {{request.detailedResponse}} </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Attached Files </td>
+                                <td> Attached files </td>
+                            </tr>
+                            <tr>
+                                <td class="bordered-purple-right"> Log Note </td>
+                                <td>
+                                    <div>
+                                        <div class="comment" ng-repeat="comment in requestComments track by $id($index)">
+                                            <div class="comment-body no-margin">
+                                                <div class="comment-text">
+                                                    <div class="comment-header">
+                                                        <a href="#" title=""><b>{{comment.name}}</b></a><span><b> {{comment.date}} </b></span>
+                                                    </div>
+                                                    {{comment.message}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <form method="post" class="well padding-bottom-10 padding-top-10 margin-top-20" onsubmit="return false;">
+                                        <span class="padding-top-10 input-icon icon-right">
+                                            <textarea type="text" rows="3" class="form-control" placeholder="Post a new message" ng-model="requestDetails.requestCommentsModel"></textarea>
+                                        </span>
+                                        <div class="padding-top-10 text-align-left">
+                                            <button ng-click="requestDetails.saveRequestComment()" class="btn btn-purple">Save Comment</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="State Change Logs" is-open="true">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Date </th>
+                                <th> Time </th>
+                                <th> User Name </th>
+                                <th> State From </th>
+                                <th> State To </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="requestHistoryLog in request.requestHistoryLogs">
+                                <td> {{ getDate(requestHistoryLog.createdDate) }} </td>
+                                <td> {{ getTime(requestHistoryLog.createdDate) }} </td>
+                                <td> {{requestHistoryLog.createdUserName}} </td>
+                                <td> {{requestHistoryLog.stateFrom}} </td>
+                                <td> {{requestHistoryLog.stateTo}} </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="Who has seen this request" is-open="true">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Date </th>
+                                <th> Time </th>
+                                <th> User Name </th>
+                                <th> State </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="requestWhoHasSeenLog in request.requestWhoHasSeenLogs">
+                                <td> {{ getDate(requestWhoHasSeenLog.createdDate) }} </td>
+                                <td> {{ getTime(requestWhoHasSeenLog.createdDate) }} </td>
+                                <td> {{requestWhoHasSeenLog.createdUserName}} </td>
+                                <td> {{requestWhoHasSeenLog.state}} </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                </accordion>
+            </form>
+        </div>
+    </div>
+</div>

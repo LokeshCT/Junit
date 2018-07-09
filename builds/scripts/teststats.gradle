@@ -1,0 +1,27 @@
+
+//Make all tasks running tests perform stat generation
+
+def reportName = "${rootDir}/test-stats.csv"
+def testStatsReport = file(reportName)
+	
+task statsReportRegeneration() {
+	if (testStatsReport.exists()) {
+		testStatsReport.delete()
+		testStatsReport << "Module,Suite name, Test count, Successful count, Failed count, Ignored count, Duration(sec)\n"
+	}
+}
+
+processTestResources.dependsOn statsReportRegeneration
+
+tasks.withType(Test).each { task ->
+
+    task.afterSuite { suite, result ->
+	    double duration = (result.endTime - result.startTime)/1000
+		def className = suite.className
+		def suiteName = suite.name
+		
+		if(className && suiteName) {
+			testStatsReport << "${project.name},${suiteName},${result.testCount},${result.successfulTestCount},${result.failedTestCount},${result.skippedTestCount},${duration}\n"
+		}
+    }
+}

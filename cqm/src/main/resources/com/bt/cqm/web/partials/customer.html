@@ -1,0 +1,232 @@
+<div id="cqm-home">
+
+    <div class="dashboard-link-div">
+        <a href="" ng-click="openDashboard()"><i class="fa fa-tachometer"></i> Dashboard</a>
+    </div>
+
+    <div id="manageCust" class="cqm-home" ng-init="onPageLoad()">
+        <div class="home-panel" style="border: 1px solid #2694E8;height: 70%;border-radius: 0.5em;">
+            <ul class="nav nav-tabs" style="background-color:#C4E6F1; ">
+                <li class="active" style="margin-left: 0px"><a data-toggle="tab" href="#showCust" style="padding-left:5px">Existing
+                    Customer</a>
+                </li>
+                <li><a data-toggle="tab" href="#createCust" style="padding-left:5px">Create Customer</a></li>
+                <li><a data-toggle="tab" href="#dslChecker" style="padding-left:5px">Availability Checker</a></li>
+            </ul>
+            <div class="tab-content" style="padding: 10px;">
+                <div id="showCust" class="tab-pane fade in active">
+                    <div ng-form="existingCustForm">
+                        <div class="cqm-panel-row">
+                            <label for="salesChannel" class="home-label">Sales Channel</label>
+
+                            <div class="home-field">
+                                <select id="salesChannel"
+                                        ng-model="selectedSalesChannel"
+                                        ng-change="salesChannelChange(selectedSalesChannel)"
+                                        ng-required="true"
+                                        data-placeholder="Select a Sales Channel"
+                                        ng-options="channel as channel.name for channel in salesUser.salesChannelList">
+                                    <option value=""/>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cqm-panel-row">
+                            <label for="customer" class="home-label">Customer</label>
+
+                            <div class="home-field">
+                                <select id="customer"
+                                        ng-model="customer"
+                                        ng-change="customerChange(customer)"
+                                        ng-disabled="disableSelectCustomer"
+                                        ng-required="true"
+                                        ui-select2
+                                        data-placeholder="Select a Customer"
+                                        class="cqm-home-field-width">
+                                    <option value=""></option>
+                                    <option ng-repeat="customer in customerList" value="{{customer}}">{{customer.cusName}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cqm-panel-row">
+                            <label for="contract" class="home-label">Contract Id / Contract Reference</label>
+
+                            <div class="home-field">
+                                <select id="contract" class="select2-container select2-choice"
+                                        ng-model="contract"
+                                        ng-required="true"
+                                        data-placeholder="Select a Contract"
+                                        ng-options="contract as contract.id +' / '+ contract.refNumber  for contract in contractList">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="panel-footer home-panel-footer" style="padding-left: 35px;margin-top: 15px;">
+                            <button ng-click="launchConfiguration('Customer')" class="dsl-btn" id="manageCustomer"
+                                    ng-disabled="existingCustForm.$invalid">Manage Customer
+                            </button>
+                            <button ng-click="launchConfiguration('Site')" class="dsl-btn" id="ManageSite"
+                                    ng-disabled="existingCustForm.$invalid">Manage Site
+                            </button>
+                            <button ng-click="launchConfiguration('Quote')" class="dsl-btn" id="ManageQuoteOrOrder"
+                                    ng-disabled="existingCustForm.$invalid">Manage Quote
+                            </button>
+                            <button ng-click="launchConfiguration('Order')" class="dsl-btn" id="TrackAndOrder"
+                                    ng-disabled="existingCustForm.$invalid">Track Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="createCust" class="tab-pane fade">
+                    <div ng-form="customerCreationForm" ng-controller="CreateCustomerController">
+                        <div class="cqm-panel-row">
+                            <label for="create-saleschannel" class="home-label required">Sales Channel</label>
+
+                            <div class="home-field">
+                                <select id="create-saleschannel"
+                                        ng-model="selectedSalesChannel"
+                                        ng-change="salesChannelChange(selectedSalesChannel)"
+                                        ng-required="true"
+                                        data-placeholder="Select a Sales Channel"
+                                        class="cqm-home-field-width">
+                                    <option value=""></option>
+                                    <option ng-repeat="channel in salesUser.salesChannelList" value="{{channel}}">{{channel.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div ng-if="isMncChannel" class="cqm-panel-row">
+                            <label for="associated-channel" class="home-label required">Associated Sales Channel</label>
+
+                            <div class="home-field">
+                                <select id="associated-channel"
+                                        ng-model="mncAssociatedSalesChannel"
+                                        ng-required="true"
+                                        data-placeholder="Select a Sales Channel"
+                                        class="cqm-home-field-width">
+                                    <option value=""></option>
+                                    <option ng-repeat="ascChannel in salesChannelsWithGfr" value="{{ascChannel}}">
+                                        {{ascChannel.salesChannelName}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cqm-panel-row">
+                            <label for="create-customerName" class="home-label required">Customer</label>
+
+                            <div class="home-field">
+                                <input type="text" id="create-customerName" name="customerName"
+                                       ng-model="customerName"
+                                       ng-change="hideMatchingCustomerDiv()"
+                                       ng-required="true"
+                                       ng-disabled="!selectedSalesChannel"
+                                       style="width:203px;font-size: 14px; padding-left: 8px;padding-right: 8px;"
+                                       maxlength="79"
+                                       capitalize> </input>
+                            </div>
+                        </div>
+                        <div class="cqm-panel-row">
+                            <label for="contractFriendlyNameInput" class="home-label">Contract Friendly Name</label>
+
+                            <div class="home-field">
+                                <input type="text" id="contractFriendlyNameInput" name="contractFriendlyName"
+                                       ng-model="contractFriendlyName"
+                                       ng-change="hideMatchingCustomerDiv()"
+                                       ng-disabled="!selectedSalesChannel"
+                                       style="width:203px;font-size: 14px; padding-left: 8px;padding-right: 8px;"
+                                       maxlength="49"
+                                       capitalize> </input>
+                            </div>
+
+                        </div>
+                        <div class="cqm-panel-row">
+                            <label for="valid-status" class="home-label">Validation Status</label>
+
+                            <div class="home-field">
+                                <select id="valid-status"
+                                        ng-model="status"
+                                        ng-disabled="!customerName"
+                                        data-placeholder="Select validation status"
+                                        class="cqm-home-field-width">
+                                    <option value=""/>
+                                    <option ng-repeat="status in validationStatus" value="{{status.value}}">{{status.name}}</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="cqm-panel-row">
+                            <label for="contractCeaseTerm" class="home-label">Contractual Cease Term (Days)</label>
+
+                            <div class="home-field">
+                                <input type="number" max="240" min="0" class="cqmField" id="contractCeaseTerm" name="contractCeaseTerm"
+                                       ng-model="contractCeaseTerm" data-toggle="tooltip" title="{{cctToolTipMsg}}"
+                                       style="width:203px;font-size: 14px; padding-left: 8px;padding-right: 8px;"
+                                       class="cqm-home-field-width"/>
+                            </div>
+                        </div>
+
+                        <div class="cqm-panel-row">
+                            <label for="linkedContractualCeaseTerm" class="home-label">Linked Contractual Cease Term (Days)</label>
+
+                            <div class="home-field">
+                                <input type="number" max="240" min="0" class="cqmField" id="linkedContractualCeaseTerm"
+                                       name="linkedContractualCeaseTerm"
+                                       ng-model="linkedContractualCeaseTerm" data-toggle="tooltip" title="{{cctToolTipMsg}}"
+                                       style="width:203px;font-size: 14px; padding-left: 8px;padding-right: 8px;"
+                                       class="cqm-home-field-width"/>
+                            </div>
+
+                        </div>
+
+                        <div class="cqm-panel-row">
+                            <div class="panel-footer home-panel-footer" style="display: flex;margin-top: 10px;">
+                                <button type="button" class="dsl-btn" style="margin-left: 38%;"
+                                        ng-disabled="customerCreationForm.$invalid"
+                                        ng-click="findCustomer(selectedSalesChannel, customerName)">Create Customer
+                                </button>
+                            </div>
+                        </div>
+                        <cqm-create-customer-dialog customer-name="customerName" matching-customers-list="matchingCustomersList"
+                                                    display="showMatchingDialog" customer-exist-by-name="isCustomerExistByName"
+                                                    total-server-Items="totalServerItems"></cqm-create-customer-dialog>
+                    </div>
+                </div>
+
+                <div id="dslChecker" class="tab-pane fade">
+                    <div class="cqm-panel-row">
+                        <div style="margin-top: 25px;margin-bottom: 10px">
+                            <div class="cqm-panel-row" style="margin-top: 10px">
+                                <label for="dsl-saleschannel" class="home-label">Sales Channel</label>
+
+                                <div class="home-field">
+                                    <select id="dsl-salesChannel"
+                                            ng-model="selectedDslSalesChannel"
+                                            ng-required="true"
+                                            data-placeholder="Select a Sales Channel"
+                                            ng-options="channel as channel.name for channel in salesUser.salesChannelList"
+                                            class="cqm-home-field-width">
+                                        <option value="">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="cqm-panel-row">
+                                <button name="checkerTool" class="cqm-panel-col dsl-btn" ng-click="launchDslChecker()"
+                                        style="margin-left: 35%;"
+                                        ng-disabled="disableDslChkBtn">Check
+                                    Availability
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <associate-saleschannel display="showAssociateSalesChannel" contract="contract"
+                                associatedSalesChannel="associatedSalesChannel"></associate-saleschannel>
+    </div>
+</div>

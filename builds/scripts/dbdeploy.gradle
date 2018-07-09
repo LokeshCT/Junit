@@ -1,0 +1,228 @@
+def DB_DRIVER = "oracle.jdbc.driver.OracleDriver"
+
+def env = System.getenv()
+
+def DBA_USERID = env["ORACLE_SYSTEM_USER"] ?: "system"
+def DBA_PASSWORD = env["ORACLE_SYSTEM_PASSWD"] ?: "admin"
+
+configurations {
+    dbDeployConf {
+        ext.allowTestData = false;
+        ext.databaseUrl = 'please-override-me'
+        ext.databaseUser = 'please-override-me'
+        ext.databasePassword = 'please-override-me'
+        ext.databaseScriptsDirectory = 'please-override-me'
+        ext.databaseSqlplusUrl = 'please-override-me'
+    }
+
+    dbDeployConfDataSqlFiles
+}
+
+dependencies {
+    compile 'com.dbdeploy:dbdeploy-cli:3.0M3', 'com.oracle:ojdbc6:11.1.0.6.0'
+
+    dbDeployConf 'com.dbdeploy:dbdeploy-core:3.0M3', 'com.dbdeploy:dbdeploy-ant:3.0M3', 'com.oracle:ojdbc6:11.1.0.6.0'
+    dbDeployConfDataSqlFiles files(filesInDirectory("$projectDir.absolutePath/src/dbscripts", /\.sql/))
+}
+
+def filesInDirectory(dir, filter) {
+    new File(dir).listFiles().collect {File file -> file.absolutePath}.findAll {it =~ filter}
+}
+
+task dumpFiles <<
+     {
+         files = configurations["dbDeployConfDataSqlFiles"].files
+         println files
+         //if ((files == null) || (files.size() == 0)) {
+         //    println ""
+         //}
+         //
+         //def fileNamesStr = files.first()
+         //if (files.size() > 1) {
+         //    files[1..files.size() - 1].collect { "," + it }.each {fileNamesStr += it}
+         //}
+         //println fileNamesStr
+     }
+task initializeDatabaseConfig << {
+    def databaseConfig = setupDatabaseConfiguration()
+
+
+
+    if (databaseConfig.allowTestData) {
+        configurations.dbDeployConf.allowTestData = databaseConfig.allowTestData=="true"?Boolean.TRUE:Boolean.FALSE
+    } else {
+        configurations.dbDeployConf.allowTestData = Boolean.FALSE;
+    }
+    if (!configurations.dbDeployConf.allowTestData) {
+        throw new RuntimeException("Test data not allowed for this environment");
+    }
+    configurations.dbDeployConf.databaseUrl = databaseConfig.getProperty('javax.persistence.jdbc.url')
+    configurations.dbDeployConf.databaseUser = databaseConfig.getProperty('javax.persistence.jdbc.user')
+    configurations.dbDeployConf.databasePassword = databaseConfig.getProperty('javax.persistence.jdbc.password')
+    configurations.dbDeployConf.databaseScriptsDirectory = projectDir.absolutePath + "/src/dbscripts"
+    configurations.dbDeployConf.databaseSqlplusUrl = removeJdbcPrefix(configurations.dbDeployConf.databaseUrl)
+}
+
+// Sqlplus connection string wont work with jdbc prefix
+def removeJdbcPrefix(connectionString) {
+    def atIndex = connectionString.findIndexOf {it == '@'}
+    connectionString[atIndex + 1..connectionString.length() - 1]
+}
+
+task createUser(dependsOn: initializeDatabaseConfig) << {
+    println "Creating $configurations.dbDeployConf.databaseUser user schema"
+    executeSqlPlus("$rootDir/builds/config/dbdeploy/create-user.sql",
+                   DBA_USERID,
+                   DBA_PASSWORD,
+
+                   configurations.dbDeployConf.databaseUser,
+                   configurations.dbDeployConf.databasePassword)
+}
+createUser.onlyIf { !project.hasProperty('skipDbDeployAdminOperations') }
+
+
+task listSchemas(dependsOn: initializeDatabaseConfig) << {
+    logger.lifecycle("Schema: $configurations.dbDeployConf.databaseUser/$configurations.dbDeployConf.databasePassword")
+}
+
+task dropUser(dependsOn: initializeDatabaseConfig) << {
+    println "Dropping $configurations.dbDeployConf.databaseUser user schema"
+    executeSqlPlus("$rootDir/builds/config/dbdeploy/drop-user.sql",
+                   DBA_USERID,
+                   DBA_PASSWORD,
+
+                   configurations.dbDeployConf.databaseUser)
+}
+dropUser.onlyIf { !project.hasProperty('skipDbDeployAdminOperations') }
+
+
+task createChangeLog(dependsOn: createUser) << {
+    println 'Creating DBDeploy ChangeLog table'
+    executeSqlPlus("$rootDir/builds/config/dbdeploy/dbdeploy-create-changelog-table.sql",
+                   configurations.dbDeployConf.databaseUser,
+                   configurations.dbDeployConf.databasePassword)
+}
+
+task applyDbUpdates(dependsOn: createChangeLog) << {
+    println 'Applying database updates'
+    println "Scanning $configurations.dbDeployConf.databaseScriptsDirectory directory for sql scripts"
+
+    def outputFileName = getOutputFileName()
+    def separator = ";"
+    if (project.hasProperty("dbDeploySeparator")) {
+        separator = project.ext.dbDeploySeparator
+    }
+
+    ant {
+        taskdef(name: 'dbdeploy',
+                classname: 'com.dbdeploy.AntTarget',
+                classpath: configurations.dbDeployConf.asPath)
+
+        if ("".equals(outputFileName)) {
+            dbdeploy(driver: DB_DRIVER,
+                     url: configurations.dbDeployConf.databaseUrl,
+                     userid: configurations.dbDeployConf.databaseUser,
+                     password: configurations.dbDeployConf.databasePassword,
+                     dir: configurations.dbDeployConf.databaseScriptsDirectory,
+                     delimiter: separator,
+                     )
+        } else {
+            dbdeploy(driver: DB_DRIVER,
+                     url: configurations.dbDeployConf.databaseUrl,
+                     userid: configurations.dbDeployConf.databaseUser,
+                     password: configurations.dbDeployConf.databasePassword,
+                     dir: configurations.dbDeployConf.databaseScriptsDirectory,
+                     outputfile: outputFileName,
+                     dbms: 'ora',
+                     delimiter: separator,
+                     )
+        }
+    }
+}
+
+
+task recompileSchema(dependsOn: initializeDatabaseConfig) << {
+    println "Compiling the whole schema for ${configurations.dbDeployConf.databaseUser}"
+    executeSqlPlus("$rootDir/builds/config/dbdeploy/compile_schema.sql",
+                   DBA_USERID,
+                   DBA_PASSWORD,
+
+                   configurations.dbDeployConf.databaseUser)
+}
+recompileSchema.onlyIf { !project.hasProperty('skipDbDeployAdminOperations') }
+applyDbUpdates.doLast {tasks.recompileSchema.execute()}
+
+
+def getOutputFileName() {
+    if (hasProperty("outputfile")) {
+        println "Changes will be output to files named ${outputfile}.sql"
+        return "${outputfile}.sql"
+    }
+    println 'Changes will be made directly to the database'
+    return ""
+}
+
+def executeSqlPlus(String sqlFilePath, String username, String password, String... args) {
+    def lineToExecute = ["sqlplus", "$username/$password", "@$sqlFilePath"]
+    lineToExecute.addAll(args)
+    exec {
+        commandLine = lineToExecute
+        environment 'LOCAL': "$configurations.dbDeployConf.databaseSqlplusUrl"
+    }
+}
+
+def setupDatabaseConfiguration() {
+    //The project evaluates to whichever subProject is currently building,
+    //and therefore has invoked this method through a dependsOn call
+    def configPropsFile = findPropsConfig()
+    def configXmlFile = findXmlConfig()
+
+    println "****** Using config file $configPropsFile.name and $configXmlFile.name in order to set up database"
+
+    def databaseId = project.ext.vModuleEnvironment
+
+    def config = new XmlSlurper().parse(configXmlFile)
+
+    def allowTestData = config.CONSTANT.find {it.'@id' == 'environment.allow.test.data'}.@value.text()
+
+    def databaseConfig = new Properties()
+    databaseConfig.load(new FileInputStream(configPropsFile))
+    databaseConfig.setProperty("allowTestData", allowTestData)
+
+    databaseConfig.setProperty("javax.persistence.jdbc.driver", "oracle.jdbc.driver.OracleDriver")
+    databaseConfig.setProperty("javax.persistence.jdbc.url", databaseConfig.getProperty("${databaseId}_url"))
+    databaseConfig.setProperty("javax.persistence.jdbc.user", databaseConfig.getProperty("${databaseId}_userName"))
+    databaseConfig.setProperty("javax.persistence.jdbc.password", databaseConfig.getProperty("${databaseId}_password"))
+
+    return databaseConfig
+}
+
+def findPropsConfig(prefix = "$rootDir/config/src/main/resources/com/bt/rsqe", tryAlternate = true) {
+    def configPropsFile = file("$prefix/dbdeploy/test.properties")
+    if (hasProperty("environment")) {
+        configPropsFile = file("$prefix/dbdeploy/${project.environment}.properties")
+    }
+    if (!configPropsFile.exists()) {
+        if (tryAlternate) {
+            return findPropsConfig("$rootDir/config/src/test/resources/com/bt/rsqe", false)
+        } else {
+            throw new RuntimeException("$configPropsFile not found")
+        }
+    }
+    return configPropsFile
+}
+
+def findXmlConfig(prefix = "$rootDir/config/src/main/resources/com/bt/rsqe", tryAlternate = true) {
+    def configXmlFile = file("$prefix/test.xml")
+    if (hasProperty("environment")) {
+        configXmlFile = file("$prefix/${project.environment}.xml")
+    }
+    if (!configXmlFile.exists()) {
+        if (tryAlternate) {
+            return findXmlConfig("$rootDir/config/src/test/resources/com/bt/rsqe", false)
+        } else {
+            throw new RuntimeException("$configXmlFile not found")
+        }
+    }
+    return configXmlFile
+}

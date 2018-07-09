@@ -1,0 +1,259 @@
+<div class="innerWrap" ng-init="loadCreateSitePage()">
+
+
+<div class="branchSiteForm">
+
+<form name="branchSiteForm" id="branchSiteForm" ng-model="branchSiteForm">
+
+    <div class="hrMargin">
+        <span class="headerLabel">Create Branch Sites</span>
+        <hr class="hrStyle" width="99%"/>
+    </div>
+
+
+    <div ng-form="branchSiteNGForm">
+
+        <div class="cqmFieldDiv" >
+            <label>Site Name<span class="rfq">(RFQ)</span></label>
+            <input class="cqmField" type="text" id="siteName" name="siteName"
+                   ng-model="siteDTO.siteName"  ng-required="true" tabindex="101"/>
+        </div>
+        <div class="cqmFieldDiv" >
+            <label>Local Company Name</label>
+            <input class="cqmField" type="text" id="companyName" name="companyName"
+                   ng-model="siteDTO.localCompanyName" tabindex="102"  maxlength="100"/>
+        </div>
+
+        <div class="cqmFieldDiv" >
+            <label>Building Name</label>
+            <input class="cqmField" type="text" id="buildingName" name="buildingName"
+                   ng-model="addressDTO.buildingName"  tabindex="103">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub Building</label>
+            <input class="cqmField" type="text" id="subBuilding" name="subBuilding"
+                   ng-model="addressDTO.subBuilding"  tabindex="104">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Building Number</label>
+            <input class="cqmField" type="text" id="buildingNumber" name="buildingNumber" maxlength="20" size="20"
+                   ng-model="addressDTO.buildingNumber"  tabindex="105">
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Room<span class="rfo">(RFO)</span></label>
+            <input class="cqmField" type="text" id="room" name="room"
+                   ng-model="addressDTO.room" maxlength="16" size="16" tabindex="106">
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Floor<span class="rfo">(RFO)</span></label>
+            <input class="cqmField" type="text" id="floor" name="floor" maxlength="16" size="16"
+                   ng-model="addressDTO.floor"  tabindex="107">
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Street</label>
+            <input class="cqmField" type="text" id="street" name="street"
+                   ng-model="addressDTO.street"  tabindex="108">
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Sub Street</label>
+            <input class="cqmField" type="text" id="subStreet" name="subStreet"
+                   ng-model="addressDTO.subStreet" tabindex="109">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Locality</label>
+            <input class="cqmField" type="text" id="locality" name="locality"
+                   ng-model="addressDTO.locality"  tabindex="110">
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Sub Locality</label>
+            <input class="cqmField" type="text" id="subLocality" name="subLocality"
+                   ng-model="addressDTO.subLocality"  tabindex="111">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label> City<span class="rfq">(RFQ)</span></label>
+            <input class="cqmField" type="text"  ng-required="true" id="city" name="city" ng-model="addressDTO.city"
+                    tabindex="112" style="border-color: red" />
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>State/County/Province<span class="rfq">{{provRfq}}</span></label>
+            <input class="cqmField" type="text" id="state" name="state"
+            ng-model="addressDTO.state"  tabindex="113" ng-required="provRfqReq"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub State/County/Province</label></label>
+            <input class="cqmField" type="text" id="subState" name="subState"
+                   ng-model="addressDTO.subState"  tabindex="114"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Country<span class="rfq">(RFQ)</span></label>
+            <select id="country" ng-model="addressDTO.country"
+                    ng-options="country as country.name for country  in allCountries"
+                    data-placeholder="Select a Country" ng-required="true"
+                    style="width: 95%;border-color:red"  tabindex="115"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Zip/Post Code</label>
+            <input class="cqmField" type="text" id="postCode" name="postCode"
+                   ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="addressDTO.postCode"
+                    tabindex="116"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub Post Code</label>
+            <input class="cqmField" type="text" id="subPostCode" name="subPostCode"
+                   ng-change="setGeoCodeValue('geoCodeActionId')"
+                   ng-model="addressDTO.subPostCode"  tabindex="117"/>
+        </div>
+
+       <!-- <div class="cqmFieldDiv">
+            <label>PO Box</label>
+            <input class="cqmField" type="text" id="poBox" name="poBox"
+                   ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="addressDTO.POBox"
+                    tabindex="118"/>
+        </div>-->
+
+        <div class="cqmFieldDiv" >
+            <label>Phone Number</label>
+            <input class="cqmField" type="text" id="phoneNumber" name="phoneNumber"
+                   ng-model="addressDTO.phoneNumber" no-alpha tabindex="119"/>
+        </div>
+      <!--  <div class="cqmFieldDiv">
+            <label>Customer Friendly Site Name</label>
+            <input class="cqmField" type="text" id="sitFriendlyName" name="sitFriendlyName"
+                   ng-model="siteDTO.sitFriendlyName"  tabindex="120" maxlength="100">
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Customer Report Site Name</label>
+            <input class="cqmField" type="text" id="custReportSiteName" name="custReportSiteName"
+                   ng-model="siteDTO.sitNetworkReportingRef"  tabindex="120"  maxlength="100">
+        </div>
+
+        <div class="cqmTextAreaFieldDiv" ng-show="!showMap">
+            <label>Site Comments</label>
+            <textarea class="cqmTextAreaField" type="text" id="comments" name="comments"
+                      ng-model="siteDTO.comment"  tabindex="121" ng-disabled="clickedAddLoc"/>
+        </div>-->
+
+        <div class="cqmFieldDiv">
+            <label>Latitude</label>
+            <input class="cqmField" type="text" id="latitude" name="latitude"
+                   ng-model="addressDTO.latitude" disabled="true" ng-required="true"  >
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Longitude</label>
+            <input class="cqmField" type="text" id="longitude" name="longitude"
+                   ng-model="addressDTO.longitude" disabled="true" ng-required="true"  >
+        </div>
+
+        <div style="float: left;margin-left: 10px;margin-bottom: 30px;margin-top: -10px;width: 18%;">
+            <label></label>
+            <input type="checkbox" id="clearLat" name="clearLat"
+                   ng-model="clearLatLong" ng-click="onClearClick()" tabindex="17">Clear</input>
+        </div>
+        <div class="hrMargin" style="clear:both;float:left;margin-top: 5px;margin-bottom: 10px;display: block" ng-show="!showMap" >
+        <span class="headerLabel" style="clear:both;float: left">Site Labels</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+
+        <div id="siteLabel" name="siteLabel" style="clear:both;margin-top: 5px;float: left">
+            <div class="cqmFieldDiv" ng-show="!showMap">
+                <label>Customer Friendly Site Name</label>
+                <input class="cqmField" type="text" id="sitFriendlyName" name="sitFriendlyName"
+                       ng-model="siteDTO.sitFriendlyName" tabindex="120" maxlength="100">
+            </div>
+            <div class="cqmFieldDiv" ng-show="!showMap">
+                <label>Customer Report Site Name</label>
+                <input class="cqmField" type="text" id="custReportSiteName" name="custReportSiteName"
+                       ng-model="siteDTO.sitNetworkReportingRef" tabindex="120" maxlength="100">
+            </div>
+            <!--<div class="cqmFieldDiv" ng-show="!showMap">
+                <label>Site Reference</label>
+                <input class="cqmField" type="text" id="sitReference" name="sitReference"
+                       ng-model="siteDTO.sitReference" tabindex="120" maxlength="50" ng-disabled="!isMncOrCs">
+            </div>-->
+            <div class="cqmFieldDiv" ng-show="!showMap">
+                <label>Site Cus Reference</label>
+                <input class="cqmField" type="text" id="siteCusReference" name="siteCusReference"
+                       ng-model="siteDTO.sitCusReference"tabindex="120" maxlength="50">
+            </div>
+            <div class="cqmFieldDiv" ng-show="!showMap">
+                <label>Region</label>
+                <input class="cqmField" type="text" id="sitCusRegion" name="sitCusRegion"    ng-show="allowNewRegion"
+                        ng-model="siteDTO.sitCusRegion" data-toggle="tooltip" title="Enter New Region" tabindex="120" maxlength="100" style="width: 80%;margin-bottom: 0px"/>
+            <select id="sitCusRegionExist" ng-model="siteDTO.sitCusRegion"    ng-show="!allowNewRegion"
+                        ng-options="sitCusRegion.region as sitCusRegion.region for sitCusRegion  in siteRegionList"
+                        data-placeholder="Select a Region"
+                        style="width: 85%;border-color:red"  tabindex="115" ng-change="onRegionValueChange()"/>
+            <button ng-click="addRegion()" class="plus-btn" data-toggle="tooltip" title="Add New Region"><i class="fa fa-plus fa-fw"></i></button>
+            </div>
+            <div class="cqmTextAreaFieldDiv" ng-show="!showMap">
+                <label>Site Comments</label>
+                <textarea class="cqmTextAreaField" type="text" id="comments" name="comments"
+                          ng-model="siteDTO.comment" tabindex="121" maxlength="1000"/>
+            </div>
+        </div>
+
+
+
+        <input class="cqmField" type="hidden" id="siteId" name="siteId"
+               ng-model="siteDTO.siteId" disabled="true"  >
+
+
+        <div class="containerDiv" style="float:left;margin-bottom: 5px;">
+            <button type="button" class="btn google-map"  ng-show="true" 
+                    style="float:right;margin:5px;" ng-click="clickShowMap()" tabindex="127">
+            </button>
+            <button class="btn google-map-black"  ng-show="false"
+                    style="float:right;margin:5px;" tabindex="126">
+            </button>
+            <button class="btn" ng-disabled="disableSearch" ng-click="searchAddress()"
+                    style="float:right;margin:5px;" tabindex="125">Search
+                Address
+            </button>
+            <button class="btn" ng-disabled="false" ng-click="clear()"
+                    style="float:right;margin:5px;" tabindex="124">Reset
+            </button>
+         <!--   <button class="btn" style="float:right;margin:5px;" id="editCustomerId"
+                    ng-disabled="disableUpdate"
+                    ng-model="editCustomerId"
+                    ng-click="createBranchSite(false)" tabindex="123"
+                >Update Branch Site
+            </button>-->
+            <button class="btn" style="float:right;margin:5px;" id="createCustomerId"
+                    ng-disabled="branchSiteNGForm.$invalid"
+                    ng-click="createBranchSite()" tabindex="122"
+                >Create Branch Site
+            </button>
+
+
+        </div>
+
+        <div ng-show="isAdrSearchSuccess" class="searchResult">
+            <div class="hrMargin">
+                <span class="headerLabel">Search Results: {{ numOfMatchingAddresses }} address(es) found.</span>
+                <hr class="hrStyle">
+            </div>
+
+            <div class="searchResultGridStyle" style="height: 250px" ng-grid="addressGrid"></div>
+        </div>
+        <div ng-show="showMap"  style="height: 420px;width: 98%; margin-left: 2px;margin-right: 2px;margin-bottom: 20px; margin-top:10px;">
+            <div id="map-canvas" class="map-canvas"></div>
+            <input id="pac-input" name="pac-input" class="map-canvas" type="text" placeholder="Search Maps"
+         style="background-color: #fff;font-family: Roboto;font-size: 15px;font-weight: 300;margin-left: 12px;margin-top: 12px;padding: 0 11px 0 13px;text-overflow: ellipsis;
+  width: 300px;height: 30px"/>
+        </div>
+    </div>
+</form>
+</div>
+</div>

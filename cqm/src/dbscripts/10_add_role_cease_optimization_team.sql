@@ -1,0 +1,2 @@
+Insert into user_role_master (ROLE_ID,ROLE_NAME,CREATED_DATE,CREATED_USER,MODIFIED_DATE,MODIFIED_USER,ROLE_TYPE) values (24,'Cease Optimization Team',to_timestamp('19-JAN-15 08.51.47.000000000','DD-MON-RR HH24.MI.SS.FF'),'Refresh_script',to_timestamp('19-JAN-15 08.51.47.000000000','DD-MON-RR HH24.MI.SS.FF'),'Refresh_script',1)
+//

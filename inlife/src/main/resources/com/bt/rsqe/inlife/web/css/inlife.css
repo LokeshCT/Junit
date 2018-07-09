@@ -1,0 +1,118 @@
+.gridStyle {
+    margin-left: 10px;
+    height: 400px;
+    font-size: 11px;
+}
+
+.quoteStatsDiv {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.pieChartDiv {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    left: 771px;
+    top: 0px;
+    border:  1px solid #9999ff;;
+}
+
+.quoteStatsDiv .pieChartDiv rsqe-pie-chart {
+    position: relative;
+    top: 50px;
+}
+
+.quoteStatsDiv .pieChartDiv rsqe-pie-chart canvas{
+    position: absolute;
+    left: -10px;
+    top: 20px;
+}
+
+.quoteStatsDiv .pieChartDiv rsqe-pie-chart ul {
+    position: absolute;
+    left: 250px;
+    top: -40px;
+    width: 300px;
+    font-size: 12px;
+}
+
+.quotesSummaryByChannelDiv {
+    float: left;
+    position: absolute;
+    left: 20px;
+    top:0px;
+    width: 1250px;
+    height: 300px;
+    border:  1px solid #9999ff;
+}
+
+
+.quoteItemDetailsDiv {
+    position: absolute;
+    top: 301px;
+    border:  1px solid #9999ff;
+    left: 20px;
+    width: 1250px;
+    height: 400px;
+
+}
+
+.quotesSummaryByChannelDiv label, .quoteItemDetailsDiv label {
+    margin-bottom: 0px;
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.quotesSummaryByChannelTab {
+    margin-left: 20px;
+    width: 1200px;
+    height: 279px;
+    font-size: 11px;
+}
+
+.quoteItemDetailsTab {
+    width: 1200px;
+    height: 350px;
+    font-size: 11px;
+    position: absolute;
+    top:20px;
+    left: 10px;
+}
+
+.ngRow:hover {
+   background-color: #ffff99;
+}
+
+.ngViewport {
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.gridFooter {
+    background-color: transparent;
+}
+
+#header {
+    background: url(../img/bannerbg.jpg) #dee3e7 repeat-x left top;
+    height: 75px;
+}
+
+#header .header-text {
+    float:right;
+}
+
+#header .header-text .dashboard-msg {
+    float:right;
+    margin-top:10px;
+    font-size:15px;
+    margin-right:20px;
+    line-height:10px;
+}
+
+.ngHeaderContainer {
+    background-image: url(../img/t_bg_header_sprite.png);
+}

@@ -1,0 +1,14 @@
+#header {
+    background:url(../img/bannerbg.jpg) #dee3e7 repeat-x left top;
+    height:75px;
+}
+#header .logo {
+    float:left;
+}
+
+#header h1 {
+    color: #2584C8;
+    float: left;
+    font-weight: bold;
+    margin: 45px 0 0;
+}

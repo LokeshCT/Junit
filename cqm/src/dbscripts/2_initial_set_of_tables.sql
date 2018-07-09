@@ -1,0 +1,37 @@
+DECLARE tbl_exist INTEGER; BEGIN SELECT count(*) INTO tbl_exist FROM USER_TABLES WHERE table_name = 'ROLE_TYPE_CONFIG'; IF tbl_exist = 1 THEN EXECUTE IMMEDIATE 'DROP TABLE ROLE_TYPE_CONFIG CASCADE CONSTRAINTS'; END IF; END;//
+DECLARE constr_exist INTEGER; BEGIN SELECT count(*) INTO constr_exist FROM USER_CONSTRAINTS WHERE constraint_name = 'FK1_USER_CONFIG'; IF constr_exist = 1 THEN EXECUTE IMMEDIATE 'ALTER TABLE USER_AUTHORIZATION DROP CONSTRAINT FK1_USER_CONFIG'; END IF; END;//
+
+
+create table ROLE_TYPE_MASTER
+(
+  ROLE_TYPE_ID   INTEGER not null,
+  ROLE_TYPE_NAME VARCHAR2(50) not null,
+  CREATED_DATE   TIMESTAMP(6),
+  CREATED_USER   VARCHAR2(25),
+  MODIFIED_DATE  TIMESTAMP(6),
+  MODIFIED_USER  VARCHAR2(25)
+)
+//
+
+alter table ROLE_TYPE_MASTER add constraint PK_ROLE_TYPE_MASTER primary key (ROLE_TYPE_ID) using index
+//
+
+alter table SALES_CHANNEL add ROLE_TYPE INTEGER default 1 not null
+//
+
+alter table SALES_CHANNEL  add constraint FK1_SALES_CHANNEL foreign key (ROLE_TYPE) references ROLE_TYPE_MASTER (ROLE_TYPE_ID)
+//
+
+alter table USER_AUTHORIZATION add constraint FK1_USER_CONFIG foreign key (ROLE_TYPE_ID) references ROLE_TYPE_MASTER (ROLE_TYPE_ID)
+//
+
+alter table USER_ROLE_MASTER add ROLE_TYPE INTEGER default 1 not null
+//
+
+alter table USER_ROLE_MASTER add constraint FK1_USER_ROLE_MASTER foreign key (ROLE_TYPE) references ROLE_TYPE_MASTER (ROLE_TYPE_ID)
+//
+
+
+
+
+

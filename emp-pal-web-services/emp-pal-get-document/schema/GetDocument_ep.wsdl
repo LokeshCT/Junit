@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.4. -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/GetDocument/2.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/GetDocument/2.0">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/GetDocument/2.0" schemaLocation="http://10.29.66.41:61020/ManageDocument/GetDocument_ep?xsd=1"/>
+        </schema>
+    </types>
+    <message name="GetDocumentRequestMessage">
+        <part name="payload" element="tns:GetDocumentRequest"/>
+    </message>
+    <message name="GetDocumentResponseMessage">
+        <part name="payload" element="tns:GetDocumentResponse"/>
+    </message>
+    <portType name="GetDocumentPort">
+        <operation name="getDocument">
+            <input message="tns:GetDocumentRequestMessage"/>
+            <output message="tns:GetDocumentResponseMessage"/>
+        </operation>
+    </portType>
+    <binding name="GetDocumentBinding" type="tns:GetDocumentPort">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getDocument">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal" namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocumentt/GetDocument/2.0"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocumentt/GetDocument/2.0"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="GetDocumentService">
+        <port name="GetDocument_ep" binding="tns:GetDocumentBinding">
+            <soap:address location="http://10.29.66.41:61020/ManageDocument/GetDocument_ep"/>
+        </port>
+    </service>
+</definitions>

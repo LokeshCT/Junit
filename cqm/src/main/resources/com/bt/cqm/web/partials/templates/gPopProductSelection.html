@@ -1,0 +1,14 @@
+<div cqm-dialog="display" title="title" no-details-button width="40%" on-ok="onSubmit"
+     on-show="onPageLoad">
+    <form name="myForm" style="width: 92%;height: 200px">
+        <div class="cqmFieldDiv" style="width:45%" ng-repeat="product in products">
+            <label>{{product.label}}</label>
+            <input type="checkbox" name="selectedProducts[]" class="cqmField" ng-model="product.selected" value="{{product.value}}">
+        </div>
+        <div class="cqmFieldDiv" style="width:45%">
+                <label>Include Domestic</label>
+                <input id="isDomestic" class="chk-toggle chk-toggle-yes-no" ng-model="formdata.includeDomestic" type="checkbox" style="display: none" >
+                <label for="isDomestic" data-on="Yes" data-off="No"></label>
+        </div>
+    </form>
+</div>

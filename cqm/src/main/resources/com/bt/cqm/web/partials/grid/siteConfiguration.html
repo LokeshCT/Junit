@@ -1,0 +1,194 @@
+<div class="inner" id="siteTechnicalConfiguration" ng-controller="siteTechnicalConfigCtrl">
+
+    <div id="siteDetailsContainer" style="width: 400px;">
+        <div id="siteNameLabel" style="width:300px; font-size: 10px;"><b>Site Name</b> : {{siteConfigData.siteName}} &nbsp;
+            <b>Location</b> :{{siteConfigData.address.city}},{{siteConfigData.address.country}}
+        </div>
+    </div>
+
+    <div class="table-container" style="height: 200px; visibility: visible;">
+        <table>
+            <thead class="header-fixed">
+            <tr style="top: 1px;">
+                <th>
+                    <div style="width: 60px;">Management <br/>Type</div>
+                </th>
+                <th>
+                    <div style="width: 60px;">Resiliency</div>
+                </th>
+                <th>
+                    <div style="width: 100px;">CPE <br/>Resilience</div>
+                </th>
+                <th>
+                    <div style="width: 60px;">CPE <br/>Manufacturer</div>
+                </th>
+                <th>
+                    <div style="width: 60px;">Port Pricing <br/>Type</div>
+                </th>
+                <th>
+                    <div style="width: 60px;">Access Term</div>
+                </th>
+
+                <th>
+                    <div style="width: 60px;">CPE Contract <br/>Term</div>
+                </th>
+               <!-- <th>
+                    <div style="width: 60px;">CPE Site <br/>Survey</div>
+                </th>
+                <th>
+                    <div style="width: 70px;">CPE Installation <br/>Hours</div>
+                </th>-->
+
+
+            </tr>
+            </thead>
+            <tbody style="display: block; border-top: 50px solid transparent;">
+            <!-- ngRepeat: r in data.rows -->
+            <tr>
+                <td>
+                    <div style="width: 60px;">
+
+                        <configurable-attribute leg-type="Primary" attribute-name="Management Type" attribute-id="managementType.value"
+                                                attribute-value="{{siteConfigData.managementType.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 60px;">
+
+                        <configurable-attribute leg-type="Primary" attribute-name="Resiliency" attribute-id="resiliency.value"
+                                                attribute-value="{{siteConfigData.resiliency.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div row="row" style="width: 100px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="CPE Resilience Dropdown" attribute-id="cpeResilience"
+                                                attribute-value="{{siteConfigData.cpeResilience}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div title="" style="width: 60px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="Manufacturer"
+                                                attribute-id="cpeConfigurationData.manufacturer"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.manufacturer}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 60px;">
+
+                        <configurable-attribute leg-type="Primary" attribute-name="Port Pricing Type"
+                                                attribute-id="portConfigurationData.portPricingType"
+                                                attribute-value="{{siteConfigData.portConfigurationData.portPricingType}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 60px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="Access Term"
+                                                attribute-id="accessConfigurationData.accessTerm"
+                                                attribute-value="{{siteConfigData.accessConfigurationData.accessTerm}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+
+                <td>
+                    <div title="" style="width: 60px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="CPE Contract Term"
+                                                attribute-id="cpeConfigurationData.cpeContractTerm"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.cpeContractTerm}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+               <!-- <td>
+                    <div title="" style="width: 60px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="Site Survey"
+                                                attribute-id="cpeConfigurationData.siteSurvey"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.siteSurvey}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div title="" style="width: 70px;">
+
+                        <configurable-attribute leg-type="Primary" attribute-name="Installation Hours"
+                                                attribute-id="cpeConfigurationData.installationHours"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.installationHours}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>-->
+
+
+
+            </tr>
+
+
+            </tbody>
+        </table>
+        <div class="hidden">11</div>
+    </div>
+</div>
+
+
+<!--
+<div class="row-fluid" id="accessConfiguraton" ng-controller="accessConfigCtrl">
+    <div class="span5" id="primaryAccessConfiguration">
+        <div class="page-header" style="text-align: center">Primary Access Configuration</div>
+        <form class="form-horizontal" ng-model="accessConfigurationData">
+
+            <configurable-attribute attribute-name="Access Type" attribute-id="accessType"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessType.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Access Technology"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.accessTechnology.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessTechnology.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Access Speed"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.accessSpeed.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessSpeed.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Access Model"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.accessModel.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessModel.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Service Variant"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.serviceVariant.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.serviceVariant.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+        </form>
+    </div>
+    <div class="span5" id="secondaryAccessConfiguration" ng-show="isSecondary">
+        <div class="page-header" style="text-align: center">Secondary Access Configuration</div>
+        <form class="form-horizontal" ng-model="accessConfigurationData">
+
+            <configurable-attribute attribute-name="Access Type" attribute-id="accessType"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessType.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Access Technology"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.accessTechnology.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessTechnology.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Access Speed"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.accessSpeed.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessSpeed.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Access Model"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.accessModel.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.accessModel.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Service Variant"
+                                    attribute-id="accessConfigurationData.primaryAccessParams.serviceVariant.value"
+                                    attribute-value="{{accessConfigurationData.primaryAccessParams.serviceVariant.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+        </form>
+    </div>
+    <div class="span8">
+        <a class="btn btn-primary pull-left" href="#/siteConfig" id="siteConfigPrevious">Previous</a>
+        <a class="btn btn-primary pull-right" href="#/portConfig" id="portConfigNext">Next</a>
+    </div>
+
+</div>-->

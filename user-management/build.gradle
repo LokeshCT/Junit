@@ -1,0 +1,38 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+ext.dbDeploySeparator = "//";
+apply from: "$rootDir/builds/scripts/dbdeploy.gradle"
+
+ext.coverageTargetPct = 0
+ext.coverageBranchTargetPct = 0
+
+
+ext.vModuleEnvironment = "user-management"
+
+test.dependsOn applyDbUpdates
+
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':common:web')
+dependsOnIncludingTests(project, ':core')
+dependsOnIncludingTests(project, ':user-management-client')
+dependencies {
+    compile([
+                    'org.glassfish.jersey.containers:jersey-container-simple-http:2.0.1',
+                    'com.oracle:ojdbc6:11.1.0.6.0',
+                    'org.hibernate:hibernate-core:4.3.7.Final',
+                    'org.hibernate:hibernate-entitymanager:4.3.7.Final',
+                    'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final',
+                    'org.hibernate:hibernate-c3p0:4.3.0.Beta5',
+                    'commons-collections:commons-collections:3.2.1',
+                    'org.jdto:jdto:1.4'
+            ])
+
+    testCompile([
+                        'junit:junit:4.10',
+                        'org.dbunit:dbunit:2.4.8'
+                ])
+
+
+}

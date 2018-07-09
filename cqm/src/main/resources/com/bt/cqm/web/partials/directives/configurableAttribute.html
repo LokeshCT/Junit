@@ -1,0 +1,17 @@
+<div id="configurableAttributeContainer" class="control-group">
+    <!--<label class="control-label pull-left" style="font-weight: bold">{{attributeName}}&nbsp;:</label>-->
+
+    <div class="controls">
+        <div id="{{attributeId}}" ng-dblclick="displayDropDownForSelectingValues()" ng-value="{{attributeValue}}" ng-show="!editMode" class="span6">{{attributeValue}}
+        </div>
+        <select ng-show="editMode"
+                ng-model="selectedConfigurationValue"
+                ng-options="lookupData as lookupData.value  for lookupData in lookupDataValues"
+                ng-change="updateValue({'newValue':selectedConfigurationValue})">
+        </select>
+    </div>
+
+    <div ng-show="!hasValue" ng-click="displayDropDownForSelectingValues()">Configure</div>
+    <!--<div ng-show="!editMode" ng-click="displayDropDownForSelectingValues()" class="span1 btn-link">Change</div>-->
+
+</div>

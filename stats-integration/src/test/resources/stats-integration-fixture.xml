@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<StatsIntegration name="CA Service Basic" version="1.0" uri="http://127.0.0.1:9994/rsqe/customers/1/projects/7789?guid=TOKEN-DIRECT-1195037283">
+   <ProductInformation projectId="7789" customerId="1" quoteName="MyQuote">
+        <Cmc numberOfUsers="10" einNumber="987654321"/>
+   </ProductInformation>
+</StatsIntegration>

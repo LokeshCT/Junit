@@ -1,0 +1,15 @@
+<div>
+    <div style="margin-left: 40px; margin-top: 40px;">
+        <label>Quote Items by Sales channel:</label>
+    </div>
+    <div class="quotesSummaryDiv">
+        <rsqe-grid data="quoteSummaryData"
+                   class="quotesSummaryByChannelTab"
+                   column-defs="quoteSummaryColumns"
+                   footer-template="footerTemplate"></rsqe-grid>
+
+        <div class="pieChart">
+            <rsqe-pie-chart pie-data="pieData" options="options"></rsqe-pie-chart>
+        </div>
+    </div>
+</div>

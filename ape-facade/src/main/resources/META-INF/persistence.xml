@@ -1,0 +1,49 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="apeFacade">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>com.bt.rsqe.ape.repository.entities.ApeQrefDetailEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.ApeRequestEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.ApeRequestDetailEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.ApeQrefErrorEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.AccessStaffCommentEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.AccessUserCommentsEntity</class>
+        <class>com.bt.rsqe.persistence.store.RequestResponseEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.AvailabilityParamEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.AvailabilitySetEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.DslEfmSupportedCountriesEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierCheckApeRequestEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierCheckClientRequestEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierCheckLogEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierProductEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierRequestSiteEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierRequestSiteSpacEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.SupplierSiteEntity</class>
+
+        <class>com.bt.rsqe.ape.repository.entities.OnnetAvailabilityEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.OnnetBuildingsWithEFMEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.OnnetBuildingEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.EFMAddressEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.BritishAddressEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.AddressReferenceEntity</class>
+        <class>com.bt.rsqe.ape.repository.entities.TechnologysEntity</class>
+
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
+            <property name="hibernate.connection.provider_class" value="org.hibernate.c3p0.internal.C3P0ConnectionProvider"/>
+            <property name="hibernate.c3p0.max_size" value="150"/>
+            <property name="hibernate.c3p0.min_size" value="30"/>
+            <property name="hibernate.c3p0.acquire_increment" value="2"/>
+            <property name="hibernate.c3p0.idle_test_period" value="300"/>
+            <property name="hibernate.c3p0.max_statements" value="0"/>
+            <property name="hibernate.c3p0.timeout" value="100"/>
+            <property name="hibernate.c3p0.dataSourceName" value="ape-facade JPA"/>
+            <property name="hibernate.jdbc.fetch_size" value="50"/>
+            <property name="hibernate.default_batch_fetch_size" value="10"/>
+        </properties>
+    </persistence-unit>
+</persistence>

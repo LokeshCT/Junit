@@ -1,0 +1,16 @@
+<div cqm-dialog="display" title="title" no-details-button width="40%" on-ok="onSubmit"
+     on-show="onPageLoad" ng-init="associatedSalesChannel=undefined;" on-exit="onClosure" on-cancel="onClosure">
+    <form name="myForm" style="width: 100%;">
+        <div class="cqmFieldDiv" style="width:50%">
+            <label>Sales Channel</label>
+            <select class="cqmField" id="associatedChannel" ng-model="associatedSalesChannel" ng-change="onChangeSalesChannel(associatedSalesChannel)" ng-options="p as p.orgName for p in salesChannelList"
+                    tabindex="1"/>
+        </div>
+
+        <div class="cqmFieldDiv" style="width:20%">
+            <label>Role Id</label>
+            <input class="cqmField" type="text" id="roleId"
+                   ng-model="associatedSalesChannel.roleId" ng-disabled="true"/>
+        </div>
+    </form>
+</div>

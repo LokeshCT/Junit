@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<StatsIntegration name="CA Service Basic" version="1.0" uri="http:/1.2.3.4/host/tail?par=test">
+   <ProductInformation projectId="7789" customerId="1" quoteName="MyQuote">
+        <Cmc numberOfUsers="10" einNumber="987654321"/>
+   </ProductInformation>
+</StatsIntegration>

@@ -1,0 +1,171 @@
+html, body {
+    background: white !important;
+}
+
+.sqe-dashboard-widget {
+    border: 1px solid rgba(58, 58, 58, 0.35);
+    border-radius: 10px;
+    height: auto;
+    float: left;
+    margin: 20px;
+}
+
+.sqe-dashboard-widget > .widget-header {
+    background-color: #ececec;
+    padding: 5px 0 5px 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+.widget-links {
+    padding-right: 15px;
+    text-align: right;
+}
+
+.widget-content  {
+    margin: 5px 15px 5px 15px;
+    position: relative;
+}
+
+.widget-content > .table > tbody > tr {
+    height: 25px;
+}
+
+.widget-content-grid  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.metrics-container {
+    height: auto; margin-top: 20px;
+}
+
+.widget-container {
+    float: left;
+    padding-top: 20px;
+    top: 200px;
+}
+
+.center-div {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}
+
+/* Header Start */
+
+.sqe-header {
+    background-color: #EEEBEB;
+    padding-left: 0;
+    height: 75px;
+    color: #333333;
+    font-size: 11px;
+}
+
+.sqe-header-welcome-div {
+    background-color: #595e62;
+    height: 17px;
+    color: #ffffff;
+    font-size: 11px;
+    font-family: Arial;
+}
+/* Header End */
+
+/* Metric styles start */
+.sqe-dashboard-metric {
+    /*background-color: #EEEBEB;*/
+    background-color: darkviolet;
+    border-radius: 20px;
+    border: 1px solid rgba(58, 58, 58, 0.35);
+    display: table-cell;
+    padding: 10px 15px 10px 15px;
+    float: left;
+    margin-left: 60px;
+    width: 140px;
+}
+
+.sqe-dashboard-metric p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+/* Metric styles end */
+
+/* RAG Status styles start */
+.sqe-status-image {
+    position: relative;
+    height: 18px;
+    width: 48px;
+    overflow: hidden;
+}
+
+.sqe-status-image > img {
+    position: absolute;
+    left: 0;
+}
+
+.sqe-status-image > .yellow, .sqe-status-image > .InProgress {
+    top: -19px;
+}
+
+.sqe-status-image > .green, .sqe-status-image > .Complete {
+    bottom: 0;
+}
+/* RAG Status styles end */
+
+
+/* ng-grid styles start*/
+.ui-grid {
+    margin-bottom: 15px;
+}
+
+.ui-grid-header-viewport, .ui-grid-row, .ui-grid-cell, .ui-grid-footer-info {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.ui-grid-header-viewport {
+    text-align: center;
+    background-color: rgba(68, 163, 238, 0.21);
+}
+
+.ui-grid-row, .ui-grid-cell {
+    height: 25px !important;
+    position: relative;
+}
+
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: rgba(68, 163, 238, 0.13);
+}
+
+.grid-cell-left {
+    text-align: left !important;
+    padding-left: 5px;
+}
+
+.grid-cell-centre {
+    text-align: center !important;
+}
+
+.ui-grid-viewport {
+    overflow-x: hidden !important;
+}
+
+.ui-grid-cell > sqe-status-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.dashboard-backBtn {
+    padding: 5px; margin-left: 5px;
+}
+/* ng-grid styles end*/

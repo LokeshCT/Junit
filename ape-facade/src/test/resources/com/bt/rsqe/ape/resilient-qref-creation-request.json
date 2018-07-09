@@ -1,0 +1,90 @@
+{
+    "uniqueId":"assetId_1",
+    "customer":{
+        "name":"customerName",
+        "salesChannel":"BT UK"
+    },
+    "site":{
+        "name":"siteName",
+        "postCode":"BT1 1GJ",
+        "country":"country",
+        "city":"city",
+        "pageNumber":0,
+        "totalDisplayRecords":0,
+        "totalRecords":0,
+        "countryISOCode":"",
+        "latitude":2222,
+        "longitude":1111,
+        "subBuilding":"7",
+        "locality":"13",
+        "streetName":"12",
+        "stateCode":"11",
+        "postBox":"10",
+        "postalOrg":"9",
+        "subStateCountyProvince":"8",
+        "subStreet":"6",
+        "building":"5",
+        "buildingNumber":"4",
+        "subLocality":"3",
+        "stateCountySProvince":"2",
+        "countryISOCode":"1"
+    }, "assetAttributes":[
+    {
+        "attributeName":"PRIMARY SERVICE SPEED DISPLAY VALUE",
+        "attributeValue":"2Mbps"
+    },
+    {
+        "attributeName":"SECONDARY SERVICE SPEED DISPLAY VALUE",
+        "attributeValue":"4Tbps"
+    },
+    {
+        "attributeName":"PRIMARY ACCESS DOWNSTREAM SPEED DISPLAY VALUE",
+        "attributeValue":"12Kbps"
+    },
+    {
+        "attributeName":"SECONDARY ACCESS DOWNSTREAM SPEED DISPLAY VALUE",
+        "attributeValue":"14Gbps"
+    },
+    {
+        "attributeName":"PRIMARY ACCESS TECHNOLOGY",
+        "attributeValue":"Primary Leased Line"
+    },
+    {
+        "attributeName":"SECONDARY ACCESS TECHNOLOGY",
+        "attributeValue":"Secondary Leased Line"
+    },
+    {
+        "attributeName":"REQUIRED ACCESS CONTRACT TERM",
+        "attributeValue":"12"
+    },
+    {
+        "attributeName":"DIVERSITY",
+        "attributeValue":"Secure"
+    },
+    {
+        "attributeName":"PRODUCT DIVERSITY",
+        "attributeValue":"Secure"
+    },
+    {
+        "attributeName":"PRIMARY ACCESS TECHNOLOGY SUB-TYPE",
+        "attributeValue":"1 Gbps (Ethernet)"
+    },
+    {
+        "attributeName":"SECONDARY ACCESS TECHNOLOGY SUB-TYPE",
+        "attributeValue":"N x 64"
+    }
+],
+    "user":{
+        "loginName":"loginName",
+        "surname":"surname",
+        "userType":"DIRECT",
+        "ein":"111111",
+        "email":"sales.user@bt.com"
+    },
+    "currency":"GBP",
+    "legacyIdentifier":{
+        "productId":"123",
+        "productName":"Inter Connect Reach",
+        "versionNumber":"1.0"
+    }
+}

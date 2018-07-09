@@ -1,0 +1,145 @@
+---
+cli-aliases:
+  gui:
+    modules:
+      jmeter:
+        gui: true
+  report:
+    reporting:
+    - blazemeter
+execution:
+- concurrency:
+    local: null
+  distributed: []
+  executor: jmeter
+  hold-for: 0
+  iterations: null
+  ramp-up: null
+  scenario:
+    data-sources: {}
+    disable-listeners: true
+    modifications: {}
+    properties:
+      jmeter.save.saveservice.timestamp_format: ms
+      jmeterengine.nongui.maxport: 4445
+      jmeterengine.nongui.port: 4445
+    requests: {}
+    script:
+      path: nationwide-test.jmx
+    variables: {}
+  steps: null
+  throughput:
+    local: null
+included-configs: []
+install-id: 36fc46d2-3f7f-4fb2-bb37-12ac5c0379a6
+modules:
+  blazemeter:
+    address: https://a.blazemeter.com
+    browser-open: start
+    class: bzt.modules.blazemeter.BlazeMeterUploader
+    data-address: https://data.blazemeter.com
+    report-name: null
+    send-interval: 30
+    timeout: 10
+    token: ''
+  cloud:
+    class: bzt.modules.blazemeter.CloudProvisioning
+  console:
+    class: bzt.modules.console.ConsoleStatusReporter
+    disable: false
+    dummy-cols: 140
+    dummy-rows: 35
+  consolidator:
+    buffer-seconds: 2
+    class: bzt.modules.aggregator.ConsolidatingAggregator
+    generalize-labels: false
+    ignore-labels:
+    - ignore
+    percentiles:
+    - 0.0
+    - 50.0
+    - 90.0
+    - 95.0
+    - 99.0
+    - 99.9
+    - 100.0
+  fail-criteria:
+    class: bzt.modules.passfail.PassFailStatus
+  final_stats:
+    class: bzt.modules.reporting.FinalStatus
+  gatling:
+    class: bzt.modules.gatling.GatlingExecutor
+    path: ~/.bzt/gatling-taurus/bin/gatling.sh
+  grinder:
+    class: bzt.modules.grinder.GrinderExecutor
+    path: ~/.bzt/grinder-taurus/lib/grinder.jar
+    properties:
+      grinder.useConsole: false
+  jmeter:
+    class: bzt.modules.jmeter.JMeterExecutor
+    gui: false
+    path: /home/jenkins/.bzt/jmeter-taurus/bin/jmeter
+    plugins-download-link: http://jmeter-plugins.org/files/JMeterPlugins-{plugin}-1.3.0.zip
+    properties:
+      jmeter.save.saveservice.autoflush: 'true'
+      jmeter.save.saveservice.connect_time: 'true'
+      jmeter.save.saveservice.timestamp_format: ms
+      jmeterengine.force.system.exit: 'true'
+      jmeterengine.nongui.maxport: 4445
+      jmeterengine.nongui.port: 4445
+      mode: Stripped
+      summariser.name: ''
+      user.classpath: /wls_domains/apps/jenkinsSITB8081/workspace/DEMO-JMETER/jmeter/nationwide/2015-10-07_10-20-35.878792
+    rename-distributed-threads: true
+    shutdown-port: 4445
+    shutdown-wait: 5
+    system-properties: {}
+    version: '2.13'
+  jtl-loader: bzt.modules.jmeter.JMeterJTLLoaderExecutor
+  junit-xml:
+    class: bzt.modules.reporting.JUnitXMLReporter
+  local:
+    class: bzt.modules.provisioning.Local
+  locust:
+    class: bzt.modules.locustio.LocustIOExecutor
+  monitoring:
+    class: bzt.modules.monitoring.Monitoring
+  selenium:
+    class: bzt.modules.selenium.SeleniumExecutor
+    selenium-tools:
+      junit:
+        hamcrest-core: ~/.bzt/selenium-taurus/tools/junit/hamcrest-core.jar
+        jar-name: compiled.jar
+        path: ~/.bzt/selenium-taurus/tools/junit/junit.jar
+        selenium-server: ~/.bzt/selenium-taurus/selenium-server.jar
+        working-dir: classes
+      nose:
+        working-dir: classes
+  shellexec:
+    class: bzt.modules.shellexec.ShellExecutor
+provisioning: local
+reporting:
+- dump-csv: null
+  dump-xml: null
+  failed-labels: false
+  module: final_stats
+  percentiles: true
+  summary: true
+  test-duration: true
+- module: console
+- module: blazemeter
+  report-name: null
+  session-id: null
+  signature: null
+  test-id: null
+  user-id: null
+services: []
+settings:
+  aggregator: consolidator
+  artifacts-dir: '%Y-%m-%d_%H-%M-%S.%f'
+  check-interval: 1
+  check-updates: true
+  default-executor: jmeter
+  proxy: {}
+version: 0.4.4.1
+

@@ -1,0 +1,182 @@
+<!--Quote Details START-->
+<div ng-controller="quotesController" class="innerWrapCreateQuote" ng-init="loadCreateQuotePage()">
+
+    <div>
+        <div class="hrMargin">
+            <span class="headerLabel">Create a new Quote</span>
+            <hr class="hrStyle"/>
+        </div>
+        <div class="cqmForm" style="width:99%;height:300px;">
+            <form name="createQuoteForm" id="createQuoteForm">
+
+                <div class="cqmFieldDiv">
+                    <label>Quote Reference</label>
+                    <input type="text" id="quoteReference" name="quoteReference" class="cqmField"
+                           ng-model="createQuoteFormData.quoteReference" disabled="true"/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Quote Version</label>
+                    <input type="text" id="quoteVersion" name="quoteVersion" class="cqmField"
+                           ng-model="createQuoteFormData.quoteVersion" disabled="true">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Status <span class="rfq">(RFQ)</span></label>
+                    <input type="text" id="quoteStatus" name="quoteStatus" class="cqmField"
+                           ng-model="createQuoteFormData.quoteStatus" disabled="true">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Sales Representative</label>
+                    <input type="text" id="salesRepName" name="salesRepName" class="cqmField"
+                           ng-model="createQuoteFormData.salesRepName" disabled="true">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Customer ID</label>
+                    <input type="text" id="customerId" name="customerId" class="cqmField"
+                           ng-model="createQuoteFormData.customerId" disabled="true">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Quote Name <span class="rfq">(RFQ)</span></label>
+                    <input type="text" id="quoteName" name="quoteName" class="cqmField"
+                           ng-model="createQuoteFormData.quoteName" required/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Order Type <span class="rfq">(RFQ)</span></label>
+                    <select name="orderType" id="orderType" ng-model="createQuoteFormData.orderType"
+                            ng-options="t as t.name for t in orderTypes" required class="cqmField" ng-change="setModifyCeaseFields()">
+                        <option value=""></option>
+                    </select>
+
+                    <!--<input type="text" ng-show="false" name="orderType" id="orderType" ng-model="createQuoteFormData.orderType">-->
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label style="float: left;" ng-show="contractTermReq">Contract Term <span class="rfq">(RFQ)</span></label>
+                    <label style="float: left;" ng-show="!contractTermReq">Contract Term</label>
+                    <select name="contractTerm" id="contractTerm" class="cqmField"
+                            ng-model="createQuoteFormData.contractTerm"
+                            ng-options="t for t in contractTerms" ng-required="contractTermReq">
+                        <option value=""></option>
+                    </select>
+                </div>
+
+
+                <div class="cqmFieldDiv">
+                    <label style="float: left">Currency <span class="rfq">(RFQ)</span></label>
+                    <select name="currency" id="currency" class="cqmField" ng-model="createQuoteFormData.currency"
+                            ng-options="t as t.name for t in currencies" required>
+                        <option value=""></option>
+                    </select>
+                    <!--<input type="text" ng-show="false" name="select_currency" id="select_currency" ng-model="select_currency"/>-->
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label ng-show="oppReferenceReq">Opportunity Ref Number <span class="rfq">(RFQ)</span></label>
+                    <label ng-show="!oppReferenceReq">Opportunity Ref Number</label>
+                    <input type="text" id="orNumber" name="orNumber" class="cqmField" ng-model="createQuoteFormData.orNumber"
+                           style="width:92%;" ng-required="oppReferenceReq">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Bid Number</label>
+                    <input type="text" id="bidNumber" name="bidNumber" class="cqmField"
+                           ng-model="createQuoteFormData.bidNumber"
+                           style="width:92%;">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label style="float: left;">Sub Order Type</label>
+                    <select name="subOrderType" id="subOrderType" class="cqmField" ng-model="createQuoteFormData.subOrderType"
+                            ng-options="t.name for t in subOrderTypes" ng-change="setModifyCeaseFields()">
+                    </select>
+                    <!--<input type="text" ng-show="false" name="select_subOrderType" id="select_subOrderType" ng-model="select_subOrderType">-->
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label style="float: left;">Quote Indicative Flag <span class="rfq">(RFQ)</span></label>
+                    <select name="quoteIndicativeFlag" id="quoteIndicativeFlag" class="cqmField"
+                            ng-model="createQuoteFormData.quoteIndicativeFlag"
+                            ng-options="indicativeFlag.name for indicativeFlag in quoteIndicativeFlagList" required></select>
+                </div>
+                <div class="cqmFieldDiv" ng-show="showSubGroupUser">
+                    <label style="float: left;">Sub Group </label>
+                    <select name="subGroup" id="subGroup" class="cqmField"
+                            ng-model="createQuoteFormData.subGroup"
+                            ng-options="subGroup for subGroup in userSubGroupListDisplay"></select>
+                </div>
+
+                <div class="containerDiv" align="right" style="float:left;width:95%;">
+                    <td>
+                        <button class="btn" ng-click="createQuoteBillingAssoCheck()" ng-disabled="createQuoteForm.$invalid">Create
+                        </button>
+                    </td>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div ng-controller="quotePriceBookController" ng-init="loadChannelPartnerDetails()" ng-show="$parent.isContractResign">
+        <div class="hrMargin" >
+            <span class="headerLabel">Associate Price Book</span>
+            <hr class="hrStyle"/>
+        </div>
+        <div ng-form="quotePriceBookForm" ng-model="quotePriceBookFormData">
+            <div class="centralSiteFieldDiv">
+                <label>Trade Level Entity</label>
+                <select name="tradeLevelEntity" id="tradeLevelEntity" ng-model="quotePriceBookFormData.tradeLevelEntity"
+                        ng-options="t as t.name for t in tradeLevelEntities" required class="cqmField" ng-change="populateProductNames()">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="centralSiteFieldDiv">
+                <label>Product Name</label>
+                <select class="centralSiteField" id="productName" ng-model="quotePriceBookFormData.productName"
+                        ng-options="productName.productName for productName in productNameList"
+                        ng-change="getProductVersions()" required />
+            </div>
+            <div class="centralSiteFieldDiv">
+            </div>
+            <div class="centralSiteFieldDiv">
+            </div>
+            <div class="centralSiteFieldDiv">
+            </div>
+            <div class="centralSiteFieldDiv">
+                <label>Trade Level</label>
+                <input class="centralSiteField" type="text" id="tradeLevel"
+                       ng-model="quotePriceBookFormData.tradeLevel" readonly required>
+            </div>
+            <div class="centralSiteFieldDiv">
+                <label>RRP Price Book</label>
+                <input class="centralSiteField" type="text" id="rrpVersion" name="rrpVersion"
+                       ng-model="quotePriceBookFormData.rrpVersion" readonly required>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>PTP Price Book</label>
+                <input class="centralSiteField" type="text" id="ptpVersion" name="ptpVersion"
+                       ng-model="quotePriceBookFormData.ptpVersion" readonly required>
+            </div>
+            <div class="containerDiv" style="float:left;margin-bottom: 20px;margin-right: 20px;">
+
+                <button class="btn" ng-disabled="disableAddButton" ng-click="saveQuotePriceBook()"
+                        style="float:right;margin:5px;">
+                    Add
+                </button>
+                <button class="btn" ng-disabled="disableDeleteButton" ng-click="deleteQuotePriceBook()"
+                        style="float:right;margin:5px;">
+                    Delete
+                </button>
+            </div>
+            <div class="containerDiv" style="float:left;width:99%">
+                 <div class="searchResultGridStyle" style="width:98%;height:200px;" ng-grid="priceBookGrid"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Quote Details END-->

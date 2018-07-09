@@ -1,0 +1,12 @@
+/*
+ * Configuration for which repository(s)to download dependencies from
+ *
+ * The use of name is to enforce ordering, since Gradle goes in alphabetic order
+ */
+repositories {
+    mavenLocal()
+    mavenRepo name:'BT Collaborate mirrors',
+              url: "https://collaborate.bt.com/artefacts/content/groups/public",
+              artifactUrls: ["https://collaborate.bt.com/artefacts/content/repositories/btgs-andes-sqe-releases",
+                     "https://collaborate.bt.com/artefacts/content/repositories/btgs-andes-sqe-snapshots"]
+}

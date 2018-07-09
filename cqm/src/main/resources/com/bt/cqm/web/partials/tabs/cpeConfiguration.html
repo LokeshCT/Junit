@@ -1,0 +1,26 @@
+<div class="row-fluid" id="cpeConfigurationContainer" ng-controller="cpeConfigCtrl">
+    <div class="span5" id="primaryCpeConfigurationContainer">
+        <div class="page-header" style="text-align: center">Primary CPE Configuration</div>
+        <form class="form-horizontal" ng-model="cpeConfigurationData">
+
+            <configurable-attribute attribute-name="Router Bundle" attribute-id="routerBundle"
+                                    attribute-value="{{cpeConfigurationData.primaryCpeConfigurationDetail.routerBundle.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+        </form>
+    </div>
+    <div class="span5" id="secondaryCpeConfigurationContainer" ng-show="isDualCPE">
+        <div class="page-header" style="text-align: center">Secondary CPE Configuration</div>
+
+        <form class="form-horizontal">
+            <configurable-attribute attribute-name="Router Bundle" attribute-id="routerBundle"
+                                    attribute-value="{{cpeConfigurationData.primaryCpeConfigurationDetail.routerBundle.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+        </form>
+    </div>
+    <div class="span8">
+        <a class="btn btn-primary pull-left" href="#/portConfig" id="portConfigPrevious">Previous</a>
+        <a class="btn btn-primary pull-right" href="#/cpeConfig" id="submitConfiguration">Submit</a>
+    </div>
+</div>

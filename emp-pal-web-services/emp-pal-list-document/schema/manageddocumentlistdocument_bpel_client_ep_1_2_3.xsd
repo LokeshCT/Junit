@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/Folder/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fold="http://capabilities.nat.bt.com/xsd/EDM/EMP/Folder/1.0" xmlns:mdoc="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/1.0">
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/1.0" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2_3_4.xsd"/>
+  <xs:annotation>
+    <xs:documentation>This schema describes the Folder entity maintained by the EMP.</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Folder">
+    <xs:annotation>
+      <xs:documentation>A space within a system to hold folders and documents.
+Repository will set polices on Access, Versioning, Metadata Indexing, etc.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="FolderID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique identifier of the folder with a system</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FolderURL" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>URL to locate the folder.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FolderName" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name for the folder.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of parent folder or repository.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Either Folder or Repository.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="CreatedDate" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Date folder created.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:date"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="OwnerID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of the owner of the folder. Owners can be people (in which case UIN will be used) or systems (in which case we use functional account name)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FolderFileCount" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of the owner of the folder. Owners can be people (in which case UIN will be used) or systems (in which case we use functional account name)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:integer"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Folder" minOccurs="0" maxOccurs="unbounded" type="fold:Folder">
+        <xs:annotation>
+          <xs:documentation>Relationship to Folders</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ManagedDocument" minOccurs="0" maxOccurs="unbounded" type="mdoc:ManagedDocument">
+        <xs:annotation>
+          <xs:documentation>Relationship to ManagedDocuments</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/Delete" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/Delete" xmlns:header="http://wsi.nat.bt.com/2005/06/StandardHeader/" xmlns:hdr="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/Header/1.0">
+  <xs:import namespace="http://wsi.nat.bt.com/2005/06/StandardHeader/" schemaLocation="manageddocumentdelete_bpel_client_ep_1.xsd"/>
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/Header/1.0" schemaLocation="manageddocumentdelete_bpel_client_ep_1_2.xsd"/>
+  <xs:element name="DeleteRequest" type="DeleteRequestType">
+    <xs:annotation>
+      <xs:documentation>Request Element for Delete operation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DeleteResponse" type="DeleteResponseType">
+    <xs:annotation>
+      <xs:documentation>Response Element for Delete operation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DeleteRequestType">
+    <xs:sequence>
+      <xs:element ref="header:standardHeader" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="hdr:HeaderRequest" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Authentication Elements</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RepositoryID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique identifier of the repository with a system</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DocumentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique ID of the document within a system</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentPath" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Complete path of the parent folder or root library.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteResponseType">
+    <xs:sequence>
+      <xs:element ref="header:standardHeader" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="InstanceID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Id of the instance generated for this run</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

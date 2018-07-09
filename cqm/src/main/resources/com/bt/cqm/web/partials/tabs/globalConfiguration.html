@@ -1,0 +1,25 @@
+<div class="row-fluid" id="generalConfigurationContainer" ng-controller="productConfigCtrl">
+    <div class="span2" id="generalConfigurationContainerLeft"></div>
+    <div class="span8" id="generalConfigurationContainerLeftRight">
+        <div class="page-header"></div>
+        <form class="form-horizontal">
+            <configurable-attribute attribute-name="Management Type" attribute-id="managementType"
+                                    attribute-value="{{siteConfigData.managementType.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Proactive Fault Management" attribute-id="proactiveFaultManagement"
+                                    attribute-value="{{siteConfigData.proactiveFaultManagement}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Change Management" attribute-id="changeManagement"
+                                    attribute-value="{{siteConfigData.changeManagement}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Price Book" attribute-id="pricebookVersion"
+                                    attribute-value="{{siteConfigData.pricebookVersion}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+
+        </form>
+    </div>
+    <div class="span8">
+        <a class="btn btn-primary pull-right" href="#/siteConfig" id="siteConfigNext">Next</a>
+    </div>
+</div>

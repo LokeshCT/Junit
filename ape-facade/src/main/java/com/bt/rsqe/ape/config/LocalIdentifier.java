@@ -1,0 +1,19 @@
+package com.bt.rsqe.ape.config;
+
+public enum LocalIdentifier {
+    QREF,
+    PAIR_ID,
+    WORKFLOW_STATUS,
+    PRICE_STATUS,
+    CURRENCY,
+    MONTHLY_PRICE,
+    INSTALL_PRICE,
+    INSTALL_COST,
+    SUPPLIER_COST,
+    USD_EXCHANGE_RATE,
+    EUR_EXCHANGE_RATE,
+    GBP_EXCHANGE_RATE,
+    EXPIRY_DATE,
+    BT_INSTALL_PRICE,
+    BT_MONTHLY_PRICE
+}

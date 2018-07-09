@@ -1,0 +1,7 @@
+group = 'com.bt.rsqe.externalmodels'
+sonar.project.skip = true
+
+// Configure variables for the XSD->Java conversion, *then* include the task that use them
+ext.schemaPath = "$projectDir/schema/"
+ext.inclusionPattern = '*.wsdl,*.xsd'
+apply from: "$rootDir/builds/scripts/xmlbeans.gradle"

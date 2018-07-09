@@ -1,0 +1,282 @@
+<div ng-controller="quotesController" class="innerWrap" ng-init="onPageLoad()">
+<!--<div ng-show="noQuotesFound">
+    <span class="headerLabel">No Quotes found for customer {{ selectedCustomer.name }}</span>
+</div>-->
+<!--<div ng-show="!noQuotesFound">-->
+<div class="hrMargin">
+    <span class="headerLabel">Customer Quotes </span>
+    <hr class="hrStyle"/>
+</div>
+<div name="filterQuote" style="margin-top: 10px;display: inline-block;width:98%">
+    <div class="cqmFieldDiv">
+        <label>Quote Activity Status</label>
+        <select name="quoteActivityStatus" class="cqmField" id="quoteActivityStatus" ng-model="quoteActivityStatus"
+                ng-change="onQuoteActivityStatusChange()"
+                ng-options="activityStatus.name for activityStatus in quoteActivityStatusList"></select>
+
+    </div>
+    <div class="cqmFieldDiv">
+        <label>Standard Filter</label>
+        <select name="quoteActivityFilter" class="cqmField" id="quoteActivityFilter" ng-model="quoteActivityFilter"
+                ng-change="onQuoteActivityFilterChange()"
+                ng-options="activityStatus.name for activityStatus in quoteActivityFilterList"></select>
+
+
+
+    </div>
+    <div class="cqmFieldDiv">
+        <label>Filter Text</label>
+        <input type="text" name="fiterText" class="cqmField" id="fiterText" ng-model="fiterText"/>
+    </div>
+    <form name="quoteSearchFieldsForm" style="float: left;width:98%">
+
+        <div class="cqmFieldDiv">
+            <label><b>Site Filter</b></label>
+            <select name="siteFilter" class="cqmField" id="siteFilter" ng-model="quoteSearchFieldsForm.siteFilter"
+                    ng-options="siteFilter.name for siteFilter in siteFilterList"
+                    ng-change="showSiteFilter()"   data-placeholder="Select a Site Filter" ></select>
+        </div>
+
+        <div class=" cqmFieldDiv" ng-show="siteNameSelected">
+            <label style="float: left">Site Name </span></label>
+            <select id="siteName" style="float: right;width:100%"
+                    ng-model="quoteSearchFieldsForm.siteName"
+                    ng-change="updateBranchSiteId()"
+                    ui-select2
+                    data-placeholder="Select a Site Name"
+                >
+                <option value=""></option>
+                <option ng-repeat="branchSite in branchSiteList" value="{{branchSite}}">{{branchSite.name}}</option>
+            </select>
+
+        </div>
+        <div class="cqmFieldDiv" ng-show="siteIdSelected">
+            <label style="float: left">Site Id </span></label>
+            <select id="siteId"  style="float: right;width:100%"
+                    ng-model="quoteSearchFieldsForm.siteId"
+                    ng-change="updateBranchSiteName()"
+                    ui-select2
+                    data-placeholder="Select a Site Id"
+                >
+                <option value=""></option>
+                <option ng-repeat="branchSite in branchSiteList" value="{{branchSite}}">{{branchSite.siteId}}</option>
+            </select>
+
+        </div>
+        <div class="cqmFieldDiv" style="margin-bottom: 5px;padding-top: 12px;padding-left: 5px">
+            <button class="btn" ng-disabled="false" ng-click="reset()"
+                    style="margin:5px;" tabindex="131">Reset
+            </button>
+        </div>
+    </form>
+
+</div>
+
+
+    <div style="margin-left: 10px;">
+        <span>Quotes : {{ numOfQuotes }}</span>
+
+        <div class="searchResultGridStyle" ng-grid="quotesGrid" style="height:250px;"></div>
+    </div>
+    <div name="quoteUpdateDiv" style="margin-top: 20px; height:250px;" ng-show="isQuoteSelected">
+        <div class="cqmFieldDiv">
+            <label>Quote Reference ID</label>
+            <input type="text" id="quoteRefId" name="quoteRefId" class="cqmField"
+                   ng-model="quoteFormData.quoteRefId" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Quote version</label>
+            <input type="text" id="quoteVer" name="quoteVer" class="cqmField"
+                   ng-model="quoteFormData.quoteVer" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Customer Name</label>
+            <input type="text" id="custName" name="custName" class="cqmField"
+                   ng-model="quoteFormData.custName" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Customer ID</label>
+            <input type="text" id="custId" name="custId" class="cqmField"
+                   ng-model="quoteFormData.custId" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Sales Organization Name</label>
+            <input type="text" id="salesOrgName" name="salesOrgName" class="cqmField"
+                   ng-model="quoteFormData.salesOrgName" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Quote Name <span class="rfq">(RFQ)</span></label>
+            <input type="text" id="quoteName" name="quoteName" class="cqmField"
+                   ng-model="quoteFormData.quoteName" required ng-readonly="!isDraftQuote"/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Order Type</label>
+            <input type="text" id="orderType" name="orderType" class="cqmField"
+                   ng-model="quoteFormData.orderType" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>BID Number</label>
+            <input type="text" id="bidNum" name="bidNum" class="cqmField"
+                   ng-model="quoteFormData.bidNum" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Sales Representative Name</label>
+            <input type="text" id="salesRepName" name="salesRepName" class="cqmField"
+                   ng-model="quoteFormData.salesRepName" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Status</label>
+            <input type="text" id="quoteStatus" name="quoteStatus" class="cqmField"
+                   ng-model="quoteFormData.quoteStatus" required readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Contract Term</label>
+            <input type="text" id="contractTerm" name="contractTerm" class="cqmField"
+                   ng-model="quoteFormData.contractTerm" required readonly/>
+
+           <!-- <select id="contractTerm" ng-init="quoteFormData.contractTerm" ng-model="quoteFormData.contractTerm"
+                    ng-options="t for t in contractTerms"
+                    data-placeholder="Select t"  ng-required="true"
+                    class="cqmField">
+            </select>-->
+
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Currency<span class="rfq">(RFQ)</span></label>
+            <input type="text" id="currency" name="currency" class="cqmField"
+                   ng-model="quoteFormData.currency" required readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label ng-show="oppReferenceReq">Opportunity Ref Number <span class="rfq">(RFQ)</span></label>
+            <label ng-show="!oppReferenceReq">Opportunity Ref Number</label>
+            <input type="text" id="opportunityRef" name="opportunityRef" class="cqmField"
+                   ng-model="quoteFormData.opportunityRef"  ng-required="oppReferenceReq" ng-readonly="!isDraftQuote"/>
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Sub Order Type</label>
+            <input type="text" id="subOrderType" name="subOrderType" class="cqmField"
+                   ng-model="quoteFormData.subOrderType" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Order Status</label>
+            <input type="text" id="orderStatus" name="orderStatus" class="cqmField"
+                   ng-model="quoteFormData.orderStatus" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Quote Indicative Flag <span class="rfq">(RFQ)</span></label>
+            <select name="quoteIndFlag" class="cqmField" id="quoteIndFlag" ng-model="quoteFormData.quoteIndFlag"
+                    ng-options="indicativeFlag.name for indicativeFlag in quoteIndicativeFlagList" ng-readonly="!isDraftQuote"></select>
+
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Quote Expiry Date</label>
+            <input type="text" id="quoteExpiryDate" name="quoteExpiryDate" class="cqmField"
+                   ng-model="quoteFormData.quoteExpiryDate" readonly/>
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Quote Option Name</label>
+            <input type="text" id="quoteOptionName" name="quoteOptionName" class="cqmField"
+                   ng-model="quoteFormData.quoteOptionName" readonly/>
+        </div>
+
+    </div>
+    <div class="containerDiv" align="right" style="margin-left: -10px;" ng-show="isQuoteSelected">
+        <button ng-click="updateQuote()" class="btn" style="margin-left: 10px;" ng-disabled="quoteSearchFieldsForm.$invalid"
+            >Update Quote
+        </button>
+        <!--<button ng-click="createChannelContact()" class="btn" style="margin-left: 10px;" ng-model="createChannelContact"
+                ng-disabled="!isQuoteSelected">Create Channel Contact
+        </button>-->
+        <button ng-click="launchConfigurator()" class="btn" ng-disabled="!isQuoteSelected">Launch Configurator</button>
+    </div>
+</form>
+<span class="headerLabel" style="margin-top: 20px;" ng-show="isQuoteSelected">Channel Contacts</span>
+<hr class="hrStyle"/>
+<div class="searchResultGridStyle" ng-grid="channelContactsGrid" style="height:160px;" ng-show="isQuoteSelected && hasContacts"></div>
+<div class="containerDiv" align="right" style="margin-top: 30px;" ng-show="hasContacts">
+    <button ng-click="deleteChannelContact(channelContactFormData)" class="btn" style="margin-left: 10px;"
+            ng-disabled="!isContactSelected" ng-show="hasContacts">Delete Channel Contact
+    </button>
+</div>
+
+<div class="channelContactsForm" style="margin-top: 20px;" ng-show="isQuoteSelected">
+    <form name="channelContactsForm" id="channelContactForm">
+        <div class="cqmFieldDiv" required style="width:12%;">
+            <label>Channel Contact ID</label>
+            <input type="text" id="channelContactId" name="channelContactId" class="cqmField"
+                   ng-model="channelContactFormData.channelContactId" readonly/>
+        </div>
+        <div class="cqmFieldDiv" required style="width:12%;">
+            <label>EIN <span class="rfo">(RFO)</span></label>
+            <input type="text" id="ein" name="ein" class="cqmField" ng-model="channelContactFormData.ein" ng-disabled="isBtDirectorySelected" required>
+        </div>
+        <div class="cqmFieldDiv" style="width:14%;">
+            <label>First Name <span class="rfo">(RFO)</span></label>
+            <input type="text" id="firstName" name="firstName" class="cqmField" ng-model="channelContactFormData.firstName" ng-disabled="isBtDirectorySelected"
+                   required>
+        </div>
+        <div class="cqmFieldDiv" style="width:172px;">
+            <label>Last Name <span class="rfo">(RFO)</span></label>
+            <input type="text" id="lastName" name="lastName" class="cqmField" ng-model="channelContactFormData.lastName" ng-disabled="isBtDirectorySelected" required>
+        </div>
+        <div class="cqmFieldDiv" style="width:14%;">
+            <label>Job Title <span class="rfo">(RFO)</span></label>
+            <input type="text" id="jobTitle" name="jobTitle" class="cqmField" ng-model="channelContactFormData.jobTitle" required size="75" maxlength="75" ng-disabled="isBtDirectorySelected">
+        </div>
+        <div class="cqmFieldDiv" style="width:19%;">
+            <label>Email <span class="rfo">(RFO)</span></label>
+            <input type="text" id="email" name="email" class="cqmField" ng-model="channelContactFormData.email" ng-disabled="isBtDirectorySelected" required >
+
+        </div>
+        <div class="cqmFieldDiv" style="width:13%;">
+            <label>Phone Number <span class="rfo">(RFO)</span></label>
+            <input type="text" no-alpha id="phone" name="phone" class="cqmField" ng-model="channelContactFormData.phone"
+                   required>
+        </div>
+        <div class="cqmFieldDiv" style="width:12%;margin-left:0px;...">
+            <label>Mobile</label>
+            <input type="text"  no-alpha id="mobile" name="mobile" class="cqmField"
+                   ng-model="channelContactFormData.mobile">
+        </div>
+        <div class="cqmFieldDiv" style="width:14%;margin-right: 1px">
+            <label>Fax</label>
+            <input type="text" no-alpha id="fax" name="fax" class="cqmField"  ng-model="channelContactFormData.fax" >
+        </div>
+        <div class="cqmFieldDiv" style="width:17%;margin-left:16px;...">
+            <label>Distributor Role <span class="rfo">(RFO)</span></label>
+            <select ng-model="channelContactFormData.distributorRole" id="distributorRole" name="distributorRole"
+                    ng-options="item as item.label for item in distributorRoles"
+                    ng-change="changeChannelContactRole()" class="cqmField" ng-value="" required>
+            </select>
+            <br/>
+            <span style="color: red;font: italic">  *mandatory</span>
+        </div>
+        <div class="cqmFieldDiv" style="width:14%;...">
+            <button ng-click="searchBtDirectory(channelContactFormData)" class="btn"
+                    style="height:36px;margin-top: 10px;width:100%">Search BT Directory
+            </button>
+        </div>
+        <div class="cqmFieldDiv" style="width:90px;">
+            <button ng-click="createChannel(channelContactFormData)" class="btn"
+                    style="margin-top:10px;width:86px;height:36px"
+                    ng-disabled="channelContactsForm.$invalid">Save
+            </button>
+        </div>
+        <div class="cqmFieldDiv" style="width:80px;margin-left: 2px;">
+            <button ng-click="resetChannelContact()" class="btn"
+                    style="margin-top:10px;width:86px;height:36px">Reset
+            </button>
+        </div>
+    </form>
+</div>
+<div style="margin-top:20px;width:98%" ng-show="showBTDirectorygrid">
+    <div>
+            <span class="headerLabel">BT Directory Search Result:</span>
+
+            <div class="searchResultGridStyle" ng-grid="searchBtDirectoryGrid" style="height:160px;"></div>
+        </div>
+</div>
+<!--</div>-->
+</div>

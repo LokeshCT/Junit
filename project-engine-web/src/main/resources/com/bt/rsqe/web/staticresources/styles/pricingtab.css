@@ -1,0 +1,277 @@
+table td.oneTime_discount, td.pricingDiscountCell, td.pricingTextCell, table td.oneTime_netTotal, table td.recurring_discount, table td.recurring_netTotal {
+    padding: 3px 0;
+}
+
+tr.oneTimeChangeDiscount td.oneTime_discount, tr.pricingRowChargeDiscount td.pricingDiscountCell, tr.pricingRowChargeDiscount td.pricingTextCell, tr.oneTimeChangeDiscount td.oneTime_netTotal,
+tr.recurringChangeDiscount td.recurring_discount, tr.recurringChangeDiscount td.recurring_netTotal {
+    color:#d2691e;
+}
+
+/* Indicate editable fields for the priceLineDetails and Revenue tables. */
+td.oneTime_value:not(.readOnly),
+td.oneTime_discount:not(.readOnly),
+td.oneTime_netTotal:not(.readOnly),
+td.recurring_value:not(.readOnly),
+td.recurring_discount:not(.readOnly),
+td.recurring_netTotal:not(.readOnly),
+td.pricingDiscountCell:not(.readOnly),
+td.pricingTextCell:not(.readOnly),
+td.productCategoryName:not(.readOnly),
+td.proposedRevenue:not(.readOnly),
+td.triggerMonths:not(.readOnly),
+table tr td.numeric form input {
+    background: url(../images/editable_cell.png) no-repeat 0 0;
+}
+
+td.oneTime_value:not(.readOnly):hover,
+td.oneTime_discount:not(.readOnly):hover,
+td.oneTime_netTotal:not(.readOnly):hover,
+td.pricingDiscountCell:not(.readOnly):hover,
+td.pricingTextCell:not(.readOnly):hover,
+td.recurring_discount:not(.readOnly):hover,
+td.recurring_netTotal:not(.readOnly):hover {
+    background-color: #ffef8f;
+}
+
+table tr td.numeric form input,
+tr.oneTimeChangeDiscount td.oneTime_discount,
+tr.oneTimeChangeDiscount td.oneTime_netTotal,
+tr.recurringChangeDiscount td.recurring_discount,
+tr.recurringChangeDiscount td.recurring_netTotal,
+tr.pricingRowChargeDiscount td.pricingDiscountCell,
+tr.pricingRowChargeDiscount td.pricingTextCell {
+    background: url(../images/editable_cell.png) no-repeat 0 -50px;
+}
+
+table tr td.numeric, table tr td.numeric form input {
+    text-align: center; padding: 0; cursor: text;
+}
+
+table tr.readOnly td.numeric, table tr.readOnly td.numeric form input {
+    cursor: default;
+    background-image: none;
+}
+
+/* Styling for the filters on the tab. */
+
+/*collapse filter pane*/
+#content.noFilterPane .filterPaneContainer h2 {
+    border-bottom: none;
+}
+
+#content.noFilterPane .filterPaneContainer .filterPanel div.content{
+    display: none;
+}
+
+.noFilterPane.ui-icon {
+    background-position: 0 -195px;
+}
+
+/* hover state of icon*/
+.noFilterPane.ui-icon:hover {
+    background-position: -15px -195px;
+}
+
+/* up arrow */
+.ui-icon-circle-arrow-n { background-position: 0 -210px; }
+
+.filterPaneContainer {
+    vertical-align: top;
+    margin: 0 0 0 0.3em;
+    overflow: hidden;
+}
+
+.filterPaneContainer .ui-icon {
+    cursor: pointer;
+    float: left;
+    margin-top: 8px;
+}
+
+/* hover state of icon */
+.filterPaneContainer .ui-icon:hover {
+    background-position: -15px -210px;
+}
+
+.filterPaneContainer .content {
+    padding:   0.6em 0.5em;
+    font-size: 11px;
+}
+
+.filterPaneContainer .content label {
+    margin-right: 0.3em;
+}
+
+.filterPaneContainer .content li {
+    margin-bottom: 0.6em;
+}
+
+.filterPaneContainer .content a {
+    text-decoration: none;
+}
+
+.ui-button {
+    width: 12em;
+}
+
+.filterPaneContainer .content a,
+.filterPaneContainer .content a:hover,
+.filterPaneContainer .content a:active,
+.filterPaneContainer .content a:visited {
+    color: black;
+}
+
+div.addProduct .filterPaneContainer {
+    margin-top: 1em;
+}
+
+/*
+    Apply a slight margin on the bottom of the inputs so that there is slight gap between them.
+    Have any overflow values in the filters expand the input box vertically to create space for them.
+    Pad the filter selections, so they fit neatly within the selection box.
+    Margin to push the search box label to the right.
+*/
+div#pricingFilterPanel select {
+    width:         25%;
+    margin-bottom: 3px;
+    float:         left;
+}
+
+div#pricingFilterPanel .select2-container {
+    margin-bottom: 3px;
+}
+
+div#pricingFilterPanel .select2-choices {
+    height:  auto;
+    padding: 2px 2px 0;
+}
+
+div#pricingFilterPanel .select2-container-multi .select2-choices .select2-search-choice {
+    margin-top: 4px;
+}
+
+div#pricingSearch .globalSearchLabel {
+    margin-left: 6px;
+}
+
+div#pricingViewSelector {
+    margin: 6px;
+    float:  left;
+}
+
+div#pricingSearch label,
+div#pricingViewSelector label {
+    display: inline-block;
+    width:   45px;
+}
+
+/* Line the Show menu up with the Search and View Selector. */
+div#priceLinesDetails_length select {
+    margin: 0 2px 0 14px;
+}
+
+div#pricingBulkDiscount li label {
+    display: inline-block;
+    width:   4em;
+}
+
+div#pricingBulkDiscount li input.amount {
+    width: 4em;
+}
+
+div#pricingBulkDiscount li input.amount:focus {
+    background:  #FFF1A0;
+    border-left: 1px dotted #ccc;
+}
+
+div#pricingBulkDiscount li span.fieldPrefix {
+    display: inline-block;
+    width:   0.5em;
+}
+
+.mandatoryPricingCell {
+    background-color: #ffef8f;
+}
+
+/* Change the colour of the Price Line Table cell on hover. */
+table#priceLinesSummary tr td.numeric:hover,
+table#priceLinesDetails tr td.numeric:hover {
+    background: #ffef8f !important;
+}
+
+/* Hide the default filter/search box provided by the DataTable Library. */
+div#pricingDataContainer .dataTables_filter {
+    display: none;
+}
+
+/* Style the tables. */
+table#priceLinesSummary,
+table#priceLinesDetails {
+    border:         1px solid #aac4d4;
+    font-size:      smaller;
+    margin-left:    6px;
+    vertical-align: middle;
+    width:          99%;
+    float:          left;
+}
+
+table#priceLinesSummary th,
+table#priceLinesDetails th {
+    text-align: center;
+}
+
+table#priceLinesSummary td,
+table#priceLinesDetails td {
+    vertical-align: middle;
+}
+
+/* Set a minimum height for the rows.  */
+table#priceLinesSummary tr,
+table#priceLinesDetails tr {
+    height: 25px;
+}
+
+/* Remove pointer for tr that are not links */
+table#priceLinesDetails tbody tr.group_0,
+table#priceLinesDetails tbody tr.group_1,
+table#priceLinesDetails tbody tr.priceLine {
+    cursor: default;
+}
+
+/*
+    Sit these two divs next to each other so that they fill their containing div. This allows the error messages to sit alongside the search
+    without blocking parts of the table.
+*/
+div#searchAndViewContainer {
+    min-width:  20%;
+    min-height: 50px;
+    float:      left;
+}
+
+/* Styling for messages displayed to users. */
+div#pricingMessageContainer {
+    min-width:  80%;
+    min-height: 50px;
+    float:      right;
+}
+
+/* Make the messages displayed on the pricing tab consistent. */
+div#pricingMessageContainer div#commonError,
+div#pricingMessageContainer div#successMessage,
+div#pricingMessageContainer div#unsavedDiscounts,
+div#pricingMessageContainer div#manualPriceWarnMessage,
+div#pricingMessageContainer div#saveMessage,
+div#pricingMessageContainer div#export-pricing-sheet-msg,
+div#pricingMessageContainer div#export-bcm-sheet-msg {
+    min-width:     98%;
+}
+
+div#priceLinesDetails_length,
+div#priceLinesSummary_length {
+    margin:  0 0 8px 6px;
+    padding: 0;
+}
+
+div#priceLinesDetailsWrapper .dataTables_length,
+div#priceLinesSummaryWrapper .dataTables_length{
+    border: none;
+}

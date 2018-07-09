@@ -1,0 +1,19 @@
+/*
+ * Configuration to upload artefacts to the BT Nexus repository
+ */
+apply plugin: 'maven'
+/*
+ * Define nexusUserName=<UIN> and nexusPassword=<IUSER password> in <home directory>/.gradle/gradle.properties
+ */
+if (!hasProperty('nexusUserName')) nexusUserName = ''
+if (!hasProperty('nexusPassword')) nexusPassword = ''
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: 'http://10.230.189.96:9091/nexus/content/repositories/btgs-andes-sqe-releases') {
+            authentication(userName: nexusUserName, password: nexusPassword)
+        }
+        snapshotRepository(url: 'http://10.230.189.96:9091/nexus/content/repositories/btgs-andes-sqe-snapshots') {
+            authentication(userName: nexusUserName, password: nexusPassword)
+        }
+    }
+}

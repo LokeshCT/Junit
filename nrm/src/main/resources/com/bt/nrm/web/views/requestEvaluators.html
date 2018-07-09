@@ -1,0 +1,17 @@
+<div class="ui-grid-cell-contents " style="white-space: normal">
+    <span ng-if="row.entity.requestEvaluators.length == 0">
+        No Evaluators
+    </span>
+    <span ng-repeat="requestEvaluator in row.entity.requestEvaluators">
+
+        <a ng-if="requestEvaluator.response == grid.appScope.requestEvaluatorResponseConstantsService.requestEvaluatorResponse_go" class="badge badge-success" popover-append-to-body data-titleclass="bordered-purple" data-class="dark" popover-placement="bottom"  popover-title="Evaluator Group Details" popover="Evaluator Name: {{requestEvaluator.closedBy}} , Group Name: {{requestEvaluator.evaluatorGroupName}}">
+            {{requestEvaluator.evaluatorGroupName}}
+        </a>
+        <a ng-if="requestEvaluator.response == grid.appScope.requestEvaluatorResponseConstantsService.requestEvaluatorResponse_noGo" class="badge badge-danger" popover-append-to-body data-titleclass="bordered-purple" data-class="dark" popover-placement="bottom" popover-title="Evaluator Group Details" popover="Evaluator Name: {{requestEvaluator.closedBy}}, Group Name: {{requestEvaluator.evaluatorGroupName}}">
+            {{requestEvaluator.evaluatorGroupName}}
+        </a>
+        <a ng-if="requestEvaluator.response == grid.appScope.requestEvaluatorResponseConstantsService.requestEvaluatorResponse_none" class="badge badge-default" popover-append-to-body data-titleclass="bordered-purple" data-class="dark" popover-placement="bottom" popover-title="Evaluator Group Details" popover="No evaluator from group {{requestEvaluator.evaluatorGroupName}} has started working on this yet.">
+            {{requestEvaluator.evaluatorGroupName}}
+        </a>
+    </span>
+</div>

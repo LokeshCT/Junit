@@ -1,0 +1,119 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+    width: 940px;
+    padding: 10px;
+    border: 1px solid #cecece;
+    border-top: 0px none;
+    background: #fff;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .container {
+        padding: 5px 19px;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container {
+        width: 724px;
+        padding: 10px 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container {
+        width: 1170px;
+        padding: 10px 14px;
+    }
+}
+
+/* Configurator container */
+
+.nav-tabs {
+    margin-left: px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #adcfe9;
+}
+
+.nav.nav-tabs {
+    margin: 0;
+}
+
+.nav-tabs > li > a {
+    margin-left: 1px;
+    border-color: #AED0EA;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+.nav-tabs > li > a:hover {
+    background: url(../lib/img/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50%;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #3BAAE3;
+    border-color: #2694E8 #2694E8 transparent;
+    border-style: solid;
+    border-width: 1px;
+    color: #ffffff;
+    cursor: default;
+}
+
+/* Configurator container end */
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 30px;
+    /*border-bottom: 1px solid #eeeeee;*/
+}

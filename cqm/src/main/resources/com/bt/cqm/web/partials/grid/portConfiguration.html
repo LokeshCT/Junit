@@ -1,0 +1,101 @@
+<div class="inner" id="portConfigurator" ng-controller="accessPortCpeConfigCtrl">
+
+    <div id="siteDetailsContainer" style="width: 400px;">
+        <div id="siteNameLabel" style="width:300px; font-size: 10px;"><b>Site Name</b> : {{siteConfigData.siteName}} &nbsp;
+            <b>Location</b> :{{siteConfigData.address.city}},{{siteConfigData.address.country}}
+        </div>
+    </div>
+
+    <div class="table-container" style="height: 288px; visibility: visible;">
+        <table>
+            <thead class="header-fixed">
+            <tr style="top: 0px;">
+                <th>
+                    <div style="width: 80px;">Leg Type<br><br></div>
+                </th>
+
+                <th>
+                    <div style="width: 120px;">CoS Assignment<br><br></div>
+                </th>
+                <th>
+                    <div style="width: 120px;">CoS Customization Level<br><br></div>
+                </th>
+                <th>
+                    <div style="width: 100px;">HVPN GPOP Name<br><br></div>
+                </th>
+
+
+            </tr>
+            </thead>
+            <tbody style="display: block; border-top: 50px solid transparent;">
+            <!-- ngRepeat: r in data.rows -->
+            <tr>
+                <td>
+                    <div style="width: 80px;">
+                        Primary
+                    </div>
+                </td>
+
+                <td>
+                    <div style="width: 120px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="CoS Assignment" attribute-id="portConfigurationData.primaryPortConfigurationDetail.cosAssignment.value"
+                                                attribute-value="{{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.cosAssignment.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div row="row" style="width: 120px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="CoS Customization Level" attribute-id="portConfigurationData.primaryPortConfigurationDetail.cosCustomizationLevel"
+                                                attribute-value="{{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.cosCustomizationLevel}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div title="" style="width: 100px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="HVPN GPOP Name" attribute-id="portConfigurationData.primaryPortConfigurationDetail.hvpnGpop.value"
+                                                attribute-value="{{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.hvpnGpop.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+
+
+            </tr>
+            <tr ng-show="isSecondary">
+                <td>
+                    <div style="width: 80px;">
+                        Secondary
+                    </div>
+                </td>
+
+                <td>
+                    <div style="width: 120px;">
+                        <configurable-attribute leg-type="Secondary" attribute-name="CoS Assignment" attribute-id="portConfigurationData.secondaryPortConfigurationDetail.cosAssignment.value"
+                                                attribute-value="{{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.cosAssignment.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div row="row" style="width: 120px;">
+                        <configurable-attribute leg-type="Secondary" attribute-name="CoS Customization Level" attribute-id="portConfigurationData.secondaryPortConfigurationDetail.cosCustomizationLevel"
+                                                attribute-value="{{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.cosCustomizationLevel}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div title="" style="width: 100px;">
+                        <configurable-attribute leg-type="Secondary" attribute-name="HVPN GPOP Name" attribute-id="portConfigurationData.secondaryPortConfigurationDetail.hvpnGpop.value"
+                                                attribute-value="{{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.hvpnGpop.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+
+
+            </tr>
+
+            </tbody>
+        </table>
+        <div class="hidden">11</div>
+    </div>
+</div>
+
+

@@ -1,0 +1,418 @@
+/*styles from naveen : will merge this styles later.*/
+/*jquery custom style overrides*/
+
+.ui-widget-content a {
+	color:#1D84CA
+}
+.ui-widget-content {
+	border: 1px solid #DDDDDD;
+	color: #000;
+}
+.ui-dialog .ui-widget-header .ui-icon {
+	background-image: url("images/ui-icons_72a7cf_256x240.png");
+}
+.ui-dialog .ui-widget-header {
+	background: url("images/ui-bg_highlight-soft_100_deedf7_1x100.png") repeat-x scroll 50% 50% #DEEDF7;
+	border: 1px solid #AED0EA;
+	color: #222222;
+	font-weight: bold;
+}
+.ui-dialog .ui-state-hover, .ui-dialog .ui-widget-content .ui-state-hover, .ui-dialog .ui-widget-header .ui-state-hover, .ui-dialog .ui-state-focus, .ui-dialog .ui-widget-content .ui-state-focus, .ui-dialog .ui-widget-header .ui-state-focus {
+	border: 1px solid #74b2e2;
+	background: #e4f1fb url(images/ui-bg_glass_100_e4f1fb_1x400.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #0070a3;
+}
+/*header*/
+#header .logo {
+	float:left;
+}
+#header h1 {
+	color: #2584C8;
+	float: left;
+	font-weight: bold;
+	margin: 45px 0 0;
+}
+/*newQuoteOptionDialog*/
+.manditoryWarning {
+	color: #FF0000;
+	margin-bottom: 10px;
+}
+/*dialog box form styles*/
+.form {
+	display:block;
+}
+.form li {
+	overflow: hidden;
+	margin-bottom:5px;
+	padding: 0;
+}
+.form li label {
+	float:left;
+	width:150px;
+	padding-right:10px;
+	margin-right:10px;
+}
+.form li .fields {
+	float:left;
+}
+.form li input[type=text] {
+	width:130px;
+	border: 1px solid #CCCCCC;
+}
+.form li select {
+	width:134px;
+}
+.form li label.error {
+	float: left;
+	color: #f00;
+	font-weight: normal;
+	margin:4px 0 5px 0px;
+}
+.form li .fields input[type="radio"] {
+	width: auto;
+}
+/*dialogbox forms*/
+.dialogbox li .fields {
+	width:150px;
+}
+/*bulupload*/
+.bulkupload {
+	margin-top:10px;
+}
+.bulkupload li label {
+	width:60px;
+}
+.bulkupload li.filebox input {
+	margin-left: 80px;
+	width: auto;
+}
+.bulkupload li label.error {
+	width:150px;
+}
+.bulkupload li.filebox label.error {
+	margin-left:80px;
+}
+/*button styles*/
+input[type="submit"], .button {
+	background: url("../images/button-bg.gif") repeat-x scroll left bottom #ddf0fb;
+	padding: 2px 5px;
+	border: 1px solid #AFD6F2;
+	color: #404040;
+	font-family: arial, tahoma, verdana;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration:none;
+}
+/*add product*/
+.add-product ul.form {
+	margin: 10px 20px;
+}
+/*action panel*/
+#content.noRightPane .rightPaneContainer {
+	width: 2em;
+	background-color: #CBDDF3;
+}
+#content.noRightPane .rightPaneContainer h2 {
+	width: 0.8em;
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	white-space:nowrap;
+	letter-spacing: 0.2em;
+	border: none;
+	padding: 0 0 0 1.2em;
+	margin: -0.5em 0 0;
+	background: none !important;
+}
+#content.noRightPane .rightPaneContainer .container {
+	display: none;
+}
+.ui-icon {
+	width: 15px;
+	height: 15px;
+	margin: 5px;
+	background-image: url(images/tool-sprites.gif);
+}
+.ui-icon-circle-arrow-e {
+	background-position:  0 -165px;
+}
+#content.noRightPane .rightPaneContainer .ui-icon:hover {
+	background-position: -15px -195px;
+}
+#content.noRightPane .leftPaneContainer {
+	width: 96%;
+}
+.button, .submit, button, a.actionbutton {
+	background: url("../images/button-bg.gif") repeat-x scroll left top #B1D7F2;
+	border: 1px solid #98CCF2;
+	border-radius: 0.2em 0.2em 0.2em 0.2em;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 3px 5px;
+	text-decoration: none;
+	color:#000;
+	line-height:normal;
+}
+button {
+	line-height:11px;
+}
+.button[disabled='disabled'] {
+	font-style: italic;
+}
+.rightPaneContainer {
+	width: 14%;
+	vertical-align: top;
+	float: right;
+	background-color: #fff;
+	padding: 0;
+	margin: 0 0.3em 0.3em 0;
+	min-height: 33em;
+	border:#b1b2b4 1px solid;
+	font-size:11px;
+}
+.rightPaneContainer .ui-icon {
+	cursor: pointer;
+	float: right;
+	font-weight: bold;
+	margin: -2px 8px 0 0;
+}
+#content.noRightPane .rightPaneContainer .ui-icon {
+	background-position: 0 -195px;
+	margin-left: 4px;
+	float: left;
+}
+.rightPaneContainer .container {
+	margin: 0;
+	padding:0px;
+	height: auto;
+	min-height: 100%;
+}
+.rightPaneContainer h2, .filterPanel h2 {
+	font-weight:bold;
+	margin: 0;
+	border-bottom: none;
+	background:url(../images/tabheadbg.jpg) #c2d8e6 repeat-x left top;
+	padding: 0.8em 0 0.8em 0.8em;
+}
+.rightPaneContainer .content {
+	padding: 10px;
+}
+.rightPaneContainer #actions li {
+	text-align: center;
+}
+.rightPaneContainer #actions button.main-action {
+	margin: 0 auto;
+	width:152px;
+}
+.rightPaneContainer #actions .main-action {
+	background:url(../images/main-action-bg.gif) repeat-x scroll left top #020202;
+	border-color: #9E9E9F #9E9E9F #585959 #585959;
+	border-style: solid;
+	border-width: 1px;
+	color: #FFFFFF;
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
+	width: 140px;
+	text-decoration: none;
+	text-align: center;
+}
+.rightPaneContainer .content li {
+	margin-bottom: 10px;
+	padding: 0 !important;
+	overflow: hidden;
+}
+.rightPaneContainer #oneTimePricingSummary li label,
+.rightPaneContainer #recurringPricingSummary li label {
+	display:block;
+	float:left;
+	width:60px;
+	margin-right:10px;
+}
+.rightPaneContainer #oneTimePricingSummary li span,
+.rightPaneContainer #recurringPricingSummary li span{
+	display:block;
+	float:left;
+	color:#000;
+	font-weight: bold;
+}
+.rightPaneContainer h3 {
+	background: none repeat scroll 0 0 #E8E8E8;
+	font-weight: bold;
+	margin-bottom: 0;
+	padding: 7px;
+}
+.rightPaneContainer h4 {
+	border-bottom: 1px dotted #5097D0;
+	color: #5097C9;
+	font-weight: bold;
+	margin: 5px 0 10px;
+	padding-bottom: 0;
+}
+#oneTimePricingSummary, #recurringPricingSummary {
+	margin-bottom:15px;
+}
+.bulkDiscount {
+	margin-bottom:15px;
+}
+.bulkDiscount ul {
+	display:block;
+	overflow: hidden;
+	margin-bottom:5px;
+}
+.bulkDiscount li input, .bulkDiscount li label, .bulkDiscount li span {
+	float:left;
+}
+.bulkDiscount li input[type=radio] {
+	margin-right:10px;
+}
+.bulkDiscount li input[type=text] {
+	border: 1px solid #ccc;
+}
+.bulkDiscount li label {
+	width: 45px;
+}
+.requestdiscount {
+	display:block;
+	margin: 10px;
+}
+.ui-widget-content .main-action {
+	background:url(../images/main-action-bg.gif) repeat-x scroll left top #020202;
+	border-color: #9E9E9F #9E9E9F #585959 #585959;
+	border-style: solid;
+	border-width: 1px;
+	color: #FFFFFF;
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
+	width: 140px;
+	text-decoration: none;
+	text-align: center;
+}
+.ui-widget-content .main-action:active {
+	border-color: #585959 #585959 #9E9E9F #9E9E9F;
+}
+.ui-widget-content .main-action.disabled {
+	border-color:#ccc;
+	background: #ccc;
+	cursor:default;
+}
+/*notes*/
+.notes {
+	background: #fff;
+	border: 1px solid #AED0EA;
+	height: 165px;
+	margin-bottom: 0.7em;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 375px;
+}
+.notes li.note {
+	border-bottom: 1px #ccc dashed;
+	padding:  10px;
+}
+.notes li.note p {
+	color: #939393;
+	font-size: 11px;
+	padding-bottom: 5px;
+}
+#notesDialog textarea {
+	border: 1px solid #CCCCCC;
+	color: #000000;
+	font-size: 11px;
+	height: 140px;
+	line-height: 16px;
+	margin-bottom: 10px;
+	width: 375px;
+}
+
+.manualWarn {
+    display: block;
+  	margin:0 0 10px 0;
+   	overflow: hidden;
+   	padding: 5px;
+    width: 400px;
+}
+/* save / unsaved messages and display of supplementary info */
+.savediscount {
+	display: block;
+	margin:0 0 10px 0;
+	overflow: hidden;
+	padding: 5px;
+}
+.savediscount p {
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px 20px 0 0;
+}
+.savediscount .button {
+	float:left;
+	margin-right:10px;
+}
+#sendDiscountApprovalMessage.success , .successmessage {
+    background: none repeat scroll 0 0 #AED791;
+    border: 1px solid #98CF57;
+    color: #000;
+    font-size: 11px;
+    margin: 0 0 10px;
+    padding: 5px;
+}
+/*create offer dialoge*/
+#createOfferDialog form , #createOrderDialog form {display:block; margin:10px 0;}
+
+
+#dialogError {
+    margin: 10px 0 15px;
+    padding: 5px;
+}
+
+#commonError{
+
+    color: #F00;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+
+
+/*add product page*/
+ .addProduct {margin:20px;}
+.addProduct ul.select-product{margin-bottom:20px;}
+.addProduct ul.select-product label {width:75px;}
+.filterPaneContainer {
+    background-color: #CBDDF3;
+    border: 1px solid #B1B2B4;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    padding:0;
+    vertical-align: top;
+}
+.dataTables_processing {
+    background: url("../images/ajax-loader.gif") no-repeat scroll 50% 10px #595E62;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    font-size: 1em !important;
+    font-weight: bold !important;
+    height: 20px;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 35px;
+    padding: 50px 0 10px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100px;
+}
+
+table#siteTable {
+    border: 1px solid #AAC4D4;
+    margin:10px 0;
+}
+#siteTable_info {margin: 10px 0}

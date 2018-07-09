@@ -1,0 +1,10 @@
+<div>
+    <a id="openDialog" style="cursor: pointer" ng-click="showDialog()">Open dialog</a><br>
+    <a id="noOkCancelButtons" style="cursor: pointer" ng-click="showDialog('noOkCancelButtons')">Dialog with no Buttons</a><br>
+    <a id="noDetailsButton" style="cursor: pointer" ng-click="showDialog('noDetailsButton')">Dialog with no 'detail' button</a> <br>
+    <a id="okButNoCancelButton" style="cursor: pointer" ng-click="showDialog('okButNoCancelButton')">Dialog with only 'Ok' button</a> <br>
+
+    <div cqm-dialog="show" no-ok-cancel-buttons>Dialog Content</div>
+
+    <div class="action-result">{{actionResult}}</div>
+</div>

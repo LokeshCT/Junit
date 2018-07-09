@@ -1,0 +1,226 @@
+USER_ID,SALES_CHANNEL,CREATED_USER,MODIFIED_USER,DEFAULT_SALES_CHANNEL
+608026723,BT FRANCE,SQE_USER_MGMT,,N
+608026723,BT AMERICAS,SQE_USER_MGMT,,Y
+608026723,BT LUXEMBOURG,SQE_USER_MGMT,,N
+608026723,KPN INTERNATIONAL,SQE_USER_MGMT,,N
+607520161,BT AMERICAS,607520161,,Y
+607520161,BT FRANCE,607520161,,N
+607520161,BT LUXEMBOURG,607520161,,N
+607520161,BT NETHERLANDS,607520161,,N
+608308027,BT AMERICAS,608308027,,Y
+608308027,BT FRANCE,608308027,,N
+608308027,BT LUXEMBOURG,608308027,,N
+608308027,BT NETHERLANDS,608308027,,N
+604990523,BT GERMANY,Initial Load,Initial Load,N
+604990523,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+604990523,BT FRANCE,Initial Load,Initial Load,N
+604990523,BT LUXEMBOURG,Initial Load,Initial Load,N
+604990523,BT NETHERLANDS,Initial Load,Initial Load,N
+604990523,BT AMERICAS,Initial Load,Initial Load,N
+604990523,BT BELGIUM,Initial Load,Initial Load,N
+604990523,BTGS UK,Initial Load,Initial Load,N
+605703061,BT AMERICAS,Initial Load,Initial Load,N
+601400780,BT AMERICAS,Initial Load,Initial Load,N
+802987639,BTGS UK,Initial Load,Initial Load,N
+604980982,BTGS UK,Initial Load,Initial Load,N
+702119185,BTGS UK,Initial Load,Initial Load,N
+790065548,BT ITALY,Initial Load,Initial Load,N
+701067654,BTGS UK,Initial Load,Initial Load,N
+601949326,BTGS UK,Initial Load,Initial Load,N
+605821222,KDDI CORPORATION FOR JAPAN,Initial Load,Initial Load,N
+605821222,INFONET NEDERLAND BV,Initial Load,Initial Load,N
+605821222,BTGS UK,Initial Load,Initial Load,N
+605821222,BT GERMANY,Initial Load,Initial Load,N
+605821222,BT LUXEMBOURG,Initial Load,Initial Load,N
+605821222,BT FRANCE,Initial Load,Initial Load,N
+605821222,BT NETHERLANDS,Initial Load,Initial Load,N
+605821222,BT AMERICAS,Initial Load,Initial Load,N
+605821222,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+790112310,BTGS UK,Initial Load,Initial Load,N
+606352985,BT NETHERLANDS,Initial Load,Initial Load,N
+606352985,BT GERMANY,Initial Load,Initial Load,N
+606352985,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+606352985,BT AMERICAS,Initial Load,Initial Load,N
+606352985,BTGS UK,Initial Load,Initial Load,N
+606352985,BT LUXEMBOURG,Initial Load,Initial Load,N
+605913262,BT AMERICAS,Initial Load,Initial Load,N
+605913262,BT NETHERLANDS,Initial Load,Initial Load,N
+605913262,BTGS UK,Initial Load,Initial Load,N
+605913262,BT BELGIUM,Initial Load,Initial Load,N
+605913262,BT FRANCE,Initial Load,Initial Load,N
+605913262,BT GERMANY,Initial Load,Initial Load,N
+701292827,BT IRELAND,Initial Load,Initial Load,N
+605189261,BT NETHERLANDS,Initial Load,Initial Load,N
+803129052,BTGS UK,Initial Load,Initial Load,N
+801901056,BTGS UK,Initial Load,Initial Load,N
+605003482,BTGS UK,Initial Load,Initial Load,N
+605003482,BT GERMANY,Initial Load,Initial Load,N
+605003482,BT SINGAPORE,Initial Load,Initial Load,N
+605003482,BT AMERICAS,Initial Load,Initial Load,N
+605189704,BT NETHERLANDS,Initial Load,Initial Load,N
+605565065,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605565065,BT AMERICAS,Initial Load,Initial Load,N
+605565065,BTGS UK,Initial Load,Initial Load,N
+605565065,BT GERMANY,Initial Load,Initial Load,N
+605565065,BT NETHERLANDS,Initial Load,Initial Load,N
+600666446,BT FRANCE,Initial Load,Initial Load,N
+600666446,BT GERMANY,Initial Load,Initial Load,N
+600666446,BT NETHERLANDS,Initial Load,Initial Load,N
+600666446,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+802398855,BT AMERICAS,Initial Load,Initial Load,N
+604955263,BT IRELAND,Initial Load,Initial Load,N
+605200140,BT NETHERLANDS,Initial Load,Initial Load,N
+605217780,BT AMERICAS,Initial Load,Initial Load,N
+602149763,BT NETHERLANDS,Initial Load,Initial Load,N
+605326925,BT NETHERLANDS,Initial Load,Initial Load,N
+605326925,BT GERMANY,Initial Load,Initial Load,N
+605326925,BT AMERICAS,Initial Load,Initial Load,N
+605326925,BT FRANCE,Initial Load,Initial Load,N
+605326925,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+604556842,BT AMERICAS,Initial Load,Initial Load,N
+604962285,BT NETHERLANDS,Initial Load,Initial Load,N
+604962285,BT GERMANY,Initial Load,Initial Load,N
+604962285,BT FRANCE,Initial Load,Initial Load,N
+605606225,BT FRANCE,Initial Load,Initial Load,N
+605606225,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605606225,BT AMERICAS,Initial Load,Initial Load,N
+605606225,BT NETHERLANDS,Initial Load,Initial Load,N
+605606225,BTGS UK,Initial Load,Initial Load,N
+605606225,BT GERMANY,Initial Load,Initial Load,N
+701200358,BT AMERICAS,Initial Load,Initial Load,N
+802663496,BTGS UK,Initial Load,Initial Load,N
+790061328,BT ITALY,Initial Load,Initial Load,N
+606352947,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605980486,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605980486,BT NETHERLANDS,Initial Load,Initial Load,N
+605980486,BT GERMANY,Initial Load,Initial Load,N
+605980486,BT AMERICAS,Initial Load,Initial Load,N
+605564945,BT NETHERLANDS,Initial Load,Initial Load,N
+605564945,BT GERMANY,Initial Load,Initial Load,N
+605564945,BT AMERICAS,Initial Load,Initial Load,N
+605874662,BTGS UK,Initial Load,Initial Load,N
+605874662,BT GERMANY,Initial Load,Initial Load,N
+605874662,BT NETHERLANDS,Initial Load,Initial Load,N
+605874662,BT BELGIUM,Initial Load,Initial Load,N
+605874662,BT AMERICAS,Initial Load,Initial Load,N
+605874662,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605874662,BT-GLOBAL SERVICES,Initial Load,Initial Load,N
+605874662,BT FRANCE,Initial Load,Initial Load,N
+790063803,BT ITALY,Initial Load,Initial Load,N
+604099288,BT SINGAPORE,Initial Load,Initial Load,N
+604099288,BTGS UK,Initial Load,Initial Load,N
+604099288,BT AMERICAS,Initial Load,Initial Load,N
+790063193,BT ITALY,Initial Load,Initial Load,N
+602005984,BT FRANCE,Initial Load,Initial Load,N
+605202205,BT NETHERLANDS,Initial Load,Initial Load,N
+605202205,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605202205,BT GERMANY,Initial Load,Initial Load,N
+605202205,BT AMERICAS,Initial Load,Initial Load,N
+605658101,BT AMERICAS,Initial Load,Initial Load,N
+605658101,BT FRANCE,Initial Load,Initial Load,N
+605658101,BT GERMANY,Initial Load,Initial Load,N
+605658101,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605658101,BT NETHERLANDS,Initial Load,Initial Load,N
+605584943,BT AMERICAS,Initial Load,Initial Load,N
+605565027,BT FRANCE,Initial Load,Initial Load,N
+605565027,BT GERMANY,Initial Load,Initial Load,N
+605565027,BT NETHERLANDS,Initial Load,Initial Load,N
+605565027,BT AMERICAS,Initial Load,Initial Load,N
+605565027,BT BELGIUM,Initial Load,Initial Load,N
+605565027,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605448481,BT LUXEMBOURG,Initial Load,Initial Load,N
+605448481,BT AMERICAS,Initial Load,Initial Load,N
+605448481,BTGS UK,Initial Load,Initial Load,N
+605448481,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605448481,BT GERMANY,Initial Load,Initial Load,N
+605448481,BT FRANCE,Initial Load,Initial Load,N
+605448481,BT NETHERLANDS,Initial Load,Initial Load,N
+606869407,KPN INTERNATIONAL,Initial Load,Initial Load,N
+606869407,BT AMERICAS,Initial Load,Initial Load,N
+606869407,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+606869407,BT-GERMANY,Initial Load,Initial Load,N
+603983601,BTGS UK,Initial Load,Initial Load,N
+604459143,BT NETHERLANDS,Initial Load,Initial Load,N
+802613484,BTGS UK,Initial Load,Initial Load,N
+604575867,BT NETHERLANDS,Initial Load,Initial Load,N
+604575867,BT BRAZIL,Initial Load,Initial Load,N
+604575867,BT FRANCE,Initial Load,Initial Load,N
+604575867,BT-GLOBAL SERVICES,Initial Load,Initial Load,N
+604575867,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+604575867,BT GERMANY,Initial Load,Initial Load,N
+604575867,BT AMERICAS,Initial Load,Initial Load,N
+604575867,BTGS UK,Initial Load,Initial Load,N
+604575867,3C KFT,Initial Load,Initial Load,N
+604575867,KPN INTERNATIONAL,Initial Load,Initial Load,N
+604575867,BT LUXEMBOURG,Initial Load,Initial Load,N
+602135704,BT AMERICAS,Initial Load,Initial Load,N
+790051138,BT ITALY,Initial Load,Initial Load,N
+790042914,BT AMERICAS,Initial Load,Initial Load,N
+606439501,BT AMERICAS,Initial Load,Initial Load,N
+606439501,BTGS UK,Initial Load,Initial Load,N
+606439501,BT SINGAPORE,Initial Load,Initial Load,N
+600743901,BT AMERICAS,Initial Load,Initial Load,N
+600743901,BT NETHERLANDS,Initial Load,Initial Load,N
+600743901,BT GERMANY,Initial Load,Initial Load,N
+605357547,KPN INTERNATIONAL,Initial Load,Initial Load,N
+605357547,BT SINGAPORE,Initial Load,Initial Load,N
+605357547,BT TURKEY,Initial Load,Initial Load,N
+605357547,BT LUXEMBOURG,Initial Load,Initial Load,N
+605357547,BT BELGIUM,Initial Load,Initial Load,N
+605357547,BT AMERICAS,Initial Load,Initial Load,N
+605357547,BT FRANCE,Initial Load,Initial Load,N
+605357547,BT GERMANY,Initial Load,Initial Load,N
+605357547,BT NETHERLANDS,Initial Load,Initial Load,N
+605357547,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605357547,BTGS UK,Initial Load,Initial Load,N
+606371764,BT NETHERLANDS,Initial Load,Initial Load,N
+606371764,BT GERMANY,Initial Load,Initial Load,N
+606371764,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+606371764,BT BELGIUM,Initial Load,Initial Load,N
+606371764,BT AMERICAS,Initial Load,Initial Load,N
+605762983,BT FRANCE,Initial Load,Initial Load,N
+605762983,BT AMERICAS,Initial Load,Initial Load,N
+605762983,BT NETHERLANDS,Initial Load,Initial Load,N
+605762983,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605762983,BTGS UK,Initial Load,Initial Load,N
+605762983,BT GERMANY,Initial Load,Initial Load,N
+604969901,BT AMERICAS,Initial Load,Initial Load,N
+605565102,BT AMERICAS,Initial Load,Initial Load,N
+605565102,INFONET NEDERLAND BV,Initial Load,Initial Load,N
+605565102,BT NETHERLANDS,Initial Load,Initial Load,N
+605565102,BT GERMANY,Initial Load,Initial Load,N
+605565102,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605429480,BT NETHERLANDS,Initial Load,Initial Load,N
+604700726,BT AMERICAS,Initial Load,Initial Load,N
+605560688,BT GERMANY,Initial Load,Initial Load,N
+605560688,BT NETHERLANDS,Initial Load,Initial Load,N
+605560688,BT AMERICAS,Initial Load,Initial Load,N
+790056584,BT ITALY,Initial Load,Initial Load,N
+604502245,BT AMERICAS,Initial Load,Initial Load,N
+790110835,BTGS UK,Initial Load,Initial Load,N
+605560848,BT AMERICAS,Initial Load,Initial Load,N
+605560848,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605560848,BT GERMANY,Initial Load,Initial Load,N
+605560848,BTGS UK,Initial Load,Initial Load,N
+605560848,BT NETHERLANDS,Initial Load,Initial Load,N
+605836486,BT BELGIUM,Initial Load,Initial Load,N
+605836486,BTGS UK,Initial Load,Initial Load,N
+605836486,Unknown,Initial Load,Initial Load,N
+605836486,KDDI AMERICA INC,Initial Load,Initial Load,N
+605836486,DACOM,Initial Load,Initial Load,N
+605836486,BT BRAZIL (B''END ONLY),Initial Load,Initial Load,N
+605836486,BT AMERICAS,Initial Load,Initial Load,N
+605836486,BT FRANCE,Initial Load,Initial Load,N
+605836486,BT NETHERLANDS,Initial Load,Initial Load,N
+601529184,BT AMERICAS,607520161,,Y
+601529184,BT FRANCE,607520161,,N
+605836486,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+605836486,BT GERMANY,Initial Load,Initial Load,N
+801909403,BTGS UK,Initial Load,Initial Load,N
+790111696,BTGS UK,Initial Load,Initial Load,N
+605164862,BT NETHERLANDS,Initial Load,Initial Load,N
+605799385,BT AMERICAS,Initial Load,Initial Load,Y
+605799385,TELSTRA CORPORATION LIMITED,Initial Load,Initial Load,N
+608044000,BT LUXEMBOURG,Initial Load,Initial Load,Y
+608044000,BT AMERICAS,Initial Load,Initial Load,N
+607982105,BT NETHERLANDS,Initial Load,Initial Load,Y

@@ -1,0 +1,19 @@
+<div>
+    <div class="metrics-container center-div">
+        <sqe-dashboard-metric name="Customers" value="userQuoteMetrics.numberOfCustomers"></sqe-dashboard-metric>
+        <sqe-dashboard-metric name="Quotes" value="userQuoteMetrics.numberOfQuotes"></sqe-dashboard-metric>
+        <sqe-dashboard-metric name="Sites" value="userQuoteMetrics.numberOfSites"></sqe-dashboard-metric>
+        <sqe-dashboard-metric name="Orders" value="userQuoteMetrics.numberOfOrders"></sqe-dashboard-metric>
+    </div>
+
+
+    <div class="widget-container center-div">
+        <div class="sqe-dashboard-widget">
+            <div class="widget-header">Recent Quotes</div>
+            <div class="widget-links"><a href="#/allUserQuoteStatus">View All</a></div>
+            <div class="widget-content" style=" height: 170px; width: 1100px;">
+                <div class="widget-content-grid" ui-grid="recentQuoteStatusSummaryGridOptions"></div>
+            </div>
+        </div>
+    </div>
+</div>

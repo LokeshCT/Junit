@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<people>
+    <person>
+        <name>
+            <surname>Farkas</surname>
+            <initials>CL</initials>
+            <familiarName>Carol</familiarName>
+            <personalTitle></personalTitle>
+        </name>
+        <lineOfBusiness code="S00">BT Global Services</lineOfBusiness>
+        <ouc>OUC4</ouc>
+        <jobTitle>Sales Specialist - PostSales</jobTitle>
+        <empClass code="R">BT Employee</empClass>
+        <contactNumbers>
+            <contactNumber type="tel">1 111 222 3333</contactNumber>
+        </contactNumbers>
+        <manager>
+            <btDirectoryID>12345</btDirectoryID>
+            <btDirectoryId>155830</btDirectoryId>
+            <btEIN>123456</btEIN>
+            <name>Kalanovic NAJ Mr (Nikolas)</name>
+        </manager>
+        <internetEmailAddress>zzzz@bt.com</internetEmailAddress>
+        <btBoatId>FARKASC</btBoatId>
+        <btDirectoryId>679334</btDirectoryId>
+        <btEIN>1234565</btEIN>
+        <address>
+            <btBuildingCode>HOM-00-US</btBuildingCode>
+            <comment>Works from home</comment>
+        </address>
+    </person>
+</people>

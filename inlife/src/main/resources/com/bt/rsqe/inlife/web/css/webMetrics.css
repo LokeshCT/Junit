@@ -1,0 +1,173 @@
+.hidden {
+    display: none;
+}
+
+.tabs {
+    position: relative;
+    left: 25px;
+    height: 50px;
+    border: #c4e3f3 solid thin;
+    width: 1260px;
+}
+
+.tabs .tab {
+    top: 10px;
+    height: 100%;
+    float: left;
+    padding: 20px 10px;
+}
+
+.webMetrics {
+    position: relative;
+    left: 25px;
+    height: 800px;
+}
+.percentileDiv {
+    border: #c4e3f3 solid thin;
+    height: 800px;
+    margin-left: 25px;
+    width: 1260px;
+}
+.userNavigationListDiv {
+    width: 250px;
+    height: 500px;
+    clear: both;
+    position: absolute;
+    float: left;
+    border: #c4e3f3 solid thin;
+}
+
+.userNavigationListDiv ul {
+    font-size: 12px;
+}
+
+.timeDistributionChartDiv {
+    margin-left: 40px;
+}
+
+.percentageTableDiv {
+    margin-left: 40px;
+    float: left;
+    position: absolute;
+    top: 450px;
+    width:700px;
+    height: 280px;
+    overflow-y: auto;
+}
+
+.percentageTableDiv .percentageTable {
+    margin-top: 27px;
+    position: absolute;
+    border: solid #0081c2 thin;
+}
+
+.percentageTableDiv .percentageTable tbody tr td, .percentageTableDiv .percentageTable thead tr th {
+    border: solid #0081c2 thin;
+    font-size: 12px;
+    text-align: center;
+    width: auto;
+    padding: 2px 5px 2px 5px;
+}
+
+.ragTableDiv {
+    margin-left: 40px;
+    float: left;
+    position: absolute;
+    top: 320px;
+    width:700px;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.ragTableDiv .ragTable {
+    margin-top: 27px;
+    position: absolute;
+    border: solid #0081c2 thin;
+}
+
+.ragTableDiv .ragTable tbody tr td, .ragTableDiv .ragTable thead tr th {
+    border: solid #0081c2 thin;
+    font-size: 12px;
+    text-align: center;
+    width: auto;
+    padding: 2px 5px 2px 5px;
+}
+
+.navigationDetailsDiv {
+    border: #c4e3f3 solid thin;
+    height: 500px;
+    margin-left: 250px;
+    width: 1010px;
+}
+
+.navigationDetailsDiv .dateDiv {
+    float: right;
+    width: 550px;
+    margin-right: 20px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.navigationDetailsDiv .dateDiv .button {
+    margin-left: 10px;
+}
+
+.navigationDetailsDiv label, .navigationDetailsDiv input {
+    float: left;
+}
+
+.navigationDetailsDiv .headerLabel {
+    font-weight: bold;
+    font-size: 14px;
+    width: 600px;
+    float: left;
+}
+
+.navigationDetailsDiv .date {
+    width: 90px;
+    margin-left: 3px;
+    font-size: 12px;
+}
+
+.userNavigationListDiv span {
+    cursor: pointer;
+}
+
+.userNavigationListDiv .heading {
+    margin-top: 30px;
+}
+
+.userNavigationListDiv ul {
+    margin: 0px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.heading {
+    font-size: 12px;
+    text-align: center;
+}
+
+.navigationDetailsDiv .lineChartCanvas {
+    clear: both;
+}
+
+.navigationDetailsDiv .barChartCanvas {
+    clear: both;
+}
+
+.ragRow .ragLocation {
+    font-weight: bold;
+}
+
+.ragRow .ragGreen {
+    background-color: green;
+}
+
+.ragRow .ragAmber {
+    background-color: #ffcc00;
+}
+
+.ragRow .ragRed {
+    background-color: red;
+}

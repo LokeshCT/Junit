@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Bar Chart Test Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link type="text/css" href="/rsqe/static/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/foundation.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/normalize.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/prism.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/app.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/inlife.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/rsqe/static/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/angular/angular-file-upload.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/underscore/underscore.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/tcCharts/Chart.min.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/tcCharts/tc-angular-chartjs.js"></script>
+
+    <script type="text/javascript" src="/rsqe/static/js/charts.js"></script>
+    <script type="text/javascript" src="/rsqe/test/js/charts/charts-test-page.js"></script>
+
+</head>
+
+<body ng-app="rsqeChartsTest">
+    <div class="barChart" ng-controller='BarChartTestController'>
+        <rsqe-bar-chart bar-data="barData" options="options"></rsqe-bar-chart>
+    </div>
+</body>
+</html>
+

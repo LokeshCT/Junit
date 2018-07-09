@@ -1,0 +1,464 @@
+<div ng-controller="billingAccountController" class="innerWrapBillingAccount" ng-init="loadPage()">
+
+<div class="searchBillingResult">
+    <div class="hrMargin">
+        <span class="headerLabel collapse" ng-click="collapseAccountGrid()">Billing Account</span>
+        <hr class="hrStyle">
+    </div>
+    <div class="headerLabel" ng-show="displayAccountGrid">Accounts : {{numOfMatchingAccounts}} account(s) found.</div>
+    <div class="searchResultGridStyle" style="height: 250px" ng-grid="billingAccountGrid" ng-show="displayAccountGrid"></div>
+</div>
+
+<div class="hrMargin" style="clear:both; float: left;margin-bottom: 10px;">
+    <span class="headerLabel collapse" ng-click="collapseAssLEPanel()">Associated Legal Entity </span>
+    <hr class="hrStyle" width="90%"/>
+</div>
+<div ng-form="legalEntityDetailsForm" style="clear:both; padding-top:5px;float: left;width: 98%" ng-show="displayAssLePanel">
+    <fieldset height="80%" style="height-bottom: 50px; margin-bottom: 20px;">
+        <div class="cqmFieldDiv">
+            <label>Legal Company Name</label>
+            <input type="text" id="leCompanyName" name="leCompanyName" class="cqmField" ng-required="true"
+                   ng-model="legalEntityFormData.leCompanyName" disabled="true"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Registered Country</label>
+            <input type="text" id="registeredCountry" name="registeredCountry" class="cqmField"
+                   ng-model="legalEntityFormData.registeredCountry" disabled="true">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Billing Country</label>
+            <input type="text" id="billingCountry" name="billingCountry" class="cqmField" ng-required="true"
+                   ng-model="legalEntityFormData.billingCountry" disabled="true">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Account Classification</label>
+            <input type="text" id="leAccountClassification" name="leAccountClassification" class="cqmField"
+                   ng-required="true"
+                   ng-model="legalEntityFormData.leAccountClassification" disabled="true">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Billing Mode</label>
+
+            <input type="text" id="billingMode" name="billingMode" class="cqmField"
+                   ng-required="true"
+                   ng-model="legalEntityFormData.billingMode" disabled="true">
+        </div>
+
+
+        <div class="cqmFieldDiv" ng-show="showInternalFieldsReadOnly">
+            <label>Receiving GFR</label>
+            <input class="cqmField" type="text" id="receivergfr" name="receivergfr"
+                   ng-model="legalEntityFormData.receivergfr" disabled="true">
+        </div>
+        <div class="cqmFieldDiv" ng-show="showInternalFieldsReadOnly">
+            <label>Originating OUC</label>
+            <input class="cqmField" type="text" id="originatorouc" name="originatorouc"
+                   ng-model="legalEntityFormData.originatorouc" disabled="true">
+        </div>
+        <div class="cqmFieldDiv" ng-show="showInternalFieldsReadOnly">
+            <label>Receiving OUC</label>
+            <input class="cqmField" type="text" id="receiverouc" name="receiverouc"
+                   ng-model="legalEntityFormData.receiverouc" disabled="true">
+        </div>
+        <div class="cqmFieldDiv" ng-show="showInternalFieldsReadOnly">
+            <label>TCA Number</label>
+            <input class="cqmField" type="text" id="tcaCode" name="tcaCode"
+                   ng-model="legalEntityFormData.tcaCode" disabled="true">
+        </div>
+
+    </fieldset>
+</div>
+
+<div class="hrMargin" style="clear:both; float: left; margin-bottom: 10px; margin-top: 10px">
+    <span class="headerLabel">Billing Contact Details</span>
+    <hr class="hrStyle"/>
+</div>
+<div ng-form="billingAccountContactForm" style="clear:both; float: left">
+    <div name="contactDiv" style="clear:both; float: left">
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>First Name <span class="rfo">(RFO)</span></label>
+            <input type="text" id="firstName" name="firstName" class="cqmField" ng-required="true"
+                   ng-model="billingAccountFormData.firstName"  tabindex="101"/>
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>Middle Name</label>
+            <input type="text" id="middleName" name="middleName" class="cqmField"
+                   ng-model="billingAccountFormData.middleName"  tabindex="102">
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>Last Name <span class="rfo">(RFO)</span></label>
+            <input type="text" id="lastName" name="lastName" class="cqmField" ng-required="true"
+                   ng-model="billingAccountFormData.lastName"  tabindex="103">
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>Job Title <span class="rfo">(RFO)</span></label>
+            <input type="text" id="jobTitle" name="jobTitle" class="cqmField" ng-required="true"
+                   ng-model="billingAccountFormData.jobTitle"  tabindex="104">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Building Name</label>
+            <input class="cqmField" type="text" id="buildingName" name="buildingName"
+                   ng-model="billingAccountFormData.buildingName" ng-required="isBuildingNameReq"  tabindex="105">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub Building</label>
+            <input class="cqmField" type="text" id="subBuilding" name="subBuilding"
+                   ng-model="billingAccountFormData.subBuilding"  tabindex="106">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Building Number</label>
+            <input class="cqmField" type="text" id="buildingNumber" name="buildingNumber" maxlength="20" size="20"
+                   ng-model="billingAccountFormData.buildingNumber" ng-required="isBuildingNumReq"  tabindex="107">
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Street</label>
+            <input class="cqmField" type="text" id="street" name="street"
+                   ng-model="billingAccountFormData.street" ng-required="isStreetReq"  tabindex="108">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub Street</label>
+            <input class="cqmField" type="text" id="subStreet" name="subStreet"
+                   ng-model="billingAccountFormData.subStreet"  tabindex="109">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Locality</label>
+            <input class="cqmField" type="text" id="locality" name="locality"
+                   ng-model="billingAccountFormData.locality" ng-required="isLocalityReq"  tabindex="110">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub Locality</label>
+            <input class="cqmField" type="text" id="subLocality" name="subLocality"
+                   ng-model="billingAccountFormData.subLocality"  tabindex="111">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label> City <span class="rfo">(RFO)</span></label>
+            <input type="text" class="cqmField" ng-required="true" id="city" name="city"
+                   ng-model="billingAccountFormData.city" style="border-color: red" tabindex="112">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>State/County/Province <span class="rfo">{{provRfo}}</span></label>
+            <input class="cqmField" type="text" id="state" name="state"
+                   ng-model="billingAccountFormData.state"  ng-required="provRfoReq" tabindex="113"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub State/County/Province</label>
+            <input class="cqmField" type="text" id="subState" name="subState"
+                   ng-model="billingAccountFormData.subState"  tabindex="114"/>
+        </div>
+
+        <div class="cqmFieldDiv" ng-init="getAllCountries()">
+            <label>Country <span class="rfo"> (RFO)</span></label>
+
+            <select id="country" ng-model="billingAccountFormData.country"
+                    ng-options="country as country.name for country  in allCountries"
+                    data-placeholder="Select a Country" ng-required="true"
+                    style="width: 95%;border-color: red"  tabindex="115"/>
+            </select>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Zip/Post Code <span class="rfo">{{zipRfo}}</span></label>
+            <input class="cqmField" type="text" id="postCode" name="postCode"
+                   ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="billingAccountFormData.postCode" 
+                   ng-required="zipRfoReq" tabindex="116"
+                />
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Sub Post Code</label>
+            <input class="cqmField" type="text" id="subPostCode" name="subPostCode"
+                   ng-change="setGeoCodeValue('geoCodeActionId')"
+                   ng-model="billingAccountFormData.subPostCode"  tabindex="117"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>PO Box</label>
+            <input class="cqmField" type="text" id="poBox" name="poBox"
+                   ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="billingAccountFormData.POBox" ng-required="isPoBoxReq" 
+                tabindex="118"/>
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>E-Mail</label>
+            <input type="email" class="cqmField" id="email" name="email"
+                   ng-model="billingAccountFormData.email" tabindex="119">
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>Phone Number <span class="rfo"> (RFO)</span></label>
+            <input type="text" class="cqmField" id="phoneNumber" name="phoneNumber" no-alpha ng-required="true"
+                   ng-model="billingAccountFormData.phoneNumber"  tabindex="120">
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>Fax</label>
+            <input type="text" class="cqmField" no-alpha id="fax" name="fax"
+                   ng-model="billingAccountFormData.fax" tabindex="121">
+        </div>
+
+        <div class="cqmFieldDiv" ng-show="!showMap">
+            <label>Mobile Number</label>
+            <input type="text" class="cqmField" id="mobileNo" no-alpha name="mobileNo"
+                   ng-model="billingAccountFormData.mobileNo" tabindex="122">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Latitude</label>
+            <input class="cqmField" type="text" id="latitude" name="latitude"
+                   ng-model="billingAccountFormData.latitude" disabled="true"  ng-required="true">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Longitude</label>
+            <input class="cqmField" type="text" id="longitude" name="longitude"
+                   ng-model="billingAccountFormData.longitude" disabled="true"  ng-required="true">
+        </div>
+
+        <div style="float: left;margin-top:25px;width:18%">
+            <label></label>
+            <input type="checkbox" id="clearLat" name="clearLat"
+                   ng-model="clearLatLong" ng-click="onClearClick()" tabindex="123">Clear</input>
+        </div>
+        <input type="hidden" id="adrId" name="adrId"
+               ng-model="billingAccountFormData.adrId"/>
+
+        <input type="hidden" id="siteId" name="siteId"
+               ng-model="billingAccountFormData.siteId"/>
+
+        <input type="hidden" id="siteName" name="siteName"
+               ng-model="billingAccountFormData.siteName"/>
+
+    </div>
+</div>
+
+<div class="containerDiv" style="float:left;">
+    <button class="btn google-map"  ng-show="!disableSearch"
+            style="float:right;margin:5px;" ng-click="clickShowMap()" tabindex="132">
+    </button>
+    <button class="btn google-map-black"  ng-show="disableSearch"
+            style="float:right;margin:5px;" tabindex="131">
+    </button>
+    <button class="btn" ng-click="searchAddress()" ng-disabled="disableSearch"
+            style="float:right;margin:5px;" tabindex="130">Search
+        Address
+    </button>
+</div>
+<div ng-show="isAdrSearchSuccess" class="searchResult">
+    <div class="hrMargin">
+        <span class="headerLabel">Search Results: {{ numOfMatchingAddresses }} address(es) found.</span>
+        <hr class="hrStyle">
+    </div>
+    <div class="searchResultGridStyle" style="height: 250px" ng-grid="addressGrid"></div>
+
+</div>
+
+<div ng-show="showMap"
+     style="clear:both; float: left;height: 420px;width: 98%; margin-left: 2px;margin-right: 2px;margin-bottom: 20px; margin-top:10px;">
+    <div id="map-canvas" class="map-canvas"></div>
+</div>
+
+<div class="hrMargin" style="clear:both; float: left; margin-bottom: 10px;">
+    <span class="headerLabel collapse" ng-click="collapseAccountDetPanel()"> Account Details</span>
+    <hr class="hrStyle"/>
+</div>
+<div ng-form="billingAccounDetailForm" style="clear:both; float: left;margin-bottom: 10px;" ng-show="displayAccountDetPanel">
+
+    <fieldset style="margin: 2px;margin-bottom: 20px;">
+
+        <div class="cqmFieldDiv">
+            <label>Account Name <span class="rfo"> (RFO)</span></label>
+            <input class="cqmField" type="text" id="accountName" name="accountName" ng-required="true"
+                   ng-model="billingAccountFormData.accountFriendlyName" tabindex="140">
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>User Billing Reference</label>
+            <input class="cqmField" type="text" id="customerBillingReference" name="customerBillingReference"
+                   ng-model="billingAccountFormData.customerBillingReference" tabindex="141">
+        </div>
+
+        <div class="cqmFieldDiv" ng-init="getPeriodList()">
+            <label>Bill Period <span class="rfo"> (RFO)</span></label>
+            <select id="billPeriod"  ng-model="billingAccountFormData.billPeriod"
+                    ng-options="period for period  in periodList" ng-change="checkBillPeriod()"
+                    data-placeholder="Select period"  ng-required="true"
+                    class="cqmField" tabindex="142">
+            </select>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>US Scenario <span class="rfo"> (RFO)</span></label>
+            <select id="usScenario" ng-model="billingAccountFormData.usScenario"
+                    ng-options="o.value as o.name for o in usScenario"
+                    data-placeholder="Select no. of days" ng-required="true"
+                    class="cqmField" tabindex="143"/>
+            </select>
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Invoice Language <span class="rfo"> (RFO)</span></label>
+            <select id="invoiceLanguage" ng-model="billingAccountFormData.invoiceLanguage"
+                    ng-options="lang for lang in invoiceLanguage"
+                    data-placeholder="Select Language" ng-required="true"
+                    class="cqmField" tabindex="144"/>
+            </select>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Billing Currency <span class="rfo"> (RFO)</span></label>
+            <select id="billingCurrency" ng-model="billingAccountFormData.billingCurrencyId"
+                    ng-options="currency.currId as currency.currCode  for currency in currencyCodes"
+                    ng-required="true"
+                    class="cqmField" tabindex="145"/>
+            </select>
+        </div>
+
+
+        <div class="cqmFieldDiv" ng-init="getPaymentDays()">
+            <label>Payment Days <span class="rfo"> (RFO)</span></label>
+            <select id="paymentDays" ng-model="billingAccountFormData.paymentDays"
+                    ng-options="days for days in paymentDaysList" ng-change="checkBillPaymentDays()"
+                    data-placeholder="Select no. of days" ng-required="true"
+                    class="cqmField" tabindex="146" >
+            </select>
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Info Currency <span class="rfo"> (RFO)</span></label>
+
+            <select id="infoCurrency" ng-model="billingAccountFormData.infoCurrId"
+                    ng-options="currency.currId as currency.currCode  for currency in currencyCodes"
+                    ng-required="true"
+                    class="cqmField" tabindex="147"/>
+            </select>
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Payment Method <span class="rfo"> (RFO)</span></label>
+            <select id="paymentMethod" ng-model="billingAccountFormData.paymentMethod"
+                    ng-options="o for o in accountClassificationList"
+                    data-placeholder="Select Payment method" ng-required="true"
+                    class="cqmField" tabindex="148"/>
+            </select>
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Activation Date <span class="rfo"> (RFO)</span></label>
+            <input class="cqmField" cqm-datepicker placeholder="YYYY-MM-DD" type="text" id="activationDate" name="activationDate"
+                   ng-required="true"
+                   ng-model="billingAccountFormData.activationDate" tabindex="149"/>
+        </div>
+    </fieldset>
+</div>
+
+<div class="hrMargin" style="clear:both; float: left; margin-bottom: 10px;">
+    <span class="headerLabel collapse"> Link Project Code</span>
+    <hr class="hrStyle"/>
+</div>
+<div ng-form="ProjectCodeAssociationForm" style="clear:both; padding-top:5px;float: left;width: 98%" ng-show="displayAssLePanel">
+<div style="margin-top: 25px">
+    <label class="cqmField">Project Code </label>
+    <input type="text" id="projectCode" name="projectCode"
+           class="cqmFieldInOneRow" maxlength="10" size="10"
+           data-placeholder="Enter Project Code.."
+           ng-model="clarityProjectAssociationForm.projectCode" style="width:12em" required/>
+    <button class="btn cqmFieldInOneRow" id="searcProBtw" style="margin-left: 20px; padding: 1px;height: 30px;border-radius: 4px;margin-top: -3px"
+             ng-click="searchProjectByCode()">
+        Search Code
+    </button>
+</div>
+ </div>
+<div class="cqmFieldInOneRow">
+    <div style="float:left;">
+    <label class="cqmField">Project Name </label>
+    <input type="text" id="projectName" name="projectCode"
+           class="cqmFieldInOneRow"
+           data-placeholder="Enter Project Name.."
+           ng-model="clarityProjectAssociationForm.projectName" style="width:12em" required/>
+        <label class="cqmFieldInOneRow">And/Or </label>
+    </div>
+
+    <div class="cqmFieldInOneRow">
+    <label class="cqmField">SAC Code </label>
+    <input type="text" id="sacCode" name="sacCode"
+           class="cqmFieldInOneRow"
+           data-placeholder="Enter Project SAC Code.."
+           ng-model="clarityProjectAssociationForm.sacId" style="width:12em" required/>
+    <button class="btn cqmFieldInOneRow" id="advanceProSearchBtw" style="margin-left: 20px; padding: 1px;height: 30px;border-radius: 4px;margin-top: -3px"
+            ng-click="advanceProjectSearch()">
+        Advance Search
+    </button>
+    </div>
+</div>
+<div class="searchResultGridStyle" style="height: 250px" ng-grid="clarityProjectDetailsGrid"></div>
+
+
+<div name="buttonDiv" class="containerDiv" style="clear:both; float: left" ng-hide="isCpUser">
+
+    <button class="btn" ng-click="clearAll()"
+            style="float:right;margin:5px;" tabindex="163">
+        Clear All
+    </button>
+
+    <button class="btn" ng-click="createBillingAccount()"
+            ng-disabled="billingAccounDetailForm.$invalid || billingAccountContactForm.$invalid"
+            style="float:right;margin:5px;" tabindex="162">
+        Create New Account
+    </button>
+
+    <button class="btn" ng-click="updateBillingAccount()"
+            ng-disabled="billingAccounDetailForm.$invalid || billingAccountContactForm.$invalid || disableUpdateBtnUI"
+            style="float:right;margin:5px;" tabindex="161">
+        Update Account
+    </button>
+</div>
+
+
+<div ng-form="billingAssociationForm" ng-model="billingAssociateModel" style="clear:both;float:left;padding-top: 10px;"
+     class="containerDiv" ng-hide="isDirectUser">
+    <div class="hrMargin">
+        <span class="headerLabel">Billing Account Association</span>
+        <hr class="hrStyle" width="90%"/>
+    </div>
+    <div style="margin-top: 10px;">
+        <div class="cqmFieldDiv">
+            <label>Associated Customer Name </label>
+            <select id="associateCust" ng-model="billingAssociateModel.assocCust"
+                    data-placeholder="Select a Customer"
+                    ng-options="customer as customer.cusName for customer in customerList"
+                    class="cqmField"
+                    ng-change="getCustomerAdditionalDetail()"
+                    ng-required="true" tabindex="180">
+            </select>
+        </div>
+        <button class="btn" ng-click="associateBillingAccount()" ng-disabled="!(billingAssociationForm.$valid && selectedAccount && enableAssociateBillButton)"
+                style="float:right; margin-top: 15px" tabindex="181">
+            Associate Customer
+        </button>
+    </div>
+</div>
+</div>
+
+

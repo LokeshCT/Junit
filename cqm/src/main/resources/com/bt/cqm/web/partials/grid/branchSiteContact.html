@@ -1,0 +1,108 @@
+<div class="innerWrap"  ng-controller="customerBranchSiteContactController"  ng-init="loadBranchSite()">
+
+    <div class="hrMargin headerLabel">
+        <span class="headerLabel">Customer Branch Sites</span>
+        <hr class="hrStyle" width="98%">
+    </div>
+
+    <div name="filterSite" style="margin-top: 10px;float: left;width:98%">
+        <div class="cqmFieldDiv">
+            <label>Standard Filter</label>
+            <select name="siteType" class="cqmField" id="siteType" ng-model="siteType"
+                    ng-change="onStandardFilterChange()"
+                    ng-options="st.value as st.name for st in siteTypeList"></select>
+
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Filter Text</label>
+            <input type="text" name="fiterText" class="cqmField" id="fiterText" ng-model="fiterText"/>
+        </div>
+    </div>
+    <form name="branchSiteContacts" id="branchSiteContacts" style="float: left;width:98%">
+        <div ng-form="branchSiteContactNGForm">
+
+            <div class="searchResultGridStyle" style="height:250px;"  ng-grid="branchSiteGrid"></div>
+
+            <div class="hrMargin" ng-hide="showBranchSiteContacts">
+                <span class="rfo">*Select Branch Site to View  Contacts</span>
+            </div>
+
+            <div class="hrMargin headerLabel" ng-show="showBranchSiteContacts">
+                <span class="headerLabel">Customer Branch Site Contacts: {{ numOfCustomerContacts }}</span>
+                <hr class="hrStyle" width="98%">
+            </div>
+
+            <div class="searchResultGridStyle" style="height: 200px" ng-grid="branchSiteContactGrid"
+                 ng-show="showBranchSiteContacts && hasContacts"></div>
+
+            <div class="contactsContainerDiv" ng-show="showBranchSiteContacts">
+                <div class="cqmFieldDiv">
+                    <label>Role <span class="rfo">(RFO)</span></label>
+                    <select id="sc_role" class="cqmField" ng-model="contactToBeUpdated.role" ng-options="role.value as role.name for role in roles"
+                            ng-change="updateBranchSiteContactUI()" required>
+                        <option style="display:none" value="">Select a Role</option>
+                    </select>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Job Title <span class="rfo">(RFO)</span></label>
+                    <input type="text" id="sc_jobTitle" name="sc_jobTitle" class="cqmField"
+                                ng-model="contactToBeUpdated.jobTitle"
+                                required/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>First Name <span class="rfo">(RFO)</span></label>
+                    <input type="text" id="sc_fname" name="sc_fname" class="cqmField"
+                                ng-model="contactToBeUpdated.firstName"
+                                ng-pattern="/^(\D)+$/"
+                                required/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Last Name <span class="rfo">(RFO)</span></label>
+                    <div><input type="text" id="sc_lname" name="sc_lname" class="cqmField"
+                                ng-model="contactToBeUpdated.lastName"
+                                ng-pattern="/^(\D)+$/"
+                                required/></div>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Email<span class="rfo" ng-show="isEmailMandatory">(RFO)</span></label>
+                    <input type="email" id="sc_email" name="sc_email" class="cqmField" ng-model="contactToBeUpdated.email" ng-required="isEmailMandatory"/>
+                </div>
+                <input class="branchSiteField" type="hidden" id="bfgSiteId" name="bfgSiteId"
+                       ng-model="contactToBeUpdated.bfgSiteId" disabled="true">
+
+                <div class="cqmFieldDiv">
+                    <label>Phone Number <span class="rfo">(RFO)</span></label>
+                    <input type="text" no-alpha id="sc_phone" name="sc_phone" class="cqmField" ng-model="contactToBeUpdated.phoneNumber" required/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Fax Number</label>
+                    <input type="text" id="sc_fax" name="sc_fax" class="cqmField" no-alpha
+                                ng-model="contactToBeUpdated.fax"/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Mobile Number</label>
+                    <input type="text" no-alpha id="sc_mobile" name="sc_mobile" class="cqmField" ng-model="contactToBeUpdated.mobileNumber"/>
+
+                </div>
+            </div>
+
+            <div class="contactsButtonContainerDiv" ng-show="showBranchSiteContacts">
+                <div class="btnDiv" align="right">
+                    <button class="btn" ng-disabled="!branchSiteContactNGForm.$valid || !branchSiteContactUI.enableCreateContactButton"
+                            ng-click="createBranchSiteContact()">Create
+                    </button>
+                    <button class="btn" ng-disabled="!branchSiteContactNGForm.$valid || !branchSiteContactUI.enableUpdateContactButton"
+                            ng-click="updateBranchSiteContact()">Update
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>

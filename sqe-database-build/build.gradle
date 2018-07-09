@@ -1,0 +1,240 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+version = UNUSED
+group = UNUSED
+
+dependencies {}
+
+repositories {
+    mavenLocal()
+    mavenRepo name: 'BT Collaborate mirrors',
+              urls: ["https://collaborate.bt.com/artefacts/content/groups/public",
+              "https://collaborate.bt.com/artefacts/content/repositories/btgs-andes-sqe-releases",
+              "https://collaborate.bt.com/artefacts/content/repositories/btgs-andes-sqe-snapshots"]
+}
+/*
+ * Define nexusUserName=<UIN> and nexusPassword=<IUSER password> in <home directory>/.gradle/gradle.properties
+ */
+if (!hasProperty('nexusUserName'))
+    nexusUserName = ''
+if (!hasProperty('nexusPassword'))
+    nexusPassword = ''
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: 'https://collaborate.bt.com/artefacts/content/repositories/btgs-andes-sqe-releases') {
+            authentication(userName: nexusUserName, password: nexusPassword)
+        }
+        snapshotRepository(url: 'https://collaborate.bt.com/artefacts/content/repositories/btgs-andes-sqe-snapshots') {
+            authentication(userName: nexusUserName, password: nexusPassword)
+        }
+    }
+}
+gradle.taskGraph.whenReady {taskGraph ->
+    if (taskGraph.hasTask(realclean))
+        forceClean = true
+}
+
+// Realclean task to removed cached versions of the JARs - (gradle cache + local maven cache)
+task realclean(dependsOn: clean, description: 'Clean, plus clean cached JARs') << {
+    userHome = System.getProperty("user.home")
+    doRealClean "${userHome}/.m2/repository/${project.group.replaceAll(/\./, '/')}/${project.name}/${project.version}" // Maven2
+    doRealClean "${userHome}/.gradle/cache/${project.group}/${project.name}/jars/${project.name}-${project.version}.jar" // Gradle
+}
+
+def doRealClean(pathToCache) {
+    logger.info "Cleaning $pathToCache"
+    cache = new File(pathToCache)
+    if (cache.exists()) {
+        if (cache.isDirectory() ? cache.deleteDir() : cache.delete()) {
+            logger.info "Cleaned $pathToCache"
+        }
+        else
+            logger.warn "ERROR: Couldn't delete the local repository cache $pathToCache"
+    }
+    else
+        logger.info "No cache found for $pathToCache"
+}
+
+// Common compiler flags
+tasks.withType(Compile) {
+    options.compilerArgs << "-Xlint:unchecked"
+}
+
+idea.module {
+    def  variables = ['USER_HOME': new File(System.getProperty("user.home"))]
+    iml {
+        // Generate <orderEntry type="library" name="Clover IDEA Plugin" level="application" />
+        withXml { root ->
+            def rootComponent = root.asNode().depthFirst().find { it.@name == 'NewModuleRootManager'}
+            //rootComponent.appendNode('orderEntry', ['type': 'library', 'name': 'Clover IDEA Plugin', 'level': 'application'])
+            rootComponent.appendNode('orderEntry', ['type': 'library', 'name': 'groovy-1.8.0', 'level': 'application'])
+        }
+    }
+}
+task regenerateIdeaModule(dependsOn: [cleanIdeaModule, ideaModule]) {
+    description = "Rebuild the IDEA module definitions e.g. to synchronise library dependencies"
+}
+
+
+def sharedLibraries = "${rootProject.projectDir}/ide-deps"
+
+task cleanDependencies << {
+    description = "Remove the cache of the IDE dependencies"
+    delete(sharedLibraries)
+}
+
+task syncDependencies(dependsOn: testClasses) << {
+    description = "Create or refresh the cache of the IDE dependencies"
+    configurations.testRuntime.grep {it.parent.contains('cache')}.each { artifact ->
+        def parentPathComponents = artifact.parent.split('/')
+        def group = parentPathComponents[-3]
+        def artifactName = parentPathComponents[-2]
+        def archiveName = artifact.name
+        copy {
+            from artifact.absolutePath
+            into "$sharedLibraries/$group/$artifactName/"
+        }
+    }
+}
+
+dependencies {
+    compile([
+            'log4j:log4j:1.2.16',
+            'org.slf4j:slf4j-api:1.6.1',
+            'ch.qos.logback:logback-classic:0.9.28',
+            'commons-collections:commons-collections:3.2.1',
+            'commons-lang:commons-lang:2.6',
+            'com.bt.commons:configuration:1.0',
+            ])
+
+    testCompile(['junit:junit:4.8.2',
+                'org.jmock:jmock-junit4:2.5.1',
+                'org.jmock:jmock-legacy:2.5.1',
+                'org.junit.extensions.cpsuite:cpsuite:1.2.5',
+                ])
+}
+
+// Ensure that any non-Java files in the source packages are copied across at compile time
+task copyMainResources(type: Copy) {
+    from('src/main/java') {
+        exclude '**/*.java'
+    }
+    into 'build/classes/main'
+}
+processResources.dependsOn copyMainResources
+
+task copyTestResources(type: Copy) {
+    from('src/test/java') {
+        exclude '**/*.java'
+    }
+    into 'build/classes/test'
+}
+processTestResources.dependsOn copyTestResources
+
+// Make sure no 'Suite' classes are included in test runs - they result in duplicated tests
+test {
+    exclude "**/*Suite*.class"
+}
+
+// Specific test goals (for convenience)
+task unitTests(type: Test) {
+    description = "Run Unit tests only"
+    include "**/*Test.class"
+    exclude "**/*Suite*.class"
+    exclude "**/*Acceptance*.class"
+    exclude "**/*Integration*.class"
+}
+
+// Define and Register extra JARs to be produced from the compiled tests
+task testJar(type: Jar) {
+    classifier = 'tests'
+    from sourceSets.test.classes
+}
+// .. and for the source code
+task sourcesJar(type: Jar) {
+    classifier = 'source'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives testJar
+    archives sourcesJar
+}
+
+DB_DRIVER = "oracle.jdbc.driver.OracleDriver"
+
+def env = System.getenv()
+
+DBA_USERID = env["ORACLE_SYSTEM_USER"] ?: "system"
+DBA_PASSWORD = env["ORACLE_SYSTEM_PASSWD"] ?: "admin"
+
+configurations {
+    database {
+        user: 'please-override-me'
+        password: 'please-override-me'
+    }
+}
+
+task initializeDatabaseConfig << {
+    configurations.database.user = 'SQE_USER'
+    configurations.database.password = 'SQE_USER'
+}
+
+dependencies {
+    compile([
+            'org.dbunit:dbunit:2.4.8',
+            'com.oracle:ojdbc6:11.1.0.6.0'
+            ])
+
+    database 'com.oracle:ojdbc6:11.1.0.6.0'
+}
+
+task dropUsers(dependsOn: initializeDatabaseConfig) << {
+    dropUser('SQE_USER');
+}
+
+task createUsers(dependsOn: dropUsers) << {
+    createUser('SQE_USER', 'SQE_USER');
+}
+
+task databaseImportBefore(dependsOn: createUsers) << {
+    println 'Applying database schema dump before importing data'
+    executeSqlPlus("$rootDir/src/main/resources/database/before.sql", configurations.database.user, configurations.database.password)
+}
+
+
+task databaseImportAfter(dependsOn: initializeDatabaseConfig) << {
+    println 'Applying database schema dump after importing data'
+    executeSqlPlus("$rootDir/src/main/resources/database/after.sql", configurations.database.user, configurations.database.password)
+}
+
+task databaseImport(dependsOn: databaseImportBefore) << {
+    println 'Applied exported database schema and data'
+}
+
+def createTablespace(name, filePath) {
+    println 'Creating tablespace for schema'
+    executeSqlPlus("$rootDir/src/main/resources/database/create-tablespace.sql", DBA_USERID, DBA_PASSWORD, name, filePath)
+}
+
+def dropUser(userName) {
+    println "Dropping $userName user schema";
+    executeSqlPlus("$rootDir/src/main/resources/database/drop-user.sql", DBA_USERID, DBA_PASSWORD, userName)
+}
+
+def createUser(userName, password) {
+    println "Creating $userName user schema"
+    executeSqlPlus("$rootDir/src/main/resources/database/create-user.sql", DBA_USERID, DBA_PASSWORD,
+                   userName,
+                   password);
+}
+
+def executeSqlPlus(String sqlFilePath, String username, String password, String... args) {
+    lineToExecute = ["sqlplus", "$username/$password@XE", "@$sqlFilePath"]
+    lineToExecute.addAll(args)
+    exec {
+        commandLine = lineToExecute
+    }
+}

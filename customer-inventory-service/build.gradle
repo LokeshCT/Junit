@@ -1,0 +1,27 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+ext.coverageTargetPct = 100
+ext.coverageBranchTargetPct = 100
+
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':core')
+dependsOnIncludingTests(project, ':customer-inventory-service-client')
+dependsOnIncludingTests(project, ':customer-inventory-client') // once we create a new Asset class we can remove this dependency on CIF Client for AssetDTO.
+dependsOnIncludingTests(project, ':customer-inventory')
+dependsOnIncludingTests(project, ':pmr-client')
+dependsOnIncludingTests(project, ':project-engine-client')
+dependsOnIncludingTests(project, ':ape-facade-client')
+dependsOnIncludingTests(project, ':tpe-client')
+dependsOnIncludingTests(project, ':project-engine-web')
+
+dependencies {
+    compile([
+       'javax.ws.rs:javax.ws.rs-api:2.0'
+    ])
+
+    testCompile([
+
+    ])
+}

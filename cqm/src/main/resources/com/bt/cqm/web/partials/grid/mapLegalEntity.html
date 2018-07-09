@@ -1,0 +1,112 @@
+<div ng-controller="billingAccountController" class="innerWrapBillingAccount" ng-init="loadPage()">
+
+<div class="searchBillingResult">
+    <div class="hrMargin">
+        <span class="headerLabel collapse" ng-click="collapseAccountGrid()">Billing Account</span>
+        <hr class="hrStyle">
+    </div>
+    <div class="headerLabel" ng-show="displayAccountGrid">Accounts : {{numOfMatchingAccounts}} account(s) found.</div>
+    <div class="searchResultGridStyle" style="height: 250px" ng-grid="billingAccountGrid" ng-show="displayAccountGrid"></div>
+</div>
+
+
+<div style="clear:both; float: left;width: 100%">
+    <form name="mapLegalEntityForm" id="mapLegalEntityForm" ng-model="mapLegalEntityForm">
+
+        <div ng-form="mapLegalEntityNGForm" ng-model="mapLegalEntityData" style="clear:both;padding-top: 10px;">
+            <div class="hrMargin">
+                <span class="headerLabel">Advanced Billing Attributes </span>
+                <hr class="hrStyle" width="90%"/>
+            </div>
+            <div style="clear:both; float: left;margin-top: 10px;width: 100%">
+                <div class="cqmFieldDiv">
+                    <label>Legal Company Name</label>
+                    <select ng-model="mapLegalEntityData.leName"
+                     ng-options="legalEntity.leName for legalEntity in legalEntityList"
+                         class="cqmField"  ng-required="true" tabindex="170"  ng-change="updateLeId()"/>
+                </div>
+
+                <div class="cqmFieldDiv" ng-hide="true">
+                    <label>Registered Country</label>
+                    <input type="text" id="registeredCountry" name="registeredCountry" class="cqmField"
+                           ng-model="legalEntityFormData.registeredCountry" disabled="true" >
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Billing Country </label>
+                    <select class="cqmField" ng-model="mapLegalEntityData.billingCountry" ng-required="true" tabindex="171">
+                        <option ng-repeat="channel in salesUser.salesChannelList" value={{channel.name}}>
+                            {{channel.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="cqmFieldDiv">
+                    <label>Billing Mode</label>
+                    <select class="cqmField" id="billingMode" name="billingMode"
+                            ng-model="mapLegalEntityData.billingMode"
+                            ng-options="billingMode for billingMode  in billingModeList"
+                            data-placeholder="Select " ng-required="true" ng-change="changeBillingMode()" tabindex="172"
+                        />
+                    </select>
+                </div>
+                <div class="cqmFieldDiv">
+                    <label>Account Classification</label>
+                    <select class="cqmField" id="accountClassification" name="accountClassification"
+                            ng-model="mapLegalEntityData.accountClassification"
+                            ng-options="accountClassification for accountClassification  in accountClassificationList"
+                            data-placeholder="Select " ng-required="true" ng-change="showInternalFieldsFunction()" tabindex="172"
+                        />
+                    </select>
+                </div>
+
+            </div>
+
+            <div style="clear:both; float: left;margin-top: 10px;width: 100%" ng-hide="!showInternalFields">
+                <div class="cqmFieldDiv" ng-show="showInternalFields">
+                    <label>Receiving GFR</label>
+                    <input class="cqmField" type="text" id="receivinggfr" name="receivinggfr"
+                           ng-model="mapLegalEntityData.receivinggfr" tabindex="173">
+                </div>
+                <div class="cqmFieldDiv" ng-show="showInternalFields">
+                    <label>Originating OUC</label>
+                    <input class="cqmField" type="text" id="originatingouc" name="originatingouc"
+                           ng-model="mapLegalEntityData.originatingouc" tabindex="174">
+                </div>
+                <div class="cqmFieldDiv" ng-show="showInternalFields">
+                    <label>Receiving OUC</label>
+                    <input class="cqmField" type="text" id="receivingouc" name="receivingouc"
+                           ng-model="mapLegalEntityData.receivingouc" tabindex="175">
+                </div>
+                <div class="cqmFieldDiv" ng-show="showInternalFields">
+                    <label>TCA Number</label>
+                    <input class="cqmField" type="text" id="tcaNumber" name="tcaNumber"
+                           ng-model="mapLegalEntityData.tcaNumber" tabindex="176">
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+
+
+
+<div name="buttonDiv" class="containerDiv" style="clear:both; float: left" ng-hide="isCpUser">
+
+
+    <button class="btn" ng-click="clearAll()"
+            style="float:right;margin:5px;" tabindex="162">
+        Reset
+    </button>
+
+    <button class="btn" ng-click="mapLeIdBillingAccount()"
+            ng-disabled="billingAccounDetailForm.$invalid || billingAccountContactForm.$invalid || disableUpdateBtnUI"
+            style="float:right;margin:5px;" tabindex="160">
+        Update Legal Entity
+    </button>
+
+</div>
+</div>
+
+

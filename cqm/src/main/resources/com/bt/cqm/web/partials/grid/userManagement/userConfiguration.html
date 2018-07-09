@@ -1,0 +1,165 @@
+<div class="innerWrapUserMgmt" ng-controller="userManagementController" ng-init="onLoad()">
+
+    <div ng-form="userConfigurationForm" ng-model="userConfigFormData" ng-init="onPageLoad()">
+
+        <div style="margin-top: 25px">
+            <label for="loginIDTextFld" class="cqmFieldInOneRow">User ID </label>
+            <input type="text" id="loginIDTextFld" name="loginId"
+                   class="cqmFieldInOneRow"
+                   data-placeholder="Enter User Id.."
+                   ng-model="userConfigFormData.loginId" style="width:12em" required/>
+            <button class="btn cqmFieldInOneRow" id="searchBut" style="margin-left: 20px; padding: 1px;height: 30px;border-radius: 4px;margin-top: -3px"
+                    ng-disabled="!userConfigFormData.loginId.length>0" ng-click="loginSearch()">
+                Search
+            </button>
+        </div>
+        <div ng-show="hasError" style="color:red;margin-top: 10px;margin-left: 20px;float: left">{{errorMsg}}</div>
+
+        <div ng-show="!hasError && displayuserDetails" style="clear: both;float:left;margin-top: 20px;height: 90%;width:98%;">
+            <fieldset style="height:90%;margin-top: 20px;">
+                <legend> Configure User</legend>
+                <div class="centralSiteFieldDiv">
+                    <input type="radio" ng-model="userConfigFormData.roleTypeId" value="1" ng-disabled="isDirectTypeDisabled"
+                           ng-change="roleTypeSelected()">Direct
+                    <input type="radio" ng-model="userConfigFormData.roleTypeId" value="2" ng-change="roleTypeSelected()" >In Direct
+                </div>
+                <div class="headerLabel" style="clear: both;margin: 10px">User Roles</div>
+                <table style="height: 95%;width:99%">
+                    <tr>
+                        <!--<th><H5>Role Type</H5></th>-->
+                        <th><H5>Available Roles : {{availableRoleSize}}</H5></th>
+                        <th></th>
+                        <th><H5>Assigned Roles :{{assignedRoleSize}}</H5></th>
+                        <th></th>
+                        <th><H5>Default Role</H5></th>
+                    </tr>
+                    <tr>
+                        <td style="width:35%">
+                            <select multiple=true ui-select ng-model="userConfigFormData.selectedAvailRoles"
+                                    ng-change="userAddRoleSelect()"
+                                    ng-options="aRole as aRole.roleName for aRole in userConfigFormData.availableRoleList"
+                                    style="float:left;width:100%;margin: 0px" ng-disabled="availableRoleSize == 0" required>
+                                <option value="" disabled>Choose a User Role</option>
+                            </select>
+                        </td>
+                        <td style="width:10%">
+                            <button style="margin:5px;margin-top: 10px"
+                                    ng-click="moveItem(userConfigFormData.selectedAvailRoles, userConfigFormData.assignedRoleList,'ROLE')"
+                                    ng-disabled="disableRoleAddButton">
+                                Add -><i class="icon-hand-right"/>
+                            </button>
+                            <br>
+                            <button style="margin:5px;margin-top: 10px"
+                                    ng-click="removeItem(userConfigFormData.selectedAssignedRoleList, userConfigFormData.assignedRoleList,'ROLE')"
+                                    ng-disabled="disableRoleRemoveButton">
+                                <- Remove <i class="icon-hand-left"/>
+                            </button>
+                        </td>
+                        <td>
+                            <select multiple=true
+                                    ng-model="userConfigFormData.selectedAssignedRoleList"
+                                    ng-click="onRemoveRoleSelect()"
+                                    ng-disabled="assignedRoleSize == 0"
+                                    ng-options="aRole as aRole.roleName for aRole in userConfigFormData.assignedRoleList">
+                            </select>
+                        </td>
+                        <td>
+                            <button style="margin:5px;margin-top: 10px"
+                                    ng-click="setDefaultRole(userConfigFormData.selectedAssignedRoleList[0])"
+                                    ng-disabled="disableRoleRemoveButton">
+                                Set Default Role<i class="icon-hand-left"/>
+                            </button>
+                        </td>
+                        <td>
+                            <select required >
+                                    <option value="userConfigFormData.defaultRole">{{userConfigFormData.defaultRole.roleName}}</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <div class="headerLabel" style="clear: both;margin: 10px">Sales Channels</div>
+
+                <div>
+                    <table style="height: 80%;width:99%">
+                        <tbody>
+                        <tr>
+                            <th><H5>Available Sales Channels : {{availableSalesChannelListSize}}</H5></th>
+                            <th></th>
+                            <th><H5>Sales Channels for User : {{userSalesChannelListSize}}</H5></th>
+                            <th></th>
+                            <th><H5>Default Channel</H5></th>
+                        </tr>
+                        <tr>
+                            <td><select multiple="true"
+                                        ng-model="userConfigFormData.availableList"
+                                        ng-click="userAddSalesChannelSelect()"
+                                        ng-disabled="availableSalesChannelListSize == 0"
+                                        ng-options="availableSalesChannel.name for availableSalesChannel in userConfigFormData.availableSalesChannelList">
+                            </select></td>
+
+
+                            <td>
+
+                                <button style="margin:5px;margin-top: 10px"
+                                        ng-click="moveItem(userConfigFormData.availableList, userConfigFormData.userSalesChannelList,'SALES_CHANNEL')"
+                                        ng-disabled="disableSalesChnlAddButton">
+                                    Add <i class="icon-hand-right"/>
+                                </button>
+                                <br>
+                                <button style="margin:5px;margin-top: 10px"
+                                        ng-click="removeItem(userConfigFormData.selectedSalesChannelList, userConfigFormData.userSalesChannelList,'SALES_CHANNEL')"
+                                        ng-disabled="disableSalesChnlRemoveButton">
+                                    Remove <i class="icon-hand-left"/>
+                                </button>
+
+                            </td>
+
+                            <td>
+                                <select multiple="true"
+                                        ng-model="userConfigFormData.selectedSalesChannelList"
+                                        ng-click="onRemoveSalesChannelSelect()"
+                                        ng-disabled="userSalesChannelListSize == 0"
+                                        ng-options="userSalesChannel.name for userSalesChannel in userConfigFormData.userSalesChannelList">
+                                </select>
+                            </td>
+                            <td>
+                                <button style="margin:5px;margin-top: 10px"
+                                        ng-click="setDefaultChannel(userConfigFormData.selectedSalesChannelList[0])"
+                                        ng-disabled="disableSalesChnlRemoveButton">
+                                    Set Default Channel<i class="icon-hand-left"/>
+                                </button>
+                            </td>
+                            <td>
+                                <select required >
+                                    <option value="userConfigFormData.defaultRole">{{userConfigFormData.defaultChannel.name}}</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="containerDiv" style="float:left;">
+
+                    <button class="btn" ng-click="reset()" style="float:left;margin:5px;" ng-disabled="!hasModifiedData && !hasModifiedDataRoleType">
+                        Reset
+                    </button>
+
+                    <button class="btn" ng-disabled="!((hasModifiedData || hasModifiedDataRoleType) && !isDefaultSelectEmpty)" ng-click="submit()"
+                            style="float:left;margin:5px;">
+                        Save
+                    </button>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,26 @@
+<div ng-controller="auditTrailController" class="reportsForm" ng-init="loadPage('Order')">
+    <div ng-show="!hasSummaryRecord">
+        <span class="headerLabel">{{msg}}</span>
+    </div>
+    <div ng-show="hasSummaryRecord">
+        <div class="hrMargin headerLabel">
+            <span class="headerLabel">Order Audit Trail Summary</span>
+            <hr class="hrStyle">
+        </div>
+        <div style="margin-top: 10px;">
+            <div style="margin-left: 5px">Summary Record : {{summaryRecordCount}}</div>
+            <div class="searchResultGridStyle" ng-grid="auditSummaryGrid" style="height:350px;"></div>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px" ng-show="hasDetailRecord">
+        <div class="hrMargin headerLabel" ng-show="true">
+            <span class="headerLabel">Order Audit Trail Detail</span>
+            <hr class="hrStyle">
+        </div>
+        <div style="margin-top: 10px;">
+            <div style="margin-left: 5px">Detail Record : {{detailRecordCount}}</div>
+            <div class="searchResultGridStyle" ng-grid="auditDetailGrid" style="height:250px;"></div>
+        </div>
+    </div>
+</div>

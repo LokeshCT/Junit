@@ -1,0 +1,43 @@
+
+import java.security.MessageDigest
+task publicApiTripwire() {
+    doLast {
+        Properties currentHashes = new Properties()
+        project.sourceSets['main'].allJava.each { File javaFile ->
+            if(javaFile.text.contains('@PublicAPI')) {
+                MessageDigest digest = MessageDigest.getInstance("MD5")
+                // Generate the digest based on the text of the file with all whitespace removed
+                // this should get around line-endings changing on checkout
+                digest.update(javaFile.text.replaceAll(/\s+/, '').bytes)
+                def checksum = new BigInteger(1, digest.digest()).toString(16).padLeft(32, "0")
+                currentHashes["${project.name}.${javaFile.name}"] = checksum
+            }
+        }
+
+        def currentHashesFileName = "${projectDir}/public-api.current"
+        currentHashes.store(new FileOutputStream(currentHashesFileName), "Generated")
+
+        def referenceHashesFileName = "${projectDir}/public-api.hashes"
+        Properties referenceHashes =  new Properties()
+        referenceHashes.load(new FileInputStream(referenceHashesFileName))
+
+        //if (!project.hasProperty('ignoreTripwireFailures') &&
+        //    (compareHashes(referenceHashes, currentHashes, currentHashesFileName,referenceHashesFileName)
+        //    || compareHashes(currentHashes, referenceHashes, currentHashesFileName, referenceHashesFileName))) {
+        //    throw new GradleException('Public API has been changed, see previous output for details and the resolution')
+        //}
+    }
+}
+
+private boolean compareHashes(Properties a, Properties b, currentHashesFileName, referenceHashesFileName) {
+    boolean errors = false
+    a.each { k,v ->
+        if (a[k] != b[k]) {
+            println "[WARNING] Public API $k has changed - if this is an agreed change, or backwards compatible, please copy $currentHashesFileName onto $referenceHashesFileName and commit the file "
+            errors = true
+        }
+    }
+    return errors
+}
+
+compileJava.dependsOn publicApiTripwire

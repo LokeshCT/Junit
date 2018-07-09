@@ -1,0 +1,13 @@
+<!-- DialogBox Template -->
+<div class="modal-header">
+    <label><h3>{{hTitle}}</h3></label>
+</div>
+<div class="modal-body">
+    <div>
+        <label>{{messageBody}}</label>
+    </div>
+</div>
+<div class="modal-footer">
+    <button ng-show="showOk" class="btn btn-primary" ng-click="ok()">OK</button>
+    <button ng-show="showCancel" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

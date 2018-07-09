@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Regression">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+
+       <test name ="presetup">
+        <classes>
+         <class name="com.bt.rsqe.Common">
+         <methods>
+               <include name="launchBrowser"/> 
+         </methods>
+         </class>
+         </classes>                      
+       </test>
+                           
+     <test name="CO_Journey">
+        <classes>
+            <class name="com.bt.testng.COTestSuite">
+              <methods>                    
+                    <include name="getData"/>  
+                    <include name="launchURL"/>   
+                    <include name="createQuoteOption"/>  
+                    <include name="selectQuoteOption"/>    
+                    <include name="addProduct"/> 
+                    <include name="selectSiteID"/>
+                    <include name="addCentralServices"/>
+                    <include name="selectConfigProduct"/>
+                    <include name="selectCentralServiceBaseConfig"/>
+                    <include name="selectCentralServiceTeleEngine"/>  
+                    <include name="selectTeleEngineBaseConfig"/>                                                      
+                    <include name="selectConnectOptimisationSite"/>      
+                    <include name="selectTopology"/>
+                    <include name="selectBaseConfiguration"/>
+                     <include name="selectIPCgGatewaySpecification"/> 
+                    <include name="selectWANConnection"/>
+                    <include name="selectIPEngine"/> 
+                    <include name="selectIPEngBaseConfiguration"/> 
+                    <include name="selectCPESupplierMaintenance"/> 
+                    <include name="selectConnectOptimisationCentralService"/>                   
+                    <include name="selectOffnetAccess"/>                                                  
+                    <include name="selectPrice"/>                   
+                  	<include name="createOffer"/>  
+                    <include name="createOrder"/> 
+                    <include name="submitOrder"/>                                                                                                                                             
+              </methods>
+            </class>
+         </classes>
+      </test>        
+                                 
+      
+       <test name="AWS_Private_Journey">
+        <classes>
+            <class name="com.bt.testng.CloudTestSuite">
+              <methods>                    
+                    <include name="getData"/>  
+                    <include name="launchURL"/>   
+                    <include name="createQuoteOption"  dependsOnMethods ="launchURL"/>  
+                    <include name="selectQuoteOption"  dependsOnMethods ="createQuoteOption"/>      
+                    <include name="addProduct"  dependsOnMethods ="selectQuoteOption"/> 
+                    <include name="selectContinueToQuoteDetails" dependsOnMethods ="addProduct"/>        
+                    <include name="selectConfigProduct" dependsOnMethods ="selectContinueToQuoteDetails"/> 
+                    <include name="selectDirectConnectServiceProvider" dependsOnMethods ="selectConfigProduct"/>    
+                    <include name="selectBaseConfig" dependsOnMethods ="selectDirectConnectServiceProvider"/>   
+                    <include name="selectVPNSpecification" dependsOnMethods ="selectBaseConfig"/>
+                    <include name="selectProviderConnection" dependsOnMethods ="selectVPNSpecification"/>
+                    <include name="selectProviderConnectionBaseConfiguration" dependsOnMethods ="selectProviderConnection"/>  
+                    <include name="selectCloudFirewallService" dependsOnMethods ="selectProviderConnectionBaseConfiguration"/>  
+                    <include name="selectCloudServiceLeg" dependsOnMethods ="selectCloudFirewallService"/>  
+                    <include name="selectCloudLegFirewallService" dependsOnMethods ="selectCloudServiceLeg"/>     
+                    <include name="selectCloudConnectDirect" dependsOnMethods ="selectCloudLegFirewallService"/>   
+                   	<include name="selectCloudFirewallServices" dependsOnMethods ="selectCloudConnectDirect"/>   
+                    <include name="selectCFSBaseConfiguration" dependsOnMethods ="selectCloudFirewallServices"/>      
+                    <include name="selectCFSUser" dependsOnMethods ="selectCFSBaseConfiguration"/> 
+                    <include name="selectCFSUserBaseConfig" dependsOnMethods ="selectCFSUser"/>  
+                    <include name="selectQutoeDetail" dependsOnMethods ="selectCFSUserBaseConfig"/>                                                                                                      
+    		 </methods>
+            </class>
+         </classes>
+      </test>
+                   
+         <test name="AWS_Public_Journey">
+        <classes>
+            <class name="com.bt.testng.CloudTestSuite">
+              <methods>                    
+                    <include name="getData"/>  
+                    <include name="launchURL"/>   
+                    <include name="createQuoteOption" dependsOnMethods ="launchURL"/>  
+                    <include name="selectQuoteOption" dependsOnMethods="createQuoteOption"/>      
+                    <include name="addProduct" dependsOnMethods ="selectQuoteOption" /> 
+                    <include name="selectContinueToQuoteDetails" dependsOnMethods="addProduct"/>        
+                    <include name="selectConfigProduct" dependsOnMethods="selectContinueToQuoteDetails" /> 
+                    <include name="selectDirectConnectServiceProvider_Public" dependsOnMethods="selectConfigProduct"/>    
+                    <include name="selectBaseConfig" dependsOnMethods="selectDirectConnectServiceProvider_Public"/>   
+                    <include name="selectVPNSpecification" dependsOnMethods="selectBaseConfig"/>
+                    <include name="selectProviderConnection" dependsOnMethods="selectVPNSpecification"/>
+                    <include name="selectProviderConnectionBaseConfiguration" dependsOnMethods="selectProviderConnection"/>  
+                     <include name="selectCloudFirewallService" dependsOnMethods="selectProviderConnectionBaseConfiguration"/>  
+                    <include name="selectCloudServiceLeg" dependsOnMethods="selectCloudFirewallService"/>  
+                    <include name="selectCloudLegFirewallService" dependsOnMethods="selectCloudServiceLeg"/>     
+                    <include name="selectCloudConnectDirect" dependsOnMethods="selectCloudLegFirewallService"/>   
+                   	<include name="selectCloudFirewallServices" dependsOnMethods="selectCloudConnectDirect"/>   
+                    <include name="selectCFSBaseConfiguration" dependsOnMethods="selectCloudFirewallServices"/>      
+                    <include name="selectCFSUser" dependsOnMethods="selectCFSBaseConfiguration"/> 
+                    <include name="selectCFSUserBaseConfig" dependsOnMethods="selectCFSUser"/>   
+                    <include name="selectQutoeDetail" dependsOnMethods="selectCFSUserBaseConfig"/>                                                                          
+    		 </methods>
+            </class>
+         </classes>
+      </test>   
+         
+         <test name="BTCloud_Journey">
+        <classes>
+            <class name="com.bt.testng.CloudTestSuite">
+              <methods>                    
+                    <include name="getData"/>  
+                    <include name="launchURL"/>   
+                    <include name="createQuoteOption" dependsOnMethods="launchURL"/>  
+                    <include name="selectQuoteOption" dependsOnMethods="createQuoteOption"/>      
+                    <include name="addProduct" dependsOnMethods="selectQuoteOption"/> 
+                    <include name="selectContinueToQuoteDetails" dependsOnMethods="addProduct"/>        
+                    <include name="selectConfigProduct" dependsOnMethods="selectContinueToQuoteDetails"/> 
+                    <include name="selectDirectConnectServiceProvider_BTCloud" dependsOnMethods="selectConfigProduct"/>
+                    <include name="selectBaseConfiguration_BTCloud" dependsOnMethods="selectDirectConnectServiceProvider_BTCloud"/>                 
+                    <include name="selectVPNSpecification" dependsOnMethods="selectBaseConfiguration_BTCloud"/>
+                    <include name="selectProviderConnection" dependsOnMethods="selectVPNSpecification"/>
+                    <include name="selectProviderConnectionBaseConfigurationBTCloud" dependsOnMethods="selectProviderConnection"/>  
+                     <include name="selectCloudFirewallService" dependsOnMethods="selectProviderConnectionBaseConfiguration"/>  
+                    <include name="selectCloudServiceLeg" dependsOnMethods="selectCloudFirewallService"/>  
+                    <include name="selectCloudLegFirewallService" dependsOnMethods="selectCloudServiceLeg"/>     
+                    <include name="selectCloudConnectDirect" dependsOnMethods="selectCloudLegFirewallService"/>   
+                   	<include name="selectCloudFirewallServices" dependsOnMethods="selectCloudConnectDirect"/>   
+                    <include name="selectCFSBaseConfiguration" dependsOnMethods="selectCloudFirewallServices"/>      
+                    <include name="selectCFSUser" dependsOnMethods="selectCFSBaseConfiguration"/> 
+                    <include name="selectCFSUserBaseConfig" dependsOnMethods="selectCFSUser"/>      
+                    <include name="selectQutoeDetail" dependsOnMethods="selectCFSUserBaseConfig"/>                                                                       
+    		 </methods>
+            </class>
+         </classes>
+      </test> 
+       
+        <test name="Azure_Journey">
+        <classes>
+            <class name="com.bt.testng.CloudTestSuite">
+              <methods>                    
+                    <include name="getData"/>  
+                    <include name="launchURL"/>   
+                    <include name="createQuoteOption" dependsOnMethods="launchURL"/>  
+                    <include name="selectQuoteOption" dependsOnMethods="createQuoteOption"/>      
+                    <include name="addProduct" dependsOnMethods="selectQuoteOption"/> 
+                    <include name="selectContinueToQuoteDetails" dependsOnMethods="addProduct"/>        
+                    <include name="selectConfigProduct" dependsOnMethods="selectContinueToQuoteDetails"/> 
+                    <include name="selectDirectConnectServiceProvider_Azure" dependsOnMethods="selectConfigProduct"/>
+                    <include name="selectBaseConfiguration_Azure" dependsOnMethods="selectDirectConnectServiceProvider_Azure"/>                 
+                    <include name="selectVPNSpecification" dependsOnMethods="selectBaseConfiguration_Azure"/>
+                    <include name="selectMSExpressRouteServiceConnection" dependsOnMethods="selectVPNSpecification"/>
+                    <include name="selectMSExpressRouteServiceConnectionBaseConfig" dependsOnMethods="selectMSExpressRouteServiceConnection"/>                                   
+                    <include name="selectCloudFirewallService" dependsOnMethods="selectMSExpressRouteServiceConnectionBaseConfig"/>  
+                    <include name="selectCloudServiceLeg" dependsOnMethods="selectCloudFirewallService"/>  
+                    <include name="selectCloudLegFirewallService" dependsOnMethods="selectCloudServiceLeg"/>     
+                    <include name="selectCloudConnectDirect" dependsOnMethods="selectCloudLegFirewallService"/>   
+                   	<include name="selectCloudFirewallServices" dependsOnMethods="selectCloudConnectDirect"/>   
+                    <include name="selectCFSBaseConfiguration" dependsOnMethods="selectCloudFirewallServices"/>      
+                    <include name="selectCFSUser" dependsOnMethods="selectCFSBaseConfiguration"/> 
+                    <include name="selectCFSUserBaseConfig" dependsOnMethods="selectCFSUser"/>      
+                    <include name="selectQutoeDetail" dependsOnMethods="selectCFSUserBaseConfig"/>                                                                         		 
+    		 </methods>
+            </class>
+         </classes>
+      </test> 
+ 
+  
+   <test name="CA_Journey">
+        <classes>
+            <class name="com.bt.testng.CATestSuite">
+              <methods>                    
+                    <include name="getData"/>  
+                    <include name="launchURL"/>   
+                    <include name="createQuoteOption"/>  
+                    <include name="selectQuoteOption"/>    
+                    <include name="addProduct"/> 
+                    <include name="selectSiteID"/>
+                    <include name="addCentralServices"/>  
+                    <include name="addLicencePack"/> 
+                    <include name="selectConfigProduct"/>
+                    <include name="selectConnectAcceServ"/> 
+                    <include name="selectCentralMang"/>   
+                    <include name="selectElementMang"/>
+                    <include name="selectCentralMangLicencePack"/>   
+                    <include name="selectCentralMangBaseConfig"/>    
+                    <include name="selectLicenceConsumer"/>   
+                    <include name="selectConnectAccelerationSite"/>  
+                    <include name="selectTopology"/>  
+                    <include name="selectBaseConfig"/>  
+                    <include name="selectWanConnection"/> 
+                    <include name="selectSteelhead"/>     
+                    <include name="selectSteelheadBaseConfig"/>                      
+                    <include name="selectCPESuppMain"/>    
+                    <include name="selectOffnetAccess"/>    
+                    <include name="selectPrice"/>                   
+                    <include name="createOffer"/>  
+                    <include name="createOrder"/> 
+                    <include name="submitOrder"/>                                                                                                                                                                                                                                                                                                                                     
+                 </methods>
+            </class>
+         </classes>
+      </test>
+   </suite>

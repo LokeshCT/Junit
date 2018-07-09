@@ -1,0 +1,1955 @@
+------------------------------------------------------------------------------------
+   -- START OF CONSTRAINTS For All the TABLES
+------------------------------------------------------------------------------------
+ALTER TABLE ACCESS_QREF_AS_IS ADD (
+  CONSTRAINT ACCESS_QREF_ASIS_PK
+ PRIMARY KEY
+ (ACCESS_QREF_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ACCOUNT ADD (
+  CONSTRAINT ACCOUNT_PK
+ PRIMARY KEY
+ (ACCOUNT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          192K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ATTRIBUTE ADD (
+  CONSTRAINT ATTRIBUTE_PK
+ PRIMARY KEY
+ (ATTRIBUTE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ATTRIBUTE_VALUE ADD (
+  CONSTRAINT ATTRIBUTE_VALUE_PK
+ PRIMARY KEY
+ (ATTRIBUTE_VALUE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BT_SUBSIDIARY ADD (
+  CONSTRAINT BT_SUBSIDIARY_PK
+ PRIMARY KEY
+ (BT_SUBSIDIARY_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BUNDLE_SELECTION ADD (
+  CONSTRAINT BUNDLE_SELECTION_PK
+ PRIMARY KEY
+ (BUNDLE_SELECTION_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          256K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CITY ADD (
+  CONSTRAINT CITY_PK
+ PRIMARY KEY
+ (CITY_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CONTACT ADD (
+  CONSTRAINT C_CONTACTTYPE
+ CHECK (CONTACT_TYPE
+        IN ('BILLING CONTACT',
+          'CUSTOMER NAME CONTACT'
+          ,'PRIMARY SITE CONTACT'
+          ,'SECONDARY SITE CONTACT','TECHNICAL SITE CONTACT'
+          ,'CUSTOMER SALES SUPPORT CONTACT','CUSTOMER SYSTEM ENGG CONTACT'
+          ,'CUSTOMER ACCOUNT MGR CONTACT','CUSTOMER ORDER MGR CONTACT'
+          ,'CUSTOMER BT PROJECT MGR CONTACT','PRIMARY CUSTOMER CONTACT'
+          ,'SECONDARY CUSTOMER CONTACT','SERVICE ASSURANCE SITE CONTACT',
+          'SERVICE DELIVERY SITE CONTACT',
+          'KEEP CUSTOMER INFORMED DETAILS',
+          'CUSTOMER SECURITY OFFICER',
+          'MOBILE ID DELIVERY ADDRESS',
+          'WORK PLACE CORPORATE ADMINISTRATOR',
+          'ITW BILLING CONTACT',
+          '3G ADMINISTRATOR CONTACT',
+          '3G FRANCE BILLING CONTACT',
+          'RADIUS CONTACT',
+          'IPSEC CONTACT','ORDERING ORGANISATION CONTACT','DELIVERY ORGANISTATION CONTACT'
+         )
+    ));
+
+ALTER TABLE CONTACT ADD (
+  CONSTRAINT CONTACT_PK
+ PRIMARY KEY
+ (CONTACT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          448K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE COST_DETAIL_AS_IS ADD (
+  CONSTRAINT C_COST_DETAIL_AS_IS
+ PRIMARY KEY
+ (COST_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          2M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE COUNTRY ADD (
+  CONSTRAINT COUNTRY_PK
+ PRIMARY KEY
+ (COUNTRY_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CUSTOMER_BILLING_INFO ADD (
+  PRIMARY KEY
+ (CUSTOMER_BILLING_INFO_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CUSTOMER_PRODUCT ADD (
+  CONSTRAINT CUSTOMER_PRODUCT_PK
+ PRIMARY KEY
+ (CUSTOMER_PRODUCT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE GENERAL_PRODUCT_SELECTION ADD (
+  CONSTRAINT GENERAL_PRODUCT_SELECTION_PK
+ PRIMARY KEY
+ (GENERAL_PRODUCT_SELECTION_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_ATTACHMENT ADD (
+  CONSTRAINT PK_ATTACHMENT_ID
+ PRIMARY KEY
+ (ATTACHMENT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_LINE_ITEM_AS_IS ADD (
+  CONSTRAINT ORDER_LINE_ITEM_ASIS_PK
+ PRIMARY KEY
+ (ORDER_LINE_ITEM_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          2M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_LINE_ITEM_DETAIL_AS_IS ADD (
+  CONSTRAINT OLINE_ITEM_DET_ASIS_PK
+ PRIMARY KEY
+ (ORDER_LINE_ITEM_DET_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          6M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PAYMENT_METHODS ADD (
+  PRIMARY KEY
+ (ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICE_LINE_ITEM_DETAIL_AS_IS ADD (
+  CONSTRAINT PRICE_LIN_ITM_DET_ASISPK
+ PRIMARY KEY
+ (PRICE_LINE_ITEM_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          3M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICE_LIST ADD (
+  CONSTRAINT PRICE_LIST_PK
+ PRIMARY KEY
+ (PRICE_LIST_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRODUCT_MASTER ADD (
+  CONSTRAINT PRODUCT_MASTER_PK
+ PRIMARY KEY
+ (PRODUCT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRODUCT_MASTER_DETAILS ADD (
+  CONSTRAINT PRODUCT_MASTER_DETAILS_PK
+ PRIMARY KEY
+ (PROD_FRIENDLY_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_LINE_ITEM_AS_IS ADD (
+  CONSTRAINT QUOTE_LINE_ITEM_AS_IS_PK
+ PRIMARY KEY
+ (LINE_ITEM_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          3M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_LINE_ITEM_DETAIL_AS_IS ADD (
+  CONSTRAINT QOTE_LINE_ITEM_AS_IS_DETAIL_PK
+ PRIMARY KEY
+ (LINE_ITEM_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          16M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE SALES_CHANNEL ADD (
+  CONSTRAINT SALES_CHANNEL_PK
+ PRIMARY KEY
+ (SALES_CHANNEL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE SITE_BULK_UPLOAD ADD (
+  CONSTRAINT SITE_BULK_UPLOAD_PK
+ PRIMARY KEY
+ (BATCH_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          384K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE SITE_LOG ADD (
+  CONSTRAINT SITE_LOG_PK
+ PRIMARY KEY
+ (SITE_LOG_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          704K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE UM_ROLE ADD (
+  CONSTRAINT UM_ROLE_PK
+ PRIMARY KEY
+ (UM_ROLE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE UM_USER ADD (
+  CONSTRAINT UM_USER_PK
+ PRIMARY KEY
+ (UM_USER_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE VPN_ADD_DETAILS ADD (
+  PRIMARY KEY
+ (VPN_ADD_DET_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BID_ACTIVITY ADD (
+  CONSTRAINT BID_ACTIVITY_PK
+ PRIMARY KEY
+ (BID_ACTIVITY_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ADDRESS ADD (
+  CONSTRAINT ADDRESS_PK
+ PRIMARY KEY
+ (ADDRESS_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          17M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ATTRIBUTE_MAPPING ADD (
+  CONSTRAINT ATTRIBUTE_MAPPING_PK
+ PRIMARY KEY
+ (ATTRIBUTE_MAPPING_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CUSTOMER ADD (
+  CONSTRAINT CUSTOMER_PK
+ PRIMARY KEY
+ (CUSTOMER_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CUSTOMER_CONTACT ADD (
+  CONSTRAINT CUSTOMER_CONTACT_PK
+ PRIMARY KEY
+ (CUSTOMER_CONTACT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CUSTOMER_PRICE_LIST ADD (
+  CONSTRAINT CUSTOMER_PRICE_LIST_PK
+ PRIMARY KEY
+ (CUSTOMER_PRICE_LIST_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE EDCA_INTERFACE_MAPPING ADD (
+  CONSTRAINT EDCA_INTERFACE_MAPPING_PK
+ PRIMARY KEY
+ (EDCA_INTERFACE_MAPPING_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICE_LINE_ITEM ADD (
+  CONSTRAINT PRICE_LINE_ITEM_PK
+ PRIMARY KEY
+ (PRICE_LINE_ITEM_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE ADD (
+  CONSTRAINT QUOTE_PK
+ PRIMARY KEY
+ (QUOTE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          384K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_HEADER ADD (
+  CONSTRAINT QUOTE_HEADER_PK
+ PRIMARY KEY
+ (QUOTE_HEADER_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          384K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_SITE_SERVICE ADD (
+  PRIMARY KEY
+ (QUOTE_SITE_SERVICE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_STATUS ADD (
+  PRIMARY KEY
+ (QUOTE_STATUS_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          320K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE VPN ADD (
+  CONSTRAINT VPN_PK
+ PRIMARY KEY
+ (VPN_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BILLING ADD (
+  CONSTRAINT BILLING_PK
+ PRIMARY KEY
+ (BILLING_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE DISCOUNT_APPROVAL ADD (
+  CONSTRAINT DISCOUNT_APPROVAL_PK
+ PRIMARY KEY
+ (DISCOUNT_APPROVAL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          256K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE EXCHANGE_RATE_DETAIL ADD (
+  PRIMARY KEY
+ (EXCHANGE_RATE_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_HEADER ADD (
+  CONSTRAINT ORDER_HEADER_PK
+ PRIMARY KEY
+ (ORDER_HEADER_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          192K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_VALIDATION ADD (
+  PRIMARY KEY
+ (ORDER_VALIDATION_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICING_BUCKET ADD (
+  CONSTRAINT PRICING_BUCKET_PK
+ PRIMARY KEY
+ (PRICING_BUCKET_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          192K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_PK
+ PRIMARY KEY
+ (SITE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          448K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE SITE_CONTACT_DETAIL ADD (
+  CONSTRAINT SITE_CONTACT_DET_PK
+ PRIMARY KEY
+ (SITE_CONTACT_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          384K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BCM_EXPORT ADD (
+  PRIMARY KEY
+ (BCMEXPORT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_CONTACT_DETAIL ADD (
+  CONSTRAINT ORD_CNT_PK
+ PRIMARY KEY
+ (ORDER_CONTACT_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_CONTACT_DETAIL_AS_IS ADD (
+  CONSTRAINT ORD_CNT_PK_ASIS
+ PRIMARY KEY
+ (ORDER_CONTACT_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_SITE_DETAIL ADD (
+  PRIMARY KEY
+ (ORDER_SITE_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          192K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_SITE ADD (
+  CONSTRAINT QUOTE_SITE_PK
+ PRIMARY KEY
+ (QUOTE_SITE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          2M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ACCESS_QREF ADD (
+  CONSTRAINT ACCESS_QREF_PK
+ PRIMARY KEY
+ (ACCESS_QREF_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CPE_QREF ADD (
+  CONSTRAINT CPE_QREF_PK
+ PRIMARY KEY
+ (CPE_QREF_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE GENERIC_CAVEAT ADD (
+  CONSTRAINT GENERIC_CAVEAT_PK
+ PRIMARY KEY
+ (GENERIC_CAVEAT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          2M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRODUCT_SELECTION ADD (
+  CONSTRAINT PRODUCT_SELECTION_PK
+ PRIMARY KEY
+ (PRODUCT_SELECTION_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          512K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRODUCT_VALIDATION_RESULTS ADD (
+  CONSTRAINT PRODUCT_VALIDATION_RESULTS_PK
+ PRIMARY KEY
+ (PROD_VALIDAT_RESULTS_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QUOTE_PRICE_LIST ADD (
+  CONSTRAINT QUOTE_PRICE_LIST_PK
+ PRIMARY KEY
+ (QUOTE_PRICE_LIST_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          448K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ACCESS_CAVEAT ADD (
+  CONSTRAINT ACCESS_CAVEAT_PK
+ PRIMARY KEY
+ (ACCESS_CAVEAT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          22M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BID_DETAIL ADD (
+  CONSTRAINT BID_DETAILS_PK
+ PRIMARY KEY
+ (BID_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          384K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BID_DETAIL_AS_IS ADD (
+  CONSTRAINT BID_DETAILS_AS_IS_PK
+ PRIMARY KEY
+ (BID_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BID_REQUEST_STATUS ADD (
+  PRIMARY KEY
+ (BID_REQUEST_STATUS_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          256K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE BID_REQUEST_STATUS_AS_IS ADD (
+  PRIMARY KEY
+ (BID_REQUEST_STATUS_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE CPE_CAVEAT ADD (
+  CONSTRAINT CPE_CAVEAT_PK
+ PRIMARY KEY
+ (CPE_CAVEAT_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          128K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE LINE_ITEM ADD (
+  CONSTRAINT LINE_ITEM_PK
+ PRIMARY KEY
+ (LINE_ITEM_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          12M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE LINE_ITEM_DETAIL ADD (
+  CONSTRAINT LINE_ITEM_DETAIL_PK
+ PRIMARY KEY
+ (LINE_ITEM_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          151M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_LINE_ITEM ADD (
+  CONSTRAINT ORDER_LINE_ITEM_PK
+ PRIMARY KEY
+ (ORDER_LINE_ITEM_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          2M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ORDER_LINE_ITEM_DETAIL ADD (
+  CONSTRAINT ORDER_LINE_ITEM_DET_PK
+ PRIMARY KEY
+ (ORDER_LINE_ITEM_DET_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          9M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PORT_IP_ROUTES ADD (
+  PRIMARY KEY
+ (PORT_IP_ROUTE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICE_LINE_ITEM_DETAIL ADD (
+  CONSTRAINT PRICE_LINE_ITEM_DETAILPK
+ PRIMARY KEY
+ (PRICE_LINE_ITEM_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          14M
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRODUCT_VALIDATION_RESPONSE ADD (
+  CONSTRAINT PRODUCT_VALIDATION_RESPONSE_PK
+ PRIMARY KEY
+ (PROD_VALIDAT_RESPONSE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICE_LN_USG_CHRG_DETAILS ADD (
+  PRIMARY KEY
+ (PLN_USG_CHARGE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE PRICE_LN_USG_CHRG_DETAILS_ASIS ADD (
+  PRIMARY KEY
+ (PLN_USG_CHARGE_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE COST_DETAIL ADD (
+  CONSTRAINT COST_DETAIL_PK
+ PRIMARY KEY
+ (COST_DETAIL_ID)
+    USING INDEX
+    TABLESPACE USERS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE ATTRIBUTE_VALUE ADD (
+  CONSTRAINT ATTRIBUTEVALUE_ATTRIBUTE_FK
+ FOREIGN KEY (ATTRIBUTE_ID)
+ REFERENCES ATTRIBUTE (ATTRIBUTE_ID));
+
+
+ALTER TABLE ORDER_ATTACHMENT_DETAIL ADD (
+  CONSTRAINT FK_ATTACHMENT_ID
+ FOREIGN KEY (ATTACHMENT_ID)
+ REFERENCES ORDER_ATTACHMENT (ATTACHMENT_ID));
+
+
+ALTER TABLE PAYMENT_METHODS ADD (
+  CONSTRAINT PAYMTMHDS_BTSUBSIDIARYID_FK
+ FOREIGN KEY (BT_SUBSIDIARY_ID)
+ REFERENCES BT_SUBSIDIARY (BT_SUBSIDIARY_ID));
+
+
+ALTER TABLE SITE_LOG ADD (
+  CONSTRAINT SITELOG_SITEBULKUPLOAD_FK
+ FOREIGN KEY (BATCH_ID)
+ REFERENCES SITE_BULK_UPLOAD (BATCH_ID));
+
+
+ALTER TABLE ADDRESS ADD (
+  CONSTRAINT ADDRESS_COUNTRY_FK
+ FOREIGN KEY (COUNTRY_ID)
+ REFERENCES COUNTRY (COUNTRY_ID));
+
+
+ALTER TABLE ATTRIBUTE_MAPPING ADD (
+  CONSTRAINT AM_PROD_FRIENDLY_ID_FK
+ FOREIGN KEY (PROD_FRIENDLY_ID)
+ REFERENCES PRODUCT_MASTER_DETAILS (PROD_FRIENDLY_ID));
+
+
+ALTER TABLE CUSTOMER ADD (
+  CONSTRAINT CUSTOMER_SALESCHANNEL_FK
+ FOREIGN KEY (SALES_CHANNEL_ID)
+ REFERENCES SALES_CHANNEL (SALES_CHANNEL_ID));
+
+ALTER TABLE CUSTOMER ADD (
+  CONSTRAINT CUSTOMER_BTSUBSIDIARY_FK
+ FOREIGN KEY (BT_SUBSIDIARY_ID)
+ REFERENCES BT_SUBSIDIARY (BT_SUBSIDIARY_ID));
+
+
+ALTER TABLE CUSTOMER_CONTACT ADD (
+  CONSTRAINT CUSTOMER_CONTACT_CONTACT_FK
+ FOREIGN KEY (CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+ALTER TABLE CUSTOMER_CONTACT ADD (
+  CONSTRAINT CUSTOMER_CONTACT_CUSTOMER_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+
+ALTER TABLE CUSTOMER_PRICE_LIST ADD (
+  CONSTRAINT CUSTOMER_PRICE_LIST__CUST_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+
+ALTER TABLE EDCA_INTERFACE_MAPPING ADD (
+  CONSTRAINT ATTRIBUTE_MAPPIN_FK
+ FOREIGN KEY (ATTRIBUTE_MAPPING_ID)
+ REFERENCES ATTRIBUTE_MAPPING (ATTRIBUTE_MAPPING_ID));
+
+
+ALTER TABLE PRICE_LINE_ITEM ADD (
+  CONSTRAINT PLI_PROD_FRIENDLY_ID_FK
+ FOREIGN KEY (PROD_FRIENDLY_ID)
+ REFERENCES PRODUCT_MASTER_DETAILS (PROD_FRIENDLY_ID));
+
+
+ALTER TABLE QUOTE ADD (
+  CONSTRAINT QUOTE_CUSTOMERID_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+
+ALTER TABLE QUOTE_HEADER ADD (
+  CONSTRAINT QUOTEHEADER_QUOTE_FK
+ FOREIGN KEY (QUOTE_ID)
+ REFERENCES QUOTE (QUOTE_ID));
+
+
+ALTER TABLE QUOTE_SITE_SERVICE ADD (
+  CONSTRAINT QTSITESREV_QTHDRID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE QUOTE_STATUS ADD (
+  CONSTRAINT QS_QUOTEHDRID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+ALTER TABLE QUOTE_STATUS ADD (
+  CONSTRAINT QS_QUOTEID_FK
+ FOREIGN KEY (QUOTE_ID)
+ REFERENCES QUOTE (QUOTE_ID));
+
+
+ALTER TABLE VPN ADD (
+  CONSTRAINT VPN_CUSTOMER_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+
+ALTER TABLE VPN_CUSTOMERS ADD (
+  CONSTRAINT VPNCUST_CUSTID_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+
+ALTER TABLE BILLING ADD (
+  CONSTRAINT BILLING_CUSTOMER_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+ALTER TABLE BILLING ADD (
+  CONSTRAINT BILLING_CONTACT_FK
+ FOREIGN KEY (CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+ALTER TABLE BILLING ADD (
+  CONSTRAINT BILLING_ACCOUNT_FK
+ FOREIGN KEY (ACCOUNT_ID)
+ REFERENCES ACCOUNT (ACCOUNT_ID));
+
+ALTER TABLE BILLING ADD (
+  CONSTRAINT BILLING_ADDRESS_FK
+ FOREIGN KEY (ADDRESS_ID)
+ REFERENCES ADDRESS (ADDRESS_ID));
+
+
+ALTER TABLE DISCOUNT_APPROVAL ADD (
+  CONSTRAINT DISCOUNTAPPROVAL_QUOTEID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE EXCHANGE_RATE_DETAIL ADD (
+  CONSTRAINT EXCHANGERATEDTL_QUOTEHRID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE ORDER_HEADER ADD (
+  CONSTRAINT ORDHDR_QTEHDR_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE ORDER_VALIDATION ADD (
+  CONSTRAINT ORDER_VALIDATION_ORDERHDRID_FK
+ FOREIGN KEY (ORDER_HEADER_ID)
+ REFERENCES ORDER_HEADER (ORDER_HEADER_ID));
+
+
+ALTER TABLE PRICING_BUCKET ADD (
+  CONSTRAINT PRICINGBUCKET_QUOTEHEADER_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_SITEBULKUPLOAD_FK
+ FOREIGN KEY (BATCH_ID)
+ REFERENCES SITE_BULK_UPLOAD (BATCH_ID));
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_SECONDARYCONTACT_FK
+ FOREIGN KEY (SECONDARY_CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_PRIMARYCONTACT_FK
+ FOREIGN KEY (PRIMARY_CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_CUSTOMER_FK
+ FOREIGN KEY (CUSTOMER_ID)
+ REFERENCES CUSTOMER (CUSTOMER_ID));
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_ADDRESS_FK
+ FOREIGN KEY (ADDRESS_ID)
+ REFERENCES ADDRESS (ADDRESS_ID));
+
+ALTER TABLE SITE ADD (
+  CONSTRAINT SITE_BILLING_FK
+ FOREIGN KEY (BILLING_ID)
+ REFERENCES BILLING (BILLING_ID));
+
+
+ALTER TABLE SITE_CONTACT_DETAIL ADD (
+  CONSTRAINT SITECONTACTDETAIL_CONTACTID_FK
+ FOREIGN KEY (CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+ALTER TABLE SITE_CONTACT_DETAIL ADD (
+  CONSTRAINT SITECONTACTDETAIL_SITE_ID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+
+ALTER TABLE BCM_EXPORT ADD (
+  CONSTRAINT BCMEXP_SITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE BCM_EXPORT ADD (
+  CONSTRAINT BCMEXP_QTHDR_ID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE ORDER_CONTACT_DETAIL ADD (
+  CONSTRAINT ORDERCONTACTDT_ORDERHDRID_FK
+ FOREIGN KEY (ORDER_HEADER_ID)
+ REFERENCES ORDER_HEADER (ORDER_HEADER_ID));
+
+ALTER TABLE ORDER_CONTACT_DETAIL ADD (
+  CONSTRAINT ORDERCONTACTDT_CONTACTID_FK
+ FOREIGN KEY (CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+
+ALTER TABLE ORDER_CONTACT_DETAIL_AS_IS ADD (
+  CONSTRAINT ORDERCONTDT_CONTACTID_FK_ASIS
+ FOREIGN KEY (CONTACT_ID)
+ REFERENCES CONTACT (CONTACT_ID));
+
+ALTER TABLE ORDER_CONTACT_DETAIL_AS_IS ADD (
+  CONSTRAINT ORDERCONTDT_ORDERHDRID_FK_ASIS
+ FOREIGN KEY (ORDER_HEADER_ID)
+ REFERENCES ORDER_HEADER (ORDER_HEADER_ID));
+
+
+ALTER TABLE ORDER_SITE_DETAIL ADD (
+  CONSTRAINT ORDERSITEDTL_ORDERHDRID_FK
+ FOREIGN KEY (ORDER_HEADER_ID)
+ REFERENCES ORDER_HEADER (ORDER_HEADER_ID));
+
+ALTER TABLE ORDER_SITE_DETAIL ADD (
+  CONSTRAINT ORDERSITEDTL_SITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+
+ALTER TABLE QUOTE_SITE ADD (
+  CONSTRAINT QUOTESITE_SITE_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE QUOTE_SITE ADD (
+  CONSTRAINT QUOTESITE_QUOTEHEADER_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE ACCESS_QREF ADD (
+  CONSTRAINT ACCESSQREF_QUOTESITE_FK
+ FOREIGN KEY (QUOTE_SITE_ID)
+ REFERENCES QUOTE_SITE (QUOTE_SITE_ID));
+
+
+ALTER TABLE CPE_QREF ADD (
+  CONSTRAINT CPEQREF_QUOTESITE_FK
+ FOREIGN KEY (QUOTE_SITE_ID)
+ REFERENCES QUOTE_SITE (QUOTE_SITE_ID));
+
+
+ALTER TABLE GENERIC_CAVEAT ADD (
+  CONSTRAINT GENERIC_CAVEAT_QSITE_FK
+ FOREIGN KEY (QUOTE_SITE_ID)
+ REFERENCES QUOTE_SITE (QUOTE_SITE_ID));
+
+
+ALTER TABLE PRODUCT_SELECTION ADD (
+  CONSTRAINT PROD_SELSITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE PRODUCT_SELECTION ADD (
+  CONSTRAINT PRODSEL_QUOTE_HDR_ID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+ALTER TABLE PRODUCT_SELECTION ADD (
+  CONSTRAINT PRODSELECTION_QUOTE_FK
+ FOREIGN KEY (QUOTE_ID)
+ REFERENCES QUOTE (QUOTE_ID));
+
+ALTER TABLE PRODUCT_SELECTION ADD (
+  CONSTRAINT FK_PROD_SEL_ORDERSITE
+ FOREIGN KEY (ORDER_SITE_DETAIL_ID)
+ REFERENCES ORDER_SITE_DETAIL (ORDER_SITE_DETAIL_ID));
+
+ALTER TABLE PRODUCT_SELECTION ADD (
+  CONSTRAINT PRDSEL_QTSITE_FK
+ FOREIGN KEY (QUOTE_SITE_ID)
+ REFERENCES QUOTE_SITE (QUOTE_SITE_ID));
+
+
+ALTER TABLE PRODUCT_VALIDATION_RESULTS ADD (
+  CONSTRAINT PVALRESULTS_QUOTESITE_FK
+ FOREIGN KEY (QUOTE_SITE_ID)
+ REFERENCES QUOTE_SITE (QUOTE_SITE_ID));
+
+
+ALTER TABLE QUOTE_PRICE_LIST ADD (
+  CONSTRAINT QTPRICELIST_SITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE QUOTE_PRICE_LIST ADD (
+  CONSTRAINT QUOTEPRICELIST_PRICELISTID_FK
+ FOREIGN KEY (PRICE_LIST_ID)
+ REFERENCES PRICE_LIST (PRICE_LIST_ID));
+
+ALTER TABLE QUOTE_PRICE_LIST ADD (
+  CONSTRAINT QUOTEPRICELIST_QUOTEHDRID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+ALTER TABLE QUOTE_PRICE_LIST ADD (
+  CONSTRAINT QUOTE_PRICE_LIST_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+
+ALTER TABLE ACCESS_CAVEAT ADD (
+  CONSTRAINT ACCESSCAVEAT_ACCESSQREF_FK
+ FOREIGN KEY (ACCESS_QREF_ID)
+ REFERENCES ACCESS_QREF (ACCESS_QREF_ID));
+
+
+ALTER TABLE BID_DETAIL ADD (
+  CONSTRAINT BIDDETAIL_QUOTEHDR_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+ALTER TABLE BID_DETAIL ADD (
+  CONSTRAINT BIDDETAIL_SITE_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE BID_DETAIL ADD (
+  CONSTRAINT BIDDETAIL_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+
+ALTER TABLE BID_DETAIL_AS_IS ADD (
+  CONSTRAINT BIDDETAIL_PRDSEL_AS_IS_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+ALTER TABLE BID_DETAIL_AS_IS ADD (
+  CONSTRAINT BIDDETAIL_SITE_AS_IS_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE BID_DETAIL_AS_IS ADD (
+  CONSTRAINT BIDDETAIL_QUOTEHDR_AS_IS_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE BID_REQUEST_STATUS ADD (
+  CONSTRAINT BID_REQUEST_STATUS_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+ALTER TABLE BID_REQUEST_STATUS ADD (
+  CONSTRAINT BIDREQSTSTATUS_SITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE BID_REQUEST_STATUS ADD (
+  CONSTRAINT BIDREQSTSTATUS_QTHDR_ID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE BID_REQUEST_STATUS_AS_IS ADD (
+  CONSTRAINT BID_REQ_STATUS_AS_IS_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+ALTER TABLE BID_REQUEST_STATUS_AS_IS ADD (
+  CONSTRAINT BRS_AS_IS_PROD_FRIENDLY_ID_FK
+ FOREIGN KEY (PROD_FRIENDLY_ID)
+ REFERENCES PRODUCT_MASTER_DETAILS (PROD_FRIENDLY_ID));
+
+ALTER TABLE BID_REQUEST_STATUS_AS_IS ADD (
+  CONSTRAINT BIDREQSTSTATUS_AS_IS_SITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE BID_REQUEST_STATUS_AS_IS ADD (
+  CONSTRAINT BIDREQSTATUS_AS_IS_QTHDR_ID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+
+ALTER TABLE CPE_CAVEAT ADD (
+  CONSTRAINT CPECAVEAT_CPEQREF_FK
+ FOREIGN KEY (CPE_QREF_ID)
+ REFERENCES CPE_QREF (CPE_QREF_ID));
+
+
+ALTER TABLE EXPEDIO_RESPONSE ADD (
+  CONSTRAINT EXP_RES_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+ALTER TABLE EXPEDIO_RESPONSE ADD (
+  CONSTRAINT EXPRESPE_QTHDR_ID_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+ALTER TABLE EXPEDIO_RESPONSE ADD (
+  CONSTRAINT EXPRESPE_QTID_FK
+ FOREIGN KEY (QUOTE_ID)
+ REFERENCES QUOTE (QUOTE_ID));
+
+
+ALTER TABLE LINE_ITEM ADD (
+  CONSTRAINT LINEITEM_SITE_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE LINE_ITEM ADD (
+  CONSTRAINT LINEITEM_QUOTEHEADER_FK
+ FOREIGN KEY (QUOTE_HEADER_ID)
+ REFERENCES QUOTE_HEADER (QUOTE_HEADER_ID));
+
+ALTER TABLE LINE_ITEM ADD (
+  CONSTRAINT LINE_ITEM_ID_FK
+ FOREIGN KEY (PARENT_LINE_ITEM_ID)
+ REFERENCES LINE_ITEM (LINE_ITEM_ID));
+
+ALTER TABLE LINE_ITEM ADD (
+  CONSTRAINT LNITM_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+
+ALTER TABLE LINE_ITEM_DETAIL ADD (
+  CONSTRAINT LINEITEMDET_ATTRMAP_FK
+ FOREIGN KEY (ATTRIBUTE_MAPPING_ID)
+ REFERENCES ATTRIBUTE_MAPPING (ATTRIBUTE_MAPPING_ID));
+
+ALTER TABLE LINE_ITEM_DETAIL ADD (
+  CONSTRAINT LINEITEMDET_LINEITEM_FK
+ FOREIGN KEY (LINE_ITEM_ID)
+ REFERENCES LINE_ITEM (LINE_ITEM_ID));
+
+
+ALTER TABLE ORDER_LINE_ITEM ADD (
+  CONSTRAINT ORDERLINEITEM_SITEID_FK
+ FOREIGN KEY (SITE_ID)
+ REFERENCES SITE (SITE_ID));
+
+ALTER TABLE ORDER_LINE_ITEM ADD (
+  CONSTRAINT ORDLNITM_ORDHDR_FK
+ FOREIGN KEY (ORDER_HEADER_ID)
+ REFERENCES ORDER_HEADER (ORDER_HEADER_ID));
+
+ALTER TABLE ORDER_LINE_ITEM ADD (
+  CONSTRAINT OLI_PROD_FRIENDLY_ID_FK
+ FOREIGN KEY (PROD_FRIENDLY_ID)
+ REFERENCES PRODUCT_MASTER_DETAILS (PROD_FRIENDLY_ID));
+
+ALTER TABLE ORDER_LINE_ITEM ADD (
+  CONSTRAINT ORDER_LNITM_PRDSEL_FK
+ FOREIGN KEY (PRODUCT_SELECTION_ID)
+ REFERENCES PRODUCT_SELECTION (PRODUCT_SELECTION_ID));
+
+
+ALTER TABLE ORDER_LINE_ITEM_DETAIL ADD (
+  CONSTRAINT OLID_OLI_FK
+ FOREIGN KEY (ORDER_LINE_ITEM_ID)
+ REFERENCES ORDER_LINE_ITEM (ORDER_LINE_ITEM_ID));
+
+ALTER TABLE ORDER_LINE_ITEM_DETAIL ADD (
+  CONSTRAINT OLID_ATTMAP_FK
+ FOREIGN KEY (ATTRIBUTE_MAPPING_ID)
+ REFERENCES ATTRIBUTE_MAPPING (ATTRIBUTE_MAPPING_ID));
+
+
+ALTER TABLE PORT_IP_ROUTES ADD (
+  CONSTRAINT PTIPRTES_ORDERLNITMID_FK
+ FOREIGN KEY (ORDER_LINE_ITEM_ID)
+ REFERENCES ORDER_LINE_ITEM (ORDER_LINE_ITEM_ID));
+
+
+ALTER TABLE PRICE_LINE_ITEM_DETAIL ADD (
+  CONSTRAINT PRICELINEITEMDET_PRLNITMID_FK
+ FOREIGN KEY (PRICE_LINE_ITEM_ID)
+ REFERENCES PRICE_LINE_ITEM (PRICE_LINE_ITEM_ID));
+
+ALTER TABLE PRICE_LINE_ITEM_DETAIL ADD (
+  CONSTRAINT PRICELNITEM_LINEITEM_FK
+ FOREIGN KEY (LINE_ITEM_ID)
+ REFERENCES LINE_ITEM (LINE_ITEM_ID));
+
+
+ALTER TABLE PRODUCT_VALIDATION_RESPONSE ADD (
+  CONSTRAINT PVALRESPONSE_PVALRES_FK
+ FOREIGN KEY (PROD_VALIDAT_RESULTS_ID)
+ REFERENCES PRODUCT_VALIDATION_RESULTS (PROD_VALIDAT_RESULTS_ID));
+
+
+ALTER TABLE PRICE_LN_USG_CHRG_DETAILS ADD (
+  CONSTRAINT FK_GCHRGDETAILS_PRCLINRITRMID
+ FOREIGN KEY (PRICE_LINE_ITEM_DETAIL_ID)
+ REFERENCES PRICE_LINE_ITEM_DETAIL (PRICE_LINE_ITEM_DETAIL_ID));
+
+ALTER TABLE PRICE_LN_USG_CHRG_DETAILS ADD (
+  CONSTRAINT FK_LNGCHRGDETAILS_LINRITRMID
+ FOREIGN KEY (LINE_ITEM_ID)
+ REFERENCES LINE_ITEM (LINE_ITEM_ID));
+
+
+ALTER TABLE PRICE_LN_USG_CHRG_DETAILS_ASIS ADD (
+  CONSTRAINT FK_RGDETAILSASIS_PRCLINRITRMID
+ FOREIGN KEY (PRICE_LINE_ITEM_DETAIL_ID)
+ REFERENCES PRICE_LINE_ITEM_DETAIL (PRICE_LINE_ITEM_DETAIL_ID) DISABLE);
+
+ALTER TABLE PRICE_LN_USG_CHRG_DETAILS_ASIS ADD (
+  CONSTRAINT FK_GCHRGDETAILSASIS_LINRITRMID
+ FOREIGN KEY (LINE_ITEM_ID)
+ REFERENCES LINE_ITEM (LINE_ITEM_ID) DISABLE);
+
+
+ALTER TABLE BFG_INVENTORY_DETAIL ADD (
+  CONSTRAINT FK_LINE_ITEM_BFG_INVENTORY
+ FOREIGN KEY (LINE_ITEM_ID)
+ REFERENCES LINE_ITEM (LINE_ITEM_ID));
+
+
+ALTER TABLE COST_DETAIL ADD (
+  CONSTRAINT COSTDET_PRILNITMDET_FK
+ FOREIGN KEY (PRICE_LINE_ITEM_DETAIL_ID)
+ REFERENCES PRICE_LINE_ITEM_DETAIL (PRICE_LINE_ITEM_DETAIL_ID));
+
+------------------------------------------------------------------------------------
+   -- END OF CONSTRAINTS For All the TABLES
+------------------------------------------------------------------------------------

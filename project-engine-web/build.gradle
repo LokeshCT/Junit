@@ -1,0 +1,37 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+apply from: "$rootDir/builds/scripts/jsLint.gradle"
+
+ext.coverageTargetPct = 85        // what is the acceptable test coverage
+ext.coverageBranchTargetPct = 74  // what is the acceptable test coverage for branches
+
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':common:web')
+dependsOnIncludingTests(project, ':core')
+dependsOnIncludingTests(project, ':customer-inventory-client')
+dependsOnIncludingTests(project, ':expedio-facade-client')
+dependsOnIncludingTests(project, ':project-engine-client')
+dependsOnIncludingTests(project, ':quote-engine')
+dependsOnIncludingTests(project, ':session-service-client')
+dependsOnIncludingTests(project, ':pmr')
+dependsOnIncludingTests(project, ':emp-pal-facade-client')
+dependsOnIncludingTests(project, ':product-configurator:configurator-client')
+dependsOnIncludingTests(project, ':pricing:pricing-facade-client')
+
+dependencies {
+    compile([
+            'org.glassfish.jersey.containers:jersey-container-simple-http:2.0.1',
+            'org.freemarker:freemarker:2.3.18',
+            'org.codehaus.jackson:jackson-mapper-asl:1.9.13',
+            'net.sf.jxls:jxls-core:1.0',
+            project(':pmr-client'),
+            project(':tpe-client'),
+            ])
+
+    testCompile([
+                'org.dbunit:dbunit:2.4.8',
+                'org.w3c.css:sac:1.3',
+                'jaxen:jaxen:1.1.3',
+                ])
+}

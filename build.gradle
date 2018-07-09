@@ -1,0 +1,204 @@
+import java.util.regex.Pattern
+import java.util.regex.Matcher
+
+apply from: "$rootDir/builds/scripts/projectInformation.gradle"
+apply from: "$rootDir/builds/scripts/subversion.gradle"
+apply plugin: 'sonar'
+
+def SONAR_HOST='10.230.189.97'
+
+sonar {
+    server {
+        url = "http://$SONAR_HOST:8999"
+    }
+    database {
+        url = "jdbc:derby://$SONAR_HOST:1527/sonar;create=true"
+        driverClassName = "org.apache.derby.jdbc.ClientDriver"
+        username = "sonar"
+        password = "sonar"
+    }
+}
+
+
+// Common configuration
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'project-report'
+    apply plugin: 'idea'
+    apply from: "$rootDir/builds/scripts/repositories.gradle"
+    apply from: "$rootDir/builds/scripts/publishing.gradle"
+    apply from: "$rootDir/builds/scripts/realclean.gradle"
+
+    sonar{
+        project{
+            sourceExclusions = '**/build/**, **/generated-source/**'
+            sourceDirs=["${projectDir}/src/main/java"]
+            testDirs=["${projectDir}/src/test/java"]
+            cloverReportPath = file("${reporting.baseDir}/clover/clover.xml")
+        }
+    }
+
+    // Common compiler flags
+    tasks.withType(Compile) {
+        //options.compilerArgs << "-Xlint:unchecked"
+    }
+
+    idea {
+        module {
+            def variables = ['USER_HOME': new File(System.getProperty("user.home"))]
+            iml {
+                // Generate <orderEntry type="library" name="Clover IDEA Plugin" level="application" />
+                withXml { root ->
+                    def rootComponent = root.asNode().depthFirst().find { it.@name == 'NewModuleRootManager'}
+                    //rootComponent.appendNode('orderEntry', ['type': 'library', 'name': 'Clover IDEA Plugin', 'level': 'application'])
+                    rootComponent.appendNode('orderEntry', ['type': 'library', 'name': 'groovy-1.8.0', 'level': 'application'])
+                }
+            }
+        }
+    }
+    task regenerateIdeaModule(dependsOn: [cleanIdeaModule, ideaModule]) {
+        description = "Rebuild the IDEA module definitions e.g. to synchronise library dependencies"
+    }
+
+    sourceCompatibility = '1.7'
+
+    // Common dependencies for *all* modules
+    dependencies {}
+
+    task allDeps(type: DependencyReportTask) {}
+}
+
+task projectDocs(type: Javadoc) {
+    description = "Build the aggregated JavaDocs for all modules"
+    source subprojects.collect { project ->
+        project.sourceSets.main.allJava
+    }
+    destinationDir = new File(buildDir, 'javadoc')
+    title="RQE Low Level Architcture (version $version)"
+    include 'com/bt/rsqe/**'
+    exclude 'org/**/*.*'
+    exclude '**/*Test*.*'
+    classpath = files(subprojects.collect { project ->
+        project.sourceSets.main.compileClasspath
+    })
+
+    failOnError = false
+
+    configure(options)  {
+        quiet()
+    }
+}
+projectDocs.doLast {
+    // Export the UMLet files as JPEG in the JavaDoc output
+    def srcDir = "$rootDir/docs"
+    def destDir = "$buildDir/javadoc"
+
+    def umletFiles = []
+
+    // Find all the UMLet uxf files
+    def sources = new File(srcDir)
+    if (sources.exists()) {
+        sources.traverse(nameFilter: ~/.*\.uxf/) {
+            umletFiles << it
+        }
+
+        umletFiles.each { File docFile ->
+            def destination = destinationFor(docFile, srcDir, destDir)
+            docFile.mkdirs()
+            println "Exporting ${docFile.path} -> $destination"
+            javaexec {
+                main = 'com.baselet.control.Main'
+                classpath = configurations.umlet
+                args(['-action=convert',
+                         '-format=jpg',
+                         "-filename=${docFile.path}",
+                         "-output=$destination"
+                     ])
+            }
+        }
+    }
+}
+
+def destinationFor(docFile, srcDir, destDir) {
+    def dir = docFile.parent.toString().replaceFirst(srcDir, destDir)
+    return dir + "/" + docFile.name.replaceFirst(~/\.uxf/, '.jpg')
+}
+
+def dependsOnIncludingTests(org.gradle.api.Project theProject, String dependency) {
+    theProject.dependencies {
+        compile project(dependency)
+        testCompile project(dependency).sourceSets.test.output
+    }
+
+    theProject.idea {
+        module {
+            iml {
+                withXml { root ->
+                    removeUnwantedLibraryNode(root.asNode(), "${(dependency - ':').replaceAll(Pattern.quote(":"), Matcher.quoteReplacement("/"))}/build/classes/test")
+                }
+            }
+        }
+    }
+}
+
+def removeUnwantedLibraryNode(Node root, String urlPath) {
+    def moduleRoot = root.depthFirst().find { it.@name == 'NewModuleRootManager'}
+    def unwantedNode = moduleRoot.depthFirst().grep {
+        it.name() == 'orderEntry' &&
+        it.'library'.'CLASSES'.'root'.'@url'.text().endsWith(urlPath)
+    }
+
+    if (!moduleRoot.remove(unwantedNode))
+        println "Failed to remove the unwanted node with path ending $urlPath"
+}
+
+def getSvnInfo() {
+    try {
+        def svn_wc = new org.gradle.plugins.svnkit.svnclient.WorkingCopy(
+            'https://collaborate.bt.com/svn/rsqe/rsqe',
+            project.name,
+            null,
+            null,
+            project.rootDir.path,
+            null,
+            null)
+        def svnInfo = svn_wc.getWCInfo()
+		//println "$svnInfo.URL.toString,$svnInfo.revision.toString()"
+        return [svnInfo.URL.toString(),svnInfo.revision.toString()]
+		
+    }
+    catch (org.tmatesoft.svn.core.SVNException e) {
+        logger.error "Not a Subversion working copy " + e
+        return [null, null]
+    }
+}
+
+apply from: "$rootDir/builds/scripts/repositories.gradle"
+configurations {
+    umlet
+    cloverConf
+}
+dependencies {
+    umlet(['com.umlet:umlet:11.4',
+              'log4j:log4j:1.2.16',
+              'org.sourceforge.jlibeps:jlibeps:0.1',
+              'com.itextpdf:itextpdf:5.1.3',
+              'batik:batik-svggen:1.6-1',
+          ])
+    cloverConf(['com.cenqua.clover:clover:3.0.2'])
+}
+
+task uberClover << {
+    ant.taskdef(resource: "cloverlib.xml", classpath: configurations.cloverConf.asPath)
+    ant.property(name: "clover.license.path", value: "${project.rootDir}/builds/scripts/clover.license")
+
+
+    ant."clover-merge"(initString: "mergedcoverage.db") {
+        cloverDbSet(dir: project.rootDir) {
+            include(name: "**/clover3_0_2.db")
+        }
+    }
+
+    ant."clover-html-report"(initString: "mergedcoverage.db", outdir: "${project.rootDir}/build/clover/html");
+}

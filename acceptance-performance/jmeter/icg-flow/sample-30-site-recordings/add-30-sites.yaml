@@ -1,0 +1,416 @@
+---
+execution:
+  scenario: blazemeter-recording
+  concurrency: 10
+  ramp-up: 1m
+  hold-for: 5m
+scenarios:
+  blazemeter-recording:
+    headers:
+      User-Agent: 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+      Accept-Language: 'en-US,en;q=0.8'
+    requests:
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769'
+        headers:
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Upgrade-Insecure-Requests: '1'
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/projects/000000000199758?guid=07fb87d7a1d74d7e91ccd9c0b45eec59000000000199758'
+          Accept-Encoding: 'gzip, deflate, sdch'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/details-tab'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/details-tab'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          _: '1446142538857'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/line-items'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/line-items'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '1'
+          iColumns: '14'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: siteName
+          mDataProp_2: miniAddress
+          mDataProp_3: name
+          mDataProp_4: summary
+          mDataProp_5: action
+          mDataProp_6: contractTerm
+          mDataProp_7: offerName
+          mDataProp_8: status
+          mDataProp_9: discountStatus
+          mDataProp_10: pricingStatus
+          mDataProp_11: orderStatus
+          mDataProp_12: validity
+          mDataProp_13: configurable
+          sSearch: ''
+          bRegex: 'false'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          sSearch_3: ''
+          bRegex_3: 'false'
+          bSearchable_3: 'true'
+          sSearch_4: ''
+          bRegex_4: 'false'
+          bSearchable_4: 'true'
+          sSearch_5: ''
+          bRegex_5: 'false'
+          bSearchable_5: 'true'
+          sSearch_6: ''
+          bRegex_6: 'false'
+          bSearchable_6: 'true'
+          sSearch_7: ''
+          bRegex_7: 'false'
+          bSearchable_7: 'true'
+          sSearch_8: ''
+          bRegex_8: 'false'
+          bSearchable_8: 'true'
+          sSearch_9: ''
+          bRegex_9: 'false'
+          bSearchable_9: 'true'
+          sSearch_10: ''
+          bRegex_10: 'false'
+          bSearchable_10: 'true'
+          sSearch_11: ''
+          bRegex_11: 'false'
+          bSearchable_11: 'true'
+          sSearch_12: ''
+          bRegex_12: 'false'
+          bSearchable_12: 'true'
+          sSearch_13: ''
+          bRegex_13: 'false'
+          bSearchable_13: 'true'
+          iSortCol_0: '0'
+          sSortDir_0: asc
+          iSortingCols: '1'
+          bSortable_0: 'false'
+          bSortable_1: 'true'
+          bSortable_2: 'true'
+          bSortable_3: 'true'
+          bSortable_4: 'true'
+          bSortable_5: 'true'
+          bSortable_6: 'true'
+          bSortable_7: 'true'
+          bSortable_8: 'true'
+          bSortable_9: 'true'
+          bSortable_10: 'true'
+          bSortable_11: 'true'
+          bSortable_12: 'false'
+          bSortable_13: 'false'
+          globalSearch: ''
+          _: '1446142539705'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/web-metrics'
+        method: POST
+        label: 'http://sqe.t1.nat.bt.com/rsqe/web-metrics'
+        headers:
+          Accept: '*/*'
+          Origin: 'http://sqe.t1.nat.bt.com'
+          X-Requested-With: XMLHttpRequest
+          Content-Type: application/json
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769'
+          Accept-Encoding: 'gzip, deflate'
+        body: '{"createdBy":"rSQE","timeTakenInMillis":5431,"navigationType":"Navigate","navigationName":"QuoteOption Details Tab","numberOfSites":0,"clientDetail":{"name":"Netscape","version":"5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36","platform":"Win32","userAgent":"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36"}}'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+        headers:
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Upgrade-Insecure-Requests: '1'
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769'
+          Accept-Encoding: 'gzip, deflate, sdch'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/product-tab/Add'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/product-tab/Add'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          _: '1446142543348'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '1'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: ''
+          bRegex: 'false'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          _: '1446142545882'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/web-metrics'
+        method: POST
+        label: 'http://sqe.t1.nat.bt.com/rsqe/web-metrics'
+        headers:
+          Accept: '*/*'
+          Origin: 'http://sqe.t1.nat.bt.com'
+          X-Requested-With: XMLHttpRequest
+          Content-Type: application/json
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate'
+        body: '{"createdBy":"rSQE","timeTakenInMillis":4446,"navigationType":"Navigate","navigationName":"Add Products Tab","numberOfSites":-1,"clientDetail":{"name":"Netscape","version":"5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36","platform":"Win32","userAgent":"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36"}}'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '2'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: country=
+          bRegex: 'true'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          _: '1446142549027'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '3'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: country=
+          bRegex: 'true'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          _: '1446142552850'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '4'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: country=
+          bRegex: 'true'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          _: '1446142555947'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '1'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: ''
+          bRegex: 'false'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          forProduct: S0317991
+          _: '1446142556014'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '2'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '10'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: country=UNITED KINGDOM
+          bRegex: 'true'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          forProduct: S0317991
+          _: '1446142557900'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/sites'
+        headers:
+          Accept: 'application/json, text/javascript, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          sEcho: '3'
+          iColumns: '3'
+          sColumns: ''
+          iDisplayStart: '0'
+          iDisplayLength: '-1'
+          mDataProp_0: id
+          mDataProp_1: site
+          mDataProp_2: fullAddress
+          sSearch: country=UNITED KINGDOM
+          bRegex: 'true'
+          sSearch_0: ''
+          bRegex_0: 'false'
+          bSearchable_0: 'true'
+          sSearch_1: ''
+          bRegex_1: 'false'
+          bSearchable_1: 'true'
+          sSearch_2: ''
+          bRegex_2: 'false'
+          bSearchable_2: 'true'
+          productAction: Add
+          globalSearch: ''
+          forProduct: S0317991
+          _: '1446142571703'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/getLaunched'
+        method: GET
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/getLaunched'
+        headers:
+          Accept: 'text/plain, */*; q=0.01'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate, sdch'
+        body:
+          salesChannel: BT AMERICAS
+          productSCode: S0317991
+          _: '1446142611846'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/cardinalityCheck'
+        method: POST
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/cardinalityCheck'
+        headers:
+          Accept: 'text/plain, */*; q=0.01'
+          Origin: 'http://sqe.t1.nat.bt.com'
+          X-Requested-With: XMLHttpRequest
+          Content-Type: application/x-www-form-urlencoded
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate'
+        body: '{"quoteOptionId":"42a7803f-5bae-4d91-82c3-de3ac7c93769","expedioQuoteId":"000000000199758","customerId":"182913","contractId":"444128","currency":"GBP","authenticationToken":"auth token","rsqeQuoteOptionName":"blahblah","revenueOwner":"BT AMERICAS","productCode":"S0317991","productVersion":"A.51","lineItems":[{"siteId":"1079499","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079500","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079501","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079502","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079503","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079504","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079505","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079506","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079507","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079508","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079509","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079510","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079511","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079512","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079513","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079514","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079579","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079580","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079571","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079572","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079573","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079574","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079575","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079576","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079577","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079578","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079581","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079582","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079583","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079584","action":"Add","lineItemId":"","quoteOptionId":""}],"redirectUri":"/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769","action":"Add","channelLaunchStatus":"","newSiteId":"","isImportable":"false","moveConfigurationType":"NOT_MOVEABLE","rollOnContractTermForMove":"","isUserImportable":"false","productCategoryCode":"H0301101"}'
+      - url: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/createProduct'
+        method: POST
+        label: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/createProduct'
+        headers:
+          Accept: 'text/plain, */*; q=0.01'
+          Origin: 'http://sqe.t1.nat.bt.com'
+          X-Requested-With: XMLHttpRequest
+          Content-Type: application/x-www-form-urlencoded
+          Referer: 'http://sqe.t1.nat.bt.com/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769/add-product/'
+          Accept-Encoding: 'gzip, deflate'
+        body:
+          quoteOptionContext: '{"quoteOptionId":"42a7803f-5bae-4d91-82c3-de3ac7c93769","expedioQuoteId":"000000000199758","customerId":"182913","contractId":"444128","currency":"GBP","authenticationToken":"auth token","rsqeQuoteOptionName":"blahblah","revenueOwner":"BT AMERICAS","productCode":"S0317991","productVersion":"A.51","lineItems":[{"siteId":"1079499","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079500","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079501","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079502","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079503","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079504","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079505","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079506","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079507","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079508","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079509","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079510","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079511","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079512","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079513","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079514","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079579","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079580","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079571","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079572","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079573","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079574","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079575","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079576","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079577","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079578","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079581","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079582","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079583","action":"Add","lineItemId":"","quoteOptionId":""},{"siteId":"1079584","action":"Add","lineItemId":"","quoteOptionId":""}],"redirectUri":"/rsqe/customers/182913/contracts/444128/projects/000000000199758/quote-options/42a7803f-5bae-4d91-82c3-de3ac7c93769","action":"Add","channelLaunchStatus":"","newSiteId":"","isImportable":"false","moveConfigurationType":"NOT_MOVEABLE","rollOnContractTermForMove":"","isUserImportable":"false","productCategoryCode":"H0301101"}'

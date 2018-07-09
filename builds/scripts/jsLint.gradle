@@ -1,0 +1,28 @@
+configurations {
+    jsLint
+}
+
+dependencies {
+    jsLint 'com.googlecode.jslint4java:jslint4java-ant:2.0.2'
+}
+
+task jsLint() {
+    ant.taskdef(name: 'jslint', classname: 'com.googlecode.jslint4java.ant.JSLintTask', classpath: configurations.jsLint.asPath)
+
+    it.doLast {
+
+        def reportsDir = new File("${buildDir}/reports/")
+        reportsDir.mkdirs()
+
+        def report = new File(reportsDir, "jsLint.xml")
+        report.createNewFile()
+
+        ant."jslint"(haltOnFailure: false) {
+            formatter(type: "xml", destfile: report.path)
+            fileset(dir: "$projectDir/src/main/resources/", includes: "**/com/bt/rsqe/**/*.js") {}
+        }
+    }
+}
+
+check.dependsOn jsLint
+

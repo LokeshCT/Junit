@@ -1,0 +1,59 @@
+<div class="innerWrap" ng-init="loadVPNDetails()">
+<div>
+
+
+            <div class="hrMargin">
+                <span class="headerLabel">VPN Owned </span>
+                <hr class="hrStyle"/>
+            </div>
+            <form name="vpnDetails" id="vpnDetails">
+
+                <div ng-form="vpnDetailsNGForm">
+
+                    <div class="searchResultGridStyle" style="height: 150px" ng-grid="vpnDetailsGrid"></div>
+
+                    <div class="hrMargin">
+                        <span class="headerLabel">VPN Shared </span>
+                        <hr class="hrStyle"/>
+                    </div>
+
+                    <div class="searchResultGridStyle" style="height: 150px" ng-grid="vpnDetailsGridShared"></div>
+
+
+                    <div class="hrMargin">
+                        <span class="headerLabel">VPN Shared Customers </span>
+                        <hr class="hrStyle"/>
+                    </div>
+
+                    <div class="selectCustomerWrapper">
+                        <div class="selectSharedCust">
+                            <form name="selectSharedCustomerForm">
+                                <span class="headerLabel">Sharing Customer Name      </span>
+                                <select id="e2"  ng-model="selectedSharedCustomer"  data-placeholder="Select a Shared Customer"
+                                        ng-options="customer.cusName for customer in customerList" ng-change="viewSharedCustomerDetails()"
+                                        style="width:250px;" required>
+
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="searchResultGridStyle" style="height: 150px" ng-grid="vpnDetailsGridSharedCustomers"></div>
+
+
+                    <div class="contactsButtonContainerDiv">
+                    <div class="btnDiv"  align="right">
+                        <button class="btn" style="margin-right: 5px" ng-disabled="!isVPNSelected && !isCustomerSelected"
+                                    ng-click="createSharedVPNDetail()">ADD
+                            </button>
+                     </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+   </div>
+</div>
+
+

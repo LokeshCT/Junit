@@ -1,0 +1,32 @@
+{
+    "quoteHeaderName":"quoteoptionname",
+    "customerId":"customerId",
+    "contractId":"contractId",
+    "siteId":"siteId",
+    "configuration":[{
+        "resiliency":"Secure",
+        "reachOutInterconnect":"true",
+        "legConfigurations":[
+            {
+                "uuid":"dfdfafdsfdfdfdfdfdfdfdd",
+                "legType":"Primary",
+                "accessConfiguration":{
+                    "accessSpeed":"1025MBPS",
+                    "accessType":"Secure",
+                    "valueOfN":"N",
+                    "accessTechnology":"Ethernet"
+                },
+                "portConfiguration":{
+                    "portSpeed":"1025MBPS",
+                    "aggregatedEFBandwidth":"256",
+                    "aggregatedAF1Bandwidth":"256",
+                    "aggregatedAF2Bandwidth":"256",
+                    "aggregatedAF3Bandwidth":"256",
+                    "aggregatedAF4Bandwidth":"256",
+                    "totalNoOfVPNConnections":"256",
+                    "dslCommercialSpeed":"256"
+                }
+            }
+        ]
+    }]
+}

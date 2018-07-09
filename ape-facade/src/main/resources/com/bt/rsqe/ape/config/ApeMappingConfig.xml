@@ -1,0 +1,312 @@
+<ApeMappingConfig accessTechnologyLocator="access.name">
+    <AccessTechnologyMappings>
+        <AccessTechnologyMapping id="hVPN-PLC" baseAccessTechnology="hVPN"/>
+        <AccessTechnologyMapping id="hVPN-DSL" baseAccessTechnology="hVPN"/>
+        <AccessTechnologyMapping id="hVPN-Cable" baseAccessTechnology="hVPN"/>
+        <AccessTechnologyMapping id="hVPN-Satellite" baseAccessTechnology="hVPN"/>
+        <AccessTechnologyMapping id="hVPN-Wireless" baseAccessTechnology="hVPN"/>
+        <AccessTechnologyMapping id="hVPN-Mobile" baseAccessTechnology="hVPN"/>
+        <AccessTechnologyMapping id="Ethernet" baseAccessTechnology="Ethernet"/>
+        <AccessTechnologyMapping id="Premium Ethernet" baseAccessTechnology="Ethernet"/>
+        <AccessTechnologyMapping id="Leased Line" baseAccessTechnology="Leasedline"/>
+    </AccessTechnologyMappings>
+
+    <ProductOfferingMappings>
+        <ProductOfferingMapping id="hVPN" sCode="S0315392" relationshipName="HVPNAccess" productName="HVPN Access Technology"/>
+        <ProductOfferingMapping id="Ethernet" sCode="S0317812" relationshipName="EthernetAccess" productName="Ethernet Access Technology"/>
+        <ProductOfferingMapping id="Leasedline" sCode="S0317811" relationshipName="LeasedLineAccess" productName="Leased Line Access Technology"/>
+    </ProductOfferingMappings>
+
+    <ApeQuoteMappings baseAccessTechnology="*">
+        <AttributeMapping name="Request Id" userVisible="false" mapsToOffering="false" mapping="requestId"/>
+        <AttributeMapping name="Response Type" userVisible="false" mapsToOffering="false" mapping="responseType"/>
+    </ApeQuoteMappings>
+
+    <ApeSiteQueryMappings baseAccessTechnology="*">
+        <AttributeMapping name="Site Name" userVisible="false" mapsToOffering="true" mapping="siteName"/>
+        <AttributeMapping name="Site Address" userVisible="false" mapsToOffering="true" mapping="&quot;siteAddress.streetName+', '+city+', '+postCode+', '+countryName&quot;"/>
+        <AttributeMapping name="SiteCountry" userVisible="false" mapsToOffering="true" mapping="siteAddress.countryName"/>
+        <AttributeMapping name="SitePost/ZipCode" userVisible="false" mapsToOffering="true" mapping="siteAddress.postCode"/>
+    </ApeSiteQueryMappings>
+
+    <ApeResponseTypeMappings responseType="MarketBasedPrice">
+        <AttributeMapping name="BT Install Price" userVisible="true" mapsToOffering="false" mapping="BTInstallprice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="38"/>
+        <AttributeMapping name="BT Monthly Price" userVisible="true" mapsToOffering="false" mapping="BTmonthlyprice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="39"/>
+        <AttributeMapping name="Sample Minimum Install Value" userVisible="true" mapsToOffering="false" mapping="sampleMinValueInstall" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="40"/>
+        <AttributeMapping name="Sample Maximum Install Value" userVisible="true" mapsToOffering="false" mapping="sampleMaxValueInstall" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="41"/>
+        <AttributeMapping name="Sample Minimum  Monthly Value" userVisible="true" mapsToOffering="false" mapping="sampleMinValueMonthly" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="42"/>
+        <AttributeMapping name="Sample Maximum  Monthly Value" userVisible="true" mapsToOffering="false" mapping="sampleMaxValueMonthly" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="43"/>
+        <AttributeMapping name="STDEV Install" userVisible="true" mapsToOffering="false" mapping="STDEVInstall" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="44"/>
+        <AttributeMapping name="STDEV Monthly" userVisible="true" mapsToOffering="false" mapping="STDEVMonthly" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="45"/>
+        <AttributeMapping name="Historic Estimate Risk Factor" userVisible="true" mapsToOffering="false" mapping="HEriskFactor" priority="46"/>
+        <AttributeMapping name="DSL Local Loop Total Instal" userVisible="true" mapsToOffering="false" mapping="DSLLocalLoopTotalInstall" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="47"/>
+        <AttributeMapping name="DSL Local Loop Total Monthly" userVisible="true" mapsToOffering="false" mapping="DSLLocalLoopTotalMonthly" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="48"/>
+        <AttributeMapping name="DSL Local Loop Install" userVisible="true" mapsToOffering="false" mapping="DSLLocalLoopInstall" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="49"/>
+        <AttributeMapping name="DSL Local Loop Monthly" userVisible="true" mapsToOffering="false" mapping="DSLLocalLoopMonthly" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" priority="50"/>
+        <AttributeMapping name="DSL Local Loop Local Currency" userVisible="true" mapsToOffering="false" mapping="DSLLocalLoopLocalCurrency"  priority="51"/>
+    </ApeResponseTypeMappings>
+
+    <ApeProductPricingMappings baseAccessTechnology="*">
+        <AttributeMapping name="Pair" userVisible="true" mapsToOffering="false" mapping="pairId" priority="25"/>
+        <AttributeMapping name="LEG" userVisible="true" mapsToOffering="true" mapping="legId" transformer="com.bt.rsqe.ape.transformer.LegTypeTransformer" priority="26"/>
+        <AttributeMapping name="Workflow Status" userVisible="true" mapsToOffering="false" mapping="workflowStatus" transformer="com.bt.rsqe.ape.transformer.WorkflowStatusTransformer" priority="13"/>
+        <AttributeMapping name="WORKFLOW STATUS" userVisible="false" mapsToOffering="true" mapping="workflowStatus" transformer="com.bt.rsqe.ape.transformer.WorkflowStatusTransformer"/>
+        <AttributeMapping name="Product Name" userVisible="false" mapsToOffering="true" mapping="productName"/>
+        <AttributeMapping name="PORT SPEED" userVisible="true" mapsToOffering="true" mapping="pspeedValue" priority="8"/>
+        <AttributeMapping name="Access Speed UOM" userVisible="false" mapsToOffering="false" mapping="accessSpeedUom"/>
+        <AttributeMapping name="ACCESS SPEED" userVisible="false" mapsToOffering="true" mapping="accessSpeedValue" transformer="com.bt.rsqe.ape.transformer.AccessSpeedBandwidthTransformer"/>
+        <AttributeMapping name="ACCESS TECHNOLOGY" userVisible="true" mapsToOffering="true" mapping="access.name" priority="6"/>
+        <AttributeMapping name="SUPPLIER SLA" userVisible="true" mapsToOffering="true" mapping="supplierName" priority="12"/>
+        <AttributeMapping name="SUPPLIER PRODUCT" userVisible="true" mapsToOffering="true" mapping="supplierProduct.name" priority="9"/>
+        <AttributeMapping name="ACCESS SUPPLIER NAME (TELCO NAME)" userVisible="true" mapsToOffering="true" mapping="if( userAttributes.pricingType = 'MBP', supplierName, supplier.name)" priority="10"/>
+        <AttributeMapping name="TARIFF ZONE" userVisible="true" mapsToOffering="true" mapping="tariff.tariffZoneName" priority="21"/>
+        <AttributeMapping name="CONNECTOR" userVisible="true" mapsToOffering="true" mapping="connector.name" priority="32"/>
+        <AttributeMapping name="Access Availability Status" userVisible="true" mapsToOffering="false" mapping="availability.name" priority="27"/>
+        <AttributeMapping name="Port Availability Status" userVisible="true" mapsToOffering="false" mapping="portAvailability.name" priority="28"/>
+        <AttributeMapping name="Currency Code" userVisible="false" mapsToOffering="true" mapping="currencyCode"/>
+        <AttributeMapping name="USD Exchange rate" userVisible="false" mapsToOffering="false" mapping="USDEXCHANGE" transformer="com.bt.rsqe.ape.transformer.ExchangeRateTransformer"/>
+        <AttributeMapping name="GBP Exchange rate" userVisible="false" mapsToOffering="false" mapping="GBPEXCHANGE" transformer="com.bt.rsqe.ape.transformer.ExchangeRateTransformer"/>
+        <AttributeMapping name="EUR Exchange rate" userVisible="false" mapsToOffering="false" mapping="EUROEXCHANGE" transformer="com.bt.rsqe.ape.transformer.ExchangeRateTransformer"/>
+
+        <AttributeMapping name="Base Install Price" userVisible="false" mapsToOffering="false" mapping="baseInstallPrice"  transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer" />
+        <AttributeMapping name="Hub Shared Price" userVisible="false" mapsToOffering="false" mapping="hubInstallSharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Connect Shared Price" userVisible="false" mapsToOffering="false" mapping="crossConnectInstallSharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Shared Aggregation Shared Price" userVisible="false" mapsToOffering="false" mapping="sharedAggregationInstallSharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Non Recoverable Shared Price" userVisible="false" mapsToOffering="false" mapping="nonRecoverableInstallSharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Additional BT Shared Price" userVisible="false" mapsToOffering="false" mapping="additionalBTInstallSharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Base Monthly Price" userVisible="false" mapsToOffering="false" mapping="baseMonthlyPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Hub Monthly Shared Price" userVisible="false" mapsToOffering="false" mapping="hubMonthlySharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Connect Monthly Shared Price" userVisible="false" mapsToOffering="false" mapping="crossConnectMonthlySharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Shared Aggregation Monthly Shared Price" userVisible="false" mapsToOffering="false" mapping="sharedAggregationMonthlySharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Non Recoverable Monthly Shared Price" userVisible="false" mapsToOffering="false" mapping="nonRecoverableMonthlySharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Additional BT Monthly Shared Price" userVisible="false" mapsToOffering="false" mapping="additionalBTMonthlySharedPrice" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Install Cost" userVisible="true" mapsToOffering="false" mapping="installCost" priority="18" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Base Install Cost" userVisible="false" mapsToOffering="false" mapping="baseInstallCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Hub Shared Cost" userVisible="false" mapsToOffering="false" mapping="hubInstallSharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Connect Shared Cost" userVisible="false" mapsToOffering="false" mapping="crossConnectInstallSharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Shared Aggregation Shared Cost" userVisible="false" mapsToOffering="false" mapping="sharedAggregationInstallSharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Non Recoverable Shared Cost" userVisible="false" mapsToOffering="false" mapping="nonRecoverableInstallSharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Additional BT Shared Cost" userVisible="false" mapsToOffering="false" mapping="additionalBTInstallSharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Monthly Cost" userVisible="true" mapsToOffering="false" mapping="supplierCost" priority="19" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Base Monthly Cost" userVisible="false" mapsToOffering="false" mapping="baseMonthlyCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Hub Monthly Shared Cost" userVisible="false" mapsToOffering="false" mapping="hubMonthlySharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Connect Monthly Shared Cost" userVisible="false" mapsToOffering="false" mapping="crossConnectMonthlySharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Shared Aggregation Monthly Shared Cost" userVisible="false" mapsToOffering="false" mapping="sharedAggregationMonthlySharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Non Recoverable Monthly Shared Cost" userVisible="false" mapsToOffering="false" mapping="nonRecoverableMonthlySharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Additional BT Monthly Shared Cost" userVisible="false" mapsToOffering="false" mapping="additionalBTMonthlySharedCost" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Quote Currency" userVisible="true" mapsToOffering="false" priority="15" mapping="" transformer="com.bt.rsqe.ape.transformer.QuoteCurrencyTransformer"/>
+        <AttributeMapping name="Install Price" userVisible="true" mapsToOffering="false" priority="16" mapping="install" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+        <AttributeMapping name="Monthly Price" userVisible="true" mapsToOffering="false" priority="17" mapping="monthly" transformer="com.bt.rsqe.ape.transformer.ToQuoteCurrencyTransformer"/>
+
+        <AttributeMapping name="Price Status" userVisible="true" mapsToOffering="false" mapping="budgetaryFlag" transformer="com.bt.rsqe.ape.transformer.PriceStatusTransformer" priority="14"/>
+        <AttributeMapping name="EXPIRY DATE" userVisible="true" mapsToOffering="true" mapping="expiryDate" priority="22"/>
+        <AttributeMapping name="No Of Copper Pairs" userVisible="false" mapsToOffering="false" mapping="numberOfCopperPairs"/>
+        <AttributeMapping name="QREF" userVisible="true" mapsToOffering="true" mapping="qref" priority="2"/>
+        <AttributeMapping name="TYPE" userVisible="true" mapsToOffering="false" mapping="tariffType" priority="3"/>
+        <AttributeMapping name="ACCESS TYPE" userVisible="true" mapsToOffering="true" mapping="accessTechnology" priority="7"/>
+        <AttributeMapping name="SERVICE LEADTIME" userVisible="true" mapsToOffering="true" mapping="serviceLeadTime" priority="11"/>
+        <AttributeMapping name="APoP" userVisible="true" mapsToOffering="false" mapping="apopNode.name" priority="30"/>
+        <AttributeMapping name="APOP NODE NAME" userVisible="false" mapsToOffering="true" mapping="apopNode.name" priority="30"/>
+        <AttributeMapping name="APOP NODE ID" userVisible="false" mapsToOffering="true" mapping="apopNode.id"/>
+        <AttributeMapping name="GPoP" userVisible="true" mapsToOffering="false" mapping="gpopNode.name" priority="29"/>
+        <AttributeMapping name="GPOP NODE NAME" userVisible="false" mapsToOffering="true" mapping="gpopNode.name" priority="29"/>
+        <AttributeMapping name="GPOP NODE ID" userVisible="false" mapsToOffering="true" mapping="gpopNode.id"/>
+        <AttributeMapping name="INTERFACE TYPE" userVisible="true" mapsToOffering="true" mapping="theInterface.name" priority="31"/>
+        <AttributeMapping name="FRAMING" userVisible="true" mapsToOffering="true" mapping="framing.name" priority="33"/>
+        <AttributeMapping name="OLO INTERFACE MTU SIZE" userVisible="false" mapsToOffering="true" mapping="theInterface.name"/>
+        <AttributeMapping name="DELIVERY MODE" userVisible="false" mapsToOffering="true" mapping="deliveryMode"/>
+        <AttributeMapping name="CAVEATS" userVisible="true" mapsToOffering="true" mapping="" priority="24"/>
+        <AttributeMapping name="ACCESS DOWNSTREAM SPEED DISPLAY VALUE" userVisible="true" mapsToOffering="true" mapping="&quot;accessSpeedValue+accessSpeedUom&quot;" transformer="com.bt.rsqe.ape.transformer.AccessDownStreamSpeedTransformer" priority="4"/>
+        <AttributeMapping name="ACCESS UPSTREAM SPEED DISPLAY VALUE" userVisible="true" mapsToOffering="true" mapping="&quot;accessSpeedValue+accessSpeedUom&quot;" transformer="com.bt.rsqe.ape.transformer.AccessUpStreamSpeedTransformer" priority="5"/>
+        <AttributeMapping name="Request Status" userVisible="true" mapsToOffering="false" mapping="" transformer="com.bt.rsqe.ape.transformer.PricingCommentsTransformer" priority="23"/>
+		<AttributeMapping name="APE FLAG" userVisible="false" mapsToOffering="false" mapping="workflowStatus" transformer="com.bt.rsqe.ape.transformer.ApeFlagTransformer"/>
+		<AttributeMapping name="APOP FLAG" userVisible="false" mapsToOffering="true" mapping="apopNode.id" transformer="com.bt.rsqe.ape.transformer.APOPFlagTransformer"/>
+		<AttributeMapping name="PORT AVAILABILITY" userVisible="false" mapsToOffering="true" mapping="portAvailability.name"/>
+        <AttributeMapping name="ETHERNET PHASE" userVisible="true" mapsToOffering="true" mapping="ethetnetPhaseAttribute" priority="34"/>
+        <AttributeMapping name="TARIFF TYPE" userVisible="true" mapsToOffering="true" mapping="tariffType" priority="35" />
+        <AttributeMapping name="EthernetPhase" userVisible="true" mapsToOffering="false" mapping="ethetnetPhaseAttribute" priority="36"/>
+        <AttributeMapping name="Supplier Interconnect" userVisible="true" mapsToOffering="false" mapping="supplierInterconnectionType" priority="37"/>
+
+        <!--
+        There are some visible attributes which exist on the product offering that we don't have an APE mapping
+        for and don't want to show on the access relation dialog.  The way to get around this is to add a mapping
+        for the offering attribute, set the userVisible flag as false and provide no mapping attribute.
+        -->
+        <AttributeMapping name="ACCESS REQUIRED DATE" userVisible="false" mapsToOffering="true"/>
+        <AttributeMapping name="SPECIAL BID" userVisible="false" mapsToOffering="true"/>
+        <AttributeMapping name="SPECIAL BID ID" userVisible="false" mapsToOffering="true"/>
+        <AttributeMapping name="BILL DESCRIPTION" userVisible="false" mapsToOffering="true"/>
+        <AttributeMapping name="NON STANDARD" userVisible="false" mapsToOffering="true"/>
+
+        <AttributeMapping name="OLO INTERFACE MTU" userVisible="true" mapsToOffering="true" mapping="oloInterfaceMTU"/>
+        <AttributeMapping name="SERVICE VARIANT" userVisible="true" mapsToOffering="true" mapping="serviceVariant"/>
+        <AttributeMapping name="MEF SERVICE TYPE" userVisible="true" mapsToOffering="true" mapping="mefServiceType"/>
+
+        <AttributeMapping name="ACCESS SUPPLIER CIRCUIT ID" userVisible="true" mapsToOffering="true" mapping="supplierCircuitId" priority="38"/>
+        <AttributeMapping name="ACCESS SUPPLIER QUOTE REFERENCE" userVisible="false" mapsToOffering="true" mapping="SUPPLIERREFERENCEID" priority="39"/>
+
+        <AttributeMapping name="PLATFORM NAME" userVisible="true" mapsToOffering="true" mapping="gpopNode.platformName" priority="40"/>
+        <AttributeMapping name="EXTENDED REACH" userVisible="false" mapsToOffering="true" mapping="gpopNode.platformName" transformer="com.bt.rsqe.ape.transformer.ExtendedReachTransformer"/>
+        <AttributeMapping name="SequenceId" userVisible="false" mapsToOffering="false" transformer="com.bt.rsqe.ape.transformer.SequenceIdTransformer"/>
+
+        <AttributeMapping name="No Manual Costing" userVisible="false" mapsToOffering="false" mapping="noManualCosting"/>
+        <AttributeMapping name="Offered Term" userVisible="true" mapsToOffering="true" mapping="offeredTerm" transformer="com.bt.rsqe.ape.transformer.ContractTermTransformer" priority="52"/>
+        <AttributeMapping name="CONTRACT TERM" userVisible="true" mapsToOffering="true" mapping="offeredTerm" transformer="com.bt.rsqe.ape.transformer.ContractTermTransformer" priority="20"/>
+
+        <!--mandatory address fields-->
+        <AttributeMapping name="Mandatory Country" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.country" />
+        <AttributeMapping name="Mandatory City" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.city" />
+        <AttributeMapping name="Mandatory State" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.state" />
+        <AttributeMapping name="Mandatory StreetAddress1" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.streetAddress1" />
+        <AttributeMapping name="Mandatory StreetAddress2" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.streetAddress2" />
+        <AttributeMapping name="Mandatory StreetAddress3" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.streetAddress3" />
+        <AttributeMapping name="Mandatory StreetAddress4" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.streetAddress4" />
+        <AttributeMapping name="Mandatory PostalZipCode" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.postalZipCode" />
+        <AttributeMapping name="Mandatory Telephone" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.telephone" />
+        <AttributeMapping name="Mandatory PoCFirstName" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.poCFirstName" />
+        <AttributeMapping name="Mandatory PoCLastName" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.poCLastName" />
+        <AttributeMapping name="Mandatory PoCPhoneNumber" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.poCPhoneNumber" />
+        <AttributeMapping name="Mandatory PoCEmail" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.poCEmail" />
+        <AttributeMapping name="Mandatory PoCNotes" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.poCNotes" />
+        <AttributeMapping name="Mandatory PSTNNumber" userVisible="false" mapsToOffering="false" mapping="siteaddressfield.PSTNNumber" />
+
+        <!-- R37 Mapping - Mapping is common for AccessPrice and MarketBased Price-->
+        <AttributeMapping name="PRODUCT DIVERSITY" userVisible="true" mapsToOffering="true" mapping="userAttributes.siteAvalibiltyTarget"  priority="53"/>
+        <AttributeMapping name="ROUTING" userVisible="true" mapsToOffering="true" mapping="routing"  priority="54"/>
+        <AttributeMapping name="CPE RESILIENCE" userVisible="true" mapsToOffering="true" mapping="userAttributes.CPEResilience"  priority="55"/>
+        <AttributeMapping name="BFD" userVisible="true" mapsToOffering="true" mapping="userAttributes.BFD"  priority="56"/>
+        <AttributeMapping name="FAST CONVERGENCE" userVisible="true" mapsToOffering="true" mapping="userAttributes.fastConvergence"  priority="57"/>
+        <AttributeMapping name="PRICING REQUEST TYPE" userVisible="false" mapsToOffering="true" mapping="userAttributes.pricingType"  priority="58"/>
+        <!--R39 mapping -->
+        <AttributeMapping name="MBP RISK ADVICE" userVisible="true" mapsToOffering="true" mapping="userAttributes.riskAdvice" priority="59"/>
+        <AttributeMapping name="MBP STATUS" userVisible="true" mapsToOffering="true" mapping="userAttributes.pricingStatus" priority="60"/>
+
+        <AttributeMapping name="REQUESTTYPE" userVisible="true" mapsToOffering="true" mapping="userAttributes.requestType"  priority="61"/>
+        <AttributeMapping name="QUOTESTAGE" userVisible="true" mapsToOffering="true" mapping="userAttributes.quoteStage"  priority="62"/>
+        <AttributeMapping name="Avg_Install" userVisible="true" mapsToOffering="false" mapping="userAttributes.avgInstall"  priority="63"/>
+        <AttributeMapping name="Avg_Monthly" userVisible="true" mapsToOffering="false" mapping="userAttributes.avgMonthly"  priority="64"/>
+        <AttributeMapping name="Sample Site Average Distance" userVisible="true" mapsToOffering="true" mapping="userAttributes.sampleSiteAverageDistance"  priority="65"/>
+        <AttributeMapping name="Expected Turnaround Time" userVisible="true" mapsToOffering="false" mapping="userAttributes.expectedTurnaroundTime+' Days'" priority="66"/>
+
+        <!-- Custom Access Solution R41 development -->
+        <AttributeMapping name="ACF TAG" userVisible="true" mapsToOffering="true" mapping="acfTag" priority="67"/>
+        <AttributeMapping name="BUNDLED" userVisible="true" mapsToOffering="true" mapping="bundled" priority="69" />
+        <AttributeMapping name="IP ADDRESS ASSIGNMENT" userVisible="true" mapsToOffering="true" mapping="ipAddressAssignment" priority="70" />
+        <AttributeMapping name="DSL TELEPHONE NUMBER" userVisible="true" mapsToOffering="true" mapping="dslTelephoneNumber" priority="71" />
+        <AttributeMapping name="NUMBER OF IP ADDRESS" userVisible="true" mapsToOffering="true" mapping="numberofIpAddress" priority="72" />
+        <AttributeMapping name="SERVICE LEVEL" userVisible="true" mapsToOffering="true" mapping="serviceLevel" priority="73" />
+        <AttributeMapping name="CONTENTION RATIO" userVisible="true" mapsToOffering="true" mapping="contentionRatio" priority="74" />
+        <AttributeMapping name="NUMBER OF CHANNELS" userVisible="true" mapsToOffering="true" mapping="numberOfChannels" priority="75" />
+
+    </ApeProductPricingMappings>
+
+    <AttributeCopyRules>
+        <AttributeMapping name="NON STANDARD" mapping="NON STANDARD REQUIREMENT" userVisible="true" mapsToOffering="true" />
+        <AttributeMapping name="TRANSIT" mapping="TRANSIT" userVisible="false" mapsToOffering="true"/>
+        <AttributeMapping name="CUSTOMER PROVIDED" mapping="CUSTOMER PROVIDED" userVisible="false" mapsToOffering="true"/>
+        <AttributeMapping name="LEGACY BILLING" mapping="LEGACY BILLING" userVisible="true" mapsToOffering="true"/>
+    </AttributeCopyRules>
+
+    <ApeStarsResponseMappings responseType="RenewalPrice">
+        <AttributeMapping name="Leg Identifier" userVisible="true" mapsToOffering="false" mapping="legIdentifier" priority="76"/>
+        <AttributeMapping name="Renewable Status" userVisible="true" mapsToOffering="false" mapping="renewalStatus" priority="77"/>
+        <AttributeMapping name="Renewable Status Code" userVisible="true" mapsToOffering="false" mapping="renewalStatusCode" priority="78"/>
+        <AttributeMapping name="Renewable Comments" userVisible="true" mapsToOffering="false" mapping="renewalComments" priority="79"/>
+        <AttributeMapping name="Supplier Contract Start Date" userVisible="false" mapsToOffering="false" mapping="supplierContractStartDate"/>
+        <AttributeMapping name="Supplier Contract Term" userVisible="false" mapsToOffering="false" mapping="supplierContractTerm"/>
+        <AttributeMapping name="Currently Monthly Cost" userVisible="false" mapsToOffering="false" mapping="currentMonthlyCost"/>
+        <AttributeMapping name="Local Currency" userVisible="false" mapsToOffering="false" mapping="localCurrency"/>
+        <AttributeMapping name="USD EXCHANGE" userVisible="false" mapsToOffering="false" mapping="USD_EXCHANGE"/>
+        <AttributeMapping name="GBP EXCHANGE" userVisible="false" mapsToOffering="false" mapping="GBP_EXCHANGE"/>
+        <AttributeMapping name="EURO EXCHANGE" userVisible="false" mapsToOffering="false" mapping="EURO_EXCHANGE"/>
+        <AttributeMapping name="Conversion Rate" userVisible="false" mapsToOffering="false" mapping="conversionRate"/>
+    </ApeStarsResponseMappings>
+
+    <ApeProductPricingMappings baseAccessTechnology="Ethernet">
+        <AttributeMapping name="SUPPLIER INTERCONNECTION TYPE" userVisible="true" mapsToOffering="true" mapping="supplierInterconnectionType"/>
+    </ApeProductPricingMappings>
+
+    <ApeProductPricingMappings baseAccessTechnology="hVPN">
+        <AttributeMapping name="PRICING ID" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.HVPNPRICINGID"/>
+        <AttributeMapping name="SERVICE ID" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.HVPNSERVICEID"/>
+        <AttributeMapping name="MINIMUM GUARANTEED SPEEDS" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.HVPNGUARANTEEDSPEED"/>
+        <AttributeMapping name="COPPER DETAILS" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.copperDetails"/>
+        <AttributeMapping name="COPPER SERVICE DETAILS" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.copperServiceId"/>
+        <AttributeMapping name="SERVICE CATEGORY" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.serviceCategory"/>
+        <AttributeMapping name="ENCAPSULATION" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.hvpnEncapsulation"/>
+        <AttributeMapping name="ACCESS UPSTREAM SPEED DISPLAY VALUE" userVisible="true" mapsToOffering="true" mapping="&quot;hvpnCaveats.hvpnAccessSpeedValue@SlashRangeUpper:String&quot;" priority="5"/>
+        <!--<AttributeMapping name="ACCESS SUPPLIER CIRCUIT ID" userVisible="true" mapsToOffering="true" mapping="SUPPLIERREFERENCEID" priority="37"/>
+        <AttributeMapping name="Access Supplier Reference ID" userVisible="true" mapsToOffering="false" mapping="SUPPLIERREFERENCEID" priority="37"/>-->
+        <AttributeMapping name="METHOD" userVisible="false" mapsToOffering="true" mapping="hvpnCaveats.hvpnMethod"/>
+        <AttributeMapping name="ACCESS TYPE" userVisible="true" mapsToOffering="true" mapping="hvpnCaveats.accessTechnology" priority="7"/>
+        <AttributeMapping name="HVPN Pricing ID" userVisible="true" mapsToOffering="false" mapping="hvpnCaveats.HVPNPRICINGID" priority="34"/>
+        <AttributeMapping name="HVPN Service ID" userVisible="true" mapsToOffering="false" mapping="hvpnCaveats.HVPNSERVICEID" priority="35"/>
+        <AttributeMapping name="HVPN Minimum Guaranteed Speeds" userVisible="true" mapsToOffering="false" mapping="hvpnCaveats.HVPNGUARANTEEDSPEED" priority="36"/>
+
+        <!-- HVPN details are visible via the Caveats popup (HVPN tab) !!! add new attribute or change label require a change in OfferingGridAdapterService.js!!!-->
+        <AttributeMapping name="Service Category" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.serviceCategory"/>
+        <AttributeMapping name="Copper Details" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.copperDetails"/>
+        <AttributeMapping name="Copper Service ID" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.copperServiceId"/>
+        <AttributeMapping name="Other Service Notes" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.otherServiceNote"/>
+        <AttributeMapping name="Additional Charges" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.additionalCharges"/>
+        <AttributeMapping name="Pricing Notes" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.pricingNotes"/>
+        <AttributeMapping name="RFA Notes" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.RFANotes"/>
+        <AttributeMapping name="RFO Notes" userVisible="false" mapsToOffering="false" mapping="hvpnCaveats.RFONotes"/>
+        <!-- END of HVPN details -->
+    </ApeProductPricingMappings>
+
+    <LocalIdentifierMappings>
+        <LocalIdentifierMapping id="PAIR_ID">
+            <OfferingAttribute name="Pair"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="WORKFLOW_STATUS">
+            <OfferingAttribute name="Workflow Status"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="PRICE_STATUS">
+            <OfferingAttribute name="Price Status"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="CURRENCY">
+            <OfferingAttribute name="Currency Code"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="MONTHLY_PRICE">
+            <OfferingAttribute name="Monthly Price"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="INSTALL_PRICE">
+            <OfferingAttribute name="Install Price"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="INSTALL_COST">
+            <OfferingAttribute name="Install Cost"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="SUPPLIER_COST">
+            <OfferingAttribute name="Monthly Cost"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="QREF">
+            <OfferingAttribute name="QREF"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="USD_EXCHANGE_RATE">
+            <OfferingAttribute name="USD Exchange rate"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="GBP_EXCHANGE_RATE">
+            <OfferingAttribute name="GBP Exchange rate"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="EUR_EXCHANGE_RATE">
+            <OfferingAttribute name="EUR Exchange rate"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="EXPIRY_DATE">
+            <OfferingAttribute name="EXPIRY DATE"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="ETHERNET_PHASE">
+            <OfferingAttribute name="EthernetPhase"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="SUPPLIER_INTERNETCONNECT">
+            <OfferingAttribute name="Supplier Interconnect"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="BT_INSTALL_PRICE">
+            <OfferingAttribute name="BT Install Price"/>
+        </LocalIdentifierMapping>
+        <LocalIdentifierMapping id="BT_MONTHLY_PRICE">
+            <OfferingAttribute name="BT Monthly Price"/>
+        </LocalIdentifierMapping>
+    </LocalIdentifierMappings>
+</ApeMappingConfig>
+

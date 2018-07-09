@@ -1,0 +1,58 @@
+<div class="innerWrap" ng-init="onPageLoad()" id="contractEditPage">
+
+    <div class="hrMargin">
+        <span class="headerLabel">Customer Contract</span>
+        <hr class="hrStyle" width="100%"/>
+    </div>
+
+    <div ng-form="contractForm" style="margin-top: 5px">
+        <div class="cqmFieldDiv">
+            <label>Contract Friendly Name</label>
+            <input type="text" class="cqmField" id="contractFriendlyName" name="contractFriendlyName" tabindex="1" ng-model="contractFormData.contractFriendlyName"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Contract Reference</label>
+            <input class="cqmField" type="text" id="contractRef" name="contractRef"
+                   ng-model="contractFormData.contractRef" tabindex="2"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Contractual Cease Term (Days)</label>
+            <input type="number" max="240" min="0"  class="cqmField" id="contractCeaseTerm" name="contractCeaseTerm" ng-model="contractFormData.contractCeaseTerm" tabindex="3" data-toggle="tooltip" title="{{cctToolTipMsg}}"/>
+            <!--<select class="cqmField" id="contractCeaseTerm" name="contractCeaseTerm" ng-model="contractFormData.contractCeaseTerm" ng-options="t in ceaseTerms" tabindex="3"/>-->
+
+        </div>
+
+        <div class="cqmFieldDiv" style="width:25%">
+            <label>Linked Contractual Cease Term (Days)</label>
+            <input type="number" max="240" min="0"  class="cqmField" id="linkedContractualCeaseTerm" name="linkedContractualCeaseTerm" ng-model="contractFormData.linkedContractualCeaseTerm" tabindex="4" data-toggle="tooltip" title="{{cctToolTipMsg}}"/>
+        </div>
+
+        <div class="cqmFieldDiv">
+            <label>Contract Start Date</label>
+            <input class="cqmField" cqm-datepicker placeholder="YYYY-MM-DD" type="text" id="contractStartDate" name="contractStartDate"
+                   ng-model="contractFormData.contractStartDate" tabindex="5" />
+        </div>
+
+
+        <div class="cqmFieldDiv">
+            <label>Contract Duration </label>
+            <select class="cqmField" id="contractDuration" name="contractDuration" ng-model="contractFormData.contractDuration" ng-options="d.label for d in durations" tabindex="6"/>
+
+        </div>
+        <div class="cqmFieldDiv">
+            <label>Client Group</label>
+            <select class="cqmField" id="clientGroup" name="clientGroup" ng-model="contractFormData.clientGroup" ng-options="c.clientGrpId as c.groupName for c in clientGroups" tabindex="7" ng-disabled="cltGrpDisable"/>
+        </div>
+
+        <div class="containerDiv" style="float:left;">
+
+            <button class="btn" ng-show="!disableUpdate"
+                    style="float:right;margin:5px;" ng-click="updateContract()" tabindex="15" ng-disabled="contractForm.$invalid">Update
+            </button>
+
+        </div>
+
+    </div>
+</div>

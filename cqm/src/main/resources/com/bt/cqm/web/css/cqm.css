@@ -1,0 +1,200 @@
+.green { BACKGROUND:#33CC66;COLOR:WHITE}
+.blue {FONT-FAMILY: Verdana;font-size: 9pt; background-color:#6495ed;COLOR:WHITE}
+.even{ background-color:lightgray;FONT-FAMILY: Verdana;font-size: 9pt; }
+.odd{  background-color:white;FONT-FAMILY: Verdana;font-size: 9pt;}
+.divHeaderClass{margin-left:45px;overflow:scroll;height:250px ;border:2px double black;width: 1400px}
+.hrMargin{margin-left:45px;margin-top:2em}
+.hrStyle{height:1px;border:1px solid #000;}
+.vrStyle{width:2px;border:1px solid #000; margin-right: 1px}
+.rfq {font-family: "Arial",Tahoma,verdana,sans-serif;font-size: 11px; color:RED}
+.rfo {font-family: "Arial",Tahoma,verdana,sans-serif;font-size: 11px; color:GREEN}
+.txt{
+    height:2em;
+    border:1px solid ;
+}
+.txt_IE{
+    height:1em;
+    border:1px solid ;
+    text-align: left;
+}
+.pageBgColor{background-color:#E6E6E6;
+    /*newly added - 15-APR-2013*/
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff
+}
+.mainTab{background-color:#E6E6E6;height:210%;
+/*newly added - 15-APR-2013*/
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff
+}
+th {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+	background-color:#9E9E9F;
+	COLOR:WHITE;
+	white-space:nowrap;
+    text-align: left;
+    border: 1px solid;
+   /* BORDER-LEFT:  1px solid;
+    BORDER-RIGHT:  1px solid;
+    border-style: solid;*/
+
+/*Newly added - 15-APR-2013*/
+    background-color:#CAE8EA;
+    background-image: url("../images/t_bg_header_sprite.png");
+    background-position: 0pt 0pt;
+    vertical-align: middle;
+    color: #333333;
+    font-size: 10pt;
+    font-weight: normal;
+    height: 20px;
+
+	}
+td {
+
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+        text-align: left;
+
+    }
+.tdData {
+        white-space:nowrap;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+        font-size: 9pt;
+    }
+.lstCustBtn{height:2em; width:15em ;
+}
+.lstCustTbl{border:2px solid grey;width:100%}
+
+.searchCustTxt{
+ BORDER-BOTTOM:  1px solid; POSITION: relative; BORDER-LEFT:  1px solid; WIDTH: 180px; HEIGHT: 2em; BORDER-TOP: 1px solid;  BORDER-RIGHT: 1px solid;
+}
+.searchCustTxt_IE{
+ BORDER-BOTTOM:  1px solid; POSITION: relative; BORDER-LEFT:  1px solid; WIDTH: 172px; HEIGHT: 1em; BORDER-TOP: 1px solid;  BORDER-RIGHT: 1px solid;
+}
+
+.searchCustDD{
+    POSITION: absolute; PADDING-BOTTOM: 0px;  MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 200px; PADDING-RIGHT: 0px; HEIGHT: 25px; PADDING-TOP: 0px;
+
+}
+.divCustList{margin-left:0px;overflow-x:scroll;height:150px ;border:2px double black;overflow-y:scroll;width:600px}
+
+label{
+    white-space:nowrap;
+    font-family: "Arial",Tahoma,verdana,sans-serif;
+    font-size: 11px;
+    //font-weight: bold;
+    text-align: left;
+
+
+    display: block;
+    margin-right: 10px;
+    padding: 0.5em 0,0,0;
+    position: relative;
+    text-align: left;
+    width: 16em;
+}
+.headerLabel{
+
+    font-family: "Arial",tahoma,verdana,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+.modalExpedio {
+	  background-color: #E6E6E6;
+	  color: black;
+	  border: 1px solid gray;
+	  padding: 20px;
+	  /*display: block;*/
+	  position: fixed;
+      overflow: auto;
+	  top: 10px;
+	  right: 10px;
+	  width: 600px;
+	  height: 500px;
+}
+
+
+
+.background {
+	  background-color: black;
+	  filter:alpha(opacity=10);
+	  background-color: rgba(0,0,0,0.90);
+	  width: 100%;
+	  min-height: 100%;
+	  overflow: hidden;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  color: white;
+}
+
+.labelExpedio{
+    white-space:nowrap;
+    FONT-FAMILY: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #ffffff;
+}
+.tableLabel{
+    white-space:nowrap;
+    FONT-FAMILY: Verdana;
+    font-size: 10pt;
+}
+
+img
+{
+opacity:0.4;
+filter:alpha(opacity=40);
+}
+
+.imgtBtn {
+    height: 1em;
+    width: 1em;
+}
+.processMsgFont{
+  	  font-family: verdana;
+      font-size: 12pt;
+}
+.updatePopup_margin{
+    margin: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    border: #000000 double;
+}
+.updatePopup_text{
+    text-align: justify ;
+    margin:1em 1em 1em 1em ;
+    background-color: #ffffff;
+}
+.popupMsg_text{
+    text-align: justify ;
+    margin:1px 1px 1px 1px ;
+    background-color: #ffffff;
+    border: #000000 double;
+}
+.largeTextTD{
+    overflow: hidden;
+    width:150px;
+    max-width:150px;
+    text-overflow:ellipsis;
+
+}
+.btnDiv {
+    text-align:center ;
+   /* background-color:#E6E6E6;*/
+}
+.lstUseSelBtn{height:2em; width:15em ;
+}
+
+.table-hover tbody tr:hover td  {
+  background-color: #FFA500;
+}

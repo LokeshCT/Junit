@@ -1,0 +1,106 @@
+<div class="inner" id="cpeConfigurationContainer" ng-controller="accessPortCpeConfigCtrl">
+
+    <div id="siteDetailsContainer" style="width: 400px;">
+        <div id="siteNameLabel" style="width:300px; font-size: 10px;"><b>Site Name</b> : {{siteConfigData.siteName}} &nbsp;
+            <b>Location</b> :{{siteConfigData.address.city}},{{siteConfigData.address.country}}
+        </div>
+    </div>
+
+    <div class="table-container" style="height: 288px; visibility: visible;">
+        <table>
+            <thead class="header-fixed">
+            <tr style="top: 0px;">
+                <th>
+                    <div style="width: 80px;">Leg Type<br><br></div>
+                </th>
+                <th>
+                    <div style="width: 140px;">Router Bundle<br><br></div>
+                </th>
+                <th>
+                    <div style="width: 140px;">Maintenance Option<br><br></div>
+                </th>
+                <th>
+                    <div style="width: 140px;">Action Type<br><br></div>
+                </th>
+                <th>
+                    <div style="width: 140px;">Sub Action Type<br><br></div>
+                </th>
+            </tr>
+            </thead>
+            <tbody style="display: block; border-top: 50px solid transparent;">
+            <!-- ngRepeat: r in data.rows -->
+            <tr>
+                <td>
+                    <div style="width: 80px;">
+                        Primary
+                    </div>
+                </td>
+
+                <td>
+                    <div style="width: 140px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="Router Bundle" attribute-id="cpeConfigurationData.primaryCpeConfigurationDetail.routerBundle.value"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.routerBundle.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 140px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="Maintenance Option" attribute-id="cpeConfigurationData.primaryCpeConfigurationDetail.maintenanceOption"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.maintenanceOption}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 140px;">
+                        {{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.actionType}}
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 140px;">
+                        <configurable-attribute leg-type="Primary" attribute-name="Sub Action Type" attribute-id="cpeConfigurationData.primaryCpeConfigurationDetail.subActionType"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.subActionType}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+            </tr>
+            <tr ng-show="isDualCPE">
+                <td>
+                    <div style="width: 80px;">
+                        Secondary
+                    </div>
+                </td>
+
+                <td>
+                    <div style="width: 140px;">
+                        <configurable-attribute leg-type="Secondary" attribute-name="Router Bundle" attribute-id="cpeConfigurationData.secondaryCpeConfigurationDetail.routerBundle.value"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.routerBundle.value}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 140px;">
+                        <configurable-attribute leg-type="Secondary" attribute-name="Maintenance Option" attribute-id="cpeConfigurationData.secondaryCpeConfigurationDetail.maintenanceOption"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.maintenanceOption}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 140px;">
+                        {{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.actionType}}
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 140px;">
+                        <configurable-attribute leg-type="Secondary" attribute-name="Sub Action Type" attribute-id="cpeConfigurationData.secondaryCpeConfigurationDetail.subActionType"
+                                                attribute-value="{{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.subActionType}}"
+                                                update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+                    </div>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <div class="hidden">11</div>
+    </div>
+</div>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Virtusa (Virtusa) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/Header/1.0" xmlns:ns1="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0" targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0" elementFormDefault="qualified">
+	<xs:element name="HeaderRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>Contains authentication related elements</xs:documentation>
+				</xs:annotation>
+				<xs:element name="AccountID">
+					<xs:annotation>
+						<xs:documentation>user id: Either functional accounts or individuals</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Password">
+					<xs:annotation>
+						<xs:documentation>password, encypted via SSL</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Domain">
+					<xs:annotation>
+						<xs:documentation>Windows Domain</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

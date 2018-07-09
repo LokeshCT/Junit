@@ -1,0 +1,19 @@
+[
+    {
+        "id":"482287",
+        "cusId":"566256012",
+        "bchId":"-1",
+        "cgpId":"62",
+        "refNumber":"5.66E+20",
+        "custRefNumber":"T2Error",
+        "customerCode":"EPC",
+        "duration":"4YEARS",
+        "billFrequency":"MONTHLY",
+        "conRoleId":"29420",
+        "conGfrCode":"877",
+        "centralSitId":"666892",
+        "conQuoteOnlyFlag":"N",
+        "conNominalGFRCode":"877",
+        "conNominalLEID":"822612"
+    }
+]

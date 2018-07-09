@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Line Chart Test Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link type="text/css" href="/rsqe/static/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/foundation.min.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/normalize.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/prism.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/lineChart.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="/rsqe/static/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/angular/angular-file-upload.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/underscore/underscore.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/tcCharts/Chart.min.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/tcCharts/tc-angular-chartjs.js"></script>
+
+    <script type="text/javascript" src="/rsqe/static/js/charts.js"></script>
+    <script type="text/javascript" src="/rsqe/static/js/webMetricsAdapter.js"></script>
+    <script type="text/javascript" src="/rsqe/static/js/services.js"></script>
+
+    <script type="text/javascript" src="/rsqe/test/js/charts/charts-test-page.js"></script>
+
+</head>
+
+<body ng-app="rsqeChartsTest">
+    <div ng-controller='LineChartTestController' style="width: 900px;position: relative;">
+        <rsqe-line-chart data="data" options="options"></rsqe-line-chart>
+    </div>
+</body>
+</html>
+

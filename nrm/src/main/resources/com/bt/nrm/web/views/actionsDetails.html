@@ -1,0 +1,185 @@
+<div class="col-lg-12 col-sm-12 col-xs-12" ng-controller="ActionsDetailsController as actionsDetailsController">
+    <div class="widget">
+        <div class="widget-header bordered-bottom bg-themeprimary">
+            <span class="widget-caption"><b>Action Details</b></span>
+            <div class="widget-buttons">
+                <a href="" widget-maximize></a>
+                <a href="" widget-collapse></a>
+                <a href="" widget-dispose></a>
+            </div>
+        </div>
+        <div class="widget-body no-padding">
+            <form class="form-horizontal form-bordered" role="form">
+                <accordion close-others="false">
+                    <accordion-group heading="Summary" is-open="true">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Role </th>
+                                <th> Feature </th>
+                                <th> RequestId </th>
+                                <th> State </th>
+                                <th> Response </th>
+                                <th>  </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td> {{evaluator.evaluatorGroupName}} </td>
+                                <td> {{request.templateCode}} </td>
+                                <td> {{request.requestId}} </td>
+                                <td> {{evaluator.state}} </td>
+                                <td> {{evaluator.response}} </td>
+
+                                <td ng-if="(evaluator.state != null) && (evaluator.state == 'created')">
+                                    <button class="btn btn-purple" ng-click="startWorkingOnAction()">Start Working</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="Comments" is-open="true">
+                         <div>
+                             <div>
+                                 <div class="comment" ng-repeat="comment in comments track by $id($index)">
+                                     <div class="comment-body no-margin">
+                                         <div class="comment-text">
+                                             <div class="comment-header">
+                                                 <a href="#" title=""><b>{{comment.name}}</b></a><span><b> {{comment.date}} </b></span>
+                                             </div>
+                                             {{comment.message}}
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <form method="post" class="well padding-bottom-10 padding-top-10 margin-top-20" onsubmit="return false;">
+                                <span class="input-icon icon-right">
+                                    <textarea rows="3" class="form-control" placeholder="Post a new message" ng-model="messageModel"/></textarea>
+                                </span>
+                                 <div class="padding-top-10 text-align-left">
+                                     <button ng-click="saveRequestEvaluatorComments()" class="btn btn-purple">Save Comment</button>
+                                 </div>
+                             </form>
+                         </div>
+                    </accordion-group>
+                    <accordion-group heading="Actions for other roles in this Request:" is-open="true">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Role </th>
+                                <th> State </th>
+                                <th> Decision </th>
+                                <th> Agent </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="otherEvaluator in otherEvaluators">
+                                    <td> {{otherEvaluator.evaluatorGroupName}} </td>
+                                    <td> {{otherEvaluator.state}} </td>
+                                    <td> {{otherEvaluator.decision}} </td>
+                                    <td> {{otherEvaluator.acceptedBy}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+
+                    <accordion-group heading="Specifics" is-open="true" ng-if="evaluator.state != 'created'">
+                        <table width="100%">
+                            <tbody>
+                            <tr>
+                                <td width="50%">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Initiated date: </td>
+                                            <td> {{evaluator.createdDate}} </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Accepted date: </td>
+                                            <td> {{evaluator.acceptedDate}} </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Updated date: </td>
+                                            <td> {{evaluator.modifiedDate}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Closed date: </td>
+                                            <td> {{evaluator.closedDate}} </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="50%">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Response: </td>
+                                            <td> {{evaluator.response}} </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Accepted by: </td>
+                                            <td> {{evaluator.acceptedByName}} </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Updated by: </td>
+                                            <td> {{evaluator.modifiedUserName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bordered-purple-right"> Closed by: </td>
+                                            <td> {{evaluator.closedByName}} </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <table width="100%">
+                            <tbody>
+                            <tr>
+                                <td width="50%">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <td class="bordered-purple-right">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="colored-blue" ng-model="checkboxModel.value">
+                                                        <span class="text">Decision/Go-NoGo:</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div ng-if="checkboxModel.value">
+                                                    <div class="padding-top-10 text-align-left">
+                                                        <ui-select ng-model="evaluatorResponseModel.selected" theme="bootstrap">
+                                                            <ui-select-match placeholder="Select Response...">{{$select.selected}}</ui-select-match>
+                                                            <ui-select-choices repeat="respConst in requestEvaluatorResponseConstantsService | filter: $select.search">
+                                                                <div ng-bind-html="respConst | highlight: $select.search"></div>
+                                                            </ui-select-choices>
+                                                        </ui-select>
+                                                    </div>
+                                                    <span class="padding-top-10 input-icon icon-right">
+                                                        <textarea type="text" rows="3" class="form-control" placeholder="Decision message" ng-model="goNoGoDecisionModel"></textarea>
+                                                    </span>
+                                                    <div class="padding-top-10 text-align-left">
+                                                        <button ng-click="updateFinalDecision()" class="btn btn-purple">Update Decision</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </accordion-group>
+                    <accordion-group heading="Site and Price Details Section" is-open="true" ng-if="evaluator.state != 'created'">
+                        <button class="btn btn-purple" style="margin-right:10px" ng-click="saveGridData()">Update Prices</button>
+                        <div ag-grid="gridOptionsSitePriceGroupList" class="ag-fresh ag-basic" style="width: 100%;height: 350px;padding-top: 15px;"></div>
+                    </accordion-group>
+                </accordion>
+            </form>
+        </div>
+    </div>
+</div>

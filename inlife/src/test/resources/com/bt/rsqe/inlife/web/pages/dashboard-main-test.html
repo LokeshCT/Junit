@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="rsqeGridTest">
+<head>
+    <title>PMD.SQE Dashboard</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link type="text/css" href="/rsqe/static/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/lib/bootstrap/css/ng-grid.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/inlife.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link type="text/css" href="/rsqe/static/css/foundation.css" rel="stylesheet">-->
+    <link type="text/css" href="/rsqe/static/css/normalize.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/prism.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/app.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/rsqe/static/lib/underscore/underscore.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/jquery/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/angular/ui/ng-grid.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/tcCharts/Chart.min.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/tcCharts/tc-angular-chartjs.js"></script>
+
+    <script type="text/javascript" src="/rsqe/static/js/grid.js"></script>
+    <script type="text/javascript" src="/rsqe/static/js/charts.js"></script>
+
+    <script type="text/javascript" src="/rsqe/test/js/data/quote-stats-summary.js"></script>
+    <script type="text/javascript" src="/rsqe/test/js/grid/grid-test-page.js"></script>
+    <script type="text/javascript" src="/rsqe/test/js/charts/charts-test-page.js"></script>
+
+</head>
+<body>
+
+
+<div ng-controller='GridTestController'>
+    <div id="header">
+        <img src="/rsqe/static/img/mx_banner.jpg" class="logo"/>
+
+        <div class="header-text">
+            <div><h1 class="dashboard-msg">Dashboard</h1></div>
+        </div>
+    </div>
+
+    <label style="margin-left: 40px; margin-top: 10px;">Summary of 'Quotes / Quote Items' in Quoting Stage:</label>
+    <div ng-controller='QuoteGridTestController' class="quoteStatsDiv">
+        <div class="quotesSummaryByChannelDiv">
+            <rsqe-grid data="quoteSummaryData" class="quotesSummaryByChannelTab" column-defs="quoteSummaryColumns" footer-template="footerTemplate"></rsqe-grid>
+        </div>
+
+        <div class="pieChartDiv" ng-controller='PieChartTestController'>
+            <rsqe-pie-chart pie-data="pieData" options="options"></rsqe-pie-chart>
+        </div>
+
+        <div class="quoteItemDetailsDiv">
+            <label style="margin-left: 40px;">Details of Quote Items in Quoting Stage:</label>
+            <rsqe-grid class="quoteItemDetailsTab" data="data" class="gridStyle" column-defs="columnDefs" enable-grouping></rsqe-grid>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

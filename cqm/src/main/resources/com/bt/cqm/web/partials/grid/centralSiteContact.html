@@ -1,0 +1,95 @@
+<div ng-controller="centralSiteContactController" ng-init="loadContacts()" class="inner">
+
+    <div>
+        <div class="hrMargin headerLabel">
+            <span class="headerLabel">Customer Contacts: {{ numOfCustomerContacts }}</span>
+            <hr class="hrStyle" width="98%">
+        </div>
+        <form name="centralSiteContacts" id="centralSiteContacts">
+
+            <div ng-form="centralSiteContactNGForm">
+
+                <div class="searchResultGridStyle" style="height: 200px" ng-grid="centralSiteContactGrid"></div>
+
+                <div class="contactsContainerDiv">
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Role <span class="rfo">(RFO)</span></label></div>
+                        <select id="sc_role" ng-model="contactToBeUpdated.role" ng-options="role for role in roles"
+                                ng-change="updateCentralSiteContactUI()" class="cqmField" required>
+                            <option style="display:none" value="">Select a Role</option>
+                        </select>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Job Title<span class="rfo">(RFO)</span></label></div>
+                        <div><input type="text" id="sc_jobTitle" name="sc_jobTitle" class="cqmField"
+                                    ng-model="contactToBeUpdated.jobTitle"
+                                    required/>
+                        </div>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>First Name<span class="rfo">(RFO)</span></label></div>
+                        <div><input type="text" id="sc_fname" name="sc_fname" class="cqmField"
+                                    ng-model="contactToBeUpdated.firstName"
+                                    ng-pattern="/^(\D)+$/"
+                                    required/></div>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Last Name<span class="rfo">(RFO)</span></label></div>
+                        <div><input type="text" id="sc_lname" name="sc_lname" class="cqmField"
+                                    ng-model="contactToBeUpdated.lastName"
+                                    ng-pattern="/^(\D)+$/"
+                                    required/></div>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Email<span class="rfo">(RFO)</span></label></div>
+                        <div><input type="email" id="sc_email" name="sc_email" class="cqmField"
+
+                                    ng-model="contactToBeUpdated.email"
+                                    required/></div>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Phone Number <span class="rfo">(RFO)</span></label></div>
+                        <div><input type="text" no-alpha id="sc_phone" name="sc_phone" class="cqmField" ng-model="contactToBeUpdated.phoneNumber"
+                                    required/></div>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Fax Number</label></div>
+                        <div><input type="text" id="sc_fax" name="sc_fax" class="cqmField"
+                                    no-alpha
+                                    ng-model="contactToBeUpdated.fax"/></div>
+                    </div>
+
+                    <div class="cqmFieldDiv">
+                        <div style="width:100%"><label>Mobile Number</label></div>
+                        <div><input type="text" no-alpha id="sc_mobile" name="sc_mobile" class="cqmField" ng-model="contactToBeUpdated.mobileNumber"/>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="bfgSiteId" name="bfgSiteId"
+                           ng-model="contactToBeUpdated.bfgSiteId" disabled="true"/>
+
+                    <input type="hidden" id="contactRoleId" name="contactRoleId"
+                           ng-model="contactToBeUpdated.contactRoleId" disabled="true"/>
+                </div>
+
+                <div class="contactsButtonContainerDiv">
+                    <div class="btnDiv" align="right">
+                        <button class="btn" ng-disabled="!centralSiteContactNGForm.$valid || !centralSiteContactUI.enableCreateContactButton"
+                                ng-click="createCentralSiteContact()">Create
+                        </button>
+                        <button class="btn" ng-disabled="!centralSiteContactNGForm.$valid || !centralSiteContactUI.enableUpdateContactButton"
+                                ng-click="updateCentralSiteContact()">Update
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

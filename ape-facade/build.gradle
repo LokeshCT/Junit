@@ -1,0 +1,48 @@
+// Module-specific settings
+ext.dbDeploySeparator = "//";
+
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+apply from: "$rootDir/builds/scripts/dbdeploy.gradle"
+
+ext.coverageTargetPct = 85        // what is the acceptable test coverage
+ext.coverageBranchTargetPct = 75  // what is the acceptable test coverage for branches
+
+ext.vModuleEnvironment = "ape-facade"
+test.dependsOn applyDbUpdates
+
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':core')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':ape-client')
+dependsOnIncludingTests(project, ':session-service-client')
+dependsOnIncludingTests(project, ':expedio-facade-client')
+dependsOnIncludingTests(project, ':project-engine-web')
+dependsOnIncludingTests(project, ':ape-facade-client')
+dependsOnIncludingTests(project, ':cqm-client')
+
+dependencies {
+    compile(['org.glassfish.jersey.containers:jersey-container-simple-http:2.0.1',
+                    'org.freemarker:freemarker:2.3.18',
+                    'com.oracle:ojdbc6:11.1.0.6.0',
+                    'org.hibernate:hibernate-core:4.3.7.Final',
+                    'org.hibernate:hibernate-entitymanager:4.3.7.Final',
+                    'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final',
+                    'org.hibernate:hibernate-c3p0:4.3.0.Beta5',
+                    'commons-collections:commons-collections:3.2.1',
+                    'org.apache.poi:poi:3.7',
+                    project(':config'),
+                    project(':ape-client'),
+                    project(':ape-facade-client'),
+                    project(':session-service-client'),
+                    project(':cqm-client')
+
+            ])
+
+    testCompile([
+                        'org.dbunit:dbunit:2.4.8',
+                        'org.w3c.css:sac:1.3',
+                        project(':codebase-stub'),
+                        project(':ape-facade-client')
+                ])
+}
+

@@ -1,0 +1,31 @@
+<div class="col-lg-12 col-sm-12 col-xs-12" ng-controller="RoleGroupSelectionController">
+    <div class="widget">
+        <div class="widget-header bordered-bottom bordered-purple">
+            <span class="widget-caption"><b>Please select one of the below to proceed further</b></span>
+            <div class="widget-buttons">
+                <a href="" widget-maximize></a>
+                <a href="" widget-collapse></a>
+            </div>
+        </div>
+        <div class="widget-body padding-20">
+            <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12" ng-show="hasCQMRole">
+                <div class="well bordered-left bordered-themeprimary">
+                    <p> Long statements about what CQM is and its features. Long statements about what CQM is and its features. Long statements about what CQM is and its features.</p>
+                    <p>Long statements about what CQM is and its features. Long statements about what CQM is and its features. Long statements about what CQM is and its features. Long statements about what CQM is and its features. Long statements about what CQM is and its features.</p>
+                    <button class="btn btn-purple" ng-click="goToCQM()">Click here for Customer Quote Management</button>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12" ng-show="hasNRMRole">
+                <div class="well bordered-left bordered-themeprimary">
+                    <p> Long statements about what NRM is and its features. Long statements about what NRM is and its features. Long statements about what NRM is and its features.</p>
+                    <p>Long statements about what NRM is and its features. Long statements about what NRM is and its features. Long statements about what NRM is and its features. Long statements about what NRM is and its features. Long statements about what NRM is and its features.</p>
+                    <button class="btn btn-purple" ng-click="goToNRM()">Click here for Non-Standard Request Management</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

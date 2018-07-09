@@ -1,0 +1,19 @@
+div#notesScrollContainer {
+    height: 15em;
+    width:95%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 0.7em;
+}
+div#notesScrollContainer li.note{
+    border-bottom: 1px dotted #AED0EA;
+    padding: 0.7em;
+}
+
+div#notesScrollContainer li.note span{
+    padding-bottom: 0.5em;
+}
+
+div#notesScrollContainer li.note p.text{
+    padding-top: 0.5em;
+}

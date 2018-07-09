@@ -1,0 +1,50 @@
+<div class="row-fluid" id="portConfigurator" ng-controller="portConfigCtrl">
+    <div class="span5" id="primaryPortConfiguration">
+        <div class="page-header" style="text-align: center">Primary Port Configuration</div>
+        <form class="form-horizontal" ng-model="portConfigurationData">
+            <configurable-attribute attribute-name="Port Speed" attribute-id="portSpeed"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.portSpeed.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CoS Assignment" attribute-id="cosAssignment"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.cosAssignment.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CoS Customization Level" attribute-id="cosCustomizationLevel"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.cosCustomizationLevel.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="HVPN GPOP Name*" attribute-id="hvpnGpop"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.hvpnGpop.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+
+        </form>
+    </div>
+    <div class="span5" id="secondaryPortConfiguration" ng-show="isSecondary">
+        <div class="page-header" style="text-align: center">Secondary Port Configuration</div>
+        <form class="form-horizontal" ng-model="portConfigurationData">
+            <configurable-attribute attribute-name="Port Speed" attribute-id="portSpeed"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.portSpeed.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CoS Assignment" attribute-id="cosAssignment"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.cosAssignment.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CoS Customization Level" attribute-id="cosCustomizationLevel"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.cosCustomizationLevel.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="HVPN GPOP Name*" attribute-id="hvpnGpop"
+                                    attribute-value="{{portConfigurationData.primaryPortConfigurationDetail.hvpnGpop.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+
+        </form>
+    </div>
+    <div class="span8">
+        <a class="btn btn-primary pull-left" href="#/accessConfig" id="accessConfigPrevious">Previous</a>
+        <a class="btn btn-primary pull-right" href="#/cpeConfig" id="cpeConfigNext">Next</a>
+    </div>
+</div>

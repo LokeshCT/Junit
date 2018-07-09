@@ -1,0 +1,16 @@
+<div style="background-color: #55379b; color: white;" ng-controller="ActionsController">
+    <div class="widget-body no-padding">
+        <div>
+            <accordion is-open="false" close-others="false">
+                <accordion-group heading="Your Actions" is-open="true">
+                    <div ag-grid="gridOptionPersonalActions" class="ag-fresh ag-basic" style="width: 100%;height: 350px;"></div>
+                </accordion-group>
+
+
+                <accordion-group heading="All Actions" is-open="true">
+                    <div ag-grid="gridOptionAllActions" class="ag-fresh ag-basic" style="width: 100%;height: 350px;"></div>
+                </accordion-group>
+            </accordion>
+        </div>
+    </div>
+</div>

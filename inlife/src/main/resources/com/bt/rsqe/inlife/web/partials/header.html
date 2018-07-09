@@ -1,0 +1,12 @@
+<div id="header">
+    <img src="{{url}}" class="logo"/>
+
+    <div class="header-text" ng-hide="context.state == 'Logout'">
+        <div>
+            <h1 class="welcome-msg">
+                Welcome {{user.name}}
+            </h1>
+        </div>
+        <div class="log-out" ng-hide="showLogout"><a ng-click="logout()">Log out</a></div>
+    </div>
+</div>

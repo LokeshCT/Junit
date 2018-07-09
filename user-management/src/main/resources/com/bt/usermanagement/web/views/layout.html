@@ -1,0 +1,9 @@
+﻿<div class="navbar {{settings.fixed.navbar ? 'navbar-fixed-top' : ''}}" data-ng-include=" '/user-management/static/views/navbar.html' "></div>
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <div class="page-content">
+            <div class="page-header position-relative {{settings.fixed.header ? 'page-header-fixed' : ''}}" data-ng-include=" '/user-management/static/views/header.html' "></div>
+            <div class="page-body" ui-view></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+﻿<!-- Page Sidebar Header-->
+<div class="sidebar-header-wrapper">
+    <input type="text" class="searchinput" ng-model="requestId" ng-keyup="$event.keyCode == 13 ? goToRequestDetails() : null"/>
+    <i class="searchicon fa fa-search" ui-sref="app.requestDetails({requestId:requestId})"></i>
+    <div class="searchhelper">Search Non-Standard Requests</div>
+</div>
+<!-- /Page Sidebar Header -->
+
+<!-- Sidebar Menu -->
+<ul class="nav sidebar-menu">
+
+    <!--Templates Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[14,15,16])">
+        <a ui-sref="app.templates">
+            <i class="menu-icon glyphicon glyphicon-tasks"></i>
+            <span class="menu-text"> Templates </span>
+        </a>
+    </li>
+
+    <!--Quotes Options Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[14])">
+        <a ui-sref="app.quoteOptions">
+            <i class="menu-icon fa fa-table"></i>
+            <span class="menu-text"> Quote Options </span>
+        </a>
+    </li>
+
+    <!--Requests Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[14])">
+        <a ui-sref="app.requests">
+            <i class="menu-icon fa fa-pencil-square-o"></i>
+            <span class="menu-text"> Manage Requests </span>
+        </a>
+    </li>
+
+    <!--Actions Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[15])">
+        <a ui-sref="app.actions">
+            <i class="menu-icon fa fa-calendar"></i>
+            <span class="menu-text"> Manage Actions </span>
+        </a>
+    </li>
+
+   <!-- User Management Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[16])">
+        <a ui-sref="app.searchUser">
+            <i class="menu-icon fa fa-cog"></i>
+            <span class="menu-text"> Manage Users </span>
+        </a>
+    </li>
+
+   <!-- Reports Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[14,15,16])">
+        <a ui-sref="app.reports">
+            <i class="menu-icon fa fa-bar-chart-o"></i>
+            <span class="menu-text"> Reports </span>
+        </a>
+    </li>
+
+    <!--My Profile Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[14,15,16])">
+        <a ui-sref="app.myProfile">
+            <i class="menu-icon fa fa-picture-o"></i>
+            <span class="menu-text"> My Profile </span>
+        </a>
+    </li>
+
+    <!--My Profile Tab-->
+    <li ui-sref-active="active" ng-show="ifAuthorized(nrmUser.roles,[17])">
+        <a ui-sref="app.dataBuild">
+            <i class="menu-icon fa fa-database"></i>
+            <span class="menu-text"> Data Build </span>
+        </a>
+    </li>
+
+</ul>
+<!-- /Sidebar Menu -->

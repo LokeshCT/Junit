@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions
+     name="ManageDocument_CreateFolder_BPEL"
+     targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/CreateFolder"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:client="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/CreateFolder"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:documentation>
+        <abstractWSDL>http://10.29.66.41:61020/soa-infra/services/default/ManageDocument_CreateFolder_BPEL!15.0/ManageDocument_CreateFolder_BPEL.wsdl</abstractWSDL>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="ManageDocument_CreateFolder_BPEL">
+        <plnk:role name="ManageDocument_CreateFolder_BPELProvider">
+            <plnk:portType name="client:ManageDocument_CreateFolder_BPEL"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="wss_sdk_username_token_service_policy">
+   <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+      <wsp:Policy>
+         <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+            <wsp:Policy>
+               <sp:WssUsernameToken10/>
+            </wsp:Policy>
+         </sp:UsernameToken>
+      </wsp:Policy>
+   </sp:SupportingTokens>
+</wsp:Policy>    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/CreateFolder"
+                 schemaLocation="ManageDocument_CreateFolder_BPEL.xsd"/>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0"
+                 schemaLocation="HeaderRequest.xsd"/>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://wsi.nat.bt.com/2005/06/StandardHeader/" schemaLocation="StandardHeader.xsd"/>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                 schemaLocation="Header.xsd"/>
+        </schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                 schemaLocation="Header.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="ManageDocument_CreateFolder_BPELRequestMessage">
+        <part name="payload" element="client:CreateFolderRequest"/>
+    </message>
+    <message name="ManageDocument_CreateFolder_BPELResponseMessage">
+        <part name="payload" element="client:CreateFolderResponse"/>
+    </message>
+    <portType name="ManageDocument_CreateFolder_BPEL">
+        <operation name="createFolder">
+            <input message="client:ManageDocument_CreateFolder_BPELRequestMessage"/>
+            <output message="client:ManageDocument_CreateFolder_BPELResponseMessage"/>
+        </operation>
+    </portType>
+    <binding name="ManageDocument_CreateFolder_BPELBinding" type="client:ManageDocument_CreateFolder_BPEL">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+      <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss_sdk_username_token_service_policy" wsdl:required="false"/>
+        <operation name="createFolder">
+            <soap:operation style="document" soapAction="createFolder"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="managedocument_createfolder_bpel_client_ep">
+        <port name="ManageDocument_CreateFolder_BPEL_pt" binding="client:ManageDocument_CreateFolder_BPELBinding">
+            <soap:address location="http://10.29.66.41:61020/soa-infra/services/default/ManageDocument_CreateFolder_BPEL/managedocument_createfolder_bpel_client_ep"/>
+        </port>
+    </service>
+</definitions>

@@ -1,0 +1,12 @@
+<div>
+    <div ng-transclude></div>
+    <hr>
+    <div class="right pane">
+        <div class="btn-group">
+            <button class="action-ok btn-mini" ng-hide="hideOkButton">Ok</button>
+            <button class="action-cancel btn-mini" title="" ng-hide="hideCancelButton">Cancel</button>
+            <button class="action-details btn-mini" ng-hide="hideDetailsButton" style="display: inline;" ng-click="toggle()"><span
+                ng-show="!isVisible">Details</span><span ng-show="isVisible">Hide Details</span></button>
+        </div>
+    </div>
+</div>

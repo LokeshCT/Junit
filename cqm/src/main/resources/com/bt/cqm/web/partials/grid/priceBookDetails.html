@@ -1,0 +1,112 @@
+<div ng-controller="indirectCustomerController"  ng-init="loadPriceBookDetails()" class="innerWrap">
+
+    <div>
+        <div class="hrMargin">
+            <span class="headerLabel">Price Book Details</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+
+        <div ng-show="true">
+            <div class="priceBookGridStyle" style="height: 250px" ng-grid="priceBookGrid"/>
+        </div>
+
+        <div class="hrMargin">
+            <span class="headerLabel">Add Price Book </span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+
+        <div ng-form="priceBookForm" ng-model="priceBookFormData">
+            <div class="centralSiteFieldDiv">
+                <label>Customer Name</label>
+                <input class="centralSiteField" type="text" id="customerName" name="customerName"
+                       ng-model="priceBookFormData.customerName" readonly/>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>Product Name</label>
+                <select class="centralSiteField" id="productName" ng-model="priceBookFormData.productName" ng-disabled="productNameRO"
+                        ng-options="productName.productName for productName in productNameList"
+                        ng-change="getProductVersions()" required
+                        />
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>RRP Price Book</label>
+                <input class="centralSiteField" type="text" id="rrpVersion" name="rrpVersion"
+                       ng-model="priceBookFormData.rrpVersion" readonly required>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>PTP Price Book</label>
+                <input class="centralSiteField" type="text" id="ptpVersion" name="ptpVersion"
+                       ng-model="priceBookFormData.ptpVersion"  readonly required>
+            </div>
+
+            <div class="containerDiv" style="float:left;">
+
+  <!--      &lt;!&ndash;        <button class="btn" ng-disabled="priceBookFormData.$invalid" ng-click=""
+                        style="float:right;margin:5px;">
+                    Save
+                </button>&ndash;&gt;
+                //priceBookFormData.$valid-->
+                <button class="btn" ng-disabled="!priceBookForm.$valid" ng-click="savePriceBook()"
+                        style="float:right;margin:5px;">
+                       Add
+                </button>
+                <button class="btn" ng-disabled="!enableUpdatePriceBook" ng-click="getUpdatePriceBookDetails()"
+                        style="float:right;margin:5px;">
+                    Get Latest Price Book
+                </button>
+            </div>
+        </div>
+
+
+        <div class="containerDiv" style="float:left;" ng-show="showModifyPriceBook">
+            <div class="centralSiteFieldDiv">
+                <label>Customer ID</label>
+                <input class="centralSiteField" type="text" id="customerId" name="customerId"
+                       ng-model="priceBookFormData.customerId" readonly/>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>Product ID</label>
+                <input class="centralSiteField" type="text" id="productId" name="productId"
+                       ng-model="priceBookFormData.productId" readonly/>
+        </div>
+            <div class="centralSiteFieldDiv">
+                <label>RRP Price Book</label>
+                <input class="centralSiteField" type="text" id="rrpVersionSelected" name="rrpVersionSelected"
+                       ng-model="priceBookFormData.rrpVersionSelected" readonly required>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>PTP Price Book</label>
+                <input class="centralSiteField" type="text" id="ptpVersionSelected" name="ptpVersionSelected"
+                       ng-model="priceBookFormData.ptpVersionSelected" readonly required>
+    </div>
+            <div class="centralSiteFieldDiv">
+                <label>Trigger Months</label>
+                <input class="centralSiteField" type="text" id="triggerMonths" name="triggerMonths"
+                       ng-model="priceBookFormData.triggerMonths"/>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>Monthly Committed Revenue</label>
+                <input class="centralSiteField" type="text" id="committedRevenue" name="committedRevenue"
+                       ng-model="priceBookFormData.committedRevenue">
+            </div>
+            <div class="centralSiteFieldDiv">
+                <label>Price Book ID</label>
+                <input class="centralSiteField" type="text" id="priceBookId" name="priceBookId"
+                       ng-model="priceBookFormData.priceBookId" readonly required>
+            </div>
+            <div class="containerDiv" style="float:left;">
+                <button class="btn" ng-disabled="!enableUpdatePriceBook" ng-click="updatePriceBookDetails()"
+                        style="float:right;margin:5px;">
+                    Update Price Book
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

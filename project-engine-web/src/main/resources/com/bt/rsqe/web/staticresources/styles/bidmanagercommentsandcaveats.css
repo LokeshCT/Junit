@@ -1,0 +1,19 @@
+.commentsAndCaveatsCapture {
+    background: #fff;
+    border: 1px solid #AED0EA;
+    height: 165px;
+    margin-bottom: 0.7em;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 470px;
+}
+
+.commentsAndCaveatsCapture li.comment {
+    border-bottom: 1px dotted #AED0EA;
+    padding: 10px;
+}
+
+.salesUserComments{
+    height: 90px;
+    width: 470px;
+}

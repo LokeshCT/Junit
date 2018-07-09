@@ -1,0 +1,31 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title bordered-purple bordered-bottom "><b>Controller-Evaluator Comments Log</b></h4>
+    </div>
+    <div class="modal-body">
+        <div>
+            <div class="comment" ng-repeat="comment in comments track by $id($index)">
+                <div class="comment-body no-margin">
+                    <div class="comment-text">
+                        <div class="comment-header">
+                            <a href="#" title=""><b>{{comment.name}}</b></a><span><b> {{comment.date}} </b></span>
+                        </div>
+                        {{comment.message}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" class="well padding-bottom-10 padding-top-10 margin-top-20" onsubmit="return false;">
+            <span class="input-icon icon-right">
+                <textarea rows="3" class="form-control" placeholder="Post a new message" ng-model="messageModel"></textarea>
+            </span>
+            <div class="padding-top-10 text-align-left">
+                <button ng-click="saveComment()" class="btn btn-purple">Save Comment</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" ng-click="close()"> Close This Window </button>
+    </div>
+</div>

@@ -1,0 +1,202 @@
+{"tabs":[
+    {
+        "id":"Customer",
+        "label":"Customer",
+        "uri":"/centralSite",
+        "treeNode":{
+            "id":"customerRootNode",
+            "label":"Customer",
+            "status":"Not Configured",
+            "children":[
+                {
+                    "id":"customerSite",
+                    "label":"Customer Site",
+                    "status":"Not Configured",
+                    "uri":"/centralSite",
+                    "children":[]
+                },
+                {
+                    "id":"customerContacts",
+                    "label":"Customer Contacts",
+                    "status":"Not Configured",
+                    "uri":"/centralSiteContact",
+                    "children":[]
+                },
+                {
+                    "id":"billingDetails",
+                    "label":"Billing Details",
+                    "status":"Not Configured",
+                    "children":[
+                        {
+                            "id":"billingAccount",
+                            "label":"Billing Account",
+                            "status":"Not Configured",
+                            "uri":"/billingAccountDetails",
+                            "children":[]
+                        },
+                        {
+                            "id":"legalEntity",
+                            "label":"Manage LE",
+                            "status":"Not Configured",
+                            "uri":"/legalEntity",
+                            "children":[]
+                        },
+                        {
+                            "id":"mapLegalEntity",
+                            "label":"Map LE",
+                            "status":"Not Configured",
+                            "uri":"/mapLegalEntity",
+                            "children":[]
+                        }
+                    ]
+                },
+                {
+                    "id":"partnerDetails",
+                    "label":"Partner Details",
+                    "status":"Not Configured",
+                    "children":[
+                        {
+                            "id":"createChannelPartner",
+                            "label":"Create Partner",
+                            "status":"Not Configured",
+                            "uri":"/createChannelPartner",
+                            "children":[]
+                        },
+                        {
+                            "id":"linkPartner",
+                            "label":"Associate Partner",
+                            "status":"Not Configured",
+                            "uri":"/linkPartner",
+                            "children":[]
+                        },
+                        {
+                            "id":"priceBookDetails",
+                            "label":"Price Book",
+                            "status":"Not Configured",
+                            "uri":"/priceBookDetails",
+                            "children":[]
+                        },
+                        {
+                            "id":"channelMonthlyCommitment",
+                            "label":"Monthly Commitment",
+                            "status":"Not Configured",
+                            "uri":"/channelMonthlyCommittment",
+                            "children":[]
+                        }
+                    ]
+                },
+                {
+                    "id":"vpnDetails",
+                    "label":"VPN",
+                    "status":"Not Configured",
+                    "uri":"/vpn",
+                    "children":[]
+                }
+            ]
+        }
+    },
+    {
+        "id":"Site",
+        "label":"Manage Sites",
+        "uri":"/branchSite",
+        "treeNode":{
+            "id":"SiteRootNode",
+            "label":"Site",
+            "status":"Not Configured",
+            "children":[
+                {
+                    "id":"branchSites",
+                    "label":"View Sites",
+                    "status":"Not Configured",
+                    "uri":"/branchSite",
+                    "children":[]
+                },
+                {
+                    "id":"siteContacts",
+                    "label":"Contacts",
+                    "status":"Not Configured",
+                    "uri":"/branchSiteContact",
+                    "children":[]
+                },
+                {
+                    "id":"bulkSiteUpload",
+                    "label":"Bulk Upload",
+                    "status":"Not Configured",
+                    "uri":"/bulkSiteUpload",
+                    "children":[]
+                }
+            ]
+        }
+    },
+    {
+        "id":"Quote",
+        "label":"Manage Quotes",
+        "uri":"/searchQuotes",
+        "treeNode":{
+            "id":"QuoteRootNode",
+            "label":"Quote",
+            "status":"Not Configured",
+            "children":[
+                {
+                    "id":"searchQuotes",
+                    "label":"View Quote",
+                    "status":"Not Configured",
+                    "uri":"/searchQuotes",
+                    "children":[]
+                },
+                {
+                    "id":"createQuote",
+                    "label":"Create Quote",
+                    "status":"Not Configured",
+                    "uri":"/createQuote",
+                    "children":[]
+                }
+            ]
+        }
+    },
+    {
+        "id":"Activity",
+        "label":"Manage Activity",
+        "uri":"/viewUpdateActivity",
+        "treeNode":{
+            "id":"ActivityRootNode",
+            "label":"Activity",
+            "status":"Not Configured",
+            "children":[
+                {
+                    "id":"viewUpdateActivity",
+                    "label":"View/Update Activity",
+                    "status":"Not Configured",
+                    "uri":"/viewUpdateActivity",
+                    "children":[]
+                },
+                {
+                    "id":"createActivity",
+                    "label":"Create Activity",
+                    "status":"Not Configured",
+                    "uri":"/createActivity",
+                    "children":[]
+                }
+            ]
+        }
+    },
+    {
+        "id":"Order",
+        "label":"Orders",
+        "uri":"/searchOrders",
+        "treeNode":{
+            "id":"OrderRootNode",
+            "label":"Order",
+            "status":"Not Configured",
+            "children":[
+                {
+                    "id":"searchOrders",
+                    "label":"View Orders",
+                    "status":"Not Configured",
+                    "uri":"/searchOrders",
+                    "children":[]
+                }
+            ]
+        }
+    }
+]}

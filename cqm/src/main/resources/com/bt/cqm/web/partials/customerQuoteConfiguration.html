@@ -1,0 +1,33 @@
+<div>
+    <div id="breadCrumb">
+        <span>
+            <div>
+                <div style="width: 15%;display: inline-block;float: left;">
+                    <a ng-click="gotoCustomerSelection()"><b><u>Select Different Customer</u></b></a>
+                </div>
+                <div style="width: 85%;display: inline-block;">
+                    <span class="additionalInfo">Sales Channel: <b>{{salesChannelName}}</b>,     Customer: <b>{{customerName}}</b>,     Contract: <b>{{contract}}</b>,Role: <b>{{roleName}}</b>, Access:<b>{{userType}}</b> </span>
+                </div>
+            </div>
+        </span>
+    </div>
+
+    <div ng-controller="tabsController" class="tabbable">
+        <ul class="nav nav-tabs">
+            <li ng-repeat="tab in tabs" id="{{tab.id}}">
+                    <span>
+                        <a ng-click="tabClick(tab)" ng-class="tab | tabSelectedCssClasses" title="{{tab.label}}"
+                           style="padding: 5px">
+                            {{tab.label}}
+                        </a>
+                    </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <div cqm-tree node="rootNode" depth="-1"></div>
+    </div>
+
+    <div class="col" style="width: 80%; float:left;" ng-view></div>
+</div>

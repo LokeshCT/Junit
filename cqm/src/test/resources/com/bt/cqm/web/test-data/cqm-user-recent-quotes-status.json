@@ -1,0 +1,67 @@
+[
+  {
+    "expedioQuoteId": "000000000166278",
+    "expedioQuoteVersion": "1.0",
+    "quoteHeaderId": "426053",
+    "quoteName": "BCM 1595",
+    "quoteVersion": "1.0",
+    "siteCount": 0,
+    "lastAccessedOn": "06 Jan 2016 00:00:00",
+    "configStatus": "NotStarted",
+    "pricingStatus": "InProgress",
+    "offerStatus": "NotStarted",
+    "orderStatus": "NotStarted"
+  },
+  {
+    "expedioQuoteId": "000000000162800",
+    "expedioQuoteVersion": "1.0",
+    "quoteHeaderId": "401571",
+    "quoteName": "DEMOQUOTE26",
+    "quoteVersion": "1.0",
+    "siteCount": 0,
+    "lastAccessedOn": "06 Jan 2016 00:00:00",
+    "configStatus": "NotStarted",
+    "pricingStatus": "InProgress",
+    "offerStatus": "NotStarted",
+    "orderStatus": "NotStarted"
+  },
+  {
+    "expedioQuoteId": "000000000210677",
+    "expedioQuoteVersion": "1.0",
+    "quoteHeaderId": "1001635",
+    "quoteName": "kk1",
+    "quoteVersion": "1.0",
+    "siteCount": 0,
+    "lastAccessedOn": "13 Jan 2016 00:00:00",
+    "configStatus": "NotStarted",
+    "pricingStatus": "InProgress",
+    "offerStatus": "NotStarted",
+    "orderStatus": "NotStarted"
+  },
+  {
+    "expedioQuoteId": "000000000204449",
+    "expedioQuoteVersion": "1.0",
+    "quoteHeaderId": "939842",
+    "quoteName": "R38INCAMPUSMOD",
+    "quoteVersion": "1.0",
+    "siteCount": 0,
+    "lastAccessedOn": "13 Jan 2016 00:00:00",
+    "configStatus": "NotStarted",
+    "pricingStatus": "InProgress",
+    "offerStatus": "NotStarted",
+    "orderStatus": "NotStarted"
+  },
+  {
+    "expedioQuoteId": "000000000210512",
+    "expedioQuoteVersion": "1.0",
+    "quoteHeaderId": "1000191",
+    "quoteName": "kk",
+    "quoteVersion": "1.0",
+    "siteCount": 0,
+    "lastAccessedOn": "05 Jan 2016 00:00:00",
+    "configStatus": "NotStarted",
+    "pricingStatus": "InProgress",
+    "offerStatus": "NotStarted",
+    "orderStatus": "NotStarted"
+  }
+]

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Virtusa (Virtusa) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/CreateFolder" xmlns:header="http://wsi.nat.bt.com/2005/06/StandardHeader/" xmlns:hdr="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0" targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/CreateFolder" elementFormDefault="qualified">
+	<xs:import namespace="http://wsi.nat.bt.com/2005/06/StandardHeader/" schemaLocation="http://10.29.66.41:61020/soa-infra/services/default/ManageDocument_CreateFolder_BPEL/managedocument_createfolder_bpel_client_ep?XSD=xsd/StandardHeader.xsd"/>
+	<xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0" schemaLocation="http://10.29.66.41:61020/soa-infra/services/default/ManageDocument_CreateFolder_BPEL/managedocument_createfolder_bpel_client_ep?XSD=xsd/HeaderRequest.xsd"/>
+	<xs:element name="CreateFolderRequest">
+		<xs:annotation>
+			<xs:documentation>Request Element for Create Folder operation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="header:standardHeader">
+					<xs:annotation>
+						<xs:documentation>BT Standard Message Header</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="hdr:HeaderRequest">
+					<xs:annotation>
+						<xs:documentation>Authentication Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="RepositoryID">
+					<xs:annotation>
+						<xs:documentation>Unique identifier of the repository with a system</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="FolderName">
+					<xs:annotation>
+						<xs:documentation>Name for the folder.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ParentID">
+					<xs:annotation>
+						<xs:documentation>ID of parent folder or repository.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CreatedDate">
+					<xs:annotation>
+						<xs:documentation>Date folder created.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:date"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="OwnerID">
+					<xs:annotation>
+						<xs:documentation>ID of the owner of the folder. Owners can be people (in
+                        which case UIN will be used) or systems (in which case
+                        we use functional account name)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="FolderFileCount" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>ID of the owner of the folder. Owners can be people (in
+                        which case UIN will be used) or systems (in which case
+                        we use functional account name)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:integer"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ParentPath">
+					<xs:annotation>
+						<xs:documentation>Complete path of the parent folder or root library.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateFolderResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="header:standardHeader">
+					<xs:annotation>
+						<xs:documentation>BT Standard Message Header</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="FolderID">
+					<xs:annotation>
+						<xs:documentation>Unique identifier of the folder with a system</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="FolderURL">
+					<xs:annotation>
+						<xs:documentation>URL to locate the folder.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="InstanceID">
+					<xs:annotation>
+						<xs:documentation>Id of the instance generated for this run</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

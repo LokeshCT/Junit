@@ -1,0 +1,248 @@
+// Run 'gradle -c ..\settings-full.gradle distZip' from trunk\rsqe-app to get a distribution zip-file with all
+// dependencies and two scripts suitable for running from the command line (once the distribution is unzipped)
+//
+// Other approaches attempted and abandoned:
+//   1) Creating a single uber-JAR - too many hacks to fix the merged META-INF/services/* classes
+//      and other classpath ordering problems. (Tony)
+//   2) Using the gradle application plugin, which automatically generates the startup script files.
+//      Classpath generated in the windows startup script was too long, though this could be solved.
+//      Couldn't configure (i.e. restrict) the jars placed in the zip - too many placed in there,
+//      though this implies the dependencies are too wide. Also couldn't add additional jars, which
+//      is needed to add the rsqe-app test jar into the zip. Gradle milestone 1.0 M5 introduced
+//      application.applicationDistribution property which might solve this. The above was attempted
+//      on Gradle milestone 1.0 M3. (Graeme)
+
+def allDeps                                 // Dependencies needed to create the distribution zip file
+def startupScriptDeps                       // Scripts to start demo webapp on windows and unix
+def misScriptDeps                       // Scripts to run MIS Reporting
+def dbDeploySqlFileDeps = [:]               // Dbdeploy database install scripts
+def installScriptDeps                       // Rsqe install scripts
+ext.distributionDir = "$buildDir/distributions" // Location of the distribution zip files
+ext.libDir = "lib"                              // Location of jar files in distribution zip file
+ext.dependenciesTempLibDir = "$buildDir/output/lib" // Temporary location of jar file dependencies before copying them into distribution zip file
+ext.dbDeployScriptDir = "dbscripts"             // Location of dbscripts sql files in distribution zip file
+ext.configDir = "config"                        // Location of config jar file in distribution zip file
+ext.startupScriptDir = "bin"                    // Location of startup scripts on target server
+ext.installDir = "install"                      // Location of install scripts and files on target server
+ext.misDir = "mis"                      // Location of install scripts and files on target server
+ext.projBaseDir = rootDir as String
+ext.zipFileStem = "$project.name-deploy"        // First part of distribution zip file name
+
+Project.metaClass.getChildProjectsRecursive = {->
+    delegate.childProjects.collect { name, proj ->
+        [proj] << proj.childProjectsRecursive
+    }       .flatten()
+}
+
+task constructZipDependencies << {
+    allDeps = (configurations.runtime + configurations.archives.allArtifacts.files).findAll {
+        !(it.name =~ /clover/)
+    }                                                                              .unique()
+
+    // Only perform the following if the distZip task was called from the rsqe-app module
+    if ("rsqe-app".equals(project.name)) {
+        rootProject.childProjectsRecursive.each {
+            // Add an entry to the map for any component that uses dbdeploy
+            // The map value is the list of sql files needed to configure that module's database
+            try {
+                dbDeploySqlFileDeps.put(it.name, it.configurations["dbDeployConfDataSqlFiles"].files)
+            } catch (UnknownConfigurationException e) {
+                // This module does not use dbdeploy, so skip it
+            }
+        }
+        // Rsqe install and startup scripts
+        installScriptDeps = configurations["installScripts"].files
+        startupScriptDeps = configurations["serverScripts"].files
+        misScriptDeps = configurations["misScripts"].files
+    }
+}
+
+def getChildProjectsRecursive(notit) {
+    notit.childProjects.collect { it, proj ->
+        [proj.name] << getChildProjectsRecursive(proj)
+    }    .flatten()
+}
+
+// A task declaring a dependency on this task depends upon the existence of the directory "distributionDir"
+task createDistributionDir << {
+    mkdir("$distributionDir") }
+
+task copyDependenciesToTempLibDir(type: Copy) {
+    into "$dependenciesTempLibDir"
+    from configurations.runtime
+    from configurations.default.allArtifacts.files
+    exclude '**/*dbdeploy*.jar'
+    exclude '**/*config-*.jar/'
+    exclude 'cxf-bundle-*.jar'
+    exclude 'jsr311-api*.jar'
+}
+
+def zipFile = "$zipFileStem-${version}.zip"
+task distZip(dependsOn: [jar, constructZipDependencies, createDistributionDir, copyDependenciesToTempLibDir]) {
+    description = 'Assemble a ZIP with the collected dependencies'
+    doLast {
+        // Stage 1 - Construct comma separated file lists ready for ant zip task
+        // ---------------------------------------------------------------------
+
+        // dbdeploy jar files are put into install sub-directory within the jar to
+        // avoid clash with jars in lib sub-directory
+        def gradleCacheRegex = /.*\.gradle[\/\\]caches[\/\\]/
+        def dbDeployRegex = /dbdeploy/
+        def cacheBaseDir = allDeps.find { it.absolutePath =~ gradleCacheRegex }.absolutePath.find(gradleCacheRegex)
+        def dbDeployJarFiles = allDeps.findAll { (it.absolutePath =~ gradleCacheRegex) && (it.absolutePath =~ dbDeployRegex) }.collect {
+            it.absolutePath.replaceFirst(gradleCacheRegex, "")
+        }
+        def dbDeployFileNameList = dbDeployJarFiles.join(',')
+
+        // config jar file is put into config sub-directory within the jar
+        def projConfigJarFile = allDeps.find { it.absolutePath.startsWith(projBaseDir) && it.name =~ /.*config-.*\.jar/ }
+        def projConfigJarFileNameList = toCommaSeparatedFileList([projConfigJarFile])
+
+        def startupScriptsFileList = toCommaSeparatedFileList(startupScriptDeps)
+        def installScriptsFileList = toCommaSeparatedFileList(installScriptDeps)
+        def misScriptsFileList = toCommaSeparatedFileList(misScriptDeps)
+
+
+        // Stage 2 - Construct the zip
+        // ---------------------------
+        ant.zip(destfile: "$distributionDir/$zipFile", duplicate: 'preserve') {
+            // project jar files (excluding config)
+            mappedresources {
+                zipfileset(dir: dependenciesTempLibDir, includes: "**") {
+                }
+                chainedmapper {
+                    flattenmapper {}
+                    mapper(type: "glob", from: "*", to: "$libDir/*") {}
+                }
+            }
+
+            // project config jar files
+            mappedresources {
+                zipfileset(dir: projBaseDir, includes: projConfigJarFileNameList) {
+                }
+                chainedmapper {
+                    flattenmapper {}
+                    mapper(type: "glob", from: "*", to: "$configDir/*") {}
+                }
+            }
+
+            // startup scripts
+            if (!"".equals(startupScriptsFileList)) {
+                mappedresources {
+                    zipfileset(dir: projBaseDir, includes: startupScriptsFileList) {
+                    }
+                    chainedmapper {
+                        flattenmapper {}
+                        mapper(type: "glob", from: "*", to: "$startupScriptDir/*") {}
+                    }
+                }
+            }
+
+            // dbdeploy sql scripts
+            dbDeploySqlFileDeps.each {
+                def projectName = it.key
+                def fileNameList = it.value
+                checkForFileNameErrors(fileNameList)
+
+                def dbDeploySqlFileList = toCommaSeparatedFileList(fileNameList)
+
+                if (!"".equals(dbDeploySqlFileList)) {
+                    mappedresources {
+                        zipfileset(dir: projBaseDir, includes: dbDeploySqlFileList) {
+                        }
+                        chainedmapper {
+                            flattenmapper {}
+                            mapper(type: "glob", from: "*", to: "$dbDeployScriptDir/$projectName/*") {}
+                        }
+                    }
+                }
+            }
+
+            // installation scripts
+            if (!"".equals(installScriptsFileList)) {
+                mappedresources {
+                    zipfileset(dir: projBaseDir, includes: installScriptsFileList) {
+                    }
+                    chainedmapper {
+                        flattenmapper {}
+                        mapper(type: "glob", from: "*", to: "$installDir/*") {}
+                    }
+                }
+            }
+             // mis scripts
+            if (!"".equals(misScriptsFileList)) {
+                println "SUCCESS! AM HERE"
+                mappedresources {
+                    zipfileset(dir: projBaseDir, includes: misScriptsFileList) {
+                    }
+                    chainedmapper {
+                        flattenmapper {}
+                        mapper(type: "glob", from: "*", to: "$misDir/*") {}
+                    }
+                }
+            }
+
+            // dbdeploy installation jars
+            if (!"".equals(dbDeployFileNameList)) {
+                mappedresources {
+                    zipfileset(dir: cacheBaseDir, includes: dbDeployFileNameList) {
+                    }
+                    chainedmapper {
+                        flattenmapper {}
+                        mapper(type: "glob", from: "*", to: "$installDir/*") {}
+                    }
+                }
+            }
+        }
+
+        // Stage 3 - Cleanup
+        // -----------------
+        cleanUp("$distributionDir", "runRsqe.*")
+        cleanUp("$dependenciesTempLibDir", ".+")
+    }
+}
+
+def checkForFileNameErrors(fileNameList) {
+    def errorFileNameList = stripFilePath(fileNameList).findAll {it.contains(' ')}
+    if (errorFileNameList.size() > 0) {
+        throw new org.gradle.api.GradleException('Could not process following file(s): ' + toCommaSeparatedString(errorFileNameList))
+    }
+}
+
+def toCommaSeparatedFileList(files) {
+    if ((files == null) || (files.size() == 0)) {
+        return ""
+    }
+    return toCommaSeparatedString(stripFilePath(files))
+}
+
+def stripFilePath(files) {
+    if ((files == null) || (files.size() == 0)) {
+        return ""
+    }
+    return files.collect {
+        it.absolutePath.replace(projBaseDir, "").replaceFirst(/^[\/\\]/, "")
+    }
+}
+
+def toCommaSeparatedString(listOfStrings) {
+    if ((listOfStrings == null) || (listOfStrings.size() == 0)) {
+        return ""
+    }
+    def commaSeparatedStringList = listOfStrings.first()
+    if (listOfStrings.size() > 1) {
+        listOfStrings[1..listOfStrings.size() - 1].collect { "," + it }.each {commaSeparatedStringList += it}
+    }
+    return commaSeparatedStringList
+}
+
+artifacts {
+    archives new org.gradle.api.internal.artifacts.publish.DefaultPublishArtifact(
+            zipFileStem, "zip", "zip", null, new Date(),
+            new File("$distributionDir", "${zipFile}"))
+}
+uploadArchives.dependsOn(distZip)
+
+def cleanUp(dir, filePattern) {
+    new File(dir).eachFileMatch(~filePattern) { f -> f.delete()}
+}

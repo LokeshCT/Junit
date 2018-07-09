@@ -1,0 +1,41 @@
+/*
+ * Define and register a task/artifact for building a JAR from WSDL using CXF
+ */
+
+dependencies {
+    compile 'org.apache.cxf:cxf-bundle:2.5.2'
+}
+
+configurations {
+    // Filter out log4j in favour of the log4j-over-slf4j drop-in replacement
+    runtime.exclude group: 'log4j', module: 'log4j'
+    compile.exclude group: 'org.springframework'
+    compile.exclude group: 'org.apache.ws.security', module: 'wss4j'
+    compile.exclude group: 'org.opensaml', module: 'opensaml'
+    compile.exclude group: 'org.opensaml', module: 'openws'
+    testCompile.exclude group: 'net.jcip', module: 'jcip-annotations'
+}
+
+task classes(overwrite: true) {
+    description = "Build the CXF classes from wsdl for ${project.name}"
+    binding = project.ext.has('binding') ? project.ext.binding : "jaxb"
+    doLast {
+        ant.echo("-------------------------${description}")
+        ant.java(classname:"org.apache.cxf.tools.wsdlto.WSDLToJava",fork:true, classpath:configurations.default.asPath) {
+            arg(value: "-db")
+            arg(value: binding)
+            arg(value: "-d")
+            arg(value: "${project.buildDir}/generated-sources")
+            arg(value: "-compile")
+            arg(value: "-classdir")
+            arg(value: "${project.buildDir}/classes/main")
+            arg(value: "-p")
+            arg(value: project.ext.packageName)
+            arg(value: "-fe")
+            arg(value: "jaxws21")
+            arg(value: "${project.ext.schemaPath}/service.wsdl")
+        }
+    }
+}
+
+clean.onlyIf { project.hasProperty('forceClean') }

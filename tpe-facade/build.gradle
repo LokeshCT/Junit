@@ -1,0 +1,20 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+//ext.coverageTargetPct = -100        // what is the acceptable test coverage
+//ext.coverageBranchTargetPct = -100  // *this assumes no branches in the production code*
+
+ext.vModuleEnvironment = "tpe-facade"
+
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':core')
+
+dependencies {
+    compile(['org.glassfish.jersey.containers:jersey-container-simple-http:2.0.1',
+            'commons-collections:commons-collections:3.2.1',
+            project(':core'),
+            project(':common'),
+            project(':tpe-client'),
+            ])
+}

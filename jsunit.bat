@@ -1,0 +1,1 @@
+testacular start product-configurator/configurator-web/src/test/resources/web/config/gradle-unit-dev.conf.js

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ManagedDocumentListDocument_BPEL" targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" xmlns:ns2="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ns1="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:client="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <abstractWSDL>http://10.29.66.41:61020/soa-infra/services/default/ManagedDocumentListDocument_BPEL!9.0/ManagedDocumentListDocument_BPEL.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="ManagedDocumentListDocument_BPEL">
+    <plnk:role name="ManagedDocumentListDocument_BPELProvider">
+      <plnk:portType name="ns1:ManagedDocumentListDocument_BPEL"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsp:Policy wsu:Id="wss_sdk_username_token_service_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy">
+    <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+      <wsp:Policy>
+        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+          <wsp:Policy>
+            <sp:WssUsernameToken10/>
+          </wsp:Policy>
+        </sp:UsernameToken>
+      </wsp:Policy>
+    </sp:SupportingTokens>
+  </wsp:Policy>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" schemaLocation="manageddocumentlistdocument_bpel_client_ep.xsd"/>
+    </schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2_3_4_5_6.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ManagedDocumentListDocument_BPELRequestMessage">
+    <wsdl:part name="payload" element="ns1:ListDocumentRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ManagedDocumentListDocument_BPELResponseMessage">
+    <wsdl:part name="payload" element="ns1:ListDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ManagedDocumentListDocument_BPEL">
+    <wsdl:operation name="process">
+      <wsdl:input message="ns1:ManagedDocumentListDocument_BPELRequestMessage"/>
+      <wsdl:output message="ns1:ManagedDocumentListDocument_BPELResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagedDocumentListDocument_BPELBinding" type="ns1:ManagedDocumentListDocument_BPEL">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsp:PolicyReference URI="#wss_sdk_username_token_service_policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="manageddocumentlistdocument_bpel_client_ep">
+    <wsdl:port name="ManagedDocumentListDocument_BPEL_pt" binding="ns1:ManagedDocumentListDocument_BPELBinding">
+      <soap:address location="http://10.29.66.41:61020/soa-infra/services/default/ManagedDocumentListDocument_BPEL/manageddocumentlistdocument_bpel_client_ep" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

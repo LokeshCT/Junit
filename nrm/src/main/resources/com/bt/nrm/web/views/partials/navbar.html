@@ -1,0 +1,54 @@
+﻿<div class="navbar-inner">
+    <div class="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <img src="{{headerImageUri}}" alt="" />
+                </small>
+            </a>
+        </div>
+        <div class="sidebar-collapse"></div>
+        <div class="navbar-header pull-right">
+            <div class="navbar-account">
+                <ul class="account-area">
+                    <li>
+                        <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                            <div class="avatar" title="View your public profile">
+                                <img src="/nrm/static/assets/img/avatars/mittal.jpg">
+                            </div>
+                            <section>
+                                <h2><span class="profile"><span>{{nrmUser.fullName}}</span></span></h2>
+                            </section>
+                        </a>
+                        <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                            <li class="username"><a>{{ nrmUser.fullName }}</a></li>
+                            <li class="email"><a><b>{{ nrmUser.emailId }} </b></a></li>
+                            <li>
+                                <div class="avatar-area">
+                                    <img src="/nrm/static/assets/img/avatars/mittal.jpg" class="avatar">
+                                    <span class="caption">Change Photo</span>
+                                </div>
+                            </li>
+                            <li class="theme-area">
+                                <a class="pull-left"><b> Roles : </b></a>
+                                <ul style="list-style: none;" class="pull-right no-padding-left">
+                                    <li ng-repeat="role in nrmUser.roles">
+                                        <span> {{ role.roleName }} </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-footer">
+                                <a href="" class="pull-left">
+                                    <b>Profile</b>
+                                </a>
+                                <a href="">
+                                    <b>Sign out</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

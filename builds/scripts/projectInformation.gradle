@@ -1,0 +1,215 @@
+apply from: "$rootDir/builds/scripts/cloverOffCheck.gradle"
+
+/*
+ * Reports against the source code and Subversion logs
+ */
+task subversionLog() {
+    doLast {
+        def xmlLog = file('/tmp/svn-log.xml')
+        xmlLog.delete()
+        def endDate = new Date() + 1 // Subversion date ranges are to/from the *start* of the date
+        def startDate = new Date() - 28
+        exec {
+            commandLine = ['svn', 'log', '--xml', "-r{${String.format('%tY-%<tm-%<td', startDate)}}:{${String.format('%tY-%<tm-%<td', endDate)}}", 'https://collaborate.bt.com/svn/rsqe/rsqe']
+            standardOutput = new FileOutputStream(xmlLog)
+        }
+    }
+}
+
+task pairsReport(dependsOn: subversionLog) {
+    doLast {
+        def report = file('pairs-report.html')
+        report.delete()
+        report << pairsReport()
+    }
+}
+
+
+def htmlFormatter = { writer, reportHeading, matches ->
+    def matchedFileCount = matches.size()
+    def totalMatches = matches.collect {k, v -> v.size()}.sum()
+    new groovy.xml.MarkupBuilder(writer).html() {
+        body() {
+            h1(reportHeading)
+            p() {
+                strong("$matchedFileCount files with $totalMatches occurances")
+            }
+            matches.each { path, lines ->
+                strong(path)
+                ul {
+                    lines.each {
+                        li(it)
+                    }
+                }
+            }
+        }
+    }
+}
+
+task productSpecificReport() {
+    doLast {
+        def report = file('product-specific-report.html')
+        report.delete()
+        report << buildProductSpecificReport(/(S[0-9]{7}|com.bt.rsqe.enums.ProductCodes|Connect Acceleration|Connect Intelligence|Connect Assesment)/,"Product SCode references", htmlFormatter)
+    }
+}
+
+task toDoReport() {
+    doLast {
+        def report = file('todo-report.html')
+        report.delete()
+        report << buildFileMatchesReport(/(TODO|ToDo|todo|FIXME|fixme|FixMe)/, "'TODO' Comments", htmlFormatter)
+    }
+}
+
+task ignoresReport() {
+    doLast {
+        def report = file('ignores-report.html')
+        report.delete()
+        report << buildFileMatchesReport(/@Ignore/, "@Ignored Tests", htmlFormatter)
+    }
+}
+
+task serviceLocatorReport() {
+    doLast {
+        def report = file('locator-report.html')
+        report.delete()
+        report << buildFileMatchesReport(/(serviceLocatorInstance())/, "Usages of ServiceLocator", htmlFormatter)
+    }
+}
+
+
+task allProjectReports(dependsOn: [pairsReport, toDoReport, ignoresReport, cloverOffReport, productSpecificReport, serviceLocatorReport])
+
+def buildProductSpecificReport(matchExpression, reportHeading, formatter) {
+    def rootPath = project.projectDir.absolutePath
+
+    def matches = [:]
+    forEachProductionJavaFile {
+
+        it.eachLine { line ->
+            def relativePath = it.path - rootPath
+            if (line =~ matchExpression) {
+                matches[relativePath] ? (matches[relativePath] << line) : (matches[relativePath] = [line])
+            }
+        }
+    }
+    def writer = new StringWriter()
+    formatter.call(writer, reportHeading, matches)
+
+    return writer.toString()
+}
+
+def buildFileMatchesReport(matchExpression, reportHeading, formatter) {
+    def rootPath = project.projectDir.absolutePath
+
+    def matches = [:]
+    forEachSourceFile {
+        it.eachLine { line ->
+            def relativePath = it.path - rootPath
+            if (line =~ matchExpression)
+                matches[relativePath] ? (matches[relativePath] << line) : (matches[relativePath] = [line])
+        }
+    }
+    def writer = new StringWriter()
+    formatter.call(writer, reportHeading, matches)
+
+    return writer.toString()
+}
+
+def forEachSourceFile(Closure block) {
+    allSourcePaths.each { srcPath ->
+        srcPath.eachFileRecurse {
+            if (it.isFile()) {
+                block.call(it)
+            }
+        }
+    }
+}
+
+def forEachProductionJavaFile(Closure block) {
+    allProductionJavaSourcePaths.each { srcPath ->
+        block.call(new File(srcPath))
+    }
+}
+
+def getAllProductionJavaSourcePaths() {
+    def srcPaths = []
+    project.allprojects.each { proj ->
+        if (hasSourceSets(proj)) {
+            proj.sourceSets['main'].allJava.each { File javaFile ->
+                srcPaths << javaFile.path
+            }
+        }
+    }
+    srcPaths
+}
+
+def getAllSourcePaths() {
+    def srcPaths = []
+    project.allprojects.each { proj ->
+        if (hasSourceSets(proj)) {
+            proj.sourceSets.each { sourceSet ->
+                sourceSet.allSource.srcDirs.each {
+                    if (it.exists())
+                        srcPaths << it
+                }
+            }
+        }
+    }
+    srcPaths
+}
+
+def hasSourceSets(project) {
+    project.hasProperty('sourceSets')
+}
+
+def pairsReport() {
+
+    def log = new XmlSlurper().parse(new File('/tmp/svn-log.xml'))
+    def logEntriesStartingWithAnOpeningBracket = log.depthFirst().grep { it.msg.text().startsWith('(') || it.msg.text().startsWith('[') }
+
+
+    def pairDays = logEntriesStartingWithAnOpeningBracket.collect { logEntry ->
+        def timestamp = logEntry.date.text()[0..9]
+        def msg = logEntry.msg.text()
+
+        def closingBracketIndex = (msg.startsWith('(')) ? msg.indexOf(')') : msg.indexOf(']')
+
+        def committersString = msg[1..closingBracketIndex - 1]
+        def normalisedCommiters = committersString.split(/[\+\&]/).collect {it.trim()}.sort().join(' + ')
+        [timestamp, normalisedCommiters]
+    }
+
+
+    def pairCounts = [:]
+    pairDays.unique().each { pairDay ->
+        def (day, pair) = pairDay
+        def pairCount = pairCounts[pair]
+        if (pairCount)
+            pairCounts[pair] = pairCount + 1 else
+            pairCounts[pair] = 1
+    }
+
+    def writer = new StringWriter()
+    new groovy.xml.MarkupBuilder(writer).html() {
+        body() {
+            h1('Days paired in the last four weeks')
+            table() {
+                tr() {
+                    th('Pair')
+                    th('Days paired')
+                }
+                // Sort by descending count
+                pairCounts.sort {a, b -> b.value <=> a.value}.each { pair, count ->
+                    tr() {
+                        td(pair)
+                        td(count)
+                    }
+                }
+            }
+        }
+    }
+
+    return writer.toString()
+}

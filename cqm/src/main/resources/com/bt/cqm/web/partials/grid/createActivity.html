@@ -1,0 +1,134 @@
+<div class="innerWrap" ng-init="getQuotes()">
+
+    <div>
+        <div class="hrMargin">
+            <span class="headerLabel">Create Activity</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+
+        <div ng-form="createActivityForm" ng-model="createActivityFormData">
+            <div class="cqmFieldDiv">
+                <label>Activity Type</label>
+                <input type="text" class="cqmField" id="activityType" name="activityType"
+                       ng-model="createActivityFormData.activityType" value="Action Required" readonly/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Sales Channel </label>
+            <!--    <select ui-select2 style="width: 90%;" ng-model="createActivityFormData.salesChannel">
+                    <option ng-repeat="channel in salesUser.salesChannelList" value={{channel.name}}>
+                        {{channel.name}}
+                    </option>
+                </select>-->
+                <select id="salesChannel" ng-model="createActivityFormData.salesChannel"
+                        ng-options="channel as channel.name for channel in salesUser.salesChannelList"
+                        class="cqmField"
+                        ng-required="true">
+                </select>
+                <option value=""></option>
+            </div>
+            <div class="cqmFieldDiv">
+                <label>Search Customer </label>
+            <!--    <select ui-select2 style="width: 90%;" ng-model="createActivityFormData.searchCustomer">
+                    <option ng-repeat="customer in customerList" value={{customer.cusName}}>
+                        {{customer.cusName}}
+                    </option>
+                </select>-->
+                <select id="searchCustomer" ng-model="createActivityFormData.searchCustomer"
+
+                        ng-options="customer as customer.cusName for customer in customerList"
+                        class="cqmField"
+                        ng-required="true">
+                    <option value=""></option>
+                </select>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Activity Description</label>
+                <select class="cqmField" id="activityDesc" name="activityDesc" ng-change="activityDescChanged()"
+                        ng-model="createActivityFormData.activityDesc" required ng-init="getActivityDescription()"
+                        ng-options="activityDesc.name for activityDesc in activityDescList"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Assigned To</label>
+                <select class="cqmField" id="assignedTo" name="assignedTo" ng-change="assignedToChanged()"
+                        ng-model="createActivityFormData.assignedTo" required ng-init="getAssignedToList()"
+                        ng-options="assignedTo.fullName for assignedTo in assignedToList"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Assigned To e-mail ID</label>
+                <input class="cqmField" type="text" id="assignedToEmailID" name="assignedToEmailID"
+                       ng-model="createActivityFormData.assignedTo.emailAddress" readonly>
+            </div>
+            <div class="cqmFieldDiv">
+                <label>Additional Email ID</label>
+                <!--<input class="cqmField" type="text" id="groupToEmailID" name="groupToEmailID"
+                       ng-model="createActivityFormData.assignedTo.groupEmailID" >-->
+                <input type="email" class="cqmField" id="groupToEmailID" name="groupToEmailID"
+                       ng-model="createActivityFormData.assignedTo.groupEmailID">
+            </div>
+            <div class="cqmFieldDiv" ng-show="!quoteIdSelected">
+                <label>Quote Name</label>
+                <select class="cqmField" ui-select2 style="width: 90%;" ng-model="quote"
+                        ng-change="populateQuoteDetailsBasedOnName(quote)">
+                    <option value=""></option>
+                    <option ng-repeat="quote in listOfQuotes" value="{{quote}}">{{quote.quoteName}}</option>
+                </select>
+            </div>
+            <div class="cqmFieldDiv" ng-show="quoteIdSelected">
+                <label>Quote Name</label>
+                <select class="cqmField" ui-select2 style="width: 90%;" ng-model="createActivityFormData.quote"
+                        ng-change="populateQuoteDetailsBasedOnName(quote)">
+                    <option ng-repeat="quote in selectedQuote" value="{{quote}}">{{quote.quoteName}}</option>
+                </select>
+            </div>
+            <div class="cqmFieldDiv" ng-show="!quoteNameSelected">
+                <label>Quote Id</label>
+                <select class="cqmField" ui-select2 style="width: 90%;" ng-model="createActivityFormData.quoteId"
+                        ng-change="populateQuoteDetailsBasedOnId(quoteId)">
+                    <option value=""></option>
+                    <option ng-repeat="quoteId in listOfQuotes" value="{{quoteId}}">{{quoteId.quoteRefID}}</option>
+                </select>
+            </div>
+            <div class="cqmFieldDiv" ng-show="quoteNameSelected">
+                <label>Quote Id</label>
+                <select class="cqmField" ui-select2 style="width: 90%;" ng-model="createActivityFormData.quoteId"
+                        ng-change="populateQuoteDetailsBasedOnId(quoteId)">
+                    <option ng-repeat="quoteId in selectedQuote" value="{{quoteId}}">{{quoteId.quoteRefID}}</option>
+                </select>
+            </div>
+            <div class="cqmFieldDiv">
+                <label>Quote Version</label>
+                <select class="cqmField" ui-select2 style="width: 90%;" ng-model="createActivityFormData.quoteVersion">
+                    <option ng-repeat="quote in selectedQuote">
+                        {{quote.quoteVersion}}
+                    </option>
+                </select>
+            </div>
+
+            <div style="width: 98%;float: left;margin: 10px;">
+                <label>Sales User's Comment(s):</label>
+                <textarea id="salesUserComments" name="salesUserComments" class="cqmTextArea" style="width: 97.5%; height: 100px;" rows="4"
+                          cols="50"
+                          ng-model="createActivityFormData.salesUserComments" placeholder="Put comments here..."  ng-required="true"> </textarea>
+            </div>
+
+            <div class="containerDiv" style="float:left;">
+
+                <button class="btn" ng-disabled="!createActivityForm.$valid" ng-click="createActivity()"
+                        style="float:right;margin:5px;">
+                    Create Activity
+                </button>
+
+                <button class="btn" ng-click="initializeCreateActivityFormData()"
+                         style="float:right;margin:5px;">
+                    Reset
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>

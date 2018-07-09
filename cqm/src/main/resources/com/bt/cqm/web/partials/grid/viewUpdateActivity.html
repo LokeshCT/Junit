@@ -1,0 +1,214 @@
+<div class="innerWrapUpdateActivity" ng-init="onPageLoad()">
+<div>
+<div class="hrMargin">
+    <span class="headerLabel">Search Activity</span>
+    <hr class="hrStyle">
+</div>
+
+<div ng-form="searchActivityForm" ng-model="searchActivityFormData" style="margin-top: 10px;float: left">
+    <div class="cqmFieldDiv">
+        <label>Filters</label>
+        <select class="cqmField" id="filter" name="filter" ng-change="filterSelected()"
+                ng-model="searchActivityFormData.filterName" ng-init="initializeFilters()"
+                data-placeholder="Select a Filter"
+                ng-required='!searchActivityFormData.activityDescription && !searchActivityFormData.activityID'
+                ng-options="filter for filter in filterList">
+            <option value=""></option>
+        </select>
+    </div>
+
+    <div class="cqmFieldDiv">
+        <label>Activity Description</label>
+        <select class="cqmField" id="activityDescription" name="activityDescription"
+                ng-model="searchActivityFormData.activityDescription"
+                data-placeholder="Select an Activity Description" ng-init="initializeActivityDescListS()"
+                ng-required='!searchActivityFormData.filterName && !searchActivityFormData.activityID'
+                ng-options="activityDescription for activityDescription in activityDescListS">
+            <option value=""></option>
+        </select>
+    </div>
+
+
+    <div class="cqmFieldDiv">
+        <label>Sales Channel </label>
+        <select ui-select2 class="cqmField" ng-model="searchActivityFormData.salesChannel">
+            <option ng-repeat="channel in salesUser.salesChannelList" value={{channel.name}}>
+                {{channel.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="cqmFieldDiv">
+        <label>Status</label>
+        <select class="cqmField" id="status" name="status" ng-model="searchActivityFormData.status"
+                ng-init="initializeStatusList()" data-placeholder="Select a Status"
+                ng-options="status for status in statusList">
+            <option value=""></option>
+        </select>
+
+    </div>
+
+    <div class="cqmFieldDiv">
+        <label>Sales Channel Type</label>
+        <select class="cqmField" id="salesChannelType" name="salesChannelType"
+                ng-model="searchActivityFormData.salesChannelType"
+                ng-init="initializeSalesChannelTypeList()" data-placeholder="Select a Sales Channel Type"
+                ng-options="salesChannelType for salesChannelType in salesChannelTypeList">
+            <option value=""></option>
+        </select>
+    </div>
+
+    <div class="cqmFieldDiv">
+        <label>Product Name</label>
+        <select class="cqmField" id="productName" name="productName"
+                data-placeholder="Select a Product Name"
+                ng-model="searchActivityFormData.productName" ng-init="initializeProductList()"
+                ng-options="product for product in productList">
+            <option value=""></option>
+        </select>
+    </div>
+
+    <div class="cqmFieldDiv">
+        <div style="margin-top: 15px;float: right;width: 95%;">
+            <button class="btn" style="margin:2px;width: 46%;" ng-click="searchActivity()"
+                    ng-disabled='!searchActivityForm.$valid'>
+                Search
+            </button>
+            <button class="btn" style="margin:2px;width: 46%;" ng-click="reset()"
+                    ng-disabled='!searchActivityForm.$dirty'>
+                Reset
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<div ng-form="viewUpdateActivityForm" ng-model="viewUpdateActivityFormData" ng-show="showSearchResultSection" style="float: left">
+    <div style="float: left;">
+        <div class="hrMargin">
+            <span class="headerLabel">Activities Found: {{ numOfMatchingActivities }}</span>
+            <hr class="hrStyle">
+        </div>
+        <div>
+            <fieldset style="border:1px solid #eeeeee;width:96%">
+                <legend> Filter Result :</legend>
+                <div class="cqmFieldDiv" style="height: 45px;">
+                    <label>Activity ID</label>
+                    <input class="cqmField" type="text" id="activityID" name="activityID"
+                           ng-model="activityId">
+                </div>
+                <div class="cqmFieldDiv" style="height: 45px;">
+                    <label>Customer Name</label>
+                    <input class="cqmField" type="text" id="filterCustomerName" name="filterCustomerName"
+                           ng-model="filterCustomerName">
+                </div>
+                <div class="cqmFieldDiv">
+                    <label>Quote Name</label>
+                    <input class="cqmField" type="text" id="quoteName" name="quoteName"
+                           ng-model="quoteName">
+                </div>
+                <div class="cqmFieldDiv" style="height: 45px;">
+                    <label>Quote ID</label>
+                    <input class="cqmField" type="text" id="quoteId" name="quoteId"
+                           ng-model="quoteId">
+                </div>
+                <div class="cqmFieldDiv" style="height: 45px;">
+                    <label>Text Search</label>
+                    <input class="cqmField" type="text" id="textSearch" name="textSearch"
+                           ng-model="filterText">
+                </div>
+            </fieldset>
+        </div>
+        <div class="searchResultGridStyle" style="height: 250px" ng-grid="activityGrid"></div>
+    </div>
+    <div class="containerDiv" style="float:left;margin-top: 30px" ng-show="showButtonSection">
+        <button class="btn"  ng-disabled="enableWithdrawApprovalStatus" style="float:right;margin:5px;" ng-click="updateActivity('Closed')">
+            Mark as Complete
+        </button>
+        <button class="btn"  ng-disabled="!enableWithdrawApprovalStatus" style="float:right;margin:5px;" ng-click="updateActivity('Open')">
+            Re-Open Activity
+        </button>
+    </div>
+    <div style="width: 100%;float: left;margin-top: 30px;" ng-show="showCommentSection">
+        <div style="width: 49%;float: left;margin: 2px;">
+            <label>Comments History:</label>
+            <textarea id="salesUserComments" name="salesUserComments" class="cqmTextArea"
+                              ng-model="viewUpdateActivityFormData.CommentsHistory"
+                      ng-readonly="disableSalesUserCommentsTextarea"> </textarea>
+        </div>
+        <div style="width: 49%;float: left;margin: 2px;" ng-show="isBidManager">
+            <label>Bid Manager Terms & Conditions:</label>
+            <textarea id="bidManagerComments" name="bidManagerComments" class="cqmTextArea"
+                      rows="4" cols="50"
+                      ng-model="viewUpdateActivityFormData.BidMangersComments" placeholder="Put Bid manager Terms & Conditions here..."
+                      ng-readonly={{!selectedActivity}}> </textarea>
+        </div>
+    </div>
+
+    <div class="containerDiv" style="float:left;" ng-show="showButtonSection">
+        <button class="btn" ng-disabled="disableApproveButton || isSQEActivity" style="float:right;margin:5px;" ng-click="approveActivity()" ng-show="isBidManager">
+            Approve
+        </button>
+        <button class="btn" ng-disabled="disableRejectButton || isSQEActivity" style="float:right;margin:5px;" ng-click="rejectActivity()" ng-show="isBidManager">
+            Reject
+        </button>
+        <button class="btn" ng-disabled="disableConfigLauncher" style="float:right;margin:5px;" ng-click="launchConfigurator()">
+            Product Configuration
+        </button>
+
+    </div>
+
+    <div ng-form="viewUpdateActivityForm" ng-model="viewUpdateActivityFormData" ng-show="showSearchResultSection" style="float: left">
+        <div class="containerDiv" style="clear:both; padding-top:5px;float: left;width: 98%" ng-show="showButtonSection">
+            <div class="hrMargin" style="clear:both; float: left;margin-bottom: 10px;" ng-show="showButtonSection">
+                <span class="headerLabel collapse" ng-click="collapseAssLEPanel()">Delegation of Activities </span>
+                <hr class="hrStyle" width="90%"/>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <label>Assigned To</label>
+                <select class="centralSiteField" id="assignedTo" name="assignedTo" ng-change="assignedToChangedUpdatePage()"
+                        ng-model="viewUpdateActivityFormData.assignedTo"  ng-init="getAssignedToList()"
+                        ng-options="assignedTo.fullName for assignedTo in assignedToList"/>
+            </div>
+            <div class="centralSiteFieldDiv">
+                <label>Assigned To e-mail ID</label>
+                <input class="centralSiteField" type="text" id="assignedToEmailID" name="assignedToEmailID"
+                       ng-model="viewUpdateActivityFormData.assignedTo.emailAddress" readonly>
+            </div>
+            <div class="centralSiteFieldDiv">
+                <label>Group To e-mail ID</label>
+                <input class="centralSiteField" type="text" id="groupToEmailID" name="groupToEmailID"
+                       ng-model="viewUpdateActivityFormData.assignedTo.groupEmailID" readonly>
+            </div>
+            <div style="width: 49%;float: left;margin: 2px;">
+                <label>New Comments*:</label>
+                <textarea id="newComments" name="newComments" class="cqmTextArea"
+                          rows="4" cols="50"
+                          ng-model="viewUpdateActivityFormData.newComments" placeholder="Put comments here..."
+                          ng-change="enableReassign()" > </textarea>
+            </div>
+            <div class="containerDiv" style="clear:both; padding-top:5px;float: left;width: 98%" ng-show="showButtonSection">
+                <button class="btn" ng-disabled="!enableReassignComments||!enableAcceptDelegation" style="float:right;margin:5px;" ng-click="rejectDelegation()">
+                    Reject Delegation
+                </button>
+
+                <button class="btn" ng-disabled="!enableAcceptDelegation" style="float:right;margin:5px;" ng-click="acceptDelegation()">
+                    Accept Delegation
+                </button>
+
+                <button class="btn" style="float:right;margin:5px;" ng-disabled="!enableReassignComments || !enableReassignEmail" ng-click="reassignActivity()">
+                    Re-assign
+                </button>
+
+                <button class="btn" ng-disabled="!enableWithdrawApprovalRole || !enableWithdrawApprovalStatus ||!enableReassignComments " style="float:right;margin:5px;" ng-click="withdrawApproval()">
+                    Withdraw Approval
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>

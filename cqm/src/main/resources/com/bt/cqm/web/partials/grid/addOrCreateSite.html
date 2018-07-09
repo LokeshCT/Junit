@@ -1,0 +1,172 @@
+<div ng-controller="centralSiteController" class="inner">
+    <div class="hrMargin headerLabel ">
+        <span class="headerLabel">Central Site</span>
+        <hr class="hrStyle" width="98%">
+    </div>
+    <form name="centralSiteForm" id="centralSiteForm" ng-model="centralSiteForm">
+
+        <div ng-form="centralSiteNGForm" style="width:100%">
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Customer Validation Status</label></div>
+                <div><select class="centralSiteField" id="custValidStatus" name="custValidStatusName"
+                             ng-model="custValidStatus" ng-options="t.name for t in statuses"></select>
+                </div>
+                <input type="hidden" id="custStatusId" name="custStatus" value=""/>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Local Company Name<span class="rfo">(RFO)</span></label></div>
+                <div><input class="centralSiteField" type="text" id="companyName" name="companyName"
+                            ng-model="companyName"/></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Building Name</label></div>
+                <div><input class="centralSiteField" type="text" id="buildingName" name="buildingName"
+                            ng-model="buildingName"></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Sub Building</label></div>
+                <div><input class="centralSiteField" type="text" id="subBuilding" name="subBuilding"
+                            ng-model="subBuilding"></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Building Number</label></div>
+                <div><input class="centralSiteField" type="text" id="buildingNumber" name="buildingNumber"
+                            ng-model="buildingNumber"></div>
+            </div>
+
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Street</label></div>
+                <div><input class="centralSiteField" type="text" id="street" name="street"
+                            ng-model="street"></div>
+            </div>
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Sub Street</label></div>
+                <div><input class="centralSiteField" type="text" id="subStreet" name="subStreet"
+                            ng-model="subStreet"></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Locality</label></div>
+                <div><input class="centralSiteField" type="text" id="locality" name="locality"
+                            ng-model="locality"></div>
+            </div>
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Sub Locality</label></div>
+                <div><input class="centralSiteField" type="text" id="subLocality" name="subLocality"
+                            ng-model="subLocality"></div>
+            </div>
+
+            <!--<input type="text" ng-show="false" id="bfgSiteId" name="bfgSiteId" ng-model="bfgSiteId" value="">-->
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label> City <span class="rfo">(RFO)</span></label></div>
+                <div><input class="centralSiteField" type="text" id="city" name="city" ng-model="city"
+                            ng-change="setGeoCodeValue('geoCodeActionId')" required/>
+                </div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>State/Province</label></label></div>
+                <div><input class="centralSiteField" type="text" id="state" name="state"
+                            ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="state"/></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Sub State/County/Province</label></label></div>
+                <div><input class="centralSiteField" type="text" id="subState" name="subState"
+                            ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="subState"/></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Country<span class="rfo">(RFO)</span></label></div>
+                <div><select id="country" name="country" class="centralSiteField" required ng-model="countrySelect"
+                             ng-change="setCountryName('geoCodeActionId','country', 'countryName', 'countryCode')"
+                             ng-options="t.name for t  in myCountries"></select>
+                    <input type="hidden" id="countryClick" name="countryClick" value="0">
+                    <input type="text" ng-show="false" id="countryName" name="countryName" ng-model="countryName">
+                    <input type="text" ng-show="false" id="countryCode" name="countryCode" ng-model="countryCode">
+                    <!--<input type="text" ng-show="false" id="latitude" name="latitude" ng-model="latitude">
+               <input type="text" ng-show="false" id="longitude" name="longitude" ng-model="longitude">-->
+                    <input type="text" ng-show="false" id="validationLevel" name="validationLevel"
+                           ng-model="validationLevel">
+                    <input type="text" ng-show="false" id="accuracyLevel" name="accuracyLevel" ng-model="accuracyLevel">
+                </div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Zip/Post Code</label></div>
+                <div><input class="centralSiteField" type="text" id="postCode" name="postCode"
+                            ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="postCode"/></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Sub Post Code</label></div>
+                <div><input class="centralSiteField" type="text" id="subPostCode" name="subPostCode"
+                            ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="subPostCode"/></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>PO Box</label></div>
+                <div><input class="centralSiteField" type="text" id="poBox" name="poBox"
+                            ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="poBox"/></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Phone Number</label></div>
+                <div><input type="text" no-alpha id="phoneNumber" name="phoneNumber" ng-model="phoneNumber"></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Latitude</label></div>
+                <div><input class="centralSiteField" type="text" id="latitude" name="latitude"
+                            ng-model="latitude"></div>
+            </div>
+
+            <div class="centralSiteFieldDiv">
+                <div style="width:100%"><label>Longitude</label></div>
+                <div><input class="centralSiteField" type="text" id="longitude" name="longitude"
+                            ng-model="longitude"></div>
+            </div>
+
+            <div ng-show="showSearchResults" style="width: 100%">
+                <div style="margin-left:45px" class="headerLabel">
+                    <span class="headerLabel">Search Results</span>
+                    <hr class="hrStyle">
+                </div>
+
+                <div class="gridStyle" ng-grid="addressGrid" style="width: 100%"></div>
+
+                <div class="containerDiv">
+                    <div align="right" style="margin-top: 20px;">
+                        <button id="createCustomerId" ng-model="createCustomerId" ng-disabled="getSelectedCustName"
+                                ng-click="createCustomerSite(true,'outputRowSelectionId','geoCodeActionId',centralSiteForm)"
+                                >Create Customer Site
+                        </button>
+                        <button id="editCustomerId" ng-model="editCustomerId"
+                                ng-click="createCustomerSite(false,'outputRowSelectionId','geoCodeActionId',centralSiteForm)"
+                                >Edit Central Site
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerDiv" style="float:left;">
+
+            <button ng-disabled="!centralSiteNGForm.$valid" ng-click="searchGeoCode()" style="float:right;margin:5px;">
+                Get Geo Code
+            </button>
+
+            <button ng-disabled="!centralSiteNGForm.$valid" ng-click="searchMyAddress()"
+                    style="float:right;margin:5px;">Search
+                Address
+            </button>
+
+        </div>
+    </form>
+</div>

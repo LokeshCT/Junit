@@ -1,0 +1,318 @@
+get<div class="inner" id="portConfigurator" ng-controller="configSummaryCtrl">
+
+
+<div class="table-container" style="height: 500px; visibility: visible;">
+<div style="height: 20px;"></div>
+<div style="width: 400px; text-align:center;">
+    <div style="margin-left: 250px; font-size: 12px;" class="btn" ng-click="saveConfigurationDetails()">Save Site
+        Configuration
+    </div>
+</div>
+<div style="height: 20px;"></div>
+<div id="siteDetailsContainer" style="width: 400px;">
+    <div id="siteNameLabel" style="width:300px; font-size: 10px;"><b>Site Name</b> : {{siteConfigData.siteName}} &nbsp;
+        <b>Location</b> :{{siteConfigData.address.city}},{{siteConfigData.address.country}}
+    </div>
+</div>
+<table>
+    <thead class="header-fixed">
+    <tr style="top: 1px;">
+        <th>
+            <div style="width: 65px;">Management <br/>Type</div>
+        </th>
+        <th>
+            <div style="width: 60px;">Resiliency</div>
+        </th>
+        <th>
+            <div style="width: 100px;">CPE <br/>Resilience</div>
+        </th>
+        <th>
+            <div style="width: 80px;">CPE <br/>Manufacturer</div>
+        </th>
+        <th>
+            <div style="width: 70px;">Port Pricing <br/>Type</div>
+        </th>
+        <th>
+            <div style="width: 65px;">Access Term</div>
+        </th>
+
+        <th>
+            <div style="width: 60px;">CPE Contract <br/>Term</div>
+        </th>
+
+    </tr>
+    </thead>
+    <tbody style="display: block; border-top: 50px solid transparent;">
+    <tr>
+        <td>
+            <div style="width: 65px;">{{siteConfigData.managementType.value}}</div>
+        </td>
+        <td>
+            <div style="width: 60px;">{{siteConfigData.resiliency.value}}</div>
+        </td>
+        <td>
+            <div style="width: 100px;">{{siteConfigData.cpeResilience}}</div>
+        </td>
+        <td>
+            <div style="width: 80px;">{{siteConfigData.cpeConfigurationData.manufacturer}}</div>
+        </td>
+        <td>
+            <div style="width: 70px;">{{siteConfigData.portConfigurationData.portPricingType}}</div>
+        </td>
+        <td>
+            <div style="width: 65px;">{{siteConfigData.accessConfigurationData.accessTerm}}</div>
+        </td>
+        <td>
+            <div style="width: 60px;">{{siteConfigData.cpeConfigurationData.cpeContractTerm}}</div>
+        </td>
+
+    </tr>
+
+    </tbody>
+</table>
+<div style="height: 20px;"></div>
+
+
+<table>
+<thead class="header-fixed">
+<tr style="top: 1px;">
+    <th>
+        <div style="width: 140px;">Configuration Type<br><br></div>
+    </th>
+
+    <th>
+        <div style="width: 140px;">Configured Attribute<br><br></div>
+    </th>
+    <th>
+        <div style="width: 140px;">Primary Configuration<br><br></div>
+    </th>
+    <th>
+        <div style="width: 140px;">Secondary Configuration<br><br></div>
+    </th>
+
+
+</tr>
+</thead>
+<tbody style="display: block; border-top: 50px solid transparent;">
+
+<tr>
+    <td rowspan="6" style="vertical-align: middle; text-align: center;">
+        <div style="width: 140px;">Access</div>
+    </td>
+    <td>
+        <div style="width: 140px;">Port Speed</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.portSpeed.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.portSpeed.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Access Technology</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.primaryAccessParams.accessTechnology.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.secondaryAccessParams.accessTechnology.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Service Variant</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.primaryAccessParams.serviceVariant.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.secondaryAccessParams.serviceVariant.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Access Model</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.primaryAccessParams.accessModel.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.secondaryAccessParams.accessModel.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Access Speed</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.primaryAccessParams.accessSpeed.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.secondaryAccessParams.accessSpeed.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Access Type</div>
+    </td>
+    <td>
+        <div style="width: 140px;">{{siteConfigData.accessConfigurationData.primaryAccessParams.accessType.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.accessConfigurationData.secondaryAccessParams.accessType.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+        <div style="width: 140px;">Port</div>
+    </td>
+    <td>
+        <div style="width: 140px;">CoS Assignment</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.cosAssignment.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.cosAssignment.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">CoS Customization Level</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.cosCustomizationLevel}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.cosCustomizationLevel}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">HVPN GPOP Name</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.primaryPortConfigurationDetail.hvpnGpop.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.portConfigurationData.secondaryPortConfigurationDetail.hvpnGpop.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td rowspan="4" style="vertical-align: middle; text-align: center;">
+        <div style="width: 140px;">CPE</div>
+    </td>
+    <td>
+        <div style="width: 140px;">Router Bundle</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.routerBundle.value}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.routerBundle.value}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Maintenance Option</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.maintenanceOption}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.maintenanceOption}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Action Type</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.actionType}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.actionType}}
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div style="width: 140px;">Sub Action Type</div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.primaryCpeConfigurationDetail.subActionType}}
+        </div>
+    </td>
+    <td>
+        <div style="width: 140px;">
+            {{siteConfigData.cpeConfigurationData.secondaryCpeConfigurationDetail.subActionType}}
+        </div>
+    </td>
+</tr>
+</tbody>
+</table>
+
+<div style="height: 20px;"></div>
+<div style="width: 400px; text-align:center;">
+    <div style="margin-left: 250px; font-size: 12px;" class="btn" ng-click="saveConfigurationDetails()">Save Site
+        Configuration
+    </div>
+</div>
+</div>
+
+<div id="configSummarySaveInProgressInfo" ng-show="saveInProgress" class="status-bar" >Site configuration data are being saved.</div>
+<div id="configSummarySaveCompletedInfo" ng-show="saveCompleted" class="status-bar" >Site configuration has been saved successfully. You may now close this modal window.</div>
+
+
+</div>
+
+

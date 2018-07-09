@@ -1,0 +1,13 @@
+ROLE_ID,ROLE_NAME,ROLE_TYPE,CREATED_USER,MODIFIED_USER
+1,Deal Architect,1,Initial Load,Initial Load
+2,Order Entry Team,1,Initial Load,Initial Load
+3,CP User,2,Initial Load,Initial Load
+4,Super User,1,Initial Load,Initial Load
+5,Billing Dispute Raiser,1,Initial Load,Initial Load
+6,Regional Order Manager,1,Initial Load,Initial Load
+7,Sales User,1,Initial Load,Initial Load
+8,Bid Manager,1,Initial Load,Initial Load
+9,Commercial Change Manager,1,Initial Load,Initial Load
+10,Technical Manager,1,Initial Load,Initial Load
+11,Billing Team Manager,1,Initial Load,Initial Load
+12,Admin CP,2,Initial Load,Initial Load

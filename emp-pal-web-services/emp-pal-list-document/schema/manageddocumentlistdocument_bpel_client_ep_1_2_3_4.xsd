@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:meta="http://capabilities.nat.bt.com/xsd/EDM/EMP/Metadata/1.0">
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/Metadata/1.0" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2_3_4_5.xsd"/>
+  <xs:annotation>
+    <xs:documentation>This schema describes the ManagedDocument entity maintained by the EMP.</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="ManagedDocument">
+    <xs:annotation>
+      <xs:documentation>The document entity holds the actual document (as a byte Stream), information about the document and any metadata.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DocumentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique ID of the document within a system</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileName" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name for the file holding the byte stream (name and extension). A change here would change URL</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DocumentTitle" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Title of the document.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileContents" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Byte array of contents. Could be excel, word, pdf, etc ie any but those that are banned (not allowed).</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:base64Binary"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DocumentURL" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>URL to locate the document.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of parent folder or repository.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Either Folder or Repository.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AuthorID" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of the author of the file. Author can be people (in which case UIN will be used) or systems (in which case we use functional account name)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="OwnerID" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of the owner of the file. Owner can be people (in which case UIN will be used) or systems (in which case we use functional account name)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="CreatedDate" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Date document created.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:dateTime"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LastModifiedDate" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Date document last modified.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:dateTime"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LastModifiedByID" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of the account who last modified.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Version" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Version of document (draft, issue).</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DocumentDescription" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Document description.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Mime" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Multipurpose Internet Mail Extension.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileSize" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>File size.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:integer"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Metadata" minOccurs="0" maxOccurs="unbounded" type="meta:Metadata">
+        <xs:annotation>
+          <xs:documentation>Relationship to Metadata</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

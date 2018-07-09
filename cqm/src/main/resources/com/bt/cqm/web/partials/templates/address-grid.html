@@ -1,0 +1,137 @@
+        <div class="centralSiteFieldDiv">
+            <label>Building Name</label>
+            <input class="centralSiteField" type="text" id="buildingName" name="buildingName"
+                   ng-model="addressDto.buildingName" ng-disabled="!disabled" addr-conditional-mandatory-field>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Sub Building</label>
+            <input class="centralSiteField" type="text" id="subBuilding" name="subBuilding"
+                   ng-model="addressDto.subBuilding" ng-disabled="!disabled">
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Building Number <span class="rfo">(RFO)</span></label>
+            <input class="centralSiteField" type="text" id="buildingNumber" name="buildingNumber"
+                   ng-model="addressDto.buildingNumber" addr-conditional-mandatory-field ng-disabled="!disabled">
+        </div>
+
+
+        <div class="centralSiteFieldDiv">
+            <label>Street <span class="rfo">(RFO)</span></label>
+            <input class="centralSiteField" type="text" id="street" name="street"
+                   ng-model="addressDto.street" ng-disabled="!disabled" addr-conditional-mandatory-field ng-required="requiredForUpdate">
+        </div>
+        <div class="centralSiteFieldDiv">
+            <label>Sub Street</label>
+            <input class="centralSiteField" type="text" id="subStreet" name="subStreet"
+                   ng-model="addressDto.subStreet" ng-disabled="!disabled">
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Locality</label>
+            <input class="centralSiteField" type="text" id="locality" name="locality"
+                   ng-model="addressDto.locality" ng-disabled="!disabled" addr-conditional-mandatory-field>
+        </div>
+        <div class="centralSiteFieldDiv">
+            <label>Sub Locality</label>
+            <input class="centralSiteField" type="text" id="subLocality" name="subLocality"
+                   ng-model="addressDto.subLocality" ng-disabled="!disabled">
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label> City <span class="rfo">(RFO)</span></label>
+            <input class="centralSiteField" cqm-mandatory required id="city" name="city" ng-model="addressDto.city" addr-conditional-mandatory-field
+                   ng-disabled="!disabled "/>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>State/County/Province<span class="rfo">(RFO)</span></label>
+            <input class="centralSiteField" type="text" id="state" name="state"
+                   ng-model="addressDto.state" ng-disabled="!disabled"/>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Sub State/County/Province</label></label>
+            <input class="centralSiteField" type="text" id="subState" name="subState"
+                   ng-model="addressDto.subState" ng-disabled="!disabled"/>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Country<span class="rfo">(RFO)</span></label>
+            <select cqm-mandatory-select id="country" ng-model="addressDto.country" addr-conditional-mandatory-field
+                    ng-options="country as country.name for country  in allCountries"
+                    ng-change="updateCountry()" data-placeholder="Select a Country" ng-required="true"
+                    style="width: 95%" ng-disabled="!disabled "/>
+            </select>
+
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Zip/Post Code<span class="rfo">(RFO)</span></label>
+            <input class="centralSiteField" type="text" id="postCode" name="postCode" data-zipcode addr-conditional-mandatory-field
+                   ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="addressDto.postCode"
+                   ng-disabled="!disabled"/>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Sub Post Code</label>
+            <input class="centralSiteField" type="text" id="subPostCode" name="subPostCode"
+                   ng-change="setGeoCodeValue('geoCodeActionId')"
+                   ng-model="addressDto.subPostCode" ng-disabled="!disabled"/>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>PO Box</label>
+            <input class="centralSiteField" type="text" id="poBox" name="poBox"
+                   ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="addressDto.POBox"
+                   ng-disabled="!disabled" addr-conditional-mandatory-field/>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Phone Number</label>
+            <input class="centralSiteField" type="text" no-alpha id="phoneNumber" name="phoneNumber" data-phone
+                   ng-model="addressDto.phoneNumber" ng-disabled="!disabled">
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Latitude</label>
+            <input class="centralSiteField" type="text" id="latitude" name="latitude"
+                   ng-model="addressDto.latitude" disabled="true" addr-conditional-mandatory-field>
+        </div>
+
+        <div class="centralSiteFieldDiv">
+            <label>Longitude</label>
+            <input class="centralSiteField" type="text" id="longitude" name="longitude"
+                   ng-model="addressDto.longitude" disabled="true" addr-conditional-mandatory-field>
+        </div>
+
+        <div class="containerDiv" style="float:left;">
+
+            <button class="btn"
+                    ng-disabled="disableSearch || !disabled"
+                    ng-click="searchAddress()"
+                    style="float:right;margin:5px;">Search Address
+            </button>
+
+            <button class="btn" style="float:right;margin:5px;"
+                    ng-disabled="!disabled"
+                    ng-click="reset()">Reset
+            </button>
+
+            <button class="btn" style="float:right;margin:5px;" id="createCustomerId"
+                    ng-disabled="disableSubmit || !disabled"
+                    ng-click="onsubmit()">Create/Update
+            </button>
+            <div id="warnMsg" style="color:red;" ng-show="showErrorMsg">*Note : {{errorMsg}}</div>
+
+        </div>
+
+        <div ng-show="isAdrSearchSuccess" class="searchResult">
+            <div class="hrMargin">
+                <span class="headerLabel">Search Results: {{ numOfMatchingAddresses }} address(es) found.</span>
+                <hr class="hrStyle">
+            </div>
+
+            <div class="searchResultGridStyle" style="height: 250px" ng-grid="addressGrid"></div>
+        </div>

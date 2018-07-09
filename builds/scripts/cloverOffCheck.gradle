@@ -1,0 +1,93 @@
+def reportsDir = file("${rootDir}/build/reports/")
+def reportFile = file("$reportsDir.path/clover-off-report.html")
+
+task cloverOffReport() {
+
+    reportsDir.mkdirs()
+    if (reportFile.exists()) {
+        reportFile.delete()
+    }
+
+    def results = [:]
+    def resultsPerModule = [:]
+
+    doLast {
+
+        project.allprojects.each { proj ->
+
+            def totalNumLinesUncoveredForModule = 0;
+
+            if (proj.hasProperty('sourceSets')) {
+                proj.sourceSets['main'].allJava.each { File javaFile ->
+                    if (javaFile.text.contains('CLOVER:')) {
+                        int numLinesUncovered = 0;
+                        boolean uncovered = false;
+                        javaFile.eachLine { line ->
+                            if (line ==~ /.*CLOVER:(\s)?OFF.*/) {
+                                uncovered = true
+                            } else if (line ==~ /.*CLOVER:(\s)?ON.*/) {
+                                uncovered = false
+                            } else {
+                                if (uncovered) {
+                                    numLinesUncovered++;
+                                }
+                            }
+                        }
+
+                        totalNumLinesUncoveredForModule += numLinesUncovered;
+                        results[javaFile] = numLinesUncovered
+                    }
+                }
+
+                if (totalNumLinesUncoveredForModule) {
+                    resultsPerModule[proj.name] = totalNumLinesUncoveredForModule
+                }
+            }
+        }
+
+        int matchedFileCount = results.findAll { it.value > 0 }.size()
+        int totalNumLinesUncovered = resultsPerModule.inject([]) { sum, k, v -> sum += v }.sum()
+
+        results = results.sort {a, b -> b.value <=> a.value}
+        resultsPerModule = resultsPerModule.sort {a, b -> b.value <=> a.value}
+
+        def writer = new StringWriter()
+        new groovy.xml.MarkupBuilder(writer).html() {
+            body() {
+                h1("Clover Off Report")
+                p() {
+                    strong("$matchedFileCount files with $totalNumLinesUncovered lines unread by Clover.")
+                }
+                table(border: 1) {
+                    tr {
+                        td{strong("Module Name")}
+                        td{strong("Lines excluded")}
+                    }
+                    resultsPerModule.each() { key, value ->
+                        tr {
+                            td(key)
+                            td(value)
+                        }
+                    }
+                }
+                br {}
+                table(border: 1) {
+                    tr {
+                        td{strong("File Name")}
+                        td{strong("Lines excluded")}
+                    }
+                    results.each() { key, value ->
+                        tr {
+                            td (relativePath(key))
+                            td(value)
+                        }
+                    }
+                }
+            }
+        }
+
+        reportFile << writer.toString()
+        println "*** Report generated at '$reportFile.path'"
+    }
+
+}

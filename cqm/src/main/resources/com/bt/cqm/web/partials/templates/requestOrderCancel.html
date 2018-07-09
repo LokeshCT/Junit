@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <label><h3>{{hTitle}}</h3></label>
+</div>
+<div class="modal-body">
+    <textarea style="float:left; width:100%;height:150px" placeholder="Comment !" ng-model="dialogItem.comment" ng-maxlength="100" required/>
+</div>
+<div class="modal-footer">
+    <button ng-show="showOk" class="btn btn-primary" ng-click="ok()">OK</button>
+    <button ng-show="showCancel" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

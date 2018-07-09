@@ -1,0 +1,194 @@
+<div class="innerWrap" ng-init="loadLegalEntity()">
+    <div class="hrMargin">
+        <span class="headerLabel">Legal Entity Details : {{ numOfMatchingLegalEntities }} </span>
+        <hr class="hrStyle" width="100%"/>
+    </div>
+
+
+    <div class="legalEntityForm">
+
+        <form name="legalEntityForm" id="legalEntityForm" ng-model="legalEntityForm">
+
+            <div class="searchResultGridStyle" style="height: 250px" ng-grid="legalEntityGrid"></div>
+
+            <div class="hrMargin">
+                <span class="headerLabel">Create/Edit LE</span>
+
+                <div style="float:right;margin:5px;">
+                    <input type="checkbox" ng-model="isEditable" ng-change="loadCentralSite()"> Same As Customer Site
+                </div>
+                <hr class="hrStyle" width="100%"/>
+            </div>
+
+
+            <div class="hrMargin" ng-show="showBranchSiteEdit">
+                <span class="rfo">*Select LE to Edit</span>
+            </div>
+
+
+            <div ng-form="legalEntityNGForm" style="margin-top: 10px">
+
+                <div class="cqmFieldDiv">
+                    <label>Legal Company Name <span class="rfo">(RFO)</span></label>
+                    <input class="cqmField" type="text" id="companyName" name="companyName"
+                           ng-model="legalEntityFormData.legalCompanyName" legal-entity-field required tabindex="101"/>
+                </div>
+
+
+                <input class="cqmField" type="text" id="leId" name="leId"
+                       ng-model="legalEntityFormData.leId" ng-hide="true" legal-entity-field tabindex="102"/>
+
+                <div class="cqmFieldDiv">
+                    <label>Building Name</label>
+                    <input class="cqmField" type="text" id="buildingName" name="buildingName"
+                           ng-model="legalEntityFormData.buildingName" legal-entity-field tabindex="103">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Sub Building</label>
+                    <input class="cqmField" type="text" id="subBuilding" name="subBuilding"
+                           ng-model="legalEntityFormData.subBuilding" legal-entity-field tabindex="104">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Building Number</label>
+                    <input class="cqmField" type="text" id="buildingNumber" name="buildingNumber"
+                           ng-model="legalEntityFormData.buildingNumber" legal-entity-field tabindex="105">
+                </div>
+
+
+                <div class="cqmFieldDiv">
+                    <label>Street <span class="rfo">(RFO)</span></label>
+                    <input class="cqmField" type="text" id="street" name="street"
+                           ng-model="legalEntityFormData.street" legal-entity-field tabindex="106">
+                </div>
+                <div class="cqmFieldDiv">
+                    <label>Sub Street</label>
+                    <input class="cqmField" type="text" id="subStreet" name="subStreet"
+                           ng-model="legalEntityFormData.subStreet" legal-entity-field tabindex="107">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Locality</label>
+                    <input class="cqmField" type="text" id="locality" name="locality"
+                           ng-model="legalEntityFormData.locality" legal-entity-field tabindex="108">
+                </div>
+                <div class="cqmFieldDiv">
+                    <label>Sub Locality</label>
+                    <input class="cqmField" type="text" id="subLocality" name="subLocality"
+                           ng-model="legalEntityFormData.subLocality" legal-entity-field tabindex="109">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>City <span class="rfo">(RFO)</span></label>
+                    <input type="text" class="cqmField"  ng-required="true" id="city" name="city" ng-model="legalEntityFormData.city"
+                           legal-entity-field tabindex="110" style="border-color: red"/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>State/County/Province <span class="rfo">{{provRfo}}</span></label>
+                    <input class="cqmField" type="text" id="state" name="state"
+                           ng-model="legalEntityFormData.state" legal-entity-field ng-required="provRfoReq" tabindex="111"/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Sub State/County/Province</label></label>
+                    <input class="cqmField" type="text" id="subState" name="subState"
+                           ng-model="legalEntityFormData.subState" legal-entity-field tabindex="112"/>
+                </div>
+
+                <div class="cqmFieldDiv" ng-init="getAllCountries()">
+                    <label>Registered Country <span class="rfo">(RFO)</span></label>
+                    <select id="country" ng-model="legalEntityFormData.country"
+                            ng-options="country as country.name for country  in allCountries"
+                            data-placeholder="Select a Country" ng-required="true"
+                            style="width: 95%;border-color: red" legal-entity-field tabindex="113" ng-change="loadVatPrefix()"/>
+                    </select>
+
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Zip/Post Code <span class="rfo">{{zipRfo}}</span></label>
+                    <input class="cqmField" type="text" id="postCode" name="postCode"
+                           ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="legalEntityFormData.postCode" ng-required="zipRfoReq" legal-entity-field tabindex="114"
+                        />
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Sub Post Code</label>
+                    <input class="cqmField" type="text" id="subPostCode" name="subPostCode"
+                           ng-change="setGeoCodeValue('geoCodeActionId')"
+                           ng-model="legalEntityFormData.subPostCode" legal-entity-field tabindex="115"/>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>PO Box</label>
+                    <input class="cqmField" type="text" id="poBox" name="poBox"
+                           ng-change="setGeoCodeValue('geoCodeActionId')" ng-model="legalEntityFormData.POBox" legal-entity-field tabindex="116"
+                        />
+                </div>
+
+                <div class="cqmErrMsgDiv"  ng-show="showVatErrorMessage"><div  ng-show="showVatErrorMessage" style="width: 18%;margin-left: 10px;margin-right: 10px;float: left;height: 20px;"></div>
+                    <div>
+                        <span ng-show="showVatErrorMessage" class="rfq">*VAT Number should start with  {{vatPrefixOfSelectedCountry}} for {{legalEntityFormData.country.name}}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Company Registration Number</label>
+                    <input class="cqmField" type="text" id="compRegNo" name="compRegNo"  maxlength="80" size="80"
+                           ng-model="legalEntityFormData.compRegNo" legal-entity-field tabindex="116">
+                </div>
+                <div class="cqmFieldDiv">
+                    <!--<span class="rfq">*VAT Number should start with  FR for legalEntityFormData111111111.country.name</span>-->
+                    <label>VAT Number</label>
+                    <input class="cqmField" type="text" id="vatNo" name="vatNo"
+                           ng-model="legalEntityFormData.vatNo" legal-entity-field tabindex="118">
+                </div>
+
+                <div class="cqmFieldDiv">
+                    <label>Tax Exemption</label>
+                    <input class="cqmField" type="text" id="taxRef" name="taxRef"
+                           ng-model="legalEntityFormData.taxRef" legal-entity-field tabindex="119">
+                </div>
+
+
+                <div class="containerDiv" style="clear:both;float:right;margin-right: 5px">
+
+                    <button class="btn" ng-disabled="disableSearch" ng-click="searchAddress()"
+                            style="float:right;margin:5px;" tabindex="122">Search
+                        Address
+                    </button>
+                    <button class="btn" style="float:right;margin:5px;" id="editCustomerId"
+                            ng-disabled="disableCreate || disableUpdate"
+                            ng-model="editCustomerId"
+                            ng-click="createLegalEntity(false)" tabindex="121"
+                        >Update LE
+                    </button>
+                    <button class="btn" style="float:right;margin:5px;" id="createCustomerId"
+                            ng-model="createCustomerId"
+                            ng-disabled="disableCreate"
+                            ng-click="createLegalEntity(true)" tabindex="120"
+                        >Create LE
+                    </button>
+
+                    <button class="btn" ng-disabled="false" ng-click="reset()"
+                            style="float:right;margin:5px;" tabindex="119">Reset
+                    </button>
+
+                </div>
+
+                <div ng-show="legalEntityUI.showSearchResultsDiv" class="searchResult">
+                    <div class="hrMargin">
+                        <span class="headerLabel">Search Results: {{ numOfMatchingAddresses }} address(es) found.</span>
+                        <hr class="hrStyle">
+                    </div>
+
+                    <div class="searchResultGridStyle" style="height: 250px" ng-grid="addressGrid"></div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

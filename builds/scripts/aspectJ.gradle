@@ -1,0 +1,56 @@
+// https://github.com/breskeby/gradleplugins/blob/0.9-upgrade/aspectjPlugin/aspectJ.gradle
+apply plugin: 'java'
+
+def aspectJVersion='1.6.10'
+dependencies {
+    testCompile ([ "org.aspectj:aspectjrt:$aspectJVersion"
+                 , "org.aspectj:aspectjtools:$aspectJVersion"
+                 , "com.zanthan.sequence:sequence:0.9"
+                ])
+}
+
+
+task compileTestAspectJ(dependsOn: processTestResources) << {
+    println "Running ajc ..."
+    ant.taskdef(resource: "org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties",
+                classpath: configurations.testCompile.asPath)
+    ant.iajc(classpath: configurations.testRuntime.asPath, fork: 'true', showWeaveInfo: 'true',
+             source: project.convention.plugins.java.sourceCompatibility,
+             target: project.convention.plugins.java.targetCompatibility,
+             destDir: "$projectDir/build/aspectj-classes",
+             sourceRootCopyFilter: '**/*.java') {
+        sourceroots {
+            pathelement(location:"$projectDir/src/test/aspectj")
+
+            sourceSets.main.java.srcDirs.each {
+                if (it.exists()) pathelement(location: it.absolutePath)
+            }
+            sourceSets.main.resources.srcDirs.each {
+                if (it.exists()) pathelement(location: it.absolutePath)
+            }
+            sourceSets.test.java.srcDirs.each {
+                if (it.exists()) pathelement(location: it.absolutePath)
+            }
+            sourceSets.test.resources.srcDirs.each {
+                if (it.exists()) pathelement(location: it.absolutePath)
+            }
+        }
+    }
+}
+
+task testAcceptanceWithAspectJ(type: Test, dependsOn: compileTestAspectJ) {
+    testClassesDir = new File("$projectDir/build/aspectj-classes")
+    classpath = files("$projectDir/build/aspectj-classes") + configurations.testRuntime
+    includes = ['**/AcceptanceTestSuite.class']
+}
+
+task generateSequenceDiagrams(dependsOn: testAcceptanceWithAspectJ) << {
+    new File("$projectDir/build").eachFileMatch( ~/sequence\-.*\.log/ ) { f ->
+        javaexec {
+            main = 'com.zanthan.sequence.Main'
+            classpath = sourceSets.test.runtimeClasspath
+            args '--headless'
+            args f.absolutePath
+        }
+    }
+}

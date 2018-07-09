@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument" xmlns:header="http://wsi.nat.bt.com/2005/06/StandardHeader/" xmlns:hdr="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument/Header/1.0" xmlns:fold="http://capabilities.nat.bt.com/xsd/EDM/EMP/Folder/1.0" xmlns:doc="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/1.0" xmlns:metadata="http://capabilities.nat.bt.com/xsd/EDM/EMP/Metadata/1.0">
+  <xs:import namespace="http://wsi.nat.bt.com/2005/06/StandardHeader/" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1.xsd"/>
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/ListDocument/Header/1.0" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2.xsd"/>
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/Folder/1.0" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2_3.xsd"/>
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManagedDocument/1.0" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2_3_4.xsd"/>
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/Metadata/1.0" schemaLocation="manageddocumentlistdocument_bpel_client_ep_1_2_3_4_5.xsd"/>
+  <xs:element name="Folder" type="fold:Folder"/>
+  <xs:element name="ManagedDocument" type="doc:ManagedDocument"/>
+  <xs:element name="ListDocumentRequest" type="ListDocumentRequestType">
+    <xs:annotation>
+      <xs:documentation>Request Element for Add Document operation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ListDocumentResponse" type="ListDocumentResponseType">
+    <xs:annotation>
+      <xs:documentation>Response Element for Add Document operation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ListDocumentRequestType">
+    <xs:sequence>
+      <xs:element ref="header:standardHeader" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="hdr:HeaderRequest" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Authentication Elements</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RepositoryID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique identifier of the repository.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentPath" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Path where the folder is present.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileNamePattern" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name of the file.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListDocumentResponseType">
+    <xs:sequence>
+      <xs:element ref="header:standardHeader" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="InstanceID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Id of the instance generated for this run</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element ref="Folder" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="ManagedDocument" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MetadataType">
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>Each metadata entity holds one piece of
+                                      information about the document. Some
+                                      metadata is created and updated by the
+                                      system (eg lastModified date. These are
+                                      specific attributes within other entities).</xs:documentation>
+      </xs:annotation>
+      <xs:element name="MetaDataKey" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name of the metatada item (i.e. Reg
+                                          Number).The list of allowed keys
+                                          metadata keys is defined at the
+                                          repository level and held within
+                                          MetaDataTemplate.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of parent document or repository to
+                                          metadata relates to.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Value" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Value of metadata.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

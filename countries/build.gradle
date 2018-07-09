@@ -1,0 +1,10 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+project.setProperty("skipVersionClass", true)
+
+ext.coverageTargetPct = 95 // what is the acceptable test coverage
+ext.coverageBranchTargetPct = 95// what is the acceptable test coverage for branches
+
+dependencies {
+}

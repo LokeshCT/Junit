@@ -1,0 +1,115 @@
+ext.noClover = true // skip coverage for this module
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+//apply plugin: 'jetty'
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+
+
+//[jettyRun, jettyStop]*.with {
+//
+//    contextPath = '/'
+//    webAppSourceDirectory = new File("${projectDir}/src/webapp")
+//    //jettyEnvXml = file("${projectDir}/src/main/resources/jetty-env.xml")
+//
+//    httpPort = 9889
+//    stopPort = 18998
+//    //daemon = true
+//    stopKey = 'Wowbagger'
+//}
+
+mainClassName = 'com.asidua.statsintegration.Listener'
+
+jar {
+    dependsOn compileJava
+    dependsOn configurations.runtime
+    doFirst {
+        from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA,***/logback.xml'
+    manifest
+            {
+                attributes('Main-Class': mainClassName)
+            }
+}
+
+
+
+
+//import org.gradle.api.plugins.jetty.internal.Monitor
+//
+//[jettyRun, jettyRunWar]*.doLast {
+//    /**
+//     * THIS IS A WORKAROUND! THE CURRENT VERSION OF THIS TASK DOESN'T START A WATCHER IN DAEMON MODE
+//     *
+//     * If starting the monitor fails, it may be because the jetty task was updated to fix this issue
+//     * When that happens, we shouldn't need the custom task any more
+//     *
+//     * Copied From: AbstractJettyRunTask
+//     */
+//    if (getStopPort() != null && getStopPort() > 0 && getStopKey() != null) {
+//        Monitor monitor = new Monitor(getStopPort(), getStopKey(), server.getProxiedObject());
+//        monitor.start();
+//    }
+//}
+
+
+
+dependencies {
+    compile([
+            'org.codehaus.groovy:groovy-all:2.0.5',
+            'javax.servlet:servlet-api:2.5',
+            'com.sun.jersey:jersey-server:1.8',
+            'com.sun.jersey:jersey-core:1.8',
+            'com.sun.jersey.contribs:jersey-simple-server:1.8',
+            'com.sun.jersey:jersey-json:1.8',
+            'com.sun.jersey.contribs:jersey-multipart:1.8',
+            'commons-collections:commons-collections:3.2.1',
+            'org.eclipse.jetty:jetty-server:7.5.4.v20111024',
+            'org.eclipse.jetty:jetty-servlet:7.5.4.v20111024',
+            'org.bouncycastle:bcprov-jdk15on:1.47',
+            'org.apache.poi:poi:3.7',
+            'org.apache.cxf:cxf-bundle:2.4.2',
+            'joda-time:joda-time-hibernate:1.3',
+            'commons-cli:commons-cli:1.2',
+            project(':core'),
+            project(':common'),
+            gradleApi()
+
+
+    ])
+}
+
+//
+//task listen() {
+//    description = "Start Jetty server with Stats restful services to allow remote test triggering"
+//    println "STATS Server started"
+//}
+//
+//task unlisten() {
+//    description = "Stops the STATS restful services - remote test triggering will be unavailable"
+//    println "STATS Server stopping"
+//}
+//
+//
+//listen.doFirst {
+//    println "**** Starting STATS Integration server"
+//
+//    try {
+//        tasks.jettyRun.execute()
+//    } catch (Exception e) {
+//        logger.error(e.getMessage());
+//        e.printStackTrace()
+//        throw new org.gradle.api.GradleException(e.getMessage());
+//    }
+//}
+//
+//unlisten.doLast {
+//    tasks.jettyStop.execute()
+//    println "**** Stopping STATS Integration server"
+//
+//}
+
+

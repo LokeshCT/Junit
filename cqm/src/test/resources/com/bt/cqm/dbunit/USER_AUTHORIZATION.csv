@@ -1,0 +1,118 @@
+USER_ID,USER_NAME,ROLE_TYPE_ID,ACTIVE,CREATED_USER,MODIFIED_USER
+608026723,ULLAS RAMAKRISHNAN,1,Y,SQE_USER_MGMT,
+607520161,Ranjit Roykrishna,1,Y,Initial Load,607520161
+608308027,Leela Sankar Pinjala,1,Y,Initial Load,608308027
+607937181,Goutam Roy,1,Y,Initial Load,607982105
+605799385,Giri Anandamanoharan,1,Y,Seshadri,Initial Load
+607982105,Krishna Kumar K V,1,Y,Initial Load,Initial Load
+608044000,Navrang Shekhawat,1,Y,Initial Load,Initial Load
+601529184,Subramaniam Srinivasan,1,Y,Initial Load,607520161
+600666446,Chandrashekhar Junju,2,Y,Initial Load,Initial Load
+600743901,Pratap Raja Sekhar,1,Y,Initial Load,Initial Load
+600989002,Madhu Biradar,1,Y,Initial Load,Initial Load
+601029127,Anirudh Kulkarni,1,Y,Initial Load,Initial Load
+601400780,Robert Breingan,1,Y,Initial Load,Initial Load
+601949326,Rita Gajdacs,1,Y,Initial Load,Initial Load
+602005984,Isabel Moreno Mosset,1,Y,Initial Load,Initial Load
+602135704,Delmashea Rivers,1,Y,Initial Load,Initial Load
+602149763,Sheetal Katiyar,1,Y,Initial Load,Initial Load
+603983601,Zsolt Orban,1,Y,Initial Load,Initial Load
+604099288,Tulika Mitra,1,Y,Initial Load,Initial Load
+604459143,Mithun Panicker,1,Y,Initial Load,Initial Load
+604502245,Nisha Veliyan,1,Y,Initial Load,Initial Load
+604548045,Anand Mamadapur,1,Y,Initial Load,Initial Load
+604556842,Shankar Krishnamoorthi,1,Y,Initial Load,Initial Load
+604575867,Madan Polekar,2,Y,Initial Load,Initial Load
+604700726,Jegatheesan Thangavel,1,Y,Initial Load,Initial Load
+604899147,Thavamani Nallan,1,Y,Initial Load,Initial Load
+604955263,Manjupriya Kaliyaperumal,1,Y,Initial Load,Initial Load
+604961608,Shalini Somashekar,1,Y,Initial Load,Initial Load
+604962285,Bhawana Kumari,2,Y,Initial Load,Initial Load
+604969901,Naveen Srikantaiah,1,Y,Initial Load,Initial Load
+604980982,Harshali Chalisgaonkar,1,Y,Initial Load,Initial Load
+604990523,Naresh Adapala,1,Y,Initial Load,Initial Load
+605003482,Venkat Jakkula,1,Y,Initial Load,Initial Load
+605142488,Geoson George,1,Y,Initial Load,Initial Load
+605164862,Ajay Yadav,1,Y,Initial Load,Initial Load
+605189261,Taruna Gupta,1,Y,Initial Load,Initial Load
+605189704,Savitha Janthakolalu,1,Y,Initial Load,Initial Load
+605200140,Raghavan Kalyanaraman,1,Y,Initial Load,Initial Load
+605202205,Pooja Muniraj,2,Y,Initial Load,Initial Load
+605217780,Balaramakrishna Karimireddy,1,Y,Initial Load,Initial Load
+605241327,Raghu Mallaiah,1,Y,Initial Load,Initial Load
+605241440,Patan Sarvarkhan,1,Y,Initial Load,Initial Load
+605254624,Deepak Kachery,1,Y,Initial Load,Initial Load
+605326925,Anil Kumar Katragadda,1,Y,Initial Load,Initial Load
+605357547,Asha Sequeira,2,Y,Initial Load,Initial Load
+605419283,Akshatha Shetty,1,Y,Initial Load,Initial Load
+605427981,Bindu Mahadeva,1,Y,Initial Load,Initial Load
+605429480,Gitrajit Takhelmayum,1,Y,Initial Load,Initial Load
+605441826,Prabha Vadivel Murugan,1,Y,Initial Load,Initial Load
+605448481,Sachin Nayak,1,Y,Initial Load,Initial Load
+605544909,Lakshmipathi Athuru,1,Y,Initial Load,Initial Load
+605560640,Mita Chakraborty,1,Y,Initial Load,Initial Load
+605560688,Aananthy Thirupathi,1,Y,Initial Load,Initial Load
+605560725,Venkatesh Thiyagarajan,1,Y,Initial Load,Initial Load
+605560763,Valampuri Vadivel,1,Y,Initial Load,Initial Load
+605560800,Dinesh kumar Mani,1,Y,Initial Load,Initial Load
+605560848,Ajithkumar Vijayakumar,1,Y,Initial Load,Initial Load
+605564945,Srikanth Meka,1,Y,Initial Load,Initial Load
+605565027,Usha Nandihallimath,1,Y,Initial Load,Initial Load
+605565065,Bala Jayachandran,1,Y,Initial Load,Initial Load
+605565102,Syed Saleem Sulthan,1,Y,Initial Load,Initial Load
+605572766,Evenderz Anandaraj,1,Y,Initial Load,Initial Load
+605572889,Swarna Vijaya Kumar,1,Y,Initial Load,Initial Load
+605573008,Lakshmi Mamidipudi,1,Y,Initial Load,Initial Load
+605573169,Vaiyapuri Lakshumanan,1,Y,Initial Load,Initial Load
+605580723,Neha Kadakia,1,Y,Initial Load,Initial Load
+605584943,Arun Nair,1,Y,Initial Load,Initial Load
+605606225,Sowjanya KV,1,Y,Initial Load,Initial Load
+605658101,Nagella VinodReddy,1,Y,Initial Load,Initial Load
+605658149,Navitha Kurigala,1,Y,Initial Load,Initial Load
+605677287,Sneha Balehosur,1,Y,Initial Load,Initial Load
+605677720,Chandan Patil,1,Y,Initial Load,Initial Load
+605703061,Nidhi Bhatt,1,Y,Initial Load,Initial Load
+605729245,Rigved Deshpande,1,Y,Initial Load,Initial Load
+605762983,Analdeep Sinha,1,Y,Initial Load,Initial Load
+605811063,Suhas Mosale Vishwanath,1,Y,Initial Load,Initial Load
+605821222,Suresh Gangatharan,1,Y,Initial Load,Initial Load
+605825602,Prashant Pathak,1,Y,Initial Load,Initial Load
+605836486,Ayyappa Viswanath Bandi,1,Y,Initial Load,Initial Load
+605848007,Noel Philoman Rayan,1,Y,Initial Load,Initial Load
+605874662,Pooja Menon,1,Y,Initial Load,Initial Load
+605913262,Eshan Goyal,1,Y,Initial Load,Initial Load
+605980486,Madhuri Marichetty,1,Y,Initial Load,Initial Load
+606022567,Girish Keshava Raju,1,Y,Initial Load,Initial Load
+606077123,Somya Gupta,1,Y,Initial Load,Initial Load
+606237220,Ishan Sharma,1,Y,Initial Load,Initial Load
+606352947,Deepak Kumar Mallick,2,Y,Initial Load,Initial Load
+606352985,Yugandhara Reddy Gorrepati,1,Y,Initial Load,Initial Load
+606371764,Tej Pratap Singh,1,Y,Initial Load,Initial Load
+606439501,Sourav Sadhukhan,1,Y,Initial Load,Initial Load
+606675428,Karan Jain,1,Y,Initial Load,Initial Load
+606869407,Manikandan Neelakandan,1,Y,Initial Load,Initial Load
+607031407,Gokul Jaju,1,Y,Initial Load,Initial Load
+607059241,Vijay Kumar,1,Y,Initial Load,Initial Load
+607214329,Sarvesh SridharaMurthy,1,Y,Initial Load,Initial Load
+607445365,Shalini Krishnamurthy,1,Y,Initial Load,Initial Load
+701067654,Anthony Dyer,1,Y,Initial Load,Initial Load
+701200358,Leslie Lively,1,Y,Initial Load,Initial Load
+701292827,Lindsay Grant,1,Y,Initial Load,Initial Load
+702119185,Philip Colbert,1,Y,Initial Load,Initial Load
+790042914,Jim Sabey,1,Y,Initial Load,Initial Load
+790051138,Stefano Robbiati,1,Y,Initial Load,Initial Load
+790056584,Mariaeugenia Valeau,1,Y,Initial Load,Initial Load
+790061328,Roberto Luise,1,Y,Initial Load,Initial Load
+790063193,Paola Montanari,1,Y,Initial Load,Initial Load
+790063803,Domenico Mirabella,1,Y,Initial Load,Initial Load
+790065548,Claudia Del Vecchio,1,Y,Initial Load,Initial Load
+790110835,Maarten Verhaegh,1,Y,Initial Load,Initial Load
+790111696,Nick Whishaw,1,Y,Initial Load,Initial Load
+790112310,Nina Gill,1,Y,Initial Load,Initial Load
+801901056,Dave Ings,1,Y,Initial Load,Initial Load
+801909403,Ramesh Voralia,1,Y,Initial Load,Initial Load
+802398855,Nikolas Kalanovic,1,Y,Initial Load,Initial Load
+802613484,Tony Pateman,1,Y,Initial Load,Initial Load
+802663496,Andrew Lloyd,1,Y,Initial Load,Initial Load
+802987639,Steve Briggs,1,Y,Initial Load,Initial Load
+803129052,Andrew Harding,1,Y,Initial Load,Initial Load

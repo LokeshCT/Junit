@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Grid Test Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link type="text/css" href="/rsqe/static/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/lib/bootstrap/css/ng-grid.css" rel="stylesheet">
+    <link type="text/css" href="/rsqe/static/css/inlife.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/rsqe/static/lib/underscore/underscore.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/rsqe/static/lib/angular/ui/ng-grid.js"></script>
+
+    <script type="text/javascript" src="/rsqe/static/js/grid.js"></script>
+    <script type="text/javascript" src="/rsqe/test/js/grid/grid-test-page.js"></script>
+
+</head>
+
+<body ng-app="rsqeGridTest">
+    <div ng-controller='GridTestController'>
+        <rsqe-grid data="data" class="gridStyle" column-defs="columnDefs"></rsqe-grid>
+    </div>
+</body>
+</html>
+

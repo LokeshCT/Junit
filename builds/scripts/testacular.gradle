@@ -1,0 +1,141 @@
+apply plugin: 'jetty'
+
+import java.util.regex.Pattern
+
+[jettyRun]*.doFirst {
+    println "**** Starting jetty server"
+}
+
+[jettyStop]*.doFirst {
+    println "**** Stopping jetty server"
+}
+
+[jettyRun, jettyStop]*.with {
+    contextPath = '/'
+    webAppSourceDirectory = new File("${projectDir}/src/")
+    jettyEnvXml = file("${projectDir}/src/test/resources/jetty-env.xml")
+    httpPort = 8002
+    stopPort = 19742
+    daemon = true
+    stopKey = 'foo'
+}
+
+task jstest(description: 'runs all js tests', dependsOn: ['deleteUnit', 'deleteScenario', 'extractTestacular']) {
+    doLast {
+        jsunit()
+        jsscenario()
+    }
+}
+
+jstest.doFirst {
+    try {
+        tasks.jettyRun.execute()
+    } catch (TaskExecutionException e) {
+        logger.error(e.getMessage());
+        e.printStackTrace()
+        throw new org.gradle.api.GradleException(e.getMessage());
+    }
+}
+
+jstest.doLast {
+    tasks.jettyStop.execute()
+}
+
+test.dependsOn jstest
+
+private void jsunit() {
+    runSuite("gradle-unit", "unit.xml")
+    def directories = new File("${buildDir}/reports/jscoverage").listFiles(new FileFilter() {
+        @Override
+        boolean accept(File file) {
+            return file.isDirectory()
+        }
+    })
+    for (File directory : directories) {
+        def report = new File(directory, "index.html")
+        def contentLines = report.readLines()
+        def contents = new StringBuilder()
+        for (String line : contentLines) {
+            contents.append(line)
+        }
+
+        def statements = parseCoverage(contents, "Statements");
+        def branches = parseCoverage(contents, "Branches");
+        def functions = parseCoverage(contents, "Functions");
+        def lines = parseCoverage(contents, "Lines");
+
+        logger.lifecycle("Statement coverage: ${statements}, expected: ${project.ext.jsStatementCoverage}")
+        logger.lifecycle("Branch coverage: ${branches}, expected: ${project.ext.jsBranchCoverage}")
+        logger.lifecycle("Function coverage: ${functions}, expected: ${project.ext.jsFunctionCoverage}")
+        logger.lifecycle("Line coverage: ${lines}, expected: ${project.ext.jsLineCoverage}")
+        logger.lifecycle("")
+        logger.lifecycle(report.canonicalPath)
+        logger.lifecycle("")
+
+        if (       statements < project.ext.jsStatementCoverage
+                || branches < project.ext.jsBranchCoverage
+                || functions < project.ext.jsFunctionCoverage
+                || lines < project.ext.jsLineCoverage) {
+            throw new GradleException("Failed js test coverage");
+        }
+    }
+}
+
+private void jsscenario() {
+    runSuite("gradle-scenarios", "scenario.xml")
+}
+
+task deleteUnit(type: Delete) {
+    doFirst {
+        delete "${buildDir}/reports/jscoverage", "${buildDir}/reports/jstest/unit.xml"
+    }
+}
+
+task deleteScenario(type: Delete) {
+    doFirst {
+        delete "${buildDir}/reports/jstest/scenario.xml"
+    }
+}
+
+task extractTestacular(type: Copy) {
+    from zipTree(new File("${rootDir}/builds/node_modules.zip"))
+    into new File("${buildDir}")
+}
+
+private void runSuite(String suite, String report) {
+    def testacular;
+    if (System.properties['os.name'].toLowerCase().contains('windows')) {
+        testacular = "${new File("${buildDir}/node_modules/.bin/testacular.cmd").canonicalPath} start ${new File(project.ext.jsSuitePath + suite + "-dev.conf.js").canonicalPath}"
+    } else {
+        testacular = "/opt/node_modules/testacular/bin/testacular start ${new File(project.ext.jsSuitePath + suite + "-ci.conf.js").canonicalPath}"
+    }
+    logger.lifecycle(testacular)
+    logger.lifecycle(testacular.execute().text)
+    logger.lifecycle("Testacular run completed!")
+    def testsuites = new XmlSlurper().parse(new File("${buildDir}/reports/jstest/" + report))
+    testsuites.testsuite.each {testsuite ->
+        def errors = testsuite.@errors.text().asType(Integer.class)
+        def failures = testsuite.@failures.text().asType(Integer.class)
+        if (errors > 0 || failures > 0) {
+            testsuite.testcase.each {testcase ->
+                testcase.failure.list().each {failure ->
+                    logger.warn("${testcase.@name}:\r\n \t ${failure}")
+                }
+            }
+
+            throw new GradleException("Failures: ${failures}, Errors: ${errors}")
+        }
+    }
+}
+
+private Float parseCoverage(contents, patternString) {
+    patternString = patternString + ":.+[0-9]+\\.?[0-9]*%"
+    def pattern = Pattern.compile(patternString, Pattern.MULTILINE)
+    def groupMatcher = pattern.matcher(contents)
+    if (!groupMatcher.find())
+        throw new GradleException("Unable to match type coverage ${patternString}\n${contents}");
+    def numberMatcher = Pattern.compile("[0-9]+\\.?[0-9]*").matcher(groupMatcher.group())
+    if (!numberMatcher.find())
+        throw new GradleException("Unable to match number in type coverage");
+    return Float.valueOf(numberMatcher.group())
+}

@@ -1,0 +1,256 @@
+{
+  "tabs": [
+    {
+      "id": "Customer",
+      "label": "Customer",
+      "uri": "/centralSite",
+      "treeNode": {
+        "id": "customerRootNode",
+        "label": "Customer",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "customerSite",
+            "label": "Customer Site",
+            "status": "Not Applicable",
+            "uri": "/centralSite",
+            "children": []
+          },
+          {
+            "id": "customerContract",
+            "label": "Customer Contract",
+            "status": "Not Applicable",
+            "uri": "/customerContract",
+            "children": []
+          },
+          {
+            "id": "customerContacts",
+            "label": "Customer Contacts",
+            "status": "Not Applicable",
+            "uri": "/centralSiteContact",
+            "children": []
+          },
+          {
+            "id": "billingDetails",
+            "label": "Billing Details",
+            "status": "Not Applicable",
+            "children": [
+              {
+                "id": "legalEntity",
+                "label": "Manage LE",
+                "status": "Not Applicable",
+                "uri": "/legalEntity",
+                "children": []
+              },
+              {
+                "id": "billingAccount",
+                "label": "Billing Account",
+                "status": "Not Applicable",
+                "uri": "/billingAccountDetails",
+                "children": []
+              },
+              {
+                "id": "advanceBillingAccount",
+                "label": "Advanced Billing Capability",
+                "status": "Not Applicable",
+                "uri": "/advanceBillingAccountDetails",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "partnerDetails",
+            "label": "Partner Details",
+            "status": "Not Applicable",
+            "children": [
+              {
+                "id": "createChannelPartner",
+                "label": "Create Partner",
+                "status": "Not Applicable",
+                "uri": "/createChannelPartner",
+                "children": []
+              },
+              {
+                "id": "priceBookDetails",
+                "label": "Price Book",
+                "status": "Not Applicable",
+                "uri": "/priceBookDetails",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "vpnDetails",
+            "label": "VPN",
+            "status": "Not Applicable",
+            "uri": "/vpn",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "Site",
+      "label": "Manage Sites",
+      "uri": "/branchSiteCreate",
+      "treeNode": {
+        "id": "SiteRootNode",
+        "label": "Site",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "branchSiteCreate",
+            "label": "Create Site",
+            "status": "Not Applicable",
+            "uri": "/branchSiteCreate",
+            "children": []
+          },
+          {
+            "id": "branchSites",
+            "label": "View Sites",
+            "status": "Not Applicable",
+            "uri": "/branchSite",
+            "children": []
+          },
+          {
+            "id": "branchSitesMaps",
+            "label": "Locate Sites on Maps",
+            "status": "Not Applicable",
+            "uri": "/branchSiteMaps",
+            "children": []
+          },
+          {
+            "id": "siteContacts",
+            "label": "Site Contacts",
+            "status": "Not Applicable",
+            "uri": "/branchSiteContact",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "Quote",
+      "label": "Manage Quotes",
+      "uri": "/searchQuotes",
+      "treeNode": {
+        "id": "QuoteRootNode",
+        "label": "Quote",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "searchQuotes",
+            "label": "View Quote",
+            "status": "Not Applicable",
+            "uri": "/searchQuotes",
+            "children": []
+          },
+          {
+            "id": "createQuote",
+            "label": "Create Quote",
+            "status": "Not Applicable",
+            "uri": "/createQuote",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "Activity",
+      "label": "Manage Activity",
+      "uri": "/viewUpdateActivity",
+      "treeNode": {
+        "id": "ActivityRootNode",
+        "label": "Activity",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "viewUpdateActivity",
+            "label": "View/Update Activity",
+            "status": "Not Applicable",
+            "uri": "/viewUpdateActivity",
+            "children": []
+          },
+          {
+            "id": "createActivity",
+            "label": "Create Activity",
+            "status": "Not Applicable",
+            "uri": "/createActivity",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "Order",
+      "label": "Orders",
+      "uri": "/searchOrders",
+      "treeNode": {
+        "id": "OrderRootNode",
+        "label": "Order",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "searchOrders",
+            "label": "View Orders",
+            "status": "Not Applicable",
+            "uri": "/searchOrders",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "audit",
+      "label": "Reports",
+      "uri": "/viewQuoteAudit",
+      "treeNode": {
+        "id": "auditRootNode",
+        "label": "Audit Trail",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "quote",
+            "label": "Audit Trail - Quote",
+            "status": "Not Applicable",
+            "uri": "/viewQuoteAudit",
+            "children": []
+          },
+          {
+            "id": "order",
+            "label": "Audit Trail - Order",
+            "status": "Not Applicable",
+            "uri": "/viewOrderAudit",
+            "children": []
+          },
+          {
+            "id": "reports",
+            "label": "QRef Reports",
+            "status": "Not Applicable",
+            "uri": "/reports",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "UserManagement",
+      "label": "User Management",
+      "uri": "/userConfiguration",
+      "treeNode": {
+        "id": "UserManagementRootNode",
+        "label": "UserManagement",
+        "status": "Not Applicable",
+        "children": [
+          {
+            "id": "userConfiguration",
+            "label": "User Configuration",
+            "status": "Not Applicable",
+            "uri": "/userConfiguration",
+            "children": []
+          }
+        ]
+      }
+    }
+  ]
+}

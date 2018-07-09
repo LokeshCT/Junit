@@ -1,0 +1,7 @@
+SALES_CHANNEL_ID,SALES_CHANNEL_NAME,ROLE_TYPE,CREATED_USER,MODIFIED_USER
+1,BT GERMANY,1,Initial Load,Initial Load
+2,TELSTRA CORPORATION LIMITED,2,Initial Load,Initial Load
+3,BT FRANCE,1,Initial Load,Initial Load
+4,BT LUXEMBOURG,1,Initial Load,Initial Load
+5,BT NETHERLANDS,1,Initial Load,Initial Load
+6,BT AMERICAS,1,Initial Load,Initial Load

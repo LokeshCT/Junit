@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Jasmine Spec Runner</title>
+
+    <!-- jasmine -->
+    <link rel="stylesheet" type="text/css" href="../../com/bt/cqm/web/lib/jasmine/jasmine.css">
+    <script type="text/javascript" src="../../com/bt/cqm/web/lib/jasmine/jasmine.js"></script>
+    <script type="text/javascript" src="../../com/bt/cqm/web/lib/jasmine/jasmine-html.js"></script>
+
+    <!-- 3rd party libraries -->
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/jshashtable/jshashtable-2.1.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/jshashset/jshashset.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/underscore/underscore-1.4.1.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/jquery/jquery-1.9.1.min.js"></script>
+
+    <!-- AngularJS library -->
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/angular-1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/angular-1.3.15/angular-route.min.js"></script>
+    <!-- AngularJS 3rd party libraries -->
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/angular-1.3.15/angular-resource.min.js"></script>
+    <script type="text/javascript" src="../../com/bt/cqm/web/lib/angular-1.3.15/angular-mocks.js"></script>
+
+    <!-- Sources -->
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/jquery/jquery.blockUI.js"></script>
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/select2/select2.js"></script>
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/angular/angular-file-upload.js"></script>
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/angular/ui/select2/select2.js"></script>
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/angular-ui/ng-grid.js"></script>
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/underscore/underscore.js"></script>
+    <script src="../../../../main/resources/com/bt/cqm/web/lib/json/json3.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/routeProvider.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/directives.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/services.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/headerController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/baseController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/tabController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/actionController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/customerSiteController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/customerContactController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/createCustomerController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/quoteController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/channelHierarchyController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/vpnController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/activityController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/orderDetailsController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/userManagementController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/billingAccountController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/customerBranchSiteContactController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/customerBranchSiteController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/customerController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/customerQuoteConfigController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/treeNodeController.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/filters.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/js/constants.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/jquery/jquery.leanModal.min.js"></script>
+    <script type="text/javascript" src="../../../../main/resources/com/bt/cqm/web/lib/bootstrap/js/ui-bootstrap-tpls.js"></script>
+
+    <script type="text/javascript" src="../../../../test/resources/web/js/unit/page-context-mocker.js"></script>
+
+    <!-- Util test source files -->
+    <script type="text/javascript" src="../../web/js/unit/page-context-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/user-context-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/url-configuration-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/select-customer-controller-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/tab-service-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/header-controller-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/customer-quote-config-controller-test.js"></script>
+    <script type="text/javascript" src="../../web/js/unit/tree-node-controller-test.js"></script>
+
+
+    <script type="text/javascript">
+        (function () {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function () {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+
+        })();
+    </script>
+
+</head>
+
+<body>
+</body>
+</html>

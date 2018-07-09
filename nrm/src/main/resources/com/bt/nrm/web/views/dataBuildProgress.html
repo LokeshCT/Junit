@@ -1,0 +1,12 @@
+<div class="ui-grid-cell-contents" style="white-space: normal">
+     <span style="padding-left: 20px; cursor:pointer; " ng-if="!grid.appScope.checkIfDataBuildIsCompleted(row.entity)" ng-click="grid.appScope.setDataBuildCompleted(row.entity)" >
+        <span class="badge badge-danger" tooltips tooltip-content="Data Build Pending" tooltip-size="large" tooltip-side="right">
+            <i class="fa fa-times"></i>
+        </span>
+    </span>
+    <span style="padding-left: 20px;" ng-if="grid.appScope.checkIfDataBuildIsCompleted(row.entity)">
+        <span class="badge badge-success" tooltips tooltip-content="Data Build Successful" tooltip-class="tooltip-successful" tooltip-size="large" tooltip-side="right">
+            <i class="fa fa-check"></i>
+        </span>
+    </span>
+</div>

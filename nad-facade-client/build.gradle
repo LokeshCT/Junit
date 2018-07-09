@@ -1,0 +1,16 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+ext.coverageTargetPct = 80        // what is the acceptable test coverage
+ext.coverageBranchTargetPct = -100  // no branches so far.
+
+dependsOnIncludingTests(project, ':common')
+
+dependencies {
+    compile(['org.glassfish.jersey.containers:jersey-container-simple-http:2.0.1',
+            'commons-collections:commons-collections:3.2.1',
+            project(':core'),
+            project(':common'),
+            ])
+
+}

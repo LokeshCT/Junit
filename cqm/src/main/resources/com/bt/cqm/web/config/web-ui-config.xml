@@ -1,0 +1,126 @@
+<UI>
+    <!--
+       ............................
+        role        Role Name
+       ............................
+        1	        Deal Architect
+        2	        Order Entry Team
+        3	        CP User
+        4	        Super User
+        5	        Billing Dispute Raiser
+        6	        Regional Order Manager
+        7	        Sales User
+        8	        Bid Manager
+        9	        Commercial Change Manager
+        10	        Technical Manager
+        11	        Billing Team Manager
+        12	        Admin CP
+    -->
+    <!--
+       .............................
+        userType      User Type
+       .............................
+        1               Direct
+        2               InDirect
+    -->
+    <TreeNode id="customerRootNode" label="Customer">
+        <ChildNodes>
+            <TreeNode id="customerSite" label="Customer Site" uri="/centralSite"/>
+            <TreeNode id="customerContract" label="Customer Contract" uri="/customerContract"/>
+            <TreeNode id="customerContacts" label="Customer Contacts" uri="/centralSiteContact"/>
+            <TreeNode id="billingDetails" label="Billing Details" roles="1,2,4,5,6,7,8,9,10,11,12">
+                <ChildNodes>
+                    <!--  <TreeNode id="mapLegalEntity" label="Map LE" uri="/mapLegalEntity"/>-->
+                    <TreeNode id="legalEntity" label="Manage LE" uri="/legalEntity"/>
+                    <TreeNode id="billingAccount" label="Billing Account" uri="/billingAccountDetails"/>
+                    <TreeNode id="advanceBillingAccount" label="Advanced Billing Capability" uri="/advanceBillingAccountDetails"/>
+                </ChildNodes>
+            </TreeNode>
+            <TreeNode id="partnerDetails" label="Partner Details" roles="4,3,12" userType="indirect">
+                <ChildNodes>
+                    <TreeNode id="createChannelPartner" label="Create Partner" uri="/createChannelPartner"/>
+                    <!-- <TreeNode id="linkPartner" label="Associate Partner" uri="/linkPartner"/>-->
+                    <TreeNode id="priceBookDetails" label="Price Book" uri="/priceBookDetails"/>
+                    <!-- <TreeNode id="channelMonthlyCommitment" label="Monthly Commitment" uri="/channelMonthlyCommittment"/>-->
+                </ChildNodes>
+            </TreeNode>
+            <TreeNode id="vpnDetails" label="VPN" uri="/vpn"  userType="indirect"/>
+        </ChildNodes>
+    </TreeNode>
+
+    <TreeNode id="SiteRootNode" label="Site">
+        <ChildNodes>
+            <TreeNode id="branchSiteCreate" label="Create Site" uri="/branchSiteCreate"/>
+            <TreeNode id="branchSites" label="View Sites" uri="/branchSite"/>
+            <TreeNode id="branchSitesMaps" label="Locate Sites on Maps" uri="/branchSiteMaps"/>
+            <TreeNode id="siteContacts" label="Site Contacts" uri="/branchSiteContact"/>
+            <!--   <TreeNode id="bulkSiteUpload" label="Bulk Upload" uri="/bulkSiteUpload"/>-->
+        </ChildNodes>
+    </TreeNode>
+
+    <TreeNode id="QuoteRootNode" label="Quote">
+        <ChildNodes>
+            <TreeNode id="searchQuotes" label="View Quote" uri="/searchQuotes"/>
+            <TreeNode id="createQuote" label="Create Quote" uri="/createQuote"/>
+        </ChildNodes>
+
+    </TreeNode>
+
+    <TreeNode id="OrderRootNode" label="Order">
+        <ChildNodes>
+            <TreeNode id="searchOrders" label="View Orders" uri="/searchOrders"/>
+        </ChildNodes>
+    </TreeNode>
+
+    <TreeNode id="ActivityRootNode" label="Activity">
+        <ChildNodes>
+            <TreeNode id="viewUpdateActivity" label="View/Update Activity" uri="/viewUpdateActivity"/>
+            <TreeNode id="createActivity" label="Create Activity" uri="/createActivity" roles="2,3,4,5,6,7,8,9,11"/>
+        </ChildNodes>
+    </TreeNode>
+
+    <TreeNode id="auditRootNode" label="Audit Trail">
+        <ChildNodes>
+            <TreeNode id="quote" label="Audit Trail - Quote" uri="/viewQuoteAudit"/>
+            <TreeNode id="order" label="Audit Trail - Order" uri="/viewOrderAudit"/>
+            <TreeNode id="reports" label="QRef Reports" uri="/reports"/>
+        </ChildNodes>
+    </TreeNode>
+
+    <TreeNode id="UserManagementRootNode" label="UserManagement">
+        <ChildNodes>
+            <TreeNode id="userConfiguration" label="User Configuration" uri="/userConfiguration"/>
+            <TreeNode id="userSubGroupMgmt" label="User Sub Group" uri="/userSubGroupMgmt"/>
+            <TreeNode id="createSubGroup" label="Add Sub Group" uri="/createSubGroup"/>
+        </ChildNodes>
+    </TreeNode>
+
+    <Tab label="Customer" id="Customer">
+        <TreeNode ref="customerRootNode"/>
+    </Tab>
+
+    <Tab label="Manage Sites" id="Site">
+        <TreeNode ref="SiteRootNode"/>
+    </Tab>
+
+    <Tab label="Manage Quotes" id="Quote">
+        <TreeNode ref="QuoteRootNode"/>
+    </Tab>
+
+    <Tab label="Manage Activity" id="Activity">
+        <TreeNode ref="ActivityRootNode"/>
+    </Tab>
+
+    <Tab label="Orders" id="Order">
+        <TreeNode ref="OrderRootNode"/>
+    </Tab>
+
+    <Tab label="Reports" id="audit">
+        <TreeNode ref="auditRootNode"/>
+    </Tab>
+
+    <Tab label="User Management" id="UserManagement" roles="4">
+        <TreeNode ref="UserManagementRootNode"/>
+    </Tab>
+
+</UI>

@@ -1,0 +1,24 @@
+.data-uplift-input-table {
+    width: 680px;
+}
+
+.data-uplift-input-table input {
+    width: 200px;
+}
+
+.uplift-response table {
+    width: 700px;
+}
+
+.uplift-response table,  .uplift-response th, .uplift-response td {
+    border-bottom: 1px solid #aac4d4;
+    border-top: 1px solid #aac4d4;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+}
+
+.uplift-response table thead {
+    font-weight: bold;
+    background: #9999ff;
+}

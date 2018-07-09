@@ -1,0 +1,25 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+ext.coverageTargetPct = 80
+ext.coverageBranchTargetPct = 80
+
+
+
+ext.vModuleEnvironment = "sqe-ivpn-facade"
+
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':core')
+dependencies {
+    compile([
+                'com.google.code.gson:gson:2.2.2',
+                'org.w3c.css:sac:1.3'
+            ])
+
+    testCompile([
+                'junit:junit:4.10'
+                ])
+
+
+}

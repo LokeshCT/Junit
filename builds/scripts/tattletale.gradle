@@ -1,0 +1,20 @@
+configurations {
+    tattletale
+}
+
+dependencies {
+    tattletale 'org.jboss.tattletale:tattletale-ant:1.1.2.Final', 
+	'org.jboss.tattletale:tattletale:1.1.2.Final'
+}
+
+task tattletale(dependsOn: "jar"){
+    ant.taskdef(name: 'tattletale', classname: 'org.jboss.tattletale.ant.ReportTask', classpath: configurations.tattletale.asPath)
+	
+	it.doLast {
+		ant."tattletale"(
+			source: "${rootDir}", 
+			destination: "${rootDir}/build/reports/tattletale/",
+			reports: 'classdependants, classdependson, dependants, dependson, graphviz, transitivedependants, transitivedependson, circulardependency, classlocation, multiplejarspackage, multiplelocations, unusedjar, jar'
+		) {}
+	}
+}

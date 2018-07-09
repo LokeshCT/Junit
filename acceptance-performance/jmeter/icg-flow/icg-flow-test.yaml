@@ -1,0 +1,181 @@
+---
+execution:
+  scenario: blazemeter-recording
+  concurrency: 10
+  ramp-up: 1m
+  hold-for: 5m
+scenarios:
+  blazemeter-recording:
+    headers:
+      User-Agent: 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36'
+      Accept-Encoding: 'gzip, deflate, sdch'
+      Accept-Language: 'en-US,en;q=0.8'
+    requests:
+      - url: 'http://www.bbc.com/'
+        method: GET
+        label: 'http://www.bbc.com/'
+        headers:
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Upgrade-Insecure-Requests: '1'
+      - url: 'http://www.bbc.co.uk/'
+        method: GET
+        label: 'http://www.bbc.co.uk/'
+        headers:
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Upgrade-Insecure-Requests: '1'
+          Referer: 'http://www.bbc.com/'
+      - url: 'https://homepage-recs-service.api.bbc.co.uk/recommendations'
+        method: GET
+        label: 'https://homepage-recs-service.api.bbc.co.uk/recommendations'
+        headers:
+          Origin: 'http://www.bbc.co.uk'
+          Accept: '*/*'
+          Referer: 'http://www.bbc.co.uk/'
+      - url: 'https://activity.api.bbc.co.uk/my/favourites?resourceDomain=profile&resourceType=location&items=1'
+        method: OPTIONS
+        label: 'https://activity.api.bbc.co.uk/my/favourites?resourceDomain=profile&resourceType=location&items=1'
+        headers:
+          Access-Control-Request-Method: GET
+          Origin: 'http://www.bbc.co.uk'
+          Access-Control-Request-Headers: 'accept, content-type, x-api-key'
+          Accept: '*/*'
+          Referer: 'http://www.bbc.co.uk/'
+      - url: 'https://activity.api.bbc.co.uk/my/favourites'
+        method: GET
+        label: 'https://activity.api.bbc.co.uk/my/favourites'
+        headers:
+          Accept: application/json
+          Origin: 'http://www.bbc.co.uk'
+          X-API-KEY: atk0a997sff3g
+          Content-Type: application/json
+          Referer: 'http://www.bbc.co.uk/'
+        body:
+          resourceDomain: profile
+          resourceType: location
+          items: '1'
+      - url: 'http://www.bbc.co.uk/radio/'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/'
+        headers:
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Upgrade-Insecure-Requests: '1'
+          Referer: 'http://www.bbc.co.uk/'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_one.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_one.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_1xtra.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_1xtra.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_two.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_two.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_three.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_three.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_four.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_four.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_four_extra.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_four_extra.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_five_live.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_five_live.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_five_live_sports_extra.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_five_live_sports_extra.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_6music.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_6music.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_asian_network.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_asian_network.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_world_service.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_world_service.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_scotland.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_scotland.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_nan_gaidheal.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_nan_gaidheal.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_ulster.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_ulster.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_foyle.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_foyle.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_wales.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_wales.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'
+      - url: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_cymru.inc'
+        method: GET
+        label: 'http://www.bbc.co.uk/radio/onairstations/bbc_radio_cymru.inc'
+        headers:
+          Accept: '*/*'
+          X-Requested-With: XMLHttpRequest
+          Referer: 'http://www.bbc.co.uk/radio'

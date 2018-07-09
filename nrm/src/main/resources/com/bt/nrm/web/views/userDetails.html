@@ -1,0 +1,175 @@
+<div class="col-lg-12 col-sm-12 col-xs-12" ng-controller="UserDetailsController">
+    <div class="widget">
+        <div class="widget-header bordered-bottom bg-themeprimary">
+            <span class="widget-caption"><b> User Details </b></span>
+            <div class="widget-buttons">
+                <a href="" widget-maximize></a>
+                <a href="" widget-collapse></a>
+                <a href="" widget-dispose></a>
+            </div>
+        </div>
+        <div class="widget-body no-padding">
+
+            <accordion close-others="false">
+                <accordion-group heading="Contact Details" is-open="true">
+                    <div id="horizontal-form">
+                        <form class="form-horizontal form-bordered well no-margin" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right text-align-left"><b>EIN:</b></label>
+                                <div class="col-sm-5">
+                                    <input class="form-control" value="{{selectedUser.EIN}}" disabled>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right text-align-left"><b>Name:</b></label>
+                                <div class="col-sm-5">
+                                    <input class="form-control" value="{{selectedUser.fullName}}" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right text-align-left"><b>Job Title:</b></label>
+                                <div class="col-sm-5">
+                                    <input class="form-control" value="{{selectedUser.jobTitle}}" disabled>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right text-align-left"><b>Email:</b></label>
+                                <div class="col-sm-5">
+                                    <input class="form-control" value="{{selectedUser.emailId}}" disabled>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="View/Modify User Roles" is-open="true">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <td style="width:10%;border-right: medium none;">
+                                <label class="control-label no-padding-right text-align-center"> {{nrmUserRolesService.superUser}}: </label>
+                            </td>
+                            <td style="width:15%;border-left: medium none;">
+                                <label>
+                                    <input class="checkbox-slider yesno form-control colored-purple" type="checkbox"  ng-model="userRoleModel.superUser.granted" ng-change="userRoleSelectionChanged(nrmUserRolesService.superUser)">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                            <td style="width:10%;border-right: medium none;">
+                                <label class="control-label no-padding-right text-align-center"> {{nrmUserRolesService.controller}}: </label>
+                            </td>
+                            <td style="width:15%;border-left: medium none;">
+                                <label>
+                                    <input class="checkbox-slider yesno form-control colored-purple" type="checkbox" ng-model="userRoleModel.controller.granted" ng-change="userRoleSelectionChanged(nrmUserRolesService.controller)">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                            <td style="width:10%;border-right: medium none;">
+                                <label class="control-label no-padding-right text-align-center"> {{nrmUserRolesService.evaluator}}: </label>
+                            </td>
+                            <td style="width:15%;border-left: medium none;">
+                                <label>
+                                    <input class="checkbox-slider yesno form-control colored-purple" type="checkbox" ng-model="userRoleModel.evaluator.granted" ng-change="userRoleSelectionChanged(nrmUserRolesService.evaluator)">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                            <td style="width:10%;border-right: medium none;">
+                                <label class="control-label no-padding-right text-align-center"> {{nrmUserRolesService.dataBuild}}: </label>
+                            </td>
+                            <td style="width:15%;border-left: medium none;">
+                                <label>
+                                    <input class="checkbox-slider yesno form-control colored-purple" type="checkbox" ng-model="userRoleModel.dataBuild.granted" ng-change="userRoleSelectionChanged(nrmUserRolesService.dataBuild)">
+                                    <span class="text"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </accordion-group>
+                <accordion-group heading="View/Modify User Groups" is-open="true">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <td style="width:45%;border-right: medium none;">
+                                <ui-select ng-model="models.group.selected" theme="bootstrap">
+                                    <ui-select-match placeholder="Select Evaluator Group...">{{$select.selected.name}}</ui-select-match>
+                                    <ui-select-choices repeat="group in allGroups | filter: $select.search">
+                                        <div ng-bind-html="group.name | highlight: $select.search"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </td>
+                            <td style="width:45%;border-right: medium none;">
+                                <ui-select ng-model="models.product.selected" theme="bootstrap" ng-disabled="!models.group">
+                                    <ui-select-match placeholder="Select Product Category...">{{$select.selected.productCategoryName}}</ui-select-match>
+                                    <ui-select-choices repeat="product in allProductCategory | filter: $select.search">
+                                        <div ng-bind-html="product.productCategoryName | highlight: $select.search"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </td>
+                            <td style="width:10%;border-right: medium none;">
+                                <button class="btn btn-purple" ng-disabled="!models.product.selected" ng-click="addGroupToUser()">Add Group</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table class="table table-bordered table-hover" ng-if="doUserGroupsExist">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Group Name </th>
+                                <th> Product Name </th>
+                                <th> Action </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="userGroup in selectedUser.groups">
+                                <td> {{userGroup.group.name}} </td>
+                                <td> {{userGroup.product.productCategoryName}} </td>
+                                <td>
+                                    <button class="btn btn-default btn-xs black" ng-click="deleteGroupFromUser(userGroup)"><i class="fa fa-trash-o"></i> Delete</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                    <table class="table table-bordered table-hover" ng-if="!doUserGroupsExist">
+                        <tbody>
+                        <tr>
+                            <td> No User Groups exist for the selected User. </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </accordion-group>
+                <accordion-group heading="View/Modify User Products" is-open="true">
+                    <div ng-form="userProductsForm" id="productListContainer">
+                        <table class="table table-bordered">
+                            <thead class="bordered-purple">
+                            <tr>
+                                <th> Products possible for the User </th>
+                                <th> Products assigned to the User </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="col-sm-6">
+                                    <div class="cards card-list" as-sortable="sortableOptions" ng-model="unassignedProducts">
+                                        <div ng-repeat="product in unassignedProducts" as-sortable-item>
+                                            <div as-sortable-item-handle>{{product.productCategoryName}}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="col-sm-6">
+                                    <div  class="cards card-list" as-sortable="sortableOptions" ng-model="existingProductsForUser">
+                                        <div ng-repeat="product in existingProductsForUser" as-sortable-item>
+                                            <div as-sortable-item-handle>{{product.productCategoryName}}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </br>
+                    <div align="center">
+                        <button class="btn btn-purple" ng-click="addProductsToUser()">Save User Products</button>
+                    </div>
+                </accordion-group>
+            </accordion>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="error-dialog" cqm-dialog="show" title="message.title" on-ok="ok" on-cancel="cancel" width="650">
+    <h5 class="message" ng-bind="message.content"></h5>
+    <div ng-show="message.stack != ''">
+        <p>Please contact a BT Admin telling them what you were trying to do when this problem occurred. Click "Details" for more information</p>
+        <div class="stack-wrapper" ng-show="stackVisible">
+            <p><i>In your conversation it may be helpful to tell BT Admin the following diagnostic information from the system:</i></p>
+            <b>Diagnostic information (error occurred on {{ date() }}):</b>
+            <p class="stack" ng-bind="message.stack" ng-show="message.stack"></p>
+            <P class="stack" ng-hide="message.stack">No diagnostic information available.</p>
+        </div>
+    </div>
+</div>

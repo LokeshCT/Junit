@@ -1,0 +1,100 @@
+<div class="innerWrap" ng-init="loadChannelPartnerDetails()">
+
+    <div>
+        <div class="hrMargin" ng-show="enableCreateChannel">
+            <span class="headerLabel">Create Channel Partner</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+        <div class="hrMargin" ng-show="!enableCreateChannel">
+            <span class="headerLabel">Channel Partner Details</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+
+        <div ng-form="createChannelPartnerForm" ng-model="createCPFormData">
+            <div class="cqmFieldDiv">
+                <label>Account Type</label>
+                <select class="cqmField" id="accountType" name="accountType" ng-change="accountTypeSelected()"
+                        ng-model="createCPFormData.accountType" required
+                        ng-options="aType.name for aType in accountTypeList" ng-readonly="!enableCreateChannel"
+                        ng-disabled="!enableCreateChannel"/>
+            </div>
+            <div ng-show="!pAccNameRO">
+                <div class="cqmFieldDiv">
+                    <label>Parent Account Name</label>
+                    <select class="cqmField" id="pAccName" name="pAccName" ng-model="createCPFormData.pAccName" ng-readonly="pAccNameRO"
+                            ng-disbaled="pAccNameRO" ng-options="pAccName.parentCustomerName for pAccName in pAccNameList"
+                            ng-change="getChannelCreationDetails()"
+                        />
+                </div>
+            </div>
+            <div ng-show="pAccNameRO">
+                <div class="cqmFieldDiv">
+                    <label>Parent Account Name</label>
+                    <input class="cqmField" type="text" id="pAccNameAvail" name="pAccNameAvail" ng-model="createCPFormData.pAccNameAvail"
+                           ng-readonly="pAccNameRO" ng-disabled="pAccNameRO">
+                </div>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Parent Account Ref</label>
+                <input class="cqmField" type="text" id="pACRef" name="pACRef"
+                       ng-model="createCPFormData.pACRef" ng-readonly=true ng-disabled=true>
+            </div>
+            <div ng-show="!pAccNameRO">
+                <div class="cqmFieldDiv">
+                    <label>Billing Account for Invoicing </label>
+                    <select id="e2" ng-model="createCPFormData.bAC"
+                            data-placeholder="Select a Billing Account"
+                            ng-options="billingAccount.accountFriendlyName for billingAccount in billingAccountList"
+                            class="cqmField"
+                            ng-required="!pAccNameRO"
+                            ng-change="updateBillingAccount()">
+                    </select>
+                </div>
+            </div>
+            <div ng-show="pAccNameRO">
+                <div class="cqmFieldDiv">
+                    <label>Billing Account for Invoicing</label>
+                    <input class="cqmField" type="text" id="bAC" name="bAC" ng-model="createCPFormData.bAC"
+                           ng-readonly=true ng-disabled=true>
+                </div>
+            </div>
+            <div class="cqmFieldDiv">
+                <label>Yearly Committed Revenue</label>
+                <input class="cqmField" type="text" id="yCR" name="yCR" ng-readonly="yCRRO" ng-disabled="yCRRO"
+                       ng-model="createCPFormData.yCR">
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Sales Channel Type</label>
+                <input class="cqmField" type="text" id="cType" name="cType"
+                       ng-model="createCPFormData.cType" ng-readonly=true ng-disabled=true>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Trade Level</label>
+                <select class="cqmField" type="text" id="tLevel" name="tLevel" ng-readonly="tLevelRO" ng-disabled="tLevelRO"
+                        ng-model="createCPFormData.tLevel"
+                        ng-options="tLevel.name for tLevel in tradeLevels" required/>
+            </div>
+
+            <div class="containerDiv" style="float:left;" ng-show="enableCreateChannel">
+
+                <button class="btn" ng-disabled="!createChannelPartnerForm.$valid" ng-click="createChannelPartner()"
+                        style="float:right;margin:5px;">
+                    Create Channel Partner
+                </button>
+
+            </div>
+            <div class="containerDiv" style="float:left;" ng-show="!enableCreateChannel">
+
+                <button class="btn" ng-disabled=true ng-click="createChannelPartner()"
+                        style="float:right;margin:5px;">
+                    Create Channel Partner
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>

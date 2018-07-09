@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>15</daysToKeep>
+    <numToKeep>350</numToKeep>
+    <artifactDaysToKeep>7</artifactDaysToKeep>
+    <artifactNumToKeep>350</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
+  </properties>
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.5">
+    <locations>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>https://collaborate.bt.com/svn/rsqe/rsqe/trunk/acceptance-performance</remote>
+        <credentialsId></credentialsId>
+        <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>true</ignoreExternalsOption>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
+    </locations>
+    <excludedRegions></excludedRegions>
+    <includedRegions></includedRegions>
+    <excludedUsers></excludedUsers>
+    <excludedRevprop></excludedRevprop>
+    <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+    <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
+  </scm>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>java 7</jdk>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># run every hour.  Initially tried to schedule the tests around the deployments, but the deployments are occurring at different times
+# ...so its too hard to predict.  Taking the hit here.  The failures mark the actual deployments
+0 * * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.21">
+      <pythonName>taurus-python</pythonName>
+      <home></home>
+      <clear>false</clear>
+      <systemSitePackages>false</systemSitePackages>
+      <nature>shell</nature>
+      <command># set the python 2.7.9 virtualenv
+source /usr/local/virtualenvs/python2.7.9/bin/activate
+
+# set the HTTP proxies:
+export http_proxy=http://proxy.intra.bt.com:8080
+export https_proxy=http://proxy.intra.bt.com:8080
+
+# set 
+RSQE_HOST=sqe.t1.nat.bt.com
+RSQE_INLIFE_HOST=sqe.app.i2.t1.nat.bt.com
+
+# create the artifacts directory
+mkdir ${WORKSPACE}/artifacts
+
+# get the subversion revision of the target environment:
+curl http://${RSQE_INLIFE_HOST}:9990/rsqe/inlife -o ${WORKSPACE}/artifacts/inlife-info.html
+RSQE_RELEASE_TAG=$(cat ${WORKSPACE}/artifacts/inlife-info.html | sed -n -e &apos;s/^.*Version\ : &lt;\/b&gt;\(.*\):https.*$/\1/p&apos;)
+RSQE_SUBVERSION_RELEASE=$(cat ${WORKSPACE}/artifacts/inlife-info.html | sed -n -e &apos;s/^.*Version\ : &lt;\/b&gt;.*:\(https.*\):.*$/\1/p&apos; | awk -F: &apos;{print $1&quot;:&quot;$2}&apos;)
+TEST_DESCRIPTION=&quot;icg-10site-2user&quot;
+
+# run the Jmeter test
+cd ${WORKSPACE}/jmeter/icg-flow
+bzt icg-flow-test-plan.jmx -o settings.artifacts-dir=${WORKSPACE}/artifacts
+
+# rename the &quot;all-data-2*&quot; files
+OLD_CSV=$(ls ${WORKSPACE}/artifacts/all-data-[2]*.csv)
+mv $OLD_CSV ${WORKSPACE}/artifacts/all-data.csv
+OLD_XML=$(ls ${WORKSPACE}/artifacts/all-data-[2]*.xml)
+mv $OLD_XML ${WORKSPACE}/artifacts/all-data.xml
+
+# add the &quot;host&quot; and &quot;rsqeRelease&quot; columns
+awk &apos;/timeStamp/ {print &quot;host,rsqeRelease,&quot;$0&quot;,testDescription,subversionRevision&quot;}&apos; &lt;${WORKSPACE}/artifacts/all-data.csv &gt;${WORKSPACE}/artifacts/all-data-extra-columns.csv
+awk &apos;!/timeStamp/ {print HOST,RELEASE,$0,DESCRIPTION,SUBVERSION}&apos; FS=, OFS=, RELEASE=&quot;${RSQE_RELEASE_TAG}&quot; HOST=&quot;${RSQE_HOST}&quot; DESCRIPTION=${TEST_DESCRIPTION} SUBVERSION=${RSQE_SUBVERSION_RELEASE} &lt;${WORKSPACE}/artifacts/all-data.csv &gt;&gt;${WORKSPACE}/artifacts/all-data-extra-columns.csv
+
+# scp the data to the ELK server:
+scp ${WORKSPACE}/artifacts/all-data-extra-columns.csv elk@agile.csp.nat.bt.com:/stats/software/elk/data/jenkins-jmeter/jmeter-icg-perf-$(date +&quot;%Y%m%d-%H-%M-%S&quot;).csv
+</command>
+      <ignoreExitCode>false</ignoreExitCode>
+    </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>artifacts/**/*.jtl, artifacts/**/*.csv, artifacts/**/*.xml</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>true</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.performance.PerformancePublisher plugin="performance@1.13">
+      <errorFailedThreshold>0</errorFailedThreshold>
+      <errorUnstableThreshold>0</errorUnstableThreshold>
+      <errorUnstableResponseTimeThreshold></errorUnstableResponseTimeThreshold>
+      <relativeFailedThresholdPositive>0.0</relativeFailedThresholdPositive>
+      <relativeFailedThresholdNegative>0.0</relativeFailedThresholdNegative>
+      <relativeUnstableThresholdPositive>0.0</relativeUnstableThresholdPositive>
+      <relativeUnstableThresholdNegative>0.0</relativeUnstableThresholdNegative>
+      <nthBuildNumber>0</nthBuildNumber>
+      <modeRelativeThresholds>false</modeRelativeThresholds>
+      <configType>ART</configType>
+      <modeOfThreshold>false</modeOfThreshold>
+      <compareBuildPrevious>false</compareBuildPrevious>
+      <xml></xml>
+      <modePerformancePerTestCase>true</modePerformancePerTestCase>
+      <parsers>
+        <hudson.plugins.performance.JMeterParser>
+          <glob>**/all-data.xml</glob>
+        </hudson.plugins.performance.JMeterParser>
+      </parsers>
+      <modeThroughput>true</modeThroughput>
+    </hudson.plugins.performance.PerformancePublisher>
+    <hudson.tasks.Mailer plugin="mailer@1.15">
+      <recipients>gavin.didrichsen@bt.com</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.28">
+      <patterns>
+        <hudson.plugins.ws__cleanup.Pattern>
+          <pattern>artifacts</pattern>
+          <type>EXCLUDE</type>
+        </hudson.plugins.ws__cleanup.Pattern>
+      </patterns>
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

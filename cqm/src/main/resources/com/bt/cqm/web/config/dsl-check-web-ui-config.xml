@@ -1,0 +1,8 @@
+<UI>
+    <Tab label="Available Reports" id="allReports" uri="/allAvailableDslDocs">
+    </Tab>
+
+    <Tab label="My Upload" id="uploadDoc" uri="/dslUpload">
+    </Tab>
+
+</UI>

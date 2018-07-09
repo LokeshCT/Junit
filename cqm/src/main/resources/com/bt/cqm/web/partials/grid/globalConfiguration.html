@@ -1,0 +1,271 @@
+<div class="inner">
+
+<h4 class="ng-binding">Site</h4>
+
+<div class="table-container"
+
+     style="height: 288px; visibility: visible;">
+<table>
+<thead class="header-fixed">
+<tr style="top: 0px;" class="even">
+
+    <!-- ngRepeat: h in data.headers | noHiddenColumns | attributeRelevance -->
+    <th rows-selected="rowsSelected" grid-data="data" configure-all-clicked="configureAllClicked"
+        rsqe-grid-header="h" ng-repeat="h in data.headers | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope">
+        <div class="ng-scope ng-binding" style="width: 54px;">Site<br><br></div>
+    </th>
+    <th rows-selected="rowsSelected" grid-data="data" configure-all-clicked="configureAllClicked"
+        rsqe-grid-header="h" ng-repeat="h in data.headers | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope">
+        <div class="ng-scope ng-binding" style="width: 189px;">Topology<br><br></div>
+    </th>
+    <th rows-selected="rowsSelected" grid-data="data" configure-all-clicked="configureAllClicked"
+        rsqe-grid-header="h" ng-repeat="h in data.headers | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope">
+        <div class="ng-scope ng-binding" style="width: 40px;">Action<br><br></div>
+    </th>
+    <th rows-selected="rowsSelected" grid-data="data" configure-all-clicked="configureAllClicked"
+        rsqe-grid-header="h" ng-repeat="h in data.headers | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope">
+        <div class="ng-scope ng-binding" style="width: 76px;">Pricing Status<br><br></div>
+    </th>
+    <th rows-selected="rowsSelected" grid-data="data" configure-all-clicked="configureAllClicked"
+        rsqe-grid-header="h" ng-repeat="h in data.headers | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope">
+        <div class="ng-scope ng-binding" style="width: 82px;">One Time Price<br><br></div>
+    </th>
+    <th rows-selected="rowsSelected" grid-data="data" configure-all-clicked="configureAllClicked"
+        rsqe-grid-header="h" ng-repeat="h in data.headers | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope">
+        <div class="ng-scope ng-binding" style="width: 84px;">Recurring Price<br><br></div>
+    </th>
+</tr>
+</thead>
+<tbody style="display: block; border-top: 50px solid transparent;">
+<!-- ngRepeat: r in data.rows -->
+<tr class="even">
+
+    <!-- ngRepeat: c in r.cells | noHiddenColumns | attributeRelevance -->
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="site">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 54px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 54px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 54px;">FR site 2
+            </div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 54px;"></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="stencil">
+        <div cell="cell" row="row" rsqe-stencil-cell="" class="ng-scope" style="width: 189px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 189px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal" style="width: 189px;"><select
+                    ng-options="val.id as val.name for val in row.availableStencils"
+                    ng-model="cell.value.id"
+                    class="select-cell ng-pristine ng-invalid ng-invalid-required"
+                    rsqe-grid-cell-validatable="" title="Mandatory">
+                <option value="?" selected="selected"></option>
+                <option value="0">Special Bid Topology</option>
+                <option value="1">Standard Topology</option>
+                <option value="2">Secure Topology</option>
+                <option value="3">Advanced Branch Site Topology</option>
+                <option value="4">Data Centre Topology</option>
+                <option value="5">Secure Plus Topology</option>
+            </select></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="action">
+        <div row="row" rsqe-action-cell="" class="ng-scope" style="width: 40px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="resolves.to.undefined"
+                 style="width: 40px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal" style="width: 40px;"><label class="ng-binding">Add</label>
+            </div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="pricingStatus">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 76px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 76px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 76px;">N/A</div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 76px;"></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="oneTimePrice">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 82px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 82px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 82px;">0</div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 82px;"></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="recurringPrice">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 84px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 84px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 84px;">0</div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 84px;"></div>
+        </div>
+    </td>
+</tr>
+<tr class="lookupsInProgress">
+
+    <!-- ngRepeat: c in r.cells | noHiddenColumns | attributeRelevance -->
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="site">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 54px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 54px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 54px;">JP site 1
+            </div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 54px;"></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="stencil">
+        <div cell="cell" row="row" rsqe-stencil-cell="" class="ng-scope" style="width: 189px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 189px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal" style="width: 189px;"><select
+                    ng-options="val.id as val.name for val in row.availableStencils"
+                    ng-model="cell.value.id"
+                    class="select-cell ng-pristine ng-invalid ng-invalid-required"
+                    rsqe-grid-cell-validatable="" title="Mandatory">
+                <option value="?" selected="selected"></option>
+                <option value="0">Special Bid Topology</option>
+                <option value="1">Standard Topology</option>
+                <option value="2">Secure Topology</option>
+                <option value="3">Advanced Branch Site Topology</option>
+                <option value="4">Data Centre Topology</option>
+                <option value="5">Secure Plus Topology</option>
+            </select></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="action">
+        <div row="row" rsqe-action-cell="" class="ng-scope" style="width: 40px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="resolves.to.undefined"
+                 style="width: 40px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal" style="width: 40px;"><label class="ng-binding">Add</label>
+            </div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="pricingStatus">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 76px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 76px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 76px;">Not
+                Priced
+            </div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 76px;"></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="oneTimePrice">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 82px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 82px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 82px;">0</div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 82px;"></div>
+        </div>
+    </td>
+    <td cell-relation-clicked="cellRelationClicked" row="r" rsqe-grid-cell="c"
+        ng-repeat="c in r.cells | noHiddenColumns | attributeRelevance"
+        class="ng-isolate-scope ng-scope" field="recurringPrice">
+        <div cell="cell" row="row" rsqe-attribute-cell="" ng-model="cell.value"
+             rsqe-grid-cell-validatable=""
+             class="ng-isolate-scope ng-scope ng-pristine ng-valid ng-valid-required ng-valid-maxvalue ng-valid-number"
+             title="" style="width: 84px;">
+            <div class="grid_Add_oldVal" rsqe-cell-old-value="cell.oldValue" style="width: 84px;">
+                <button style="width:100%;visibility:hidden;"></button>
+            </div>
+            <div class="grid_Add_newVal text-content linkContainer" style="width: 84px;">0</div>
+            <div class="grid_Add_newVal control-content hidden" style="width: 84px;"></div>
+        </div>
+    </td>
+</tr>
+
+</tbody>
+</table>
+<div class="hidden stateversion ng-binding">11</div>
+</div>
+</div>
+
+<!--
+<div class="row-fluid" id="generalConfigurationContainer" ng-controller="productConfigCtrl">
+    <div class="span2" id="generalConfigurationContainerLeft"></div>
+    <div class="span8" id="generalConfigurationContainerLeftRight">
+        <div class="page-header"></div>
+        <form class="form-horizontal">
+            <configurable-attribute attribute-name="Management Type" attribute-id="managementType"
+                                    attribute-value="{{siteConfigData.managementType.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Proactive Fault Management" attribute-id="proactiveFaultManagement"
+                                    attribute-value="{{siteConfigData.proactiveFaultManagement}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Change Management" attribute-id="changeManagement"
+                                    attribute-value="{{siteConfigData.changeManagement}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+            <configurable-attribute attribute-name="Price Book" attribute-id="pricebookVersion"
+                                    attribute-value="{{siteConfigData.pricebookVersion}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+
+        </form>
+    </div>
+    <div class="span8">
+        <a class="btn btn-primary pull-right" href="#/siteConfig" id="siteConfigNext">Next</a>
+    </div>
+</div>-->

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="cqm">
+<head>
+    <meta charset="utf-8">
+    <title>Quick Product Configurator</title>
+    <link rel="stylesheet" href="../../../../../../../../common/web/src/main/resources/com/bt/rsqe/web/staticresources/lib/newForNRM/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../../../../../common/web/src/main/resources/com/bt/rsqe/web/staticresources/lib/newForNRM/bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+<div class="container" id="configurator" ng-controller="MainController">
+
+    <ul class="nav nav-tabs" ng-controller="tabsController">
+        <li class="{{tab.isActive}}" ng-model="tabs" ng-repeat="tab in tabs" id="{{tab.tabId}}">
+            <a href="#/{{tab.tabReference}}">{{tab.tabName}}</a>
+        </li>
+    </ul>
+
+    <div ng-view class="container-fluid"></div>
+
+</div>
+
+<script src="/static/lib/jquery/jquery.min.js"></script>
+<script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/lib/angular/angular.js"></script>
+<script src="/static/lib/underscore/underscore.js"></script>
+<script src="/static/lib/json/json3.min.js"></script>
+<script src="/static/js/appTabs.js"></script>
+<script src="/static/js/services.js"></script>
+<script src="/static/js/controllers.js"></script>
+<script src="/static/js/filters.js"></script>
+<script src="/static/js/directives.js"></script>
+
+This is index.html file.
+</body>
+</html>

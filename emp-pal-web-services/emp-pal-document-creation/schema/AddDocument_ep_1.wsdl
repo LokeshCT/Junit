@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.4.--><definitions targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0" schemaLocation="AddDocument_ep.xsd"/>
+    </schema>
+  </types>
+  <message name="AddDocumentRequestMessage">
+    <part name="payload" element="tns:AddDocumentRequest"/>
+  </message>
+  <message name="AddDocumentResponseMessage">
+    <part name="payload" element="tns:AddDocumentResponse"/>
+  </message>
+  <portType name="AddDocumentPort">
+    <operation name="addDocument">
+      <input message="tns:AddDocumentRequestMessage"/>
+      <output message="tns:AddDocumentResponseMessage"/>
+    </operation>
+  </portType>
+  <binding name="AddDocumentBinding" type="tns:AddDocumentPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="addDocument">
+      <soap:operation style="document" soapAction="process"/>
+      <input>
+        <soap:body use="literal" namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="AddDocumentService">
+    <port name="AddDocument_ep" binding="tns:AddDocumentBinding">
+      <soap:address location="http://10.29.66.41:61020/ManageDocument/AddDocument_ep"/>
+    </port>
+  </service>
+</definitions>

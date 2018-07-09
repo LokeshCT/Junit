@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.4.--><xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/3.0" xmlns:header="http://wsi.nat.bt.com/2005/06/StandardHeader/" xmlns:hdr="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0">
+  <xs:import namespace="http://wsi.nat.bt.com/2005/06/StandardHeader/" schemaLocation="AddDocument_ep_1.xsd"/>
+  <xs:import namespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0" schemaLocation="AddDocument_ep_1_2.xsd"/>
+  <xs:element name="AddDocumentRequest" type="AddDocumentRequestType">
+    <xs:annotation>
+      <xs:documentation>Request Element for Add Document operation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddDocumentResponse" type="AddDocumentResponseType">
+    <xs:annotation>
+      <xs:documentation>Response Element for Add Document operation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="AddDocumentRequestType">
+    <xs:sequence>
+      <xs:element ref="header:standardHeader" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="hdr:HeaderRequest" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Authentication Elements</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RepositoryID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique identifier of the repository with a
+                                      system</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ManagedDocument" type="ManagedDocumentType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ManagedDocument</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddDocumentResponseType">
+    <xs:sequence>
+      <xs:element ref="header:standardHeader" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>BT Standard Message Header</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Unique ID of the document within a system</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="128"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DocumentURL" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>URL to locate the document.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="260"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="InstanceID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Id of the instance generated for this run</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ResponseCode" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Response Code.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ResponseDesc" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Response description.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="2000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ManagedDocumentType">
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>The document entity holds the actual document
+                                  (as a byte Stream), information about the
+                                  document and any metadata.</xs:documentation>
+      </xs:annotation>
+      <xs:element name="FileName" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name for the file holding the byte stream
+                                      (name and extension). A change here would
+                                      change URL</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="128"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DocumentTitle" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Title of the document.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileContents" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Byte array of contents. Could be excel,
+                                      word, pdf, etc ie any but those that are
+                                      banned (not allowed).</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:base64Binary"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentPath" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Complete path of the parent folder or root
+                                      library.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Metadata" minOccurs="0" maxOccurs="unbounded" type="MetadataType">
+        <xs:annotation>
+          <xs:documentation>ManagedDocument</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MetadataType">
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>Each metadata entity holds one piece of
+                                  information about the document. Some metadata
+                                  is created and updated by the system (eg
+                                  lastModified date. These are specific
+                                  attributes within other entities).</xs:documentation>
+      </xs:annotation>
+      <xs:element name="MetaDataKey" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name of the metatada item (i.e. Reg
+                                      Number).The list of allowed keys metadata
+                                      keys is defined at the repository level
+                                      and held within MetaDataTemplate.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="128"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Value" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Value of metadata.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

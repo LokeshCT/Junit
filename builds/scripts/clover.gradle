@@ -1,0 +1,157 @@
+apply plugin: "java"
+
+def cloverConvention = new CloverPluginConvention(project)
+project.convention.plugins.clover = cloverConvention
+
+class CloverPluginConvention {
+    def instrSrcDir
+    def classesBackupDir
+    def licenseFile
+
+    def clover(Closure close) {
+        close.delegate = this
+        close.run()
+    }
+
+    CloverPluginConvention(Project theProject) {
+        instrSrcDir = "${theProject.buildDir}/instrSrc"
+        classesBackupDir = "${theProject.sourceSets.main.output.classesDir}-bak"
+        licenseFile = "${theProject.rootDir}/builds/scripts/clover.license"
+    }
+}
+
+dependencies {
+    testRuntime "com.cenqua.clover:clover:3.0.2"
+}
+
+tasks.withType(Test).each {
+    it.doFirst {
+        if (project.hasProperty("withClover") && !project.hasProperty("noClover") && sourceSets.main.output.classesDir.exists()) {
+            ant.taskdef(resource: "cloverlib.xml", classpath: configurations.testRuntime.asPath)
+            ant.property(name: "clover.license.path", value: cloverConvention.licenseFile)
+            ant."clover-clean"()
+
+            logger.info "Clover instrumenting source"
+            //instrument the source
+            new File(cloverConvention.instrSrcDir).mkdirs()
+            sourceSets.main.java.srcDirs.each {
+                if (it.exists()) {
+                    ant."clover-instr"(srcdir: it, destdir: cloverConvention.instrSrcDir)
+                }
+            }
+
+            //move original classes
+            ant.move(file: sourceSets.main.output.classesDir, tofile: cloverConvention.classesBackupDir)
+
+            //compile instrumented classes
+            sourceSets.main.output.classesDir.mkdirs()
+            ant.javac(srcdir: cloverConvention.instrSrcDir,
+                      destdir: sourceSets.main.output.classesDir,
+                      source: sourceCompatibility,
+                      target: targetCompatibility,
+                      includeAntRuntime: false,
+                      classpath: configurations.testRuntime.asPath)
+
+            //copy resources
+            ant.copy(todir: sourceSets.main.output.classesDir) {
+                fileset(dir: cloverConvention.classesBackupDir, excludes: "**/*.class")
+            }
+        }
+    }
+}
+
+tasks.withType(Test).each {
+    it.doLast {
+        if (project.hasProperty("withClover") && !project.hasProperty("noClover") && new File(cloverConvention.classesBackupDir).exists()) {
+            ant.taskdef(resource: "cloverlib.xml", classpath: configurations.testRuntime.asPath)
+            ant.property(name: "clover.license.path", value: cloverConvention.licenseFile)
+
+            // restore original classes
+            logger.info "Clover restoring orginal source code"
+            ant.delete(file: sourceSets.main.output.classesDir)
+            ant.move(file: cloverConvention.classesBackupDir, tofile: sourceSets.main.output.classesDir)
+
+            // XML Report for tool consumption
+            ant."clover-report" {
+                current(outfile: "${reporting.baseDir}/clover/clover.xml")
+            }
+            ant."clover-html-report"(outdir: "${reporting.baseDir}/clover/html");
+
+            logCoverageSummary()
+            logPerClassCoverage()
+        }
+    }
+}
+
+def logCoverageSummary() {
+    def coverageFilePath = "${reporting.baseDir}/clover/clover.xml"
+    def coverageFile = file(coverageFilePath)
+    if(coverageFile.exists()) {
+        // Logs a summary to the console
+        def cloverCoverage = new groovy.util.XmlSlurper().parse(coverageFilePath)
+        def statements = cloverCoverage.project.metrics['@statements'].text().toInteger()
+        def coveredStatements = cloverCoverage.project.metrics['@coveredstatements'].text().toInteger()
+        def conditionals = cloverCoverage.project.metrics['@conditionals'].text().toInteger()
+        def coveredConditionals = cloverCoverage.project.metrics['@coveredconditionals'].text().toInteger()
+
+        logger.lifecycle("Coverage Summary for ${project.name}")
+        logger.lifecycle("\tStatements:\t${formattedPct(coveredStatements, statements)}")
+        logger.lifecycle("\tConditionals:\t${formattedPct(coveredConditionals, conditionals)}")
+    }
+}
+
+def logPerClassCoverage()  {
+    def coverageFilePath = "${reporting.baseDir}/clover/clover.xml"
+    def coverageFile = file(coverageFilePath)
+
+    File reportFile = file("${reporting.baseDir}/detailedCoverage.txt")
+    reportFile.delete()
+
+    if(coverageFile.exists()) {
+        // Logs a summary to the console
+        def cloverCoverage = new groovy.util.XmlSlurper().parse(coverageFilePath)
+
+        reportFile << "${"Class".padRight(90)}Line\tBranch\n"
+        cloverCoverage.project.package.each { javaPackage ->
+            javaPackage.file.each { file ->
+                def statements = file.metrics['@statements'].text().toInteger()
+                def coveredStatements = file.metrics['@coveredstatements'].text().toInteger()
+                def conditionals = file.metrics['@conditionals'].text().toInteger()
+                def coveredConditionals = file.metrics['@coveredconditionals'].text().toInteger()
+
+                reportFile << ((javaPackage['@name'].text() + "." + file['@name'].text()).padRight(90)+
+                                 String.format('%3.1f', pct(coveredStatements, statements))+"\t"+
+                                 String.format('%3.1f', pct(coveredConditionals, conditionals))+"\n")
+            }
+        }
+    }
+    else {
+        logger.lifecycle "No coverage file found at $coverageFilePath"
+    }
+}
+
+def pct(actual, max) {
+    max == 0 ? 100.0 : (actual / max)*100
+}
+
+def formattedPct(actual, max) {
+    return "$actual/$max\t(${String.format('%3.1f', pct(actual,max))}%)"
+}
+
+check.doLast {
+    if (project.hasProperty("withClover") && !project.hasProperty("noClover")) {
+        logger.lifecycle("Checking test coverage")
+        ant.taskdef(resource: "cloverlib.xml", classpath: configurations.testRuntime.asPath)
+        ant.property(name: "clover.license.path", value: cloverConvention.licenseFile)
+        if (project.hasProperty("coverageTargetPct")) {
+            logger.lifecycle "Checking test statement-coverage is at least ${project.ext.coverageTargetPct}%"
+            ant."clover-check"(statementTarget: "${project.ext.coverageTargetPct}%",
+                               haltOnFailure: 'true')
+        }
+        if (project.hasProperty("coverageBranchTargetPct")) {
+            logger.lifecycle "Checking test branch-coverage is at least ${project.ext.coverageBranchTargetPct}%"
+            ant."clover-check"(conditionalTarget: "${project.ext.coverageBranchTargetPct}%",
+                               haltOnFailure: 'true')
+        }
+    }
+}

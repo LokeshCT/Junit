@@ -1,0 +1,18 @@
+div.infoContainer {
+    margin-bottom: 0.3em;
+}
+
+#bulkTarget {
+    width:0;
+    height:0;
+    border:0 solid #fff;
+}
+
+#lineItems .errorMessage, #offerDetails .errorMessage {
+    white-space: pre;
+    margin: 0;
+    padding: 0;
+}
+
+div#progressDialog div {margin:1em 0;}
+div#progressDialog.done #spinning {display: none;}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Quote Management</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style type="text/css">@charset "UTF-8";
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none;
+    }
+
+    ng\:form {
+        display: block;
+    }</style>
+    <link rel="stylesheet" type="text/css" href="/cqm/static/cqm/web/css/jquery-ui-1.8.17.custom.css">
+    <link type="text/css" href="/cqm/static/cqm/web/lib/select2/select2.css" rel="stylesheet">
+    <link type="text/css" href="/cqm/static/cqm/web/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/cqm/static/cqm/web/css/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+    <link type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link type="text/css" href="/cqm/static/cqm/web/css/ng-grid.css" rel="stylesheet">
+    <link type="text/css" href="/cqm/static/cqm/web/lib/angular-ui/ui-grid/3.0.5/ui-grid.css" rel="stylesheet">
+    <link type="text/css" href="/cqm/static/cqm/web/css/core.css" rel="stylesheet">
+    <link rel="stylesheet" href="/cqm/static/cqm/web/css/dashboard.css" type='text/css' media='all'>
+    <link rel="stylesheet" type="text/css" href="/cqm/static/cqm/web/lib/animate.css">
+
+
+
+    <!--[if IE]>
+    <link type="text/css" href="/script/css/ie.css" rel="stylesheet">
+    <![endif]-->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="/script/lib/htmlshiv/html5shiv.js"></script>
+    <![endif]-->
+
+    <script src="/cqm/static/cqm/web/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script src="/cqm/static/cqm/web/lib/jquery/jquery.blockUI.js"></script>
+    <script src="/cqm/static/cqm/web/lib/jquery/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="/cqm/static/cqm/web/lib/select2/select2.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular-1.3.15/angular.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular-1.3.15/angular-route.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular-1.3.15/angular-animate.min.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular/angular-file-upload.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular/ui/select2/select2.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular-ui/ng-grid.js"></script>
+    <script src="/cqm/static/cqm/web/lib/angular-ui/ui-grid/3.0.5/ui-grid.js"></script>
+    <script src="/cqm/static/cqm/web/lib/underscore/underscore.js"></script>
+    <script src="/cqm/static/cqm/web/lib/json/json3.js"></script>
+    <script src="/cqm/static/cqm/web/js/directives.js"></script>
+    <script src="/cqm/static/cqm/web/js/services.js"></script>
+    <script src="/cqm/static/cqm/web/js/headerController.js"></script>
+    <script src="/cqm/static/cqm/web/js/routeProvider.js"></script>
+    <script src="/cqm/static/cqm/web/js/baseController.js"></script>
+    <script src="/cqm/static/cqm/web/js/tabController.js"></script>
+    <script src="/cqm/static/cqm/web/js/actionController.js"></script>
+    <script src="/cqm/static/cqm/web/js/customerSiteController.js"></script>
+    <script src="/cqm/static/cqm/web/js/customerContactController.js"></script>
+    <script src="/cqm/static/cqm/web/js/createCustomerController.js"></script>
+    <script src="/cqm/static/cqm/web/js/matchingCustomerController.js"></script>
+    <script src="/cqm/static/cqm/web/js/quoteController.js"></script>
+    <script src="/cqm/static/cqm/web/js/quotePriceBookController.js"></script>
+    <script src="/cqm/static/cqm/web/js/channelHierarchyController.js"></script>
+    <script src="/cqm/static/cqm/web/js/vpnController.js"></script>
+    <script src="/cqm/static/cqm/web/js/activityController.js"></script>
+    <script src="/cqm/static/cqm/web/js/orderDetailsController.js"></script>
+    <script src="/cqm/static/cqm/web/js/userManagementController.js"></script>
+    <script src="/cqm/static/cqm/web/js/billingAccountController.js"></script>
+    <script src="/cqm/static/cqm/web/js/treeNodeController.js"></script>
+    <script src="/cqm/static/cqm/web/js/customerQuoteConfigController.js"></script>
+    <script src="/cqm/static/cqm/web/js/dslCheckerController.js"></script>
+    <script src="/cqm/static/cqm/web/js/customerController.js"></script>
+    <script src="/cqm/static/cqm/web/js/customerBranchSiteContactController.js"></script>
+    <script src="/cqm/static/cqm/web/js/branchSiteMapsController.js"></script>
+    <script src="/cqm/static/cqm/web/js/customerBranchSiteController.js"></script>
+    <script src="/cqm/static/cqm/web/js/LegalEntityController.js"></script>
+    <script src="/cqm/static/cqm/web/js/messageDialogController.js"></script>
+    <script src="/cqm/static/cqm/web/js/addressController.js"></script>
+    <script src="/cqm/static/cqm/web/js/cqmInterceptor.js"></script>
+    <script src="/cqm/static/cqm/web/js/auditTrailController.js"></script>
+    <script src="/cqm/static/cqm/web/js/filters.js"></script>
+    <script src="/cqm/static/cqm/web/js/constants.js"></script>
+    <script src="/cqm/static/cqm/web/js/multipleCentralSiteController.js"></script>
+    <script src="/cqm/static/cqm/web/js/associateSaleschannelController.js"></script>
+    <script src="/cqm/static/cqm/web/js/dslUploadXlsController.js"></script>
+    <script src="/cqm/static/cqm/web/js/dslViewAllReportController.js"></script>
+    <script src="/cqm/static/cqm/web/js/contractController.js"></script>
+    <script src="/cqm/static/cqm/web/js/locationController.js"></script>
+    <script src="/cqm/static/cqm/web/js/dashboard/dashboard.js"></script>
+    <script src="/cqm/static/cqm/web/lib/jquery/jquery.leanModal.min.js"></script>
+    <script src="/cqm/static/cqm/web/lib/bootstrap/js/ui-bootstrap-tpls.js"></script>
+    <script src="/cqm/static/cqm/web/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&sensor=false"></script>
+
+    <script type="text/javascript" src="../js/util/TestWebMetrics.js"></script>
+</head>
+<body ng-app="cqm">
+
+
+<div  ng-controller="CQMBaseController">
+
+    <cqm-page-header sales-user='salesUser' context='context'></cqm-page-header>
+
+    <div ng-switch on="context.state">
+        <div ng-switch-when="CustomerSelection">
+            <cqm-select-customer sales-user='salesUser' context='context'></cqm-select-customer>
+        </div>
+        <div ng-switch-when="CustomerConfiguration">
+            <cqm-customer-quote-config tabId="context.subState" context='context'/>
+        </div>
+        <div ng-switch-when="DslChecker">
+            <dsl-checker-config tabId="context.subState" context='context'/>
+        </div>
+        <div ng-switch-when="UserDashboard">
+            <cqm-user-dashboard sales-user='salesUser' context='context'></cqm-user-dashboard>
+        </div>
+        <div ng-switch-when="Logout">
+            <cqm-logout/>
+        </div>
+    </div>
+
+    <cqm-message-dialog></cqm-message-dialog>
+
+</div>
+
+<div class="hidden" id="urlConfig">
+    {"auditOrderDetailUri":"../test-data/cqm-audit-orderDetail.json","approveActivityUri":"../test-data/cqm-activity-approve.json","cancelOrderUri":"../test-data/cqm-order-IFC.json","recentQuoteStatusUrl":"../test-data/cqm-user-recent-quotes-status.json","associateSalesChannelToContractUri":"../test-data/cqm-customer-associateSalesChannelToContract.json","deleteBulkUploadUri":"../test-data/cqm-dslchecker-deleteBulkUpload.json","auditQuoteDetailUri":"../test-data/cqm-audit-quoteDetail.json","webMetricsUri":"rsqe-web-metrics.json","searchAddressUri":"../test-data/cqm-addresses.json","getBranchSiteNamesIdsUri":"../test-data/cqm-site-getBranchSiteNamesIds.json","createSiteUri":"../test-data/cqm-site-updateCentralSite.json","headerImgUri":"/cqm/static/cqm/web/img/mx_banner.jpg","pinImgUri":"../test-data/cqm-static-cqm-web-img-pin.png.json","rejectActivityUri":"../test-data/cqm-activity-reject.json","getLegalEntityUri":"../test-data/cqm-customer-legal-entities.json","getCustomerContactsUri":"../test-data/cqm-contacts-customer.json","getBillingAccountsUri":"../test-data/cqm-billing-getBillingAccounts.json","updateContactUri":"../test-data/cqm-contacts-update.json","updateQuoteUri":"../test-data/cqm-quotes.json","getCustomerDetailUri":"../test-data/cqm-customer-getCustomerDetail.json","searchActivityUri":"../test-data/cqm-activity-searchActivity.json","getContractByIdUri":"../test-data/cqm-customer-getContractById.json","assignActiviyToUri":"../test-data/cqm-activity-assignTo.json","mapLeBillingAccountUri":"../test-data/cqm-legalEntity-updatelinktocustomer.json","acceptDelegateUri":"../test-data/cqm-activity-acceptDelegation.json","getAssignedToListUri":"../test-data/cqm-activity-assignedToList.json","rejectDelegateUri":"../test-data/cqm-activity-rejectDelegation.json","getBranchSiteCountUri":"../test-data/cqm-site-getBranchSiteCount.json","getSiteStatus":"../test-data/cqm-site-isSiteActive.json","updatePriceBookUri":"../test-data/cqm-pricebook-updatePricebook.json","associateCustomerUri":"../test-data/cqm-customer-associate.json","createBillingAccountUri":"../test-data/cqm-billing-createBilling.json","getUserInfoUri":"../test-data/cqm-userManagement-getUserInfo.json","getClientGroupsUri":"../test-data/cqm-customer-clientGroups.json","requestIFCUri":"../test-data/cqm-order-IFC.json","getSiteContactsUri":"../test-data/cqm-contacts.json","vatPrefixUri":"../test-data/cqm-legalEntity-vatnumbervalidation.json","getCustomerAddDetUri":"../test-data/cqm-customer-customerAdditionalDetail.json","getContractUri":"../test-data/cqm-customer-contract.json","withdrawApprovalUri":"../test-data/cqm-activity-withdrawApproval.json","loadChannelPartnerDetailsUri":"../test-data/cqm-channelHierarchy-loadChannelPartnerDetails.json","listAttachmentsUri":"../test-data/cqm-order-listAttachments.json","createQuoteUri":"../test-data/cqm-quotes.json","logoutUri":"../test-data/cqm-logout.json","generateQrefGuid":"../test-data/cqm-quotes-generateQrefGuid.json","getParentAccountsUri":"../test-data/cqm-channelHierarchy-accountType.json","searchQuoteUri":"../test-data/cqm-quotes.json","getAllSalesChannelUri":"../test-data/cqm-userManagement-getAllSalesChannels.json","findCustomerUri":"../test-data/cqm-customer-new.json","getProductNamesUri":"../test-data/cqm-pricebook-getProductNames.json","getCountiesUri":"../test-data/cqm-customer-countries.json","createContactUri":"../test-data/cqm-contacts-create.json","getCustomerContractsUri":"../test-data/cqm-customer-contractsForCustomer.json","getSACTemplateUri":"../test-data/cqm-dslchecker-downloadTemplate.json","createBranchSiteUri":"../test-data/cqm-site-createBranchSite.json","associateCentralSiteUri":"../test-data/cqm-site-associateCentralSite.json","getPriceBookExtn":"../test-data/cqm-pricebook-getPricebookExtension.json","uploadAttachmentUri":"../test-data/cqm-order-uploadAttachment.json","updateLegalEntityUri":"../test-data/cqm-legalEntity-update.json","getBranchSiteUri":"../test-data/cqm-site-getBranchSite.json","updateCustomerAddDetUri":"../test-data/cqm-customer-updateCustomerAdditionalDetail.json","allUserQuoteStatusUrl":"../test-data/cqm-user-quotes-status.json","getAllSalesChannelWithGfrUri":"../test-data/cqm-customer-allSalesChannelWithGfr.json","getChannelCreationDetailsUri":"../test-data/cqm-channelHierarchy-getChannelCreationDetails.json","updateContractUri":"../test-data/cqm-customer-updateContract.json","updateUserInfoUri":"../test-data/cqm-userManagement-saveUserInfo.json","getUserQuoteMetricsUrl":"../test-data/cqm-user-quotes-statistics.json","savePriceBookUri":"../test-data/cqm-pricebook-savePriceBook.json","bundlingAppUrl":"../test-data/cqm-quotes-bundlingAppUrl.json","getParentAccountNamesUri":"../test-data/cqm-channelHierarchy-accountType.json","getOrderLineItemsUri":"../test-data/cqm-order-orderLineItems.json","createLocationUri":"../test-data/cqm-site-createLocation.json","getSharedVpnDetailsUri":"../test-data/cqm-vpn-sharedCustomerId.json","getCentralSiteUri":"../test-data/cqm-site-centralSite.json","getCustomersByChannelUri":"../test-data/cqm-customer-identifiers.json","createLegalEntityUri":"../test-data/cqm-legalEntity-create.json","clarityProjectCodeUri":"../test-data/cqm-billing-clarityProject.json","createActivityUri":"../test-data/cqm-activity-create.json","getAttachmentUri":"../test-data/cqm-order-getAttachment.json","requestCancelUri":"../test-data/cqm-order-requestCancel.json","getAllRoleUri":"../test-data/cqm-userManagement-getAllRoles.json","reassignActivityUri":"../test-data/cqm-activity-reassign.json","getPriceBookDetailsUri":"../test-data/cqm-pricebook-getPriceBookDetailsCustomerId.json","createBranchSiteContactUri":"../test-data/cqm-branchContact-create.json","getSiteRegions":"../test-data/cqm-site-getSiteRegions.json","updateBillingAccountUri":"../test-data/cqm-billing-updateBilling.json","importSacFileUri":"../test-data/cqm-dslchecker-uploadFile.json","loginUri":"../test-data/cqm.json","searchOrdersUri":"../test-data/cqm-order-search.json","deleteSharedVpnDetailsUri":"../test-data/cqm-vpn-createSharedVPNServiceId.json","getCurrencyCodes":"../test-data/cqm-billing-currencyCodes.json","getPriceBookCodes":"../test-data/cqm-pricebook-getPriceBookCodes.json","getProductVersionsUri":"../test-data/cqm-pricebook-getProductVersions.json","similarCustomersListUri":"../test-data/cqm-customer-similarCustomersList.json","createNewCustomerUri":"../test-data/cqm-createCustomer.json","createSharedVpnDetailsUri":"../test-data/cqm-vpn-createSharedVPNServiceId.json","searchAddressByGeoCodeUri":"../test-data/cqm-addresses-geo-code.json","createChannelPartnerUri":"../test-data/cqm-channelHierarchy-createChannelPartnerCustomerId.json","getTabsUri":"../test-data/cqm-tabs.json","getSalesUserUri":"../test-data/cqm-salesUser.json","createCustomerUri":"../test-data/cqm-customer.json","createSiteRegion":"../test-data/cqm-site-createSiteRegion.json","auditQuoteSummaryUri":"../test-data/cqm-audit-quoteSummary.json","getMatchingCustomersUri":"../test-data/cqm-customer-customersList.json","siteUpdateNotification":"../test-data/cqm-site-notifySiteUpdate.json","updateBranchSiteUri":"../test-data/cqm-site-updateBranchSite.json","getAllAvailableSalesChannelUri":"../test-data/cqm-customer-allAvailableSalesChannel.json","updateBranchSiteContactUri":"../test-data/cqm-branchContact-update.json","searchCustomerUri":"../test-data/cqm-customer-customersList.json","allUploadedFileListUri":"../test-data/cqm-dslchecker-allUploadedFileList.json","auditOrderSummaryUri":"../test-data/cqm-audit-orderSummary.json","getPortDistributorUri":"../test-data/cqm-customer-getPortDistributor.json","getVpnUri":"../test-data/cqm-vpn-customerId.json","updateActivityStatusUri":"../test-data/cqm-activity-updateActivityStatus.json","userUploadedFileListUri":"../test-data/cqm-dslchecker-userUploadedFileList.json","sqeAppUrl":"../test-data/cqm-quotes-sqeAppUrl.json"}
+</div>
+
+
+<div class="hidden" id="customerCreationResponse">{"CUSTOMER_ALREADY_EXISTS":1,"NO_CUSTOMER_NAME_PROVIDED":4,"SIMILAR_CUSTOMERS_FOUND":2,"NO_MATCHING_OR_SIMILAR_CUSTOMERS":3}</div>
+
+
+</body>
+</html>

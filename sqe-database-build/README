@@ -1,0 +1,31 @@
+__Tools to dump and re-deploy the SQE Database__
+
+The tools that have been checked into this module are intended to be used for dumping schemas and data locally.
+
+Schema is dumped and re-instantiated locally using sql-plus.
+Data is dumped and re-instantiated locally using DBUnit.
+
+__Order of Execution__
+
+***Partially complete***
+
+Tasks around import and export of data are currently ran through the IDE (will be command
+line once the compile cycle is in place)
+
+Export of DDL's are currently run through SQL Developer.
+This will be done with an export script after the import works with the build.
+
+ * Export the remote schema by running ''gradle databaseExport''  This will execute:
+    * Compile java files for importing / exporting data
+    * Dump the remote schema to a local file, without triggers
+    * Dump the remote schema to a local file, triggers only
+    * Dump the remote data to local files
+     
+ * Import the schema by running ''gradle databaseImport''  This will execute:
+    * Compile java files for importing / exporting data
+    * Drop users
+    * Create users
+    * Create schema without triggers, and constraints
+    * Import data from local files
+    * Create triggers, and constraints
+

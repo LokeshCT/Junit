@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<people>
+    <person>
+        <name>
+            <surname>Pinjala</surname>
+            <initials>LS</initials>
+            <familiarName>Leela</familiarName>
+            <personalTitle>Mr</personalTitle>
+        </name>
+        <lineOfBusiness code="C00">BT Technology Service &amp; Operations</lineOfBusiness>
+        <ouc>TAQ3</ouc>
+        <jobTitle>Senior Consultant</jobTitle>
+        <empClass code="R">BT Employee</empClass>
+        <contactNumbers>
+        </contactNumbers>
+        <manager>
+            <btDirectoryID>1389390</btDirectoryID>
+            <btDirectoryId>1389390</btDirectoryId>
+            <btEIN>1111111111</btEIN>
+            <name>AAAAAAAAAAAAAAAAA</name>
+        </manager>
+        <internetEmailAddress>AAAAAAA@bt.com</internetEmailAddress>
+        <btBoatId>AAAAAA</btBoatId>
+        <btDirectoryId>1397304</btDirectoryId>
+        <btEIN>608308027</btEIN>
+        <address>
+            <btBuildingCode>PPS-56-IN</btBuildingCode>
+            <buildingName>2nd Floor, Block 12</buildingName>
+            <street>Pritech Park SEZ,</street>
+            <street2>Bellandur village, Varthur Hobli</street2>
+            <city>Bangalore</city>
+            <county>KA</county>
+            <postcode>560103</postcode>
+            <country>India</country>
+        </address>
+    </person>
+</people>

@@ -1,0 +1,17 @@
+<div cqm-dialog="display" title="title" no-details-button ok-but-no-cancel-button width="40%"
+     on-show="initQuoteDisplayWindow">
+
+    <form name="myForm" style="width: 92%;">
+        <div class="hrMargin" ng-show="disablePriceFields">
+            <span class="headerLabel"  ng-show="disablePriceFields">Site is associated to Quotes/Assets.Only the Read/Write fields can be Updated</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+        <div class="hrMargin" ng-show="!disablePriceFields">
+            <span class="headerLabel"  ng-show="!disablePriceFields">Site is associated to Quotes/Assets. On Updating, SQE will be notified regarding the changes.</span>
+            <hr class="hrStyle" width="100%"/>
+        </div>
+        <div class="gridStyle" style="width: 100%;height: 220px;margin-top:15px;margin-left:5px;margin-bottom:5px;" ng-grid="associatedQuotesGrid"></div>
+    </form>
+</div>
+
+

@@ -1,0 +1,153 @@
+<div ng-controller="orderDetailsController" class="innerWrap" ng-init="getOrders()">
+
+    <div ng-show="noOrdersFound">
+        <span class="headerLabel">{{msg}}</span>
+    </div>
+
+    <div ng-hide="noOrdersFound">
+        <div style="clear:both;">
+            <div ng-show="!noOrdersFound">
+                <div class="headerLabel">Orders : {{listOfOrders.length}}</div>
+                <div class="searchResultGridStyle" style="height: 250px" ng-grid="orderGrid"></div>
+            </div>
+            <div class="hrMargin" ng-hide="showLineItems">
+                <span class="rfo">*Select order summary to view detail</span>
+            </div>
+            <div ng-show="showLineItems">
+                <div class="headerLabel">Order Line Items : {{countOrderLineItems}}</div>
+                <div class="searchResultGridStyle" style="height: 250px" ng-grid="orderLineItemGrid"></div>
+            </div>
+        </div>
+        <div class="hrMargin" ng-hide="gridSelected || !showLineItems">
+            <span class="rfo">*Select order detail for further processing</span>
+        </div>
+        <div ng-show="gridSelected" style="clear:both;">
+            <div>
+                <fieldset style="margin: 2px;">
+                    <legend> Attachments</legend>
+                    <table id="orderDetAttachmentTab">
+                        <tr style="background: #ffffff">
+                            <td style="width:20%">
+                                <label for="attachType">Attach Type</label>
+                                <select id="attachType" ng-change="attachTypeChange()"
+                                        ng-model="orderDetailFormData.attachType">
+                                    <option ng-repeat="attach in attachList" value={{attach.value}}>
+                                        {{attach.name}}
+                                    </option>
+                                </select>
+
+                            </td>
+
+                            <td rowspan="3">
+                                <fieldset style="-moz-border-radius: 5px;border-radius: 5px;-webkit-border-radius: 5px;border: 1px dashed #555555;height: 100%;">
+                                    <legend> List of Attachments</legend>
+                                    <a ng-click="clickDownload(doc)" ng-show="listAttachMsg.length<0"
+                                       ng-repeat="doc in attachList">{{doc.fileName}}<br></a>
+                                            <span ng-show="listAttachMsgStyle.length>0"
+                                                  style="{{listAttachMsgStyle}}">{{listAttachMsg}}</span>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%">
+
+                                <input id="orderDetailFormData.file" style="" type="file"
+                                       ng-model="orderDetailFormData.file" ng-file-select="loadAttachment($files)"
+                                       ng-disable="!orderDetailFormData.attachType.length>0"
+                                    />
+
+                                <!--&lt;!&ndash;div class="row">
+                                    <div class="col-sm-4"><progressbar value="55"></progressbar></div>
+                                    <div class="col-sm-4"><progressbar class="progress-striped" value="22" type="warning">22%</progressbar></div>
+                                    <div class="col-sm-4"><progressbar class="progress-striped active" max="200" value="166" type="danger"><i>166 / 200</i></progressbar></div>
+                                </div&ndash;&gt;-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn-mini"
+                                        style="float:left;margin:4px;"
+                                        ng-disabled="disableUploadBtn"
+                                        ng-click="uploadAttachment()">
+                                    Upload
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div ng-show="uploadStatusMsg.length>0" style="{{uploadStatusMsgStyle}}">
+                                    <span>{{uploadStatusMsg}}</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <hr class="hrStyle" width="100%"/>
+            <div class="cqmFieldDiv">
+                <label>Product Name</label>
+                <input type="text" id="productName" name="productName" class="cqmField"
+                       ng-model="orderDetailFormData.productName" ng-disabled="true"/>
+            </div>
+            <div class="cqmFieldDiv">
+                <label>Order ID</label>
+                <input type="text" id="orderId" name="orderId" class="cqmField" ng-model="orderDetailFormData.orderId"
+                       ng-disabled="true"/>
+            </div>
+            <div class="cqmFieldDiv">
+                <label>Order Line ID</label>
+                <input type="text" id="orderLineId" name="orderLineId" class="cqmField"
+                       ng-model="orderDetailFormData.orderLineId" ng-disabled="true"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Parent ID</label>
+                <input type="text" id="parentId" name="parentId" class="cqmField"
+                       ng-model="orderDetailFormData.parentId" ng-disabled="true"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Order Status</label>
+                <input type="text" id="orderStatus" name="orderStatus" class="cqmField"
+                       ng-model="orderDetailFormData.orderStatus" ng-disabled="true"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Order Sub Status</label>
+                <input type="text" id="orderSubStatus" name="orderSubStatus" class="cqmField"
+                       ng-model="orderDetailFormData.orderSubStatus" ng-disabled="true"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Product Status</label>
+                <input type="text" id="productStatus" name="productStatus" class="cqmField"
+                       ng-model="orderDetailFormData.productStatus" ng-disabled="true"/>
+            </div>
+
+            <div class="cqmFieldDiv">
+                <label>Product Sub Status</label>
+                <input type="text" id="productSubStatus" name="productSubStatus" class="cqmField"
+                       ng-model="orderDetailFormData.productSubStatus" ng-disabled="true"/>
+            </div>
+
+            <input type=hidden name="chkSuIfc" ng-model="orderDetailFormData.chkSuIfc"/>
+            <input type=hidden name="suComment" ng-model="orderDetailFormData.suComment"/>
+            <input type=hidden name="reasonForReject" ng-model="orderDetailFormData.reasonForReject"/>
+            <input type=hidden name="bfgCusId" ng-model="orderDetailFormData.bfgCusId"/>
+            <input type=hidden name="quoteId" ng-model="orderDetailFormData.quoteId"/>
+            <br/>
+            <hr class="hrStyle"/>
+            <div class="containerDiv" style="clear:both;">
+                <button class="btn"
+                        style="float:none;margin:5px;" ng-disabled='disableLanunchCofigBut'
+                        ng-click="launchConfigurator()">
+                    Launch Configurator
+                </button>
+                <!--<button class="btn"
+                        style="float:none;margin:5px;" ng-disabled='disableViewKsuBut' ng-click="viewKSU()">
+                    View KSU
+                </button>-->
+            </div>
+        </div>
+    </div>
+</div>

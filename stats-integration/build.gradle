@@ -1,0 +1,106 @@
+// Module-specific settings
+dependsOnIncludingTests(project, ':acceptance-tests')
+dependsOnIncludingTests(project, ':expedio-facade')
+dependsOnIncludingTests(project, ':expedio-facade-client')
+dependsOnIncludingTests(project, ':quote-engine')
+dependsOnIncludingTests(project, ':project-engine-client')
+dependsOnIncludingTests(project, ':project-engine-web')
+dependsOnIncludingTests(project, ':pmr')
+dependsOnIncludingTests(project, ':pmr-client')
+dependsOnIncludingTests(project, ':bfg-facade')
+dependsOnIncludingTests(project, ':sqe-ivpn-facade')
+dependsOnIncludingTests(project, ':customer-inventory')
+dependsOnIncludingTests(project, ':customer-inventory-client')
+dependsOnIncludingTests(project, ':codebase-stub')
+dependsOnIncludingTests(project, ':session-service')
+dependsOnIncludingTests(project, ':product-configurator:configurator-web')
+dependsOnIncludingTests(project, ':rsqe-app')
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':common:web')
+dependsOnIncludingTests(project, ':core')
+
+dependencies {
+    compile([])
+    testCompile('biz.neustar:browsermob-proxy:2.0-beta-6') {
+        exclude module: 'commons-io'
+        /*
+           (Marcus 2012-11-25) Excluding this transitive dependency because it does not meet ivy's strict validation:
+           'Received unexpected module descriptor commons-io#commons-io;1.3.2 for dependency org.apache.commons#commons-io;1.3.2'
+        */
+    }
+
+    testCompile(group: 'com.bt.rsqe.externalmodels', name: 'distribute-product-consumer', version: "$version")
+    testCompile(group: 'com.bt.rsqe.externalmodels', name: 'distribute-product-consumer', version: "$version", classifier: 'dp-definitions')
+    testCompile([
+            'junit:junit:4.10',
+            'org.hamcrest:hamcrest-all:1.1',
+            'org.apache.directory.junit:junit-addons:0.1',
+            'org.junit.extensions.cpsuite:cpsuite:1.2.5',
+            'org.dbunit:dbunit:2.4.8',
+            'commons-httpclient:commons-httpclient:3.1',
+            'org.seleniumhq.selenium:selenium-server:2.24.1',
+            'org.w3c.css:sac:1.3',
+            'org.mockito:mockito-all:1.9.0',
+            project(':distribute-product-consumer'),
+            files("${project(':bfg-facade').projectDir}/src/test/resources"), // to make the dbUnit CSVs available
+            files("${project(':distribute-product-consumer').projectDir}/schema/Example.Documents/iVPN2_R15/COMMON_R15_GSModelB_1"),
+            files("${project(':distribute-product-consumer').projectDir}/schema/Example.Documents/iVPN2_R15/iVPN_R15_ModelB_1"),
+            files("${project(':distribute-product-consumer').projectDir}/schema/Example.Documents/OnevoiceRSQEModel"),
+            files("${project(':distribute-product-consumer').projectDir}/schema/Example.Documents/RSQE_Product_X_V1"),
+    ])
+}
+
+configurations {
+    testCompile.exclude group: 'net.jcip', module: 'jcip-annotations'
+}
+
+
+test {
+
+}
+
+task smokeTest(overwrite: true, type: Test) {
+    description = "Run smoke tests only, to give early signs of success / failure "
+    exclude "**/*"
+
+    jvmArgs "-XX:MaxPermSize=512m", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:-PrintCommandLineFlags",
+            "-XX:HeapDumpPath=.", "-XX:+CMSClassUnloadingEnabled", "-Djava.awt.headless=true", "-server"
+
+    if (System.properties['rsqe.test.env']) {
+        systemProperty "rsqe.test.env", System.properties['rsqe.test.env']
+    }
+}
+
+task test(overwrite: true, type: Test) {
+    description = "Run Acceptance tests only, excluding the smoke tests"
+    if (!System.properties['test.single']) {
+    include "**/*TestSuite.class"
+    exclude "**/*SmokeTestSuite.class"
+    include "**/*Test.class"
+    include "**/BomSubmission*.class"
+    }
+
+
+    jvmArgs "-XX:MaxPermSize=512m", "-XX:+HeapDumpOnOutOfMemoryError", "-XX:-PrintCommandLineFlags",
+            "-XX:HeapDumpPath=.", "-XX:+CMSClassUnloadingEnabled", "-Djava.awt.headless=true", "-server"
+
+    if (System.properties['test.single']) {
+        systemProperty "test.single", System.properties['test.single']
+    }
+
+    if (System.properties['test.input']) {
+        println "test input "+System.properties['test.input']
+        systemProperty "test.input", System.properties['test.input']
+    }
+
+
+    if (System.properties['rsqe.test.env']) {
+        systemProperty "rsqe.test.env", System.properties['rsqe.test.env']
+    }
+
+}
+
+
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/Metadata/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>This schema describes the Metadata entity maintained by the EMP.</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Metadata">
+    <xs:annotation>
+      <xs:documentation>Each metadata  entity holds one piece of information about the document. Some metadata is created and updated by the system (eg lastModified date. These are specific attributes within other entities).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MetaDataKey" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name of the metatada item (i.e. Reg Number).The list of allowed keys metadata keys is defined at the repository level and held within MetaDataTemplate.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentID" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>ID of parent document or repository to metadata relates to.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParentType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Either document or repository.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Value" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Value of metadata.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,17 @@
+<div class="tree" depth="-1">
+    <ul>
+        <li treeId="{{nodeId}} " class="treeNode" ng-class="child | validCssClasses:depth+1"
+            ng-hide="!child.visible()"
+            ng-repeat="child in node.children" rsqe-nav-id="child.id">
+            <i ng-class="child | treeNodeValidClasses" rsqe-nav-id="child.id" rsqe-title="child.status"></i>
+            <a ng-click="toggleExpanded(child)" ng-show="hasChildren(child)" class="expand-icon">
+                <i ng-class="child | expandedCssClasses"></i>
+            </a>
+
+            <div ng-class="child | isExpandableCssClasses">
+                <div cqm-tree-list node="child" depth="0" is-node-first="$first"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+

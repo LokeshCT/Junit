@@ -1,0 +1,96 @@
+#rfoTarget {
+    width:0;
+    height:0;
+    border:0 solid #fff;
+}
+
+.migration_confirmation_question_container {
+    padding:2% 2% 0% 2%;
+    border-top:2px solid #DEEDF7;
+    border-bottom: 2px solid #DEEDF7;
+}
+
+.migration_confirmation_question_container span {
+    display: block;
+    margin-bottom: 10px;}
+
+.migration_cancelled_info_container {
+    padding:2% 2% 0% 2%;
+    border-top:2px solid #DEEDF7;
+    border-bottom: 2px solid #DEEDF7;
+}
+
+.migration_cancelled_info_container span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.migration_confirmation_buttons_container {
+    float: right;
+    padding-top: 20px
+}
+
+.migration_cancelled_close_button_container {
+    float: right;
+    padding-top: 20px
+}
+
+table#sites {width:100%;}
+
+.siteError_inactive_btn {
+    background-color:#53a7db;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #2694e8;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:8px 10px;
+    text-shadow:0px 1px 0px #7cacde;
+    background:#d7ebf9 url(images/ui-bg_glass_50_3baae3_1x400.png) 50% 50%;
+
+ }
+.text_color a {
+    text-decoration: none;
+}
+.siteError_active_btn  {
+    background-color:#cde8f7;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border:1px solid #b2c3d9;
+    display:inline-block;
+    cursor:pointer;
+    color:#2779aa;;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:8px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    a:color #ffffff;
+    background:#d7ebf9 url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50%;
+}
+.ul_button_site{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: #2694E8 2px solid;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(38, 148, 232);
+    font-family: "Arial", tahoma, verdana ,sans-serif;
+    font-size: 1.1em;
+    padding: .2em .2em 0;
+    border-bottom:1px solid #AAC4D4;
+    border-bottom: #2694E8 2px solid;
+    padding-left: 0;
+}
+.table_data_bg_color{background-color: #ffff00;}
+.fieldName{font-weight: bold; }
+.td_style{border: 0px; }

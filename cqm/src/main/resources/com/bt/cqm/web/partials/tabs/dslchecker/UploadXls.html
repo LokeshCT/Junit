@@ -1,0 +1,95 @@
+<div ng-init="onPageLoad()" xmlns="http://www.w3.org/1999/html">
+    <script>
+        function selectFile() {
+            console.log('File Selected ...');
+            var file = document.getElementById("selectedFile");
+            if (!_.isUndefined(file)) {
+                document.getElementById('upload-filename-ie9').value = file.files[0].name;
+            }
+        }
+    </script>
+    <div style="height: 30%;">
+        <div class="container-hor-half">
+            <div class="container-heading" id="template"> Export Template
+            </div>
+            <div>
+                <table style="width: 100%">
+                    <tr>
+                        <th>Country</th>
+                        <th>Template Name</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>France</td>
+                        <td>Bulk Availability Template</td>
+                        <td><a target="_self" class="dsl-btn" href="/cqm/dslchecker/downloadTemplate?countryName={{'FRANCE'}}"><i
+                            class="fa fa-download fa-fw"></i>Template</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="container-hor-half">
+            <div class="container-heading">Import
+                File
+            </div>
+            <div style="padding: 2px;">
+                <div style="padding: 10px"><span style="color: red">*</span>
+
+                    <div style="font-weight: bold;display: inline;">Description</div>
+                    <textarea id="fileDesc" name="fileDesc" rows="4" cols="50" maxlength="100" ng-model="description"
+                              style="width: 98%;height: 45px;box-sizing: border-box;margin-right: 10px" data-ng-trim="false"></textarea>
+
+                    <div style="font-style: italic;">
+                        {{100 - description.length}} Chars remaining
+                    </div>
+                </div>
+            </div>
+<!--            <div id="upload-div-ie9">
+                <form id="fileUploadForm" ng-submit="ie9FileUpload()">
+                    <div class="fileUpload btn btn-primary" style="margin-right: 0px;border-radius: 4px 0px 0px 4px;">
+                        <span>Browse..</span>
+                        <input type="file" name="file" class="upload" id="selectedFile"
+                               accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                               max-size="8388608" ng-model="uploadFile" onchange="selectFile()"/>
+                    </div>
+                    <input id="upload-filename-ie9" type="text" placeholder="Choose File" disabled="disabled" ng-model="uploadFile.name"
+                           style="margin-bottom: 0px;margin-right: 5px;margin-left: -4px;border-radius: 0px;padding: 5px 6px;border-radius: 0px 4px 4px 0px"/>
+
+                    <button type="submit" class="fileUpload btn btn-primary" ng-click="uploadAttachment()"
+                            style="margin-left: 0px;border-radius: 4px;" ng-disabled="!(hasDescription)">Upload
+                    </button>
+                </form>
+            </div>-->
+            <div id="upload-div-latest" ng-show="!isIe9">
+                <div class="fileUpload btn btn-primary" style="margin-right: 0px;border-radius: 4px 0px 0px 4px;" ng-disabled="disableBrowse">
+                    <span>Browse..</span>
+                    <input id="browseBtn" type="file" class="upload"
+                           accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                           max-size="8388608" ng-model="uploadFile" ng-file-select="onBrowse($files)" data-toggle="tooltip" title="{{brwsFileToolTipMsg}}" ng-disabled="disableBrowse"/>
+                </div>
+                <input id="upload-filename" type="text" placeholder="Choose File" disabled="disabled" ng-model="$file.name"
+                       style="margin-bottom: 0px;margin-right: 5px;margin-left: -4px;border-radius: 0px;padding: 5px 6px;border-radius: 0px 4px 4px 0px"/>
+
+                <div class="fileUpload btn btn-primary" ng-click="uploadAttachment()" style="margin-left: 0px;border-radius: 4px;"
+                     ng-disabled="!(hasAttachment && hasDescription) || anyReportGenInProcessing" data-toggle="tooltip" title="{{brwsFileToolTipMsg}}">
+                    <span>Upload</span>
+                </div>
+                {{fileSize}}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-hor-full">
+        <div class="container-heading">My Upload Reports
+            <div style="display: inline-block;float: right;cursor: pointer;"><a ng-click="onRefresh()"><i class="fa fa-refresh"></i></a>
+            </div>
+        </div>
+        <div style="margin-bottom: 8px;margin-left: 5px;margin-top: 7px;"> NOTE: For Successful upload please check the result in 'Available
+            Reports' after 24 hours.
+        </div>
+        <div ui-grid="myUploadGrid" class="grid" style="height:200px;margin-left: 5px; display: block;"></div>
+    </div>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <label><h3>{{hTitle}}</h3></label>
+</div>
+<div class="modal-body">
+    <div>
+        <table>
+            <tr >
+                <th ng-repeat="ksu in dialogItem">{{ksu.name }}</th>
+            </tr>
+            <tr>
+                <td ng-repeat="ksu in dialogItem">{{ ksu.value }}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button ng-show="showOk" class="btn btn-primary" ng-click="ok()">OK</button>
+    <button ng-show="showCancel" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

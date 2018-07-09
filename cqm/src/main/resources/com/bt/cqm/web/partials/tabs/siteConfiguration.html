@@ -1,0 +1,46 @@
+<div class="row-fluid" id="siteTechnicalConfiguration" ng-controller="siteTechnicalConfigCtrl">
+    <div class="span2" id="siteConfigurationContainerLeft"></div>
+    <div class="span8" id="siteConfigurationContainerContent">
+        <div class="page-header"></div>
+        <form class="form-horizontal">
+            <configurable-attribute attribute-name="Resiliency" attribute-id="resiliency"
+                                    attribute-value="{{siteConfigData.resiliency.value}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+
+            <configurable-attribute attribute-name="Port Pricing Type" attribute-id="portPricingType"
+                                    attribute-value="{{siteConfigData.portConfigurationData.portPricingType}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="Access Term*" attribute-id="accessConfigurationData.accessTerm"
+                                    attribute-value="{{siteConfigData.accessConfigurationData.accessTerm}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CPE Resilience" attribute-id="cpeResilience"
+                                    attribute-value="{{siteConfigData.cpeResilience}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CPE Contract Term*" attribute-id="cpeContractTerm"
+                                    attribute-value="{{siteConfigData.cpeConfigurationData.cpeContractTerm}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CPE Installation Hours*" attribute-id="installationHours"
+                                    attribute-value="{{siteConfigData.cpeConfigurationData.installationHours}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CPE Site Survey*" attribute-id="siteSurvey"
+                                    attribute-value="{{siteConfigData.cpeConfigurationData.siteSurvey}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+            <configurable-attribute attribute-name="CPE Manufacturer" attribute-id="manufacturer"
+                                    attribute-value="{{siteConfigData.cpeConfigurationData.manufacturer}}"
+                                    update-function="updateValueOfModel(newValue,attributeId)"></configurable-attribute>
+
+        </form>
+
+    </div>
+    <div class="span8">
+        <a class="btn pull-left btn-primary" href="#/productConfig" id="previousProductConfiguration">Previous</a>
+        <a class="btn btn-primary pull-right" href="#/accessConfig" id="nextAccessConfiguration">Next</a>
+    </div>
+</div>

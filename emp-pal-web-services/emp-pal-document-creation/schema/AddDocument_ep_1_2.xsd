@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.4.--><xs:schema targetNamespace="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/Header/1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://capabilities.nat.bt.com/xsd/EDM/EMP/ManageDocument/AddDocument/Header/1.0">
+  <xs:element name="HeaderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation>Contains authentication related elements</xs:documentation>
+        </xs:annotation>
+        <xs:element name="AccountID" minOccurs="1" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>User id: Either functional accounts or
+                                          individuals</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="255"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Password" minOccurs="1" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>Password, encypted via SSL</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="255"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Domain" minOccurs="1" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>Windows Domain</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="20"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="WindowsNTLMdata" minOccurs="0" maxOccurs="1" nillable="true">
+          <xs:annotation>
+            <xs:documentation>Encoded authentication data. Will be available in future version.</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:base64Binary"/>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

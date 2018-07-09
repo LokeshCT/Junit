@@ -1,0 +1,45 @@
+{
+    "uniqueId":"assetId_1",
+    "customer":{
+        "name":"customerName",
+        "salesChannel":"BT UK"
+    },
+    "site":{
+        "name":"siteName",
+        "postCode":"BT1 1GJ",
+        "country":"country",
+        "city":"city",
+        "pageNumber":0,
+        "totalDisplayRecords":0,
+        "totalRecords":0,
+        "latitude":2222,
+        "longitude":1111,
+        "subBuilding":"7",
+        "locality":"13",
+        "streetName":"12",
+        "stateCode":"11",
+        "postBox":"10",
+        "postalOrg":"9",
+        "subStateCountyProvince":"8",
+        "subStreet":"6",
+        "building":"5",
+        "buildingNumber":"4",
+        "subLocality":"3",
+        "stateCountySProvince":"2",
+        "countryISOCode":"1",
+        "accuracyLevel":1
+    },
+    "user":{
+        "loginName":"loginName",
+        "surname":"surname",
+        "userType":"DIRECT",
+        "ein":"111111",
+        "email":"sales.user@bt.com"
+    },
+    "currency":"GBP",
+    "legacyIdentifier":{
+        "productId":"123",
+        "productName":"Standalone Access Scenario",
+        "versionNumber":"1.0"
+    }
+}

@@ -1,0 +1,28 @@
+sourceSets.main.java.srcDir "${project.buildDir}/generated-source/${project.group.split(/\./).join('/')}"
+task generateVersionClass << {
+    def componentNameToCamelCase = { it.replaceAll( /\b[a-z]/, { it.toUpperCase() }).replaceAll('-','') }
+
+    def generatedClassName = "${componentNameToCamelCase(project.name)}Version"
+
+    def (svnWcRev, svnWcUrl) = getSvnInfo()
+    def template = """
+package ${project.group};
+///CLOVER:OFF
+public final class ${generatedClassName} implements RsqeComponentVersion {
+    public final String buildVersion() {return "${project.version}";}
+    public final String vcsRevision() {return "${svnWcUrl ?: 'UNKNOWN'}";}
+    public final String vcsUrl() {return "${svnWcRev ?: 'UNKNOWN'}";}
+    public final String timestamp() {return "${new Date().format("yyyy-MM-dd'T'HH:mm:ss-z")}";}
+    public final String all() {return buildVersion()+":"+vcsUrl()+"@r"+vcsRevision()+":"+timestamp();}
+}
+"""
+    def generatedSourceDir = file("${project.buildDir}/generated-source/${project.group.split(/\./).join('/')}")
+    generatedSourceDir.mkdirs()
+    def sourcefile = file("${generatedSourceDir}/${generatedClassName}.java")
+    delete(sourcefile)
+    sourcefile << template
+}
+compileJava.dependsOn('generateVersionClass')
+generateVersionClass.onlyIf { ( gradle.taskGraph.hasTask(jar) ||
+                                gradle.taskGraph.hasTask(clean)) &&
+                              !project.hasProperty('skipVersionClass') }

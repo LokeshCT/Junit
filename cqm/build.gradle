@@ -1,0 +1,47 @@
+// Module-specific settings
+apply from: "$rootDir/builds/scripts/javaProject.gradle"
+
+ext.dbDeploySeparator = "//";
+apply from: "$rootDir/builds/scripts/dbdeploy.gradle"
+
+ext.coverageTargetPct = 2        // Most of the tests were ignored as those no longer valid after integration with RSQE. CQM team to restructure test cases.
+ext.coverageBranchTargetPct = 2  // what is the acceptable test coverage for branches
+
+
+ext.vModuleEnvironment = "cqm"
+
+test.dependsOn applyDbUpdates
+
+dependsOnIncludingTests(project, ':customer-inventory-client')
+dependsOnIncludingTests(project, ':expedio-facade-client')
+dependsOnIncludingTests(project, ':nad-facade-client')
+dependsOnIncludingTests(project, ':ppsr-facade-client')
+dependsOnIncludingTests(project, ':cqm-client')
+dependsOnIncludingTests(project, ':config')
+dependsOnIncludingTests(project, ':common')
+dependsOnIncludingTests(project, ':core')
+dependsOnIncludingTests(project, ':emp-pal-facade-client')
+dependsOnIncludingTests(project, ':project-engine-client')
+dependsOnIncludingTests(project, ':sqe-ivpn-facade')
+
+dependencies {
+    compile([
+                    'org.glassfish.jersey.containers:jersey-container-simple-http:2.0.1',
+                    'com.oracle:ojdbc6:11.1.0.6.0',
+                    'org.hibernate:hibernate-core:4.3.7.Final',
+                    'org.hibernate:hibernate-entitymanager:4.3.7.Final',
+                    'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final',
+                    'org.hibernate:hibernate-c3p0:4.3.0.Beta5',
+                    'commons-collections:commons-collections:3.2.1',
+                    'org.jadira.usertype:usertype.core:3.2.0.GA',
+                    'org.projectlombok:lombok:1.14.2',
+                    'org.jdto:jdto:1.4'
+            ])
+
+    testCompile([
+                        'junit:junit:4.10',
+                        'org.dbunit:dbunit:2.4.8'
+                ])
+
+
+}

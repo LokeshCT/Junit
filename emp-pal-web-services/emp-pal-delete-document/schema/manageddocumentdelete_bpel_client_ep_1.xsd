@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://wsi.nat.bt.com/2005/06/StandardHeader/" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:header="http://wsi.nat.bt.com/2005/06/StandardHeader/">
+  <xs:annotation>
+    <xs:documentation>Generated on Fri Dec 04 19:17:30 IST 2009 by XMLSchemaExtractor version $2007/09/15</xs:documentation>
+  </xs:annotation>
+  <xs:element name="standardHeader" type="header:StandardHeaderBlock"/>
+  <xs:complexType name="StandardHeaderBlock">
+    <xs:sequence>
+      <xs:element name="e2e" type="header:E2E" minOccurs="0"/>
+      <xs:element name="serviceState" type="header:ServiceState"/>
+      <xs:element name="serviceAddressing" type="header:ServiceAddressing"/>
+      <xs:element name="serviceProperties" type="header:ServiceProperties" minOccurs="0"/>
+      <xs:element name="serviceSpecification" type="header:ServiceSpecification" minOccurs="0"/>
+      <xs:element name="serviceSecurity" type="header:ServiceSecurity" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="E2E">
+    <xs:sequence>
+      <xs:element name="E2EDATA" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceState">
+    <xs:sequence>
+      <xs:element name="stateCode" type="xs:string"/>
+      <xs:element name="errorCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorDesc" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorText" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorTrace" type="xs:string" minOccurs="0"/>
+      <xs:element name="resendIndicator" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="retriesRemaining" type="xs:integer" minOccurs="0"/>
+      <xs:element name="retryInterval" type="xs:integer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressReference">
+    <xs:sequence>
+      <xs:element name="address" type="xs:anyURI"/>
+      <xs:element name="contextItemList" type="header:ContextItemList" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContextItemList">
+    <xs:sequence>
+      <xs:element name="contextItem" type="header:ContextItem" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContextItem">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="contextId" type="xs:string"/>
+        <xs:attribute name="contextName" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ServiceAddressing">
+    <xs:sequence>
+      <xs:element name="from" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="to" type="header:AddressReference" minOccurs="0"/>
+      <xs:element name="replyTo" type="header:AddressReference" minOccurs="0"/>
+      <xs:element name="relatesTo" type="xs:string" minOccurs="0"/>
+      <xs:element name="faultTo" type="header:AddressReference" minOccurs="0"/>
+      <xs:element name="messageId" type="xs:string" minOccurs="0"/>
+      <xs:element name="serviceName" type="xs:anyURI" minOccurs="0"/>
+      <xs:element name="action" type="xs:anyURI" nillable="true"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceSpecification">
+    <xs:sequence>
+      <xs:element name="payloadFormat" type="xs:string" minOccurs="0"/>
+      <xs:element name="version" type="xs:string" minOccurs="0"/>
+      <xs:element name="revision" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceProperties">
+    <xs:sequence>
+      <xs:element name="messageExpiry" type="header:MessageExpiry" minOccurs="0"/>
+      <xs:element name="messageDelivery" type="header:MessageDelivery" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MessageExpiry">
+    <xs:sequence>
+      <xs:element name="expiryTime" type="xs:string" minOccurs="0"/>
+      <xs:element name="expiryAction" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MessageDelivery">
+    <xs:sequence>
+      <xs:element name="messagePersistence" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageRetries" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageRetryInterval" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageQoS" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceSecurity">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="role" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+      <xs:element name="authenticationLevel" type="xs:string" minOccurs="0"/>
+      <xs:element name="authenticationToken" type="xs:string" minOccurs="0"/>
+      <xs:element name="userEntitlements" type="xs:string" minOccurs="0"/>
+      <xs:element name="tokenExpiry" type="xs:string" minOccurs="0"/>
+      <xs:element name="callingApplication" type="xs:string" minOccurs="0"/>
+      <xs:element name="callingApplicationCredentials" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

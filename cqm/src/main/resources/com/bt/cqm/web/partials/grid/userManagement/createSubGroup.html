@@ -1,0 +1,33 @@
+<div class="innerWrapUserMgmt" ng-controller="userManagementController" ng-init="onLoadSubGroup()">
+
+    <div ng-form="createSubGroupForm" ng-model="createSubGroupFormData">
+
+
+        <div style="margin-top: 25px;margin-bottom: 30px">
+            <label for="subGroupName" class="cqmFieldInOneRow">Sub Group</label>
+            <input type="text" id="subGroupName" name="subGroupName"
+                   class="cqmFieldInOneRow"
+                   ng-model="createSubGroupFormData.subGroupName" style="margin-left:15px;width:190px" required/>
+            <button class="btn cqmFieldInOneRow" id="searchBut"
+                    style="margin-left: 20px; padding: 1px;height: 30px;border-radius: 4px;margin-top: -3px;margin-left:60px"
+                    ng-disabled="!createSubGroupFormData.subGroupName.length>0" ng-click="addSubGroup()">
+                Add
+            </button>
+        </div>
+
+        <div class="containerDiv" style="float:left;width:80%" >
+            <div class="hrMargin" style="float:left;width:30%">
+                <span class="headerLabel">User Sub Groups</span>
+                <hr class="hrStyle"/>
+            </div>
+            <div class="searchResultGridStyle" style="width:30%;height:220px;margin-top: 60px" ng-grid="subGroupGrid"/>
+        </div>
+
+
+
+        </fieldset>
+    </div>
+</div>
+
+</div>
+

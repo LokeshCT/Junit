@@ -1,0 +1,34 @@
+//apply from: "${rootDir}/builds/scripts/xslt.gradle"
+
+//configurations {
+//    jdependConf
+//}
+//
+//dependencies {
+//    jdependConf 'jdepend:jdepend:2.9.1', 'org.apache.ant:ant-jdepend:1.7.1'
+//}
+//
+//task jdepend << {
+//    println 'Running jdepend quality metrics tool'
+//    ant {
+//      taskdef(name:'jdepend',
+//         classname:'org.apache.tools.ant.taskdefs.optional.jdepend.JDependTask',
+//         classpath: configurations.jdependConf.asPath)
+//      jdepend (outputfile: "${reporting.baseDir}/jdepend-report.xml", format: 'xml') {
+//        classespath {
+//         pathelement(location: 'build')
+//        }
+//      }
+//    }
+//}
+//
+//task jdependReport(type: Xslt, dependsOn: ['jdependMain', 'jdependTest']) {
+//    description = "Generate HTML JDepend reports"
+//    source reporting.baseDir
+//    include 'jdepend-report.xml'
+//    destDir = reporting.baseDir
+//    extension = 'html'
+//
+//    stylesheetFile = file("${rootDir}/builds/config/jdepend/stylesheets/jdepend.xsl")
+//}
+//check.dependsOn jdependReport

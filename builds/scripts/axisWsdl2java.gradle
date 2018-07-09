@@ -1,0 +1,41 @@
+import java.util.Map.Entry
+
+dependencies {
+    compile 'axis:axis-ant:1.4', 'axis:axis:1.4', 'wsdl4j:wsdl4j:1.6.2'
+}
+
+task classes(overwrite: true) {
+    outputs.upToDateWhen { false }
+    description = "Build the classes from schema for ${project.name} using axis"
+    inputs.dir project.ext.schemaPath
+    outputs.dir "${project.buildDir}/classes/main"
+    doLast {
+        ant.echo(description)
+        ant.mkdir(dir: "${project.buildDir}/generated-sources")
+        ant.mkdir(dir: "${project.buildDir}/classes/main")
+        ant.taskdef(name: 'genClassesFromWSDL', classname: 'org.apache.axis.tools.ant.wsdl.Wsdl2javaAntTask', classpath: configurations.compile.asPath)
+        ant.genClassesFromWSDL(
+                url: "${project.ext.schemaPath}/service.wsdl",
+                output: "${project.buildDir}/generated-sources",
+                serverside: true,
+                skeletondeploy: true
+        ) {
+            if (project.hasProperty("namespacePackages")) {
+                project.ext.namespacePackages.each { namespace, pack ->
+                    mapping(namespace: namespace, package: pack)
+                }
+            }
+        }
+        ant.javac(
+                srcdir: "${project.buildDir}/generated-sources",
+                destdir: "${project.buildDir}/classes/main") {
+            classpath {
+                pathElement path: configurations.compile.asPath
+            }
+
+        }
+    }
+}
+
+
+clean.onlyIf { project.hasProperty('forceClean') }
